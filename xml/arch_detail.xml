@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>arch_details</name>
+        <key>UNIT_ID</key>
+        <key1>CATEGORY</key1>
+        <key2>CREATION_TIME</key2>
+        <key3>CREATED_BY</key3>
+        <key4>ROOMS_NO</key4>
+        <key5>KITCHENS_NO</key5>
+        <key6>PATHROOM_NO</key6>
+        <key7>BALCONY_NO</key7>
+        <key8>TOTAL_AREA</key8>
+        <key9>GARAGE</key9>
+        <key10>ELEVATOR</key10>
+        <key11>STORAGE</key11>
+        <key12>CLUB</key12>
+        <key13>MIN_PRICE</key13>
+        <key14>MAX_PRICE</key14>
+        <key15>OPTION_ONE</key15>
+        <key16>OPTION_TWO</key16>
+        <key17>OPTION_THREE</key17>
+       
+        <keyname>UNIT_ID</keyname>
+        
+    </table_supported>  
+   
+    <form_element>
+        <name>untID</name>
+        <table>arch_details</table>
+        <column>UNIT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>categoryName</name>
+        <table>arch_details</table>
+        <column>CATEGORY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>roomsNo</name>
+        <table>arch_details</table>
+        <column>ROOMS_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+  
+    <form_element>
+        <name>kitchensNo</name>
+        <table>arch_details</table>
+        <column>KITCHENS_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>creationTime</name>
+        <table>arch_details</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>createdBy</name>
+        <table>arch_details</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>pathroomNo</name>
+        <table>arch_details</table>
+        <column>PATHROOM_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>balconyNo</name>
+        <table>arch_details</table>
+        <column>BALCONY_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>   
+   
+    <form_element>
+        <name>totalArea</name>
+        <table>arch_details</table>
+        <column>TOTAL_AREA</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+   
+    <form_element>
+        <name>netArea</name>
+        <table>arch_details</table>
+        <column>NET_AREA</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+   
+    <form_element>
+        <name>garage</name>
+        <table>arch_details</table>
+        <column>GARAGE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>     
+   
+    <form_element>
+        <name>elevator</name>
+        <table>arch_details</table>
+        <column>ELEVATOR</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+   
+    <form_element>
+        <name>storage</name>
+        <table>arch_details</table>
+        <column>STORAGE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+
+    <form_element>
+        <name>optionOne</name>
+        <table>arch_details</table>
+        <column>OPTION_ONE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionTwo</name>
+        <table>arch_details</table>
+        <column>OPTION_TWO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionThree</name>
+        <table>arch_details</table>
+        <column>OPTION_THREE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>club</name>
+        <table>arch_details</table>
+        <column>CLUB</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>minPrice</name>
+        <table>arch_details</table>
+        <column>MIN_PRICE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>maxPrice</name>
+        <table>arch_details</table>
+        <column>MAX_PRICE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

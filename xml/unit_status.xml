@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>UNIT_STATUS_VIEW</name>
+        <key>STATUS_ID</key>
+        <key1>BUSINESS_OBJ_ID</key1>
+        <key1>PARENT_ID</key1>
+        <srefintegkey></srefintegkey>
+    </table_supported>  
+   
+    <form_element>
+        <name>statusID</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>STATUS_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>statusName</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>STATUS_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>busObjId</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>BUSINESS_OBJ_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>issueTitle</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>ISSUE_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>statusNote</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>STATUS_NOTE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>beginDate</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>BEGIN_DATE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>endDate</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>END_DATE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>      
+   
+    <form_element>
+        <name>totalTime</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>TOTAL_TIME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>causeDesc</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>CAUSE_DESCRIPTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>actionTaken</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>ACTION_TAKEN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>preventionTaken</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>PREVENTION_TAKEN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>objectType</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>OBJECT_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>parentId</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>PARENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>createdBy</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>projectID</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>PROJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>projectName</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>PROJECT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>mainProjId</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>MAIN_PROJ_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+   
+    <form_element>
+        <name>eqNO</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>EQ_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>creationTime</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+  
+  
+    <form_element>
+        <name>projectDesc</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>PROJECT_DESCRIPTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>coordinate</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>COORDINATE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>   
+   
+    <form_element>
+        <name>location_type</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>location_type</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+   
+    <form_element>
+        <name>futile</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>futile</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>     
+   
+    <form_element>
+        <name>isMngmntStn</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>IS_MNGMNT_STN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+   
+    <form_element>
+        <name>isTrnsprtStn</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>IS_TRNSPRT_STN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+
+    <form_element>
+        <name>optionOne</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>OPTION_ONE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionTwo</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>OPTION_TWO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionThree</name>
+        <table>UNIT_STATUS_VIEW</table>
+        <column>OPTION_THREE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+</form>

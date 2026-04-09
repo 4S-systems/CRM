@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>EMP_SALARY_CONFIG</name>
+      
+        <key>ID</key>
+        <key1>EMP_ID</key1>
+        <key2>EXPENSE_ID</key2>
+    </table_supported>  
+   
+    <form_element>
+        <name>id</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>empId</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>EMP_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>expenseID</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>EXPENSE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>creationTime</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>createdBy</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>configValue</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>CONFIG_VALUE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>configPersent</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>CONFIG_PERSENTAGE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>configType</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>CONFIG_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+  
+    <form_element>
+        <name>option1</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>OPTION_1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>option2</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>OPTION_2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>option3</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>OPTION_3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>option4</name>
+        <table>EMP_SALARY_CONFIG</table>
+        <column>OPTION_4</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>  
+</form>

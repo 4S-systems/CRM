@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <table_supported>
+        <name>cost_store_item</name>
+        <key1>UNIT_SCHEDULE_ID</key1>
+        <key2>ITEM_CODE</key2>
+    </table_supported>
+    
+     <form_element>
+        <name>transactionNO</name>
+        <table>cost_store_item</table>
+        <column>TRANSACTION_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>jobOrderID</name>
+        <table>cost_store_item</table>
+        <column>JOB_ORDER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unitScheduleId</name>
+        <table>cost_store_item</table>
+        <column>UNIT_SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+        
+    <form_element>
+        <name>itemId</name>
+        <table>cost_store_item</table>
+        <column>ITEM_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemQuantity</name>
+        <table>cost_store_item</table>
+        <column>DEP_QTY1</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>totalCost</name>
+        <table>cost_store_item</table>
+        <column>TOTAL_COST</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+ </form>
+

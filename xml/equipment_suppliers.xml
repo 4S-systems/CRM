@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <table_supported>
+        <name>equipment_suppliers</name>
+        <key>ID</key>
+        <key1>EQUIPMENT_ID</key1>
+        <key2>SUPPLIER_ID</key2>
+        <refintegkey></refintegkey>
+        <srefintegkey></srefintegkey>
+    </table_supported>
+    
+    <form_element>
+        <name>id</name>
+        <table>supplier_equipment</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>supplierID</name>
+        <table>supplier_equipment</table>
+        <column>SUPPLIER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>equipmentID</name>
+        <table>supplier_equipment</table>
+        <column>EQUIPMENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>name</name>
+        <table>supplier_equipment</table>
+        <column>NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>
+

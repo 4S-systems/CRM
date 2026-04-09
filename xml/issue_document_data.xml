@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>ISSUE_DOCUMENT</name>
+        <key>DOCUMENT_ID</key>
+        <key2>DOCUMENT_TITLE</key2>
+        <key3>ISSUE_ID</key3>
+        <key5>BUSINESS_OBJ_ID</key5>
+    </table_supported>  
+    
+    <form_element>
+        <name>documentID</name>
+        <table>ISSUE_DOCUMENT</table>
+        <column>DOCUMENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>documentTitle</name>
+        <table>ISSUE_DOCUMENT</table>
+        <column>DOCUMENT_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

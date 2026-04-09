@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>PLAN_ISSUE</name>
+       <key>ID</key>
+       <key1>PLAN_ID</key1>
+       <key2>ISSUE_ID</key2>
+   </table_supported>  
+   
+    <form_element>
+     <name>id</name>
+     <table>plan_issue</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>planId</name>
+     <table>plan_issue</table>
+     <column>PLAN_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>issueId</name>
+     <table>plan_issue</table>
+     <column>ISSUE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>createdBy</name>
+     <table>plan_issue</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>plan_issue</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

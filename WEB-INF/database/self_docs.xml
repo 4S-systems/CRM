@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : slef_docs.xml
+    Created on : October 3, 2011, 9:50 AM
+    Author     : khaled abdo
+    Description:
+        Purpose of the document follows.
+-->
+
+<form>
+    <!-- forms info. -->
+    <formItem>
+        <Index>1</Index>
+        <code>STR-INTEG-1</code>
+        <nameAr>&#1578;&#1593;&#1610;&#1610;&#1606; &#1605;&#1580;&#1605;&#1608;&#1593;&#1575;&#1578; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</nameAr>
+        <nameEn>Assigned Code Form for spare parts </nameEn>
+        <descAr>&#1578;&#1593;&#1610;&#1610;&#1606; &#1605;&#1580;&#1605;&#1608;&#1593;&#1575;&#1578; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</descAr>
+        <descEn></descEn>
+        <tableRead>
+        ITEM_FORM_LIST
+        Get Selected Item Form,
+        </tableRead>
+        <viewsRead>
+        ITEM_FORM
+        Get All Basic Item Form, 
+        STORES_ERP
+        Get All Basic Erp Stores,
+        BRANCH_ERP
+        Get All Basic Erp Branch,
+        </viewsRead>
+        <tableWrite>
+        ITEM_FORM_LIST
+        delete and insert,
+        </tableWrite>
+    </formItem>
+    
+    <formItem>
+        <Index>2</Index>
+        <code>STR-INTEG-2</code>
+        <nameAr>&#1578;&#1581;&#1583;&#1610;&#1583; &#1605;&#1608;&#1575;&#1589;&#1601;&#1577; &#1575;&#1604;&#1573;&#1606;&#1588;&#1575;&#1569; &#1604;&#1604;&#1581;&#1585;&#1603;&#1575;&#1578; &#1575;&#1604;&#1582;&#1575;&#1585;&#1580;&#1610;&#1577; </nameAr>
+        <nameEn>Foundation Specification for External Transactions  </nameEn>
+        <descAr>&#1578;&#1581;&#1583;&#1610;&#1583; &#1605;&#1608;&#1575;&#1589;&#1601;&#1577; &#1575;&#1604;&#1573;&#1606;&#1588;&#1575;&#1569; &#1604;&#1604;&#1581;&#1585;&#1603;&#1575;&#1578; &#1575;&#1604;&#1582;&#1575;&#1585;&#1580;&#1610;&#1577; </descAr>
+        <descEn>Determine Foundation Specification for External Transactions </descEn>
+        <tableRead>
+            STOR_TRNS
+            get all transactions from ERP,
+            SPECS_OUT_TRNS
+            get all specsOutTrns,
+        </tableRead>
+        <viewsRead>
+            EMPLOYEE_TITLE
+        </viewsRead>
+        <tableWrite>
+            SPECS_OUT_TRNS
+            update if yes else insert,
+        </tableWrite>
+    </formItem>
+    
+    <formItem>
+        <Index>3</Index>
+        <code>STR-INTEG-3</code>
+        <nameAr>&#1605;&#1587;&#1578;&#1607;&#1604;&#1603;&#1575;&#1578; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</nameAr>
+        <nameEn>Used Spare Parts</nameEn>
+        <descAr>&#1605;&#1587;&#1578;&#1607;&#1604;&#1603;&#1575;&#1578; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</descAr>
+        <descEn>Used Spare Parts</descEn>
+        <tableRead>
+            ISSUE
+            get issue by issue id,
+            UNIT_SCHEDULE,
+            EQP_MNTNC_TYPE_CONFIG
+            get configure schedule by SCHEDULE_ID,
+            USED_SPARE_PARTS
+            get Used Item schedule by SCHEDULE_ID,
+            QUANTIFIED_MNTENCE
+            get special item,
+            ISSUE_TASKS,
+        </tableRead>
+        <viewsRead>
+            SPARE_PARTS
+            get spare parts by subcode or name by not in item code by item form,
+        </viewsRead>
+        <tableWrite>
+            ISSUE
+            update total cost, 
+            TRANSACTION
+            insert transaction,
+            USED_SPARE_PARTS
+            insert Used Parts from tasks,
+        </tableWrite>
+    </formItem>
+    
+    <formItem>
+        <Index>4</Index>
+        <code>STR-INTEG-4</code>
+        <nameAr>&#1591;&#1604;&#1576; &#1571;&#1585;&#1578;&#1580;&#1575;&#1593; &#1605;&#1606; &#1575;&#1604;&#1605;&#1582;&#1586;&#1606;</nameAr>
+        <nameEn>Request Returned From Store </nameEn>
+        <descAr>&#1591;&#1604;&#1576; &#1571;&#1585;&#1578;&#1580;&#1575;&#1593; &#1605;&#1606; &#1575;&#1604;&#1605;&#1582;&#1586;&#1606;</descAr>
+        <descEn>Request Returned From Store </descEn>
+        <tableRead>
+            TRANSACTION
+            get check response,
+        </tableRead>
+        <viewsRead>
+            TRANS_STORE_ITEM
+            get response total store items,
+            RESULT_STORE_ITEM
+            get Result Total Store Items,
+        </viewsRead>
+        <tableWrite>
+            TRANSACTION
+            insert transaction,
+            TRANSACTION_DETAILS
+            insert transaction details,
+            TRANSACTION_STATUS
+            insert transaction first status,
+            Transaction 
+            update transaction,
+            STORE_TRNS_M ERP
+            save transaction in ERP,
+            STORE_TRNS_O ERP 
+            save transaction details in ERP,
+        </tableWrite>
+    </formItem>
+    
+    <formItem>
+        <Index>5</Index>
+        <code>STR-INTEG-5</code>
+        <nameAr>&#1591;&#1604;&#1576; &#1589;&#1585;&#1601; &#1605;&#1582;&#1575;&#1586;&#1606;</nameAr>
+        <nameEn>Request from the Store</nameEn>
+        <descAr>&#1591;&#1604;&#1576; &#1589;&#1585;&#1601; &#1605;&#1582;&#1575;&#1586;&#1606;</descAr>
+        <descEn>Request from the Store </descEn>
+        <tableRead>
+            QUANTIFIED_MNTENCE
+            get item by SCHEDULE_ID,
+            UNIT_SCHEDULE,
+            SCHEDULE,
+            EQP_MNTNC_TYPE_CONFIG
+            get configure schedule by SCHEDULE_ID,
+            TRANSACTION
+            get check response,
+        </tableRead>
+        <viewsRead>
+            TRANS_STORE_ITEM
+            get response total store items,
+            RESULT_STORE_ITEM
+            get Result Total Store Items,
+        </viewsRead>
+        <tableWrite>
+            TRANSACTION
+            insert transaction,
+            TRANSACTION_DETAILS
+            insert transaction details,
+            TRANSACTION_STATUS
+            insert transaction first status,
+            Transaction 
+            update transaction,
+            STORE_TRNS_M ERP
+            save transaction in ERP,
+            STORE_TRNS_O ERP 
+            save transaction details in ERP,
+        </tableWrite>
+    </formItem>
+    
+    <formItem>
+        <Index>6</Index>
+        <code>STR-INTEG-6</code>
+        <nameAr>&#1575;&#1590;&#1575;&#1601;&#1577; / &#1578;&#1593;&#1583;&#1610;&#1604; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1604;&#1605;&#1593;&#1583;&#1607;</nameAr>
+        <nameEn>Add / Update Equipment Spare Parts </nameEn>
+        <descAr>&#1575;&#1590;&#1575;&#1601;&#1577; / &#1578;&#1593;&#1583;&#1610;&#1604; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1604;&#1605;&#1593;&#1583;&#1607;</descAr>
+        <descEn>Add / Update Equipment Spare Parts </descEn>
+        <tableRead>
+            ISSUE
+            get issue by issue id,
+            QUANTIFIED_MNTENCE
+            get item by SCHEDULE_ID,
+            UNIT_SCHEDULE,
+            EQP_MNTNC_TYPE_CONFIG
+            get configure schedule by SCHEDULE_ID,
+            USER_STORE
+            get uesr store by user id,
+            ITEM_FORM_LIST
+            get item form list by store code,
+            ATTACHED_EQPS
+            get attached eqps by MAIN_EQUIP_ID and separation_DATE is null"
+            
+            SPARE_PARTS (popup window)
+            get spare parts,
+        </tableRead>
+        <viewsRead>
+            TRANS_STORE_ITEM
+            get store item,
+        </viewsRead>
+        <tableWrite>
+            QUANTIFIED_MNTENCE
+            delete by SCHEDULE_ID AND IS_DIRECT_PRCH,
+            ISSUE
+            update TOTAL_COST by UNIT_SCHEDULE_ID,
+            QUANTIFIED_MNTENCE
+            insert quantified from tasks,
+            RECONFIG_TASK
+            delete form reconfig task by ISSUE_ID,
+            UNIT_SCHEDULE
+            update CONFIGURE to yes by ID,
+        </tableWrite>
+    </formItem>
+    
+    <formItem>
+        <Index>7</Index>
+        <code>STR-INTEG-7</code>
+        <nameAr>&#1581;&#1575;&#1604;&#1577; &#1575;&#1604;&#1589;&#1585;&#1601; &#1605;&#1606; &#1575;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</nameAr>
+        <nameEn>Request from the Store</nameEn>
+        <descAr>&#1581;&#1575;&#1604;&#1577; &#1575;&#1604;&#1589;&#1585;&#1601; &#1605;&#1606; &#1575;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</descAr>
+        <descEn>Request from the Store </descEn>
+        <tableRead>
+            ISSUE
+            get issue by id,
+            TRANSACTION
+            get check response,
+        </tableRead>
+        <viewsRead>
+            RESULT_STORE_ITEM
+            get Result Total Store Items,
+            TRANS_STORE_ITEM
+            get response total store items,
+        </viewsRead>
+        <tableWrite>
+        </tableWrite>
+    </formItem>
+    
+    <formItem>
+        <Index>8</Index>
+        <code>UEC-H</code>
+        <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1593;&#1583;&#1575;&#1583; &#1605;&#1593;&#1583;&#1577;</nameAr>
+        <nameEn>Update Equipment Counter</nameEn>
+        <descAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1593;&#1583;&#1575;&#1583; &#1605;&#1593;&#1583;&#1577;</descAr>
+        <descEn></descEn>
+        <tableRead>
+            MAINTAINABLE_UNIT
+            to get updatable units,
+            AVERAGE_UNIT
+            to get equipment counter info,
+            SCHEDULE
+            to get equipment schedules,
+            UNIT_SCHEDULE_HISTORY
+            for the process,
+        </tableRead>
+        <viewsRead>
+            ------------------,
+        </viewsRead>
+        <tableWrite>
+            AVERAGE_UNIT
+            for counter,
+            UNIT_SCHEDULE_HISTORY
+            for the process,
+        </tableWrite>
+    </formItem>
+
+    <formItem>
+        <Index>9</Index>
+        <code>MAIN-TYPE</code>
+        <nameAr>&#1606;&#1608;&#1593; &#1571;&#1587;&#1575;&#1587;&#1610; &#1580;&#1583;&#1610;&#1583;</nameAr>
+        <nameEn>New Basic Category</nameEn>
+        <descAr>&#1606;&#1608;&#1593; &#1571;&#1587;&#1575;&#1587;&#1610; &#1580;&#1583;&#1610;&#1583;</descAr>
+        <descEn>New Basic Category</descEn>
+        <tableRead>
+            MAINTAINABLE_UNIT_TYPE
+            to get main unit type ,
+        </tableRead>
+        <viewsRead>
+            ------------------,
+        </viewsRead>
+        <tableWrite>
+            MAINTAINABLE_UNIT_TYPE
+            save the new main type ,
+        </tableWrite>
+        <jspTag>
+        TYPE CATEGORY
+        to get the category of the main unit type,
+        COUNTER UNIT
+        to get the units ,
+        </jspTag>
+    </formItem>
+
+      <formItem>
+        <Index>10</Index>
+        <code>SPARE-PARTS</code>
+        <nameAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1607;</nameAr>
+        <nameEn>Spare Parts Report</nameEn>
+        <descAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1607;</descAr>
+        <descEn>Spare Parts Report</descEn>
+        <tableRead>
+           MAINTAINABLE_UNIT
+           to get all units,
+           TASKS
+           to get task id and task name ,
+        </tableRead>
+        <viewsRead>
+            ALL_MAINTENANCE_INFO
+            to get information about the spare parts about specific unit ,
+        </viewsRead>
+        <tableWrite>
+             ------------------,
+        </tableWrite>
+        <jspTag>
+             ------------------,
+        </jspTag>
+        <queryString>
+            "select count(task_id),tasks.task_name from ALL_MAINTENANCE_INFO
+            inner join tasks on ALL_MAINTENANCE_INFO.TASK_ID = tasks.ID
+            where unit_id=? and EXPECTED_B_DATE between to_date(?,'yyyy/MM/dd') and to_date(?,'yyyy/MM/dd')
+            and task_id is not null
+            group by task_id , tasks.task_name
+            "
+        </queryString>
+    </formItem>
+
+    <formItem>
+        <Index>11</Index>
+        <code>SCHED-RELATIONS</code>
+        <nameAr>&#1585;&#1576;&#1591; &#1580;&#1583;&#1608;&#1604; &#1576;&#1580;&#1583;&#1575;&#1608;&#1604; </nameAr>
+        <nameEn>Relate Schedule to Schedules</nameEn>
+        <descAr>&#1585;&#1576;&#1591; &#1580;&#1583;&#1608;&#1604; &#1576;&#1580;&#1583;&#1575;&#1608;&#1604; </descAr>
+        <descEn>Relate Schedule to Schedules</descEn>
+        <tableRead>
+           MAINTAINABLE_UNIT
+           to get all units by pagination,
+           SCHEDULE_RELATIONS
+           get all related schedules by schedule id,
+        </tableRead>
+        <viewsRead>
+            RELATED_SCHEDULE_DETAILS
+            get details for related schedules ,
+        </viewsRead>
+        <tableWrite>
+             SCHEDULE_RELATIONS,
+        </tableWrite>
+        <jspTag>
+             ------------------,
+        </jspTag>
+        <queryString>
+            "select count(task_id),tasks.task_name from ALL_MAINTENANCE_INFO
+            inner join tasks on ALL_MAINTENANCE_INFO.TASK_ID = tasks.ID
+            where unit_id=? and EXPECTED_B_DATE between to_date(?,'yyyy/MM/dd') and to_date(?,'yyyy/MM/dd')
+            and task_id is not null
+            group by task_id , tasks.task_name
+            "
+        </queryString>
+    </formItem>
+
+
+
+  <formItem>
+        <Index>12</Index>
+        <code>TRNS_JO_LBR_AVG_COST</code>
+        <nameAr>&#1605;&#1578;&#1608;&#1587;&#1591; &#1575;&#1604;&#1578;&#1603;&#1604;&#1601;&#1607; &#1604;&#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; </nameAr>
+        <nameEn>Job Order Labor Average Cost</nameEn>
+        <descAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1605;&#1578;&#1608;&#1587;&#1591; &#1575;&#1604;&#1578;&#1603;&#1604;&#1601;&#1607; &#1604;&#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; </descAr>
+        <descEn>Job Order Labor Average Cost Report</descEn>
+        <tableRead>
+           MAINTAINABLE_UNIT
+           to get all units , All main types and all brands ,
+           PROJECT
+           get all sites,
+           TASKS
+           get all maintenance item,
+           QUANTIFIED_MNTENCE
+           get all spare parts ,
+           TRADE
+           get all trades ,
+        </tableRead>
+        <viewsRead>
+            ALL_MAINTENANCE_INFO
+            to get information aobut the issue and it's tasks ,
+            ITEM_WITH_AVG_PRICE_ITEM_DATA
+            to get information about the items such as price ,
+        </viewsRead>
+        <tableWrite>
+             ------------------,
+        </tableWrite>
+        <jspTag>
+             Maintenance TYPE,
+             (Periodic , Emergency ,BOTH) to choose the maintenance type or ,
+             all maintenance type,
+        </jspTag>
+        <queryString>
+            IF UNIT radio button choosen : ,
+            ( ,
+            getByEquipTaskItemWithoutTitleStatus
+            getByEquipTaskWithoutTitleStatus
+            getByEquipItemWithoutTitleStatus
+            getByEquipWithoutTitleStatus ) ,
+        _____________________________________________________________________
+            
+            IF BRAND radio button choosen : ,
+            ( ,
+            getByBrandSiteTaskItemWithoutTitleStatus
+            getByBrandSiteTaskWithoutTitleStatus
+            getByBrandSiteItemWithoutTitleStatus
+            getByBrandSiteWithoutTitleStatus
+           ),
+        ________________________________________________________________________________________
+            
+            IF MAIN TYPE radio button choosen : ,
+            ( ,
+            getByTypeSiteTaskWithoutTitleStatus,
+            getByTypeSiteItemWithoutTitleStatus,
+            getByTypeSiteWithoutTitleStatus,
+            ),
+            _____________________________________________________________________________________
+        
+            IF LABOR DETAILS choosen : ,
+            (,
+            getItemsWithAvgPriceItemData ,
+            ),
+            _____________________________________________________________________________________
+     
+            IF LABOR DETAILS not choosen : ,
+            (,
+            getItemsWithAvgPrice
+            ),
+            
+        </queryString>
+    </formItem>
+
+<formItem>
+        <Index>13</Index>
+        <code>Eqp_Auto_Update</code>
+        <nameAr>&#1575;&#1604;&#1578;&#1581;&#1583;&#1610;&#1579; &#1575;&#1604;&#1578;&#1604;&#1602;&#1575;&#1574;&#1609; &#1604;&#1604;&#1605;&#1593;&#1583;&#1577; &#1593;&#1604;&#1609; &#1581;&#1587;&#1576; &#1575;&#1604;&#1605;&#1593;&#1583;&#1604;&#1575;&#1578;</nameAr>
+        <nameEn>Auto Update Equipment according to Average working Time</nameEn>
+        <descAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1575;&#1604;&#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1581;&#1608;&#1604; &#1575;&#1604;&#1570;&#1604;&#1575;&#1578; &#1608;&#1575;&#1581;&#1583;&#1577; &#1605;&#1593;&#1583;&#1575;&#1578;</descAr>
+        <descEn>Update Information About Equipment's machines </descEn>
+        <tableRead>
+           EQUIP_STATUS
+           Get difference between End Date and begin Date
+           for out of working equipment
+        </tableRead>
+        <viewsRead>
+            EQUIP_BY_AUTO_UPDATE_READING
+            To get ID for equipemnt , AVERAGE working Time
+            CURRENT_READING , UNIT_NAME equipment Name,ENTRY_TIME Equipment working date after maintenance
+        </viewsRead>
+      <tableWrite>
+            Average_Unit
+            update data for equipment
+            Reading_Rate_Machine
+            Insert New Reading of machine
+        </tableWrite>
+        <jspTag>
+             MetaDataMgr TYPE
+             (Periodic , Emergency ,BOTH) to choose the Equipment type or
+             all maintenance type
+             ListOfEquip List
+             that have all Data for equipment and use it to display,
+        </jspTag>
+        <queryString>
+            IF Search button choosen : ,
+            (
+            GetDataFromView,
+            )
+        _____________________________________________________________________
+
+            IF Save button choosen : ,
+            (
+            SaveSelectedDataInTables,
+           )
+        ________________________________________________________________________________________
+
+            IF check_ctr checkBox choosen : ,
+            (
+            ChooseAllRowsToSaveIt,
+            )
+            _____________________________________________________________________________________
+
+            IF check_List CheckBox choosen : ,
+            (
+            getDataRowToSaveIt,
+            )
+        </queryString>
+
+    </formItem>
+
+
+  
+</form>
+

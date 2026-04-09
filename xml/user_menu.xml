@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Chosen User</Entitle>
+        <Artitle>&#1575;&#1604;&#1605;&#1587;&#1578;&#1582;&#1583;&#1605; &#1575;&#1604;&#1605;&#1582;&#1578;&#1575;&#1585;</Artitle>
+        <barText>Current User</barText>
+    </menu_style>
+
+    <elements>
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1604;&#1578;&#1601;&#1575;&#1589;&#1610;&#1604;</Arname>
+            <Enname>View User Details</Enname>
+            <link>UsersServlet?op=ViewUser&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=ViewUser&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+
+        <item>
+            <Arname>&#1593;&#1610;&#1606; &#1575;&#1604;&#1601;&#1585;&#1608;&#1593;</Arname>
+            <Enname>Assign Branch</Enname>
+            <link>UsersServlet?op=assignProjects&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=assignProjects&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>عين المشروع</Arname>
+            <Enname>Assign project</Enname>
+            <link>UsersServlet?op=assignProjectOfCompany&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=assignProjectOfCompany&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>عين العملاء</Arname>
+            <Enname>Assign Stores</Enname>
+            <link>UsersServlet?op=assignClients&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=assignClients&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>تغيير البيانات الاساسية</Arname>
+            <Enname>Edit Basic Data</Enname>
+            <link>UsersServlet?op=editBasicData&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=editBasicData&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>تغيير كلمة المرور</Arname>
+            <Enname>Edit Password</Enname>
+            <link>UsersServlet?op=editPassword&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=editPassword&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>تعديل المجموعات</Arname>
+            <Enname>Edit Groups</Enname>
+            <link>UsersServlet?op=editGroups&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=editGroups&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>تعديل الارتباط الوظيفي</Arname>
+            <Enname>Update Business Process</Enname>
+            <link>UsersServlet?op=editBusinessProcess&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=editBusinessProcess&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>تعديل عرض تقارير المجموعات</Arname>
+            <Enname>Update Reports Groups</Enname>
+            <link>UsersServlet?op=editUsersGroupsConfig&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=editUsersGroupsConfig&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>تعديل ارتباط الأدارات</Arname>
+            <Enname>Update User Departments</Enname>
+            <link>UsersServlet?op=editUsersDeptsConfig&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=editUsersDeptsConfig&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>ضبط الإعدادات الأساسية</Arname>
+            <Enname>Set Main Settings </Enname>
+            <link>CustomizationPanelServlet?op=customizationPanelForm&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>CustomizationPanelServlet?op=customizationPanelForm&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>ارتباط الشركات</Arname>
+            <Enname>Bind to a company </Enname>
+            <link>UsersServlet?op=updateUserCompanyForm&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=updateUserCompanyForm&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>ارتباط المناطق</Arname>
+            <Enname>Bind to a district</Enname>
+            <link>UsersServlet?op=updateUserDistrictForm&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=updateUserDistrictForm&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        <item>
+            <Arname>بيانات الوسيط</Arname>
+            <Enname>Boker Information</Enname>
+            <link>UsersServlet?op=mediatorInformation&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=mediatorInformation&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+        <item>
+            <Arname>ارتباط الحملات</Arname>
+            <Enname>User's Campaigns Joining</Enname>
+            <link>UsersServlet?op=editUserCampaignsConfig&amp;userId=ID</link>
+            <mlink>UsersServlet?op=editUserCampaignsConfig&amp;userId=ID</mlink>
+        </item>
+        
+        <item>
+            <Arname>&#1575;&#1604;&#1594;&#1575;&#1569; &#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1607; </Arname>
+            <Enname>Stop Menu</Enname>
+            <link>UsersServlet?op=closeSideMenu</link>
+            <mlink>UsersServlet?op=closeSideMenu</mlink>
+        </item>
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>user</link>
+            <mlink>user</mlink>
+        </item>
+    </elements>
+</menu>

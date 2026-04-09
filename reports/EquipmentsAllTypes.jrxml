@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Approval" columnDirection="RTL" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="21"/>
+	<property name="ireport.y" value="192"/>
+	<parameter name="logo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="allMaintTypes" class="java.lang.Integer" isForPrompting="false"/>
+	<parameter name="allEquipments" class="java.lang.Integer" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="unitName" class="java.lang.String"/>
+	<field name="unitNo" class="java.lang.String"/>
+	<field name="project_name" class="java.lang.String"/>
+	<field name="engineNo" class="java.lang.String"/>
+	<field name="opType" class="java.lang.String"/>
+	<field name="serialNo" class="java.lang.String"/>
+	<field name="noOfHours" class="java.lang.String"/>
+	<field name="rateType" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="serviceEntryDATE" class="java.lang.String"/>
+	<field name="desc" class="java.lang.String"/>
+	<field name="modelNo" class="java.lang.String"/>
+	<field name="manufacturer" class="java.lang.String"/>
+	<field name="basicCounter" class="java.lang.String"/>
+	<field name="mainTypeName" class="java.lang.String"/>
+	<field name="maintTypeId" class="java.lang.String"/>
+	<field name="parentId" class="java.lang.String"/>
+	<field name="parentName" class="java.lang.String"/>
+	<field name="parents" class="java.util.Collection"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="159" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="EEEEE dd MMMMM yyyy / h:mm a">
+				<reportElement x="0" y="0" width="232" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="20" width="550" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="177" y="30" width="267" height="28" backcolor="#E6E6FA"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true" pdfEncoding="Cp1256"/>
+				</textElement>
+				<text><![CDATA[عرض المعدات حسب النوع الأساسي]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement mode="Transparent" x="3" y="44" width="111" height="115"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Opaque" x="444" y="72" width="100" height="18" forecolor="#000000" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Times New Roman" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\u0639\u062F\u062F \u0627\u0644\u0623\u0646\u0648\u0627\u0639 \u0627\u0644\u0623\u0633\u0627\u0633\u064A\u0629:"]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Opaque" x="338" y="73" width="100" height="18" forecolor="#000000" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Times New Roman" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{allMaintTypes}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Opaque" x="444" y="95" width="100" height="18" forecolor="#000000" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Times New Roman" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\u0627\u0644\u0639\u062F\u062F \u0627\u0644\u0643\u0644\u064A \u0644\u0644\u0645\u0639\u062F\u0627\u062A:"]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement mode="Opaque" x="337" y="96" width="100" height="18" forecolor="#000000" backcolor="#CCCCCC"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="Times New Roman" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{allEquipments}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="323" y="67" width="228" height="53"/>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}!=1]]></printWhenExpression>
+			<line>
+				<reportElement x="2" y="21" width="550" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" pattern="EEEEE dd MMMMM yyyy / h:mm a" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="0" y="0" width="232" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="SansSerif" size="6" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="42">
+			<textField>
+				<reportElement mode="Opaque" x="344" y="4" width="96" height="13" forecolor="#000000" backcolor="#E6E6FA"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1256" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mainTypeName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="6" width="100" height="12" forecolor="#000000" backcolor="#E6E6FA"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="Arial" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1256" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[النوع الأساسي]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="0" y="20" width="555" height="20"/>
+				<dataSourceExpression><![CDATA[new com.maintenance.common.WboCollectionDataSource((java.util.Vector)$F{parents})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["D:\\projects\\src\\ArMaint\\reports\\EquipmentsAllTypes_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="26">
+			<line>
+				<reportElement x="2" y="4" width="550" height="1"/>
+				<graphicElement>
+					<pen lineWidth="4.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="451" y="6" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true" pdfEncoding="Cp1256"/>
+				</textElement>
+				<text><![CDATA[مؤسسة لحاء للانتاج الزراعي]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="224" y="6" width="80" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="304" y="6" width="40" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<noData>
+		<band height="802">
+			<staticText>
+				<reportElement x="110" y="99" width="334" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[لا توجد معدات لهذا النوع الأساسي]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

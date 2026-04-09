@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <table_supported>
+        <name>transaction_details</name>
+        <key>ID</key>
+        <key1>ITEM_ID</key1>
+        <key2>TRANSACTION_NO</key2>
+        <refintegkey></refintegkey>
+        <srefintegkey></srefintegkey>
+    </table_supported>
+    
+    <form_element>
+        <name>id</name>
+        <table>transaction_details</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemID</name>
+        <table>transaction_details</table>
+        <column>ITEM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemQuantity</name>
+        <table>transaction_details</table>
+        <column>ITEM_QUANNTITY</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transactionNO</name>
+        <table>transaction_details</table>
+        <column>TRANSACTION_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>isMost</name>
+        <table>transaction_details</table>
+        <column>IS_MUST</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>userID</name>
+        <table>transaction_details</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>transaction_details</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemForm</name>
+        <table>transaction_details</table>
+        <column>ITEM_FORM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>branch</name>
+        <table>transaction_details</table>
+        <column>BRANCH</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>store</name>
+        <table>transaction_details</table>
+        <column>STORE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>cost_center_id</name>
+        <table>transaction_details</table>
+        <column>COST_CENTER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>
+

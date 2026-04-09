@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>issue_equipment</name>
+        <key>id</key>
+        <key1>USER_ID</key1>
+        <key2>ASSIGNED_TO_ID</key2>
+        <key3>UNIT_SCHEDULE_ID</key3>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>issue_equipment</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueTitle</name>
+        <table>issue_equipment</table>
+        <column>ISSUE_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>projectName</name>
+        <table>issue_equipment</table>
+        <column>PROJECT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>faId</name>
+        <table>issue_equipment</table>
+        <column>FA_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueType</name>
+        <table>issue_equipment</table>
+        <column>ISSUE_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>userId</name>
+        <table>issue_equipment</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>urgencyId</name>
+        <table>issue_equipment</table>
+        <column>URGENCY_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueDesc</name>
+        <table>issue_equipment</table>
+        <column>ISSUE_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>issue_equipment</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>currentStatus</name>
+        <table>issue_equipment</table>
+        <column>CURRENT_STATUS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>currentStatusSince</name>
+        <table>issue_equipment</table>
+        <column>CURRENT_STATUS_SINCE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>assignedById</name>
+        <table>issue_equipment</table>
+        <column>ASSIGNED_BY_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>assignedByName</name>
+        <table>issue_equipment</table>
+        <column>ASSIGNED_BY_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>assignedToId</name>
+        <table>issue_equipment</table>
+        <column>ASSIGNED_TO_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>assignedToName</name>
+        <table>issue_equipment</table>
+        <column>ASSIGNED_TO_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>techName</name>
+        <table>issue_equipment</table>
+        <column>TECHNICIAN_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>finishedTime</name>
+        <table>issue_equipment</table>
+        <column>FINISHED_TIME</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>expectedBeginDate</name>
+        <table>issue_equipment</table>
+        <column>EXPECTED_B_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>expectedEndDate</name>
+        <table>issue_equipment</table>
+        <column>EXPECTED_E_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    <form_element>
+        <name>actualFinishTime</name>
+        <table>issue_equipment</table>
+        <column>ACTUAL_FINISH_TIME</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>totalCost</name>
+        <table>issue_equipment</table>
+        <column>TOTAL_COST</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>endDeviation</name>
+        <table>issue_equipment</table>
+        <column>END_DEVIATION</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>beginDeviation</name>
+        <table>issue_equipment</table>
+        <column>BEGIN_DEVIATION</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>estimatedDeviation</name>
+        <table>issue_equipment</table>
+        <column>ESTIMATED_DEVIATION</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>unitScheduleID</name>
+        <table>issue_equipment</table>
+        <column>UNIT_SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>receivedby</name>
+        <table>issue_equipment</table>
+        <column>RECEIVED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>workTrade</name>
+        <table>issue_equipment</table>
+        <column>WORK_ORDER_TRADE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>estimatedduration</name>
+        <table>issue_equipment</table>
+        <column>ESTIMATED_DURATION</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>failureCode</name>
+        <table>issue_equipment</table>
+        <column>FAILURE_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>unitId</name>
+        <table>issue_equipment</table>
+        <column>UNIT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>businessID</name>
+        <table>issue</table>
+        <column>BUSINESS_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>scheduleType</name>
+        <table>issue</table>
+        <column>SCHEDULE_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>repairtype</name>
+        <table>issue</table>
+        <column>REPAIR_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>actualBeginDate</name>
+        <table>issue</table>
+        <column>ACTUAL_BEGIN_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>equipmentId</name>
+        <table>issue</table>
+        <column>EQP_ID</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

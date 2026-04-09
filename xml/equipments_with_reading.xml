@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>equipments_with_reading</name>
+        <key>unit_id</key>
+        <key1>site</key1>
+    </table_supported>  
+    
+    <form_element>
+        <name>unitId</name>
+        <table>equipments_with_reading</table>
+        <column>unit_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unitNo</name>
+        <table>equipments_with_reading</table>
+        <column>unit_no</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unitName</name>
+        <table>equipments_with_reading</table>
+        <column>unit_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>site</name>
+        <table>equipments_with_reading</table>
+        <column>site</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>typeOfRate</name>
+        <table>equipments_with_reading</table>
+        <column>type_of_rate</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>mainTypeId</name>
+        <table>equipments_with_reading</table>
+        <column>MAIN_TYPE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>parentId</name>
+        <table>equipments_with_reading</table>
+        <column>PARENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>lastReading</name>
+        <table>equipments_with_reading</table>
+        <column>last_reading</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>previousReading</name>
+        <table>equipments_with_reading</table>
+        <column>previous_reading</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>entryTime</name>
+        <table>equipments_with_reading</table>
+        <column>entry_time</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>isMaintainable</name>
+        <table>equipments_with_reading</table>
+        <column>IS_MAINTAINABLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>isDeleted</name>
+        <table>equipments_with_reading</table>
+        <column>IS_DELETED</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

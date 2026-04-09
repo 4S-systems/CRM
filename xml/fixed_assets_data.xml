@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>fixed_assets_machine</name>
+      <key>asset_no</key>
+   </table_supported>  
+   
+   
+    <form_element>
+     <name>machineName</name>
+     <table>fixed_assets_machine</table>
+     <column>asset_desc</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>machineNo</name>
+     <table>fixed_assets_machine</table>
+     <column>asset_no</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>groupNo</name>
+     <table>fixed_assets_machine</table>
+     <column>asset_group_no</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>groupDesc</name>
+     <table>fixed_assets_machine</table>
+     <column>group_no_desc</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>subGroupNo</name>
+     <table>fixed_assets_machine</table>
+     <column>ASSET_SUB_GROUP</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>subGroupDesc</name>
+     <table>fixed_assets_machine</table>
+     <column>ASSET_SUB_GROUP_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+    <form_element>
+     <name>groupNo</name>
+     <table>fixed_assets_machine</table>
+     <column>ASSET_GROUP_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>groupDesc</name>
+     <table>fixed_assets_machine</table>
+     <column>ASSET_GROUP_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>locationName</name>
+     <table>fixed_assets_machine</table>
+     <column>ASSET_LOCATION_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>empCode</name>
+     <table>fixed_assets_machine</table>
+     <column>EMPCODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>costName</name>
+     <table>fixed_assets_machine</table>
+     <column>COSTNAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>locationId</name>
+     <table>fixed_assets_machine</table>
+     <column>ASSET_LOCATION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+ 
+   <form_element>
+     <name>costCode</name>
+     <table>fixed_assets_machine</table>
+     <column>COSTCODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+
+</form>

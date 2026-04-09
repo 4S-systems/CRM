@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>equip_mntnce_type</name>
+        <key>ID</key>
+        <key1>EQUIP_CATEGORY_ID</key1>
+        <refintegkey></refintegkey>
+    </table_supported>  
+    
+    
+    <form_element>
+        <name>id</name>
+        <table>equip_mntnce_type</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>typeName</name>
+        <table>equip_mntnce_type</table>
+        <column>TYPE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>equipCategoryId</name>
+        <table>equip_mntnce_type</table>
+        <column>EQUIP_CATEGORY_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>CREATION_TIME</name>
+        <table>equip_mntnce_type</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>equip_mntnce_type</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+   
+</form>

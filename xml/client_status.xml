@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>client_status</name>
+      <key>STATUS_ID</key>
+       <key1>STATUS_NAME</key1>
+      <key2>CLIENT_ID</key2>
+      <refintegkey>CLIENT_ID</refintegkey>
+      <srefintegkey></srefintegkey>
+   </table_supported>  
+   
+   <form_element>
+     <name>statusId</name>
+     <table>client_status</table>
+     <column>STATUS_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>statusName</name>
+     <table>client_status</table>
+     <column>STATUS_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>clientId</name>
+     <table>client_status</table>
+     <column>CLIENT_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>statusNote</name>
+     <table>client_status</table>
+     <column>STATUS_NOTE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>beginDate</name>
+     <table>client_status</table>
+     <column>BEGIN_DATE</column>
+     <class>com.silkworm.persistence.relational.TimestampValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>endDate</name>
+     <table>client_status</table>
+     <column>END_DATE</column>
+     <class>com.silkworm.persistence.relational.TimestampValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>      
+   
+</form>

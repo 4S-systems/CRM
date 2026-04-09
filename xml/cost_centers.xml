@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>COST_CENTERS</name>
+        <key>COSTCODE</key>
+        <key1>COSTNAME</key1>
+        <key2>LATIN_NAME</key2>
+
+    </table_supported>
+
+    <form_element>
+        <name>COSTCODE</name>
+        <table>COST</table>
+        <column>costCode</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>COSTNAME</name>
+        <table>COST</table>
+        <column>costName</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>LATIN_NAME</name>
+        <table>COST</table>
+        <column>latin_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

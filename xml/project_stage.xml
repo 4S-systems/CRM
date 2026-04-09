@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>PROJECT_STAGE</name>
+        <key>ID</key>
+        <refintegkey></refintegkey>
+    </table_supported>  
+
+    <form_element>
+        <name>id</name>
+        <table>PROJECT_STAGE</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>estimatedFinishDate</name>
+        <table>PROJECT_STAGE</table>
+        <column>ESTIMATED_FINISH_DATE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>estimatedCost</name>
+        <table>PROJECT_STAGE</table>
+        <column>ESTIMATED_COST</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option1</name>
+        <table>PROJECT_STAGE</table>
+        <column>OPTION1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option2</name>
+        <table>PROJECT_STAGE</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option3</name>
+        <table>PROJECT_STAGE</table>
+        <column>OPTION3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option4</name>
+        <table>PROJECT_STAGE</table>
+        <column>OPTION4</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option5</name>
+        <table>PROJECT_STAGE</table>
+        <column>OPTION5</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option6</name>
+        <table>PROJECT_STAGE</table>
+        <column>OPTION6</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

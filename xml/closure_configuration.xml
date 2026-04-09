@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<closure-configuration>
+    <department>
+        <id>7</id>
+        <department-id>1363767702341</department-id>
+        <title>إلي الماليات - م.مالية</title>
+        <comment>مطالبة مالية</comment>
+    </department>
+    <department>
+        <id>10</id>
+        <department-id>1363767764429</department-id>
+        <title>إلي الجودة - ت. جودة</title>
+        <comment>تسليم جودة</comment>
+    </department>
+    <department>
+        <id>13</id>
+        <department-id>1403765222538</department-id>
+        <title>إلي خدمة العملاء - وحدة جاهزة</title>
+        <comment>وحدة جاهزة</comment>
+    </department>
+    <department>
+        <id>14</id>
+        <department-id>1363767764429</department-id>
+        <title>إلي الجودة - مراجعة وحدة</title>
+        <comment>مراجعة وحدة</comment>
+    </department>
+</closure-configuration>

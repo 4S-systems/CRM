@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>external_job_report</name>
+        <key1>UNIT_ID</key1>
+        <key2>SUPPLIER_ID</key2>
+        <key3>SITE_ID</key3>
+        <key4>CURRENT_STATUS</key4>
+        <key5>CONVERSION_DATE</key5>
+    </table_supported>
+
+    <form_element>
+        <name>supplier_id</name>
+        <table>external_job_report</table>
+        <column>SUPPLIER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>issue_id</name>
+        <table>external_job_report</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>conversion_date</name>
+        <table>external_job_report</table>
+        <column>CONVERSION_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+        <form_element>
+        <name>labor_cost</name>
+        <table>external_job_report</table>
+        <column>LABOR_COST</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>maint_statment</name>
+        <table>external_job_report</table>
+        <column>MAINT_STATMENT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>external_type</name>
+        <table>external_job_report</table>
+        <column>EXTERNAL_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>site_id</name>
+        <table>external_job_report</table>
+        <column>SITE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>current_status</name>
+        <table>external_job_report</table>
+        <column>CURRENT_STATUS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>current_status_since</name>
+        <table>external_job_report</table>
+        <column>CURRENT_STATUS_SINCE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unit_schedule_id</name>
+        <table>external_job_report</table>
+        <column>UNIT_SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>jo_actual_e_date</name>
+        <table>external_job_report</table>
+        <column>JO_ACTUAL_E_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>jo_actual_b_date</name>
+        <table>external_job_report</table>
+        <column>JO_ACTUAL_B_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>jo_code</name>
+        <table>external_job_report</table>
+        <column>JO_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>jo_code_by_date</name>
+        <table>external_job_report</table>
+        <column>JO_CODE_BY_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unit_id</name>
+        <table>external_job_report</table>
+        <column>UNIT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>jo_expected_e_date</name>
+        <table>external_job_report</table>
+        <column>JO_EXPECTED_E_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>jo_expected_b_date</name>
+        <table>external_job_report</table>
+        <column>JO_EXPECTED_B_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>work_order_trade</name>
+        <table>external_job_report</table>
+        <column>WORK_ORDER_TRADE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>supplier_name</name>
+        <table>external_job_report</table>
+        <column>SUPPLIER_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>trade_name</name>
+        <table>external_job_report</table>
+        <column>TRADE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unit_name</name>
+        <table>external_job_report</table>
+        <column>UNIT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>parentId</name>
+        <table>external_job_report</table>
+        <column>PARENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>warranty_ar_name</name>
+        <table>external_job_report</table>
+        <column>WARRANTY_AR_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>warranty_en_name</name>
+        <table>external_job_report</table>
+        <column>WARRANTY_EN_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

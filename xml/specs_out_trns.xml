@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    
+   <table_supported>
+      <name>specs_out_trns</name>
+      <key>ID</key>
+      <key1>REQUEST_TYPE</key1>
+   </table_supported>
+
+   <form_element>
+     <name>id</name>
+     <table>specs_out_trns</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>transType</name>
+     <table>specs_out_trns</table>
+     <column>TRANS_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>fromSide</name>
+     <table>specs_out_trns</table>
+     <column>FROM_SIDE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>toSide</name>
+     <table>specs_out_trns</table>
+     <column>TO_SIDE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>requestType</name>
+     <table>specs_out_trns</table>
+     <column>REQUEST_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

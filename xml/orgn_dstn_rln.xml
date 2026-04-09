@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : orgn_dstn_rln.xml
+    Created on : February 8, 2012, 2:55 PM
+    Author     : khaled abdo
+    Description:
+        Purpose of the document follows.
+-->
+
+<form>
+    <table_supported>
+        <name>ORGN_DSTN_RLN</name>
+        <key>ID</key>
+        <key1>PROJ_ONE</key1>
+        <key1>PROJ_TWO</key1>
+    </table_supported>
+
+
+    <form_element>
+        <name>id</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>projOne</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>PROJ_ONE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>projTwo</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>PROJ_TWO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>distCost</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>DIST_COST</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>accessible</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>ACCESSIBLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>distance</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>DISTANCE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>createdBy</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>creationTime</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>validFrom</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>VALID_FROM</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>validTo</name>
+        <table>ORGN_DSTN_RLN</table>
+        <column>VALID_TO</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

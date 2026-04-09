@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>GENERIC_APPROVAL_STATUS</name>
+      <key>ID</key>
+      <key1>BUSSINESS_ID</key1>
+   </table_supported>  
+   
+    <form_element>
+     <name>id</name>
+     <table>GENERIC_APPROVAL_STATUS</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>bussiness_name</name>
+     <table>GENERIC_APPROVAL_STATUS</table>
+     <column>BUSSINESS_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>bussiness_id</name>
+     <table>GENERIC_APPROVAL_STATUS</table>
+     <column>BUSSINESS_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>status</name>
+     <table>GENERIC_APPROVAL_STATUS</table>
+     <column>STATUS</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>comments</name>
+     <table>GENERIC_APPROVAL_STATUS</table>
+     <column>COMMENTS</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

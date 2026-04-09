@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>EMPLOYEES_LOADS_GROUP_SUMMARY</name>
+        <key1>USER_ID</key1>
+        <key2>GROUP_ID</key2>
+    </table_supported>  
+   
+    <form_element>
+        <name>userId</name>
+        <table>EMPLOYEES_LOADS_GROUP_SUMMARY</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>userName</name>
+        <table>EMPLOYEES_LOADS_GROUP_SUMMARY</table>
+        <column>USER_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>fullName</name>
+        <table>client_complaints</table>
+        <column>FULL_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>groupId</name>
+        <table>EMPLOYEES_LOADS_GROUP_SUMMARY</table>
+        <column>GROUP_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>groupName</name>
+        <table>client_complaints</table>
+        <column>GROUP_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>isDefault</name>
+        <table>EMPLOYEES_LOADS_GROUP_SUMMARY</table>
+        <column>IS_DEFAULT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

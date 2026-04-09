@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+      <table_supported>
+        <name>FINANCE_TRANSACTION</name>
+        <key>FTID</key>
+        <key1>DESTINATION_ID</key1>
+        <key2>DOCUMENT_DATE</key2>
+        <key3>SOURCE_ID</key3>
+    </table_supported>  
+   
+    <form_element>
+        <name>id</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>FTID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>documentNo</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>DOCUMENT_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>documentCode</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>DOCUMENT_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>documentDate</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>DOCUMENT_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transactionCode</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>TRANSACTION_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transactionType</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>TRANSACTION_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>purpose</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>PURPOSE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transValue</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>TRANSACTION_VALUE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+    
+    <form_element>
+        <name>transNetValue</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>TRANSACTION_NET_VALUE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>   
+   
+    <form_element>
+        <name>sourceType</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>SOURCE_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>sourceID</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>SOURCE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>destinationType</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>DESTINATION_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>destinationID</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>DESTINATION_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>note</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>NOTE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option1</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>OPTION1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option2</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option3</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>OPTION3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>currencyType</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>CURRENCY_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>currencyPrice</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>CURRENCY_PRICE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>total</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>TOTAL</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>totalLE</name>
+        <table>FINANCE_TRANSACTION</table>
+        <column>TOTAL_L_E</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

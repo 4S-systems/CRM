@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>season_type</name>
+        <key>ID</key>
+        <key1>S_TYPECODE</key1>
+        <key2>DISPLAY</key2>
+        <key3>englishName</key3>
+        <key4>arabicName</key4>
+    </table_supported>  
+    
+    
+    <form_element>
+        <name>id</name>
+        <table>season_type</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>type_code</name>
+        <table>season_type</table>
+        <column>S_TYPECODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>englishName</name>
+        <table>season_type</table>
+        <column>ENGLISHNAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+     
+    <form_element>
+        <name>arabicName</name>
+        <table>season_type</table>
+        <column>ARABICNAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>imageName</name>
+        <table>season_type</table>
+        <column>IMAGE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>display</name>
+        <table>season_type</table>
+        <column>DISPLAY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>preparation_shoulder</name>
+        <table>season_type</table>
+        <column>PREP_SHLDER</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>closur_shoulder</name>
+        <table>season_type</table>
+        <column>CL_SHLDER</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+   
+    <form_element>
+        <name>entrytime</name>
+        <table>season_type</table>
+        <column>ENTRY_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationBy</name>
+        <table>season_type</table>
+        <column>CREATION_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

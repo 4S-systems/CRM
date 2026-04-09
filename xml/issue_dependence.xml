@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <table_supported>
+        <name>ISSUE_DEPENDENCE</name>
+        <key>ID</key>
+        <key2>ISSUE_ID</key2>
+        <key3>DEPEND_ON_ID</key3>
+        <key4>CREATED_BY</key4>
+        <key5>OPTION1</key5>
+        <key6>OPTION2</key6>
+        <key7>OPTION3</key7>
+        <key8>OPTION4</key8>
+        <key9>OPTION5</key9>
+        <key10>OPTION6</key10>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueID</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>dependOnID</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>DEPEND_ON_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option1</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>OPTION1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option2</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option3</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>OPTION3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option4</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>OPTION4</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option5</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>OPTION5</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option6</name>
+        <table>ISSUE_DEPENDENCE</table>
+        <column>OPTION6</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

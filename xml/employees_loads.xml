@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>EMPLOYEES_LOADS</name>
+        <key1>CURRENT_OWNER_ID</key1>
+        <key2>DEPARTMENT_ID</key2>
+        <key3>STATUS_CODE</key3>
+    </table_supported>  
+   
+    <form_element>
+        <name>currentOwner</name>
+        <table>EMPLOYEES_LOADS</table>
+        <column>CURRENT_OWNER</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>currentOwnerId</name>
+        <table>EMPLOYEES_LOADS</table>
+        <column>CURRENT_OWNER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>currentOwnerFullName</name>
+        <table>EMPLOYEES_LOADS</table>
+        <column>CURRENT_OWNER_FULL_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>statusCode</name>
+        <table>client_complaints</table>
+        <column>STATUS_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>statusName</name>
+        <table>client_complaints</table>
+        <column>STATUS_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>departmentId</name>
+        <table>EMPLOYEES_LOADS</table>
+        <column>DEPARTMENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>departmentName</name>
+        <table>EMPLOYEES_LOADS</table>
+        <column>DEPARTMENT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>departmentCode</name>
+        <table>EMPLOYEES_LOADS</table>
+        <column>DEPARTMENT_CODE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>noTicket</name>
+        <table>EMPLOYEES_LOADS</table>
+        <column>NO_TICKET</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+</form>

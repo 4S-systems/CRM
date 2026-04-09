@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>LOCAL_STORE_HISTORY</name>
+        <key>ID</key>
+        <key1>ITEM_ID</key1>
+       
+        <refintegkey></refintegkey>
+        <keyname></keyname>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemId</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>ITEM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+   
+    
+    <form_element>
+        <name>itemQuantity</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>QUANTITY</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemPrice</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>PRICE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>purchasedFrom</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>PURCHASED_FROM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>notes</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>NOTES</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>purchasedDate</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>PURCHASE_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>LOCAL_STORE_HISTORY</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    
+    
+</form>

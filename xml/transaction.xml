@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <table_supported>
+        <name>transaction</name>
+        <key>ID</key>
+        <key1>CODE</key1>
+        <key2>JOB_ORDER_ID</key2>
+        <refintegkey></refintegkey>
+        <srefintegkey></srefintegkey>
+    </table_supported>
+    
+    <form_element>
+        <name>id</name>
+        <table>transaction</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>code</name>
+        <table>transaction</table>
+        <column>CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemQuantity</name>
+        <table>transaction</table>
+        <column>ITEM_QUANNTITY</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transactionNO</name>
+        <table>transaction</table>
+        <column>TRANSACTION_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>jobOrderNO</name>
+        <table>transaction</table>
+        <column>JOB_ORDER_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transDate</name>
+        <table>transaction</table>
+        <column>TRANS_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>requesterID</name>
+        <table>transaction</table>
+        <column>REQUESTER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>requestingDepartment</name>
+        <table>transaction</table>
+        <column>REQUESTING_DEPARTMENT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>jobOrderID</name>
+        <table>transaction</table>
+        <column>JOB_ORDER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>currentStatus</name>
+        <table>transaction</table>
+        <column>CURRENT_STATUS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>currentStatusSince</name>
+        <table>transaction</table>
+        <column>CURRENT_STATUS_SINCE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>userID</name>
+        <table>transaction</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>transaction</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>item_doc</name>
+        <key>DOC_ID</key>
+        <key2>DOC_TITLE</key2>
+        <refintegkey>DOC_ID</refintegkey>
+    </table_supported>  
+    
+    <form_element>
+        <name>docID</name>
+        <table>item_doc</table>
+        <column>DOC_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>docTitle</name>
+        <table>item_doc</table>
+        <column>DOC_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemID</name>
+        <table>item_doc</table>
+        <column>ITEM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>description</name>
+        <table>item_doc</table>
+        <column>DESCRIPTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>docDate</name>
+        <table>item_doc</table>
+        <column>DOC_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>item_doc</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdByName</name>
+        <table>item_doc</table>
+        <column>CREATED_BY_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>docMetaType</name>
+        <table>item_doc</table>
+        <column>DOC_META_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>docType</name>
+        <table>item_doc</table>
+        <column>DOC_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>configItemType</name>
+        <table>item_doc</table>
+        <column>CONFIG_ITEM_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>item_doc</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

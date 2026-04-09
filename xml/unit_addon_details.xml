@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>UNIT_ADDON_DETAILS</name>
+        <key>ID</key>
+        <key2>UNIT_ID</key2>
+        <key3>TYPE</key3>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>unitID</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>UNIT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>type</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>area</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>AREA</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>price</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>PRICE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>meterPrice</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>METER_PRICE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionOne</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>OPTION_ONE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionTwo</name>
+        <table>UNIT_ADDON_DETAILS</table>
+        <column>OPTION_TWO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

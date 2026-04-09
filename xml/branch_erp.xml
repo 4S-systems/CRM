@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>branch_erp</name>
+        <key>CODE</key>         
+    </table_supported>
+    
+    <form_element>
+        <name>code</name>
+        <table>branch_erp</table>
+        <column>CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>Description</name>
+        <table>branch_erp</table>
+        <column>DESCR</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

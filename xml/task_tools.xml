@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>TASK_TOOLS</name>
+        <key>ID</key>
+        <key1>TASK_ID</key1>
+        <key2>TOOL_ID</key2>
+        <key3>TOOL_TYPE</key3>
+        
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>TASK_TOOLS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>taskId</name>
+        <table>TASK_TOOLS</table>
+        <column>TASK_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>toolId</name>
+        <table>TASK_TOOLS</table>
+        <column>TOOL_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationDate</name>
+        <table>TASK_TOOLS</table>
+        <column>CREATION_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>createdBy</name>
+        <table>TASK_TOOLS</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>notes</name>
+        <table>TASK_TOOLS</table>
+        <column>NOTEs</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>toolType</name>
+        <table>TASK_TOOLS</table>
+        <column>TOOL_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

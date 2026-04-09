@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8b5cbcb4-8f7b-41e8-821e-bfed25d4a7e9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="DEPARTMENT_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="MAIN_PROJ_ID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="logo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select t.CLIENT_NO,
+       t.NAME, 
+       t.MOBILE,
+       t.ADDRESS,
+       u.PROJECT_NAME
+from PROJECT u left join CLIENT_PROJECTS cp on  u.PROJECT_ID=cp.PROJECT_ID and cp.product_id = 'main owner' 
+               left join USERS on u.CREATED_BY = USERS.USER_ID 
+               left join (SELECT CLIENT.CLIENT_NO, CLIENT.NAME, Client.MOBILE, Client.ADDRESS,CLIENT_PROJECTS.PROJECT_ID, CLIENT.AGE_GROUP, CLIENT.SYS_ID 
+                          FROM CLIENT_PROJECTS INNER JOIN CLIENT ON CLIENT.SYS_ID = CLIENT_PROJECTS.CLIENT_ID) t on u.PROJECT_ID = t.PROJECT_ID 
+                                               left join PROJECT p on u.MAIN_PROJ_ID = p.PROJECT_ID 
+                                               left join issue_status i on u.PROJECT_ID = i.BUSINESS_OBJ_ID and i.END_DATE is null 
+                                               LEFT JOIN PROJECT M ON U.EQ_NO = M.PROJECT_ID LEFT JOIN UNIT_PRICE UP ON U.PROJECT_ID = UP.UNIT_ID 
+                                               LEFT JOIN ARCH_DETAILS AD ON M.PROJECT_ID = AD.UNIT_ID 
+                          where u.LOCATION_TYPE != 'ENG-UNIT'  AND u.PROJECTFLAG = '0' and STATUS_NAME in (select APARTMENT_STATUS from APARTMENT_RULE where DEPARTMENT_ID = $P{DEPARTMENT_ID}) AND STATUS_NAME != '28'  and((u.MAIN_PROJ_ID = $P{MAIN_PROJ_ID}))
+order by t.CLIENT_NO]]>
+	</queryString>
+	<field name="CLIENT_NO" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="MOBILE" class="java.lang.String"/>
+	<field name="ADDRESS" class="java.lang.String"/>
+	<field name="PROJECT_NAME" class="java.lang.String"/>
+	<group name="Client" keepTogether="true">
+		<groupExpression><![CDATA[$F{CLIENT_NO}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField>
+					<reportElement mode="Opaque" x="454" y="0" width="101" height="30" backcolor="#FFFFCC" uuid="9ef96cb4-bcf0-454e-b218-be09325bcbc1"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true"/>
+						<paragraph lineSpacing="1_1_2"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{CLIENT_NO}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="220" y="0" width="121" height="30" backcolor="#FFFFCC" uuid="edf2ccf2-5a02-48ee-9d4d-ee7d5ffa5871"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MOBILE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="0" width="220" height="30" backcolor="#FFFFCC" uuid="6ee4fb51-efce-43a4-9876-1f979f7e4065"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ADDRESS}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="341" y="0" width="113" height="30" backcolor="#FFFFCC" uuid="9e9a9230-7402-4536-be00-56a8330c78fa"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{NAME}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="454" y="1" width="101" height="29" backcolor="#CCCCFF" uuid="032c541a-ed35-481e-a369-0a0279c5ab53"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رقم العميل]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="341" y="1" width="113" height="29" backcolor="#CCCCFF" uuid="352abbcb-b8e5-4070-a4b5-1c69f5fe22f8"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الاسم]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="1" width="121" height="29" backcolor="#CCCCFF" uuid="0d2b051a-5ecf-4163-89e6-7b7768d3b0de"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رقم الموبايل]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="1" width="109" height="29" backcolor="#CCCCFF" uuid="8bf3a509-98c8-470c-bbf2-b49733a7dcae"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[العنوان]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="111" height="29" backcolor="#CCCCFF" uuid="8fefd8bf-db1e-4daf-80d4-7c2783d873c9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المشروع]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="30" backcolor="#F0F0F0" uuid="e638f5ee-133c-4f66-972b-d434904b54e9"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PROJECT_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

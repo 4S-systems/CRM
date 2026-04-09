@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<form>
+    
+   <table_supported>
+      <name>dist_names</name>
+   </table_supported>
+
+   <form_element>
+     <name>name</name>
+     <table>dist_names</table>
+     <column>name</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>type</name>
+     <table>dist_names</table>
+     <column>type</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>typeCode</name>
+     <table>dist_names</table>
+     <column>type_code</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+</form>

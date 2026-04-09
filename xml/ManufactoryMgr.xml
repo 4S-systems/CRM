@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ManufactoryMgr.xml
+    Created on : October 29, 2011, 1:00 PM
+    Author     : Administrator
+    Description:
+        Purpose of the document follows.
+-->
+
+<form>
+    <table_supported>
+        <name>MANUFACTORY</name>
+        <key>ID</key>         
+    </table_supported>
+    
+    <form_element>
+        <name>id</name>
+        <table>MANUFACTORY</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>ar_name</name>
+        <table>MANUFACTORY</table>
+        <column>AR_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>en_name</name>
+        <table>MANUFACTORY</table>
+        <column>EN_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>country</name>
+        <table>MANUFACTORY</table>
+        <column>COUNTRY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>abbreviatation_name</name>
+        <table>MANUFACTORY</table>
+        <column>ABBREVIATION_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>remarks</name>
+        <table>MANUFACTORY</table>
+        <column>REMARKS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

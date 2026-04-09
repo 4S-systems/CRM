@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>ISSUE_COMPLAINT_TASKS</name>
+        <key>ISSUE_ID</key>
+    </table_supported>  
+    
+    <form_element>
+        <name>issueId</name>
+        <table>ISSUE_COMPLAINT_TASKS</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>taskId</name>
+        <table>ISSUE_COMPLAINT_TASKS</table>
+        <column>TASK_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>complaintId</name>
+        <table>ISSUE_COMPLAINT_TASKS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>complaint</name>
+        <table>ISSUE_COMPLAINT_TASKS</table>
+        <column>REASON</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>laborName</name>
+        <table>ISSUE_COMPLAINT_TASKS</table>
+        <column>LABOR_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+     <name>creationTime</name>
+     <table>ISSUE_COMPLAINT_TASKS</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+        <name>recomend</name>
+        <table>ISSUE_COMPLAINT_TASKS</table>
+        <column>EXCTION_INSTRCT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

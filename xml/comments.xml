@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>COMMENTS</name>
+        <key>ID</key>
+        <key1>BUSNIESS_OBJECT_ID</key1>
+        <key2>OBJECT_TYPE</key2>
+        <key3>CREATED_BY</key3>
+        <key4>CREATION_TIME</key4>
+    </table_supported>  
+   
+    <form_element>
+        <name>id</name>
+        <table>COMMENTS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>clientId</name>
+        <table>COMMENTS</table>
+        <column>BUSNIESS_OBJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>createdBy</name>
+        <table>COMMENTS</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>type</name>
+        <table>client_complaints</table>
+        <column>TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>status</name>
+        <table>client_complaints</table>
+        <column>STATUS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.sql.TimeStamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>comment</name>
+        <table>COMMENTS</table>
+        <column>COMMENT_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>creationTime</name>
+        <table>COMMENTS</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>option1</name>
+        <table>COMMENTS</table>
+        <column>OPTION1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+   
+    <form_element>
+        <name>option2</name>
+        <table>client_complaints</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>objectType</name>
+        <table>client_complaints</table>
+        <column>OBJECT_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    
+</form>

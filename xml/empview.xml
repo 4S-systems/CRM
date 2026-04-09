@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>empview</name>
+      <key>EMPCODE</key>   
+   </table_supported>  
+   
+   <form_element>
+     <name>empId</name>
+     <table>empview</table>
+     <column>EMPCODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>empName</name>
+     <table>empview</table>
+     <column>EMPNAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>costHour</name>
+     <table>empview</table>
+     <column>COST_HOUR</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>address</name>
+     <table>empview</table>
+     <column>F_ADDRESS</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>homePhone</name>
+     <table>empview</table>
+     <column>PHONE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>workPhone</name>
+     <table>empview</table>
+     <column>MERG_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>mobile</name>
+     <table>empview</table>
+     <column>MOBILE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>email</name>
+     <table>empview</table>
+     <column>EMAIL</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>nameAr</name>
+     <table>empview</table>
+     <column>EM_NAME_AR</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>nameEn</name>
+     <table>empview</table>
+     <column>EM_NAME_EN</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

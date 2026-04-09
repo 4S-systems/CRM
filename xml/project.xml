@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>project</name>
+        <key>PROJECT_ID</key>
+        <key1>PROJECT_NAME</key1>
+        <key2>MAIN_PROJ_ID</key2>
+        <key3>EQ_NO</key3>
+        <key4>LOCATION_TYPE</key4>
+        <key5>OPTION_ONE</key5>
+        <key6>location_type</key6>
+        <key7>OPTION_THREE</key7>
+        <key8>PROJECTFLAG</key8>
+        <key9>INTEGRATED_ID</key9>
+        <key10>NEW_CODE</key10>
+       
+        <keyname>PROJECT_NAME</keyname>
+        
+    </table_supported>  
+   
+    <form_element>
+        <name>projectID</name>
+        <table>project</table>
+        <column>PROJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>projectName</name>
+        <table>project</table>
+        <column>PROJECT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>mainProjId</name>
+        <table>project</table>
+        <column>MAIN_PROJ_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+   
+    <form_element>
+        <name>eqNO</name>
+        <table>project</table>
+        <column>EQ_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>creationTime</name>
+        <table>project</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>createdBy</name>
+        <table>project</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>projectDesc</name>
+        <table>project</table>
+        <column>PROJECT_DESCRIPTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>coordinate</name>
+        <table>project</table>
+        <column>COORDINATE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>   
+   
+    <form_element>
+        <name>location_type</name>
+        <table>project</table>
+        <column>location_type</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+   
+    <form_element>
+        <name>futile</name>
+        <table>project</table>
+        <column>futile</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>     
+   
+    <form_element>
+        <name>isMngmntStn</name>
+        <table>project</table>
+        <column>IS_MNGMNT_STN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+   
+    <form_element>
+        <name>isTrnsprtStn</name>
+        <table>project</table>
+        <column>IS_TRNSPRT_STN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+
+    <form_element>
+        <name>optionOne</name>
+        <table>project</table>
+        <column>OPTION_ONE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionTwo</name>
+        <table>project</table>
+        <column>OPTION_TWO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionThree</name>
+        <table>project</table>
+        <column>OPTION_THREE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>integratedId</name>
+        <table>project</table>
+        <column>INTEGRATED_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>newCode</name>
+        <table>project</table>
+        <column>NEW_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>projectFlag</name>
+        <table>project</table>
+        <column>PROJECTFLAG</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>projectCategory</name>
+        <table>project</table>
+        <column>CATNAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

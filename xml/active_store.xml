@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>active_store</name>
+        <key>BRANCH_CODE</key>
+        <key1>STORE_CODE</key1>
+        <key2>USER_ID</key2>
+    </table_supported> 
+    
+    <form_element>
+        <name>branchCode</name>
+        <table>active_store</table>
+        <column>BRANCH_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>storeCode</name>
+        <table>active_store</table>
+        <column>STORE_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>userId</name>
+        <table>active_store</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>creationTime</name>
+        <table>active_store</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

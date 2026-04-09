@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="900" pageHeight="600" orientation="Landscape" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a7e9c8e0-0ce4-44e8-9c00-61df959f51d6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/home/yasmin/projects/src/crm/reports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="logo" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[select  project.PROJECT_NAME , rating.FULL_NAME , rating.CLIENT_ID
+from project full join (select users.FULL_NAME, Client_rating.CLIENT_ID, Client_rating.RATE_ID
+                        from users inner join user_group on users.USER_ID = user_group.USER_ID 
+                        left join Client_rating on users.USER_ID = Client_rating.CREATED_BY
+                        where user_group.GROUP_ID = '1408016478381') rating on project.PROJECT_ID = rating.RATE_ID
+where project.MAIN_PROJ_ID = '1484491028701' or project.PROJECT_ID is null]]>
+	</queryString>
+	<field name="PROJECT_NAME" class="java.lang.String"/>
+	<field name="FULL_NAME" class="java.lang.String"/>
+	<field name="CLIENT_ID" class="java.lang.String"/>
+	<title>
+		<band height="71">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="66" y="51" width="100" height="20" uuid="79971456-1d63-4087-b54d-5d9e7ec990ed"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="51" width="62" height="20" uuid="5cb4f137-2c83-42be-9ac4-ff2d0492dd41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Date:]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement mode="Transparent" x="726" y="0" width="134" height="68" uuid="cd576d8e-1646-4b41-816d-51c684fd5913"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<summary>
+		<band height="63" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="860" height="2" uuid="1f392430-ed6e-476e-bf02-10da859c5809"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<crosstab>
+				<reportElement x="0" y="8" width="860" height="50" uuid="980d5af9-85ec-46fd-8cbd-412daacef7d7"/>
+				<rowGroup name="FULL_NAME" width="111" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{FULL_NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="111" height="25" uuid="8b2dd664-f353-4063-bbe2-4930d5a3ed82"/>
+								<textFieldExpression><![CDATA[$V{FULL_NAME}==null?"UnDefined":$V{FULL_NAME}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="111" height="25" uuid="49b87d1e-d6fd-4563-b676-429d7c3c1f34"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total Emplyees]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="PROJECT_NAME" height="30" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{PROJECT_NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="90" height="30" uuid="8ca1d51d-2a10-4c06-9d75-234f078b7021"/>
+								<textFieldExpression><![CDATA[$V{PROJECT_NAME}==null?"UnDefined":$V{PROJECT_NAME}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement x="0" y="0" width="104" height="30" uuid="c470a9c0-cb4e-404f-b749-789ca68568e0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[Total Rating]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="CLIENT_IDMeasure" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[$F{CLIENT_ID}]]></measureExpression>
+				</measure>
+				<crosstabCell width="90" height="25">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="90" height="25" uuid="4800dbdb-b35b-4f4f-90a2-be553f9fa540"/>
+							<textFieldExpression><![CDATA[$V{CLIENT_IDMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="90" height="25" rowTotalGroup="FULL_NAME">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="90" height="25" uuid="95c130b9-d4df-4375-9cb8-75f3e0915a6d"/>
+							<textFieldExpression><![CDATA[$V{CLIENT_IDMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="104" columnTotalGroup="PROJECT_NAME">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="104" height="25" uuid="72d9e3fd-a902-4ea5-b6a1-73f8a402886d"/>
+							<textFieldExpression><![CDATA[$V{CLIENT_IDMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="104" rowTotalGroup="FULL_NAME" columnTotalGroup="PROJECT_NAME">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="104" height="25" uuid="5700a21b-7e30-43ef-abab-559b6f81ea8a"/>
+							<textFieldExpression><![CDATA[$V{CLIENT_IDMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</summary>
+</jasperReport>

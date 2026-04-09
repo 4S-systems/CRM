@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>monthly_joborder</name>
+        <key>issue_id</key>
+        <key1>unit_sch_id</key1>
+        <key2>parent_id</key2>
+        <key3>unit_id</key3>
+        <key4>unit_name</key4>
+        <key5>pro_line</key5>
+        <key6>main_type</key6>
+    </table_supported>   
+    
+    <form_element>
+        <name>unitSchId</name>
+        <table>monthly_joborder</table>
+        <column>unit_sch_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>unitId</name>
+        <table>monthly_joborder</table>
+        <column>unit_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>unitName</name>
+        <table>monthly_joborder</table>
+        <column>unit_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>parentId</name>
+        <table>monthly_joborder</table>
+        <column>parent_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueId</name>
+        <table>monthly_joborder</table>
+        <column>issue_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+  
+   
+    <form_element>
+        <name>expectedBeginDate</name>
+        <table>monthly_joborder</table>
+        <column>expected_b_date</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>proLine</name>
+        <table>monthly_joborder</table>
+        <column>pro_line</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>mainType</name>
+        <table>monthly_joborder</table>
+        <column>main_type</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

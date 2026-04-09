@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Active Equipment Now </Entitle>
+        <Artitle>&#1575;&#1604;&#1605;&#1593;&#1583;&#1607; &#1575;&#1604;&#1606;&#1588;&#1591;&#1607; &#1581;&#1575;&#1604;&#1610;&#1575; </Artitle>
+        <barText>Equipment Menu</barText>
+    </menu_style>  
+    
+    <elements>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</Arname>
+            <Enname>View Equipment</Enname>
+            <link>UnitDocReaderServlet?op=ViewImages&amp;equipmentID=</link>
+        </item>
+        
+        <item>
+            <Arname>&#1578;&#1581;&#1583;&#1610;&#1579; &#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</Arname>
+            <Enname>Update Equipment Data</Enname>
+            <link>EquipmentServlet?op=GetUpdateEquipmentForm&amp;equipmentID=</link>
+        </item>
+        
+        <item>
+            <Arname>&#1578;&#1581;&#1583;&#1610;&#1579; &#1593;&#1605;&#1604; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</Arname>
+            <Enname>Update Operation</Enname>
+            <link>EquipmentServlet?op=getEqpOperationForm&amp;currentMode=Ar&amp;equipmentID=</link>
+        </item>
+        
+        <!--item>
+            <Arname>&#1578;&#1581;&#1583;&#1610;&#1579; &#1587;&#1575;&#1593;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</Arname>
+            <Enname>Update Equipment Hours</Enname>
+            <link>AverageUnitServlet?op=GetAverageUnitForm&amp;currentMode=Ar&amp;backto=viewEquipment&amp;equipmentID=</link>
+        </item-->
+        
+        <item>
+            <Arname>&#1571;&#1590;&#1575;&#1601;&#1607; &#1571;&#1605;&#1585; &#1588;&#1594;&#1604; &#1593;&#1575;&#1583;&#1609;</Arname>
+            <Enname>Add Job Order</Enname>
+            <link>ScheduleServlet?op=newJobOrder&amp;source=viewImages&amp;currentMode=Ar&amp;unitName=</link>
+        </item>
+        
+        <item>
+            <Arname>&#1585;&#1576;&#1591; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607; &#1576;&#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1607;</Arname>
+            <Enname>Assign Equipment To Maintenance Schedule</Enname>
+            <link>ScheduleServlet?op=BindSingleSchedUnit&amp;equipmentID=</link>
+        </item>
+        
+        <item>
+            <Arname>&#1573;&#1585;&#1601;&#1602; &#1605;&#1587;&#1578;&#1606;&#1583;</Arname>
+            <Enname>Attach Document</Enname>
+            <link>UnitDocWriterServlet?op=SelectFile&amp;equipmentID=</link>
+        </item>
+        
+        <!--item>
+            <Arname>&#1593;&#1585;&#1590; &#1587;&#1575;&#1593;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</Arname>
+            <Enname>List Equipment Hours</Enname>
+            <link>AverageUnitServlet?op=ListAverageUnitForm&amp;currentMode=Ar&amp;equipmentID=</link>
+        </item-->
+        
+        <item>
+            <Arname>&#1593;&#1585;&#1590; &#1575;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604;</Arname>
+            <Enname>List Job Orders</Enname>
+            <link>ScheduleServlet?op=ListEqpSchedules&amp;source=other&amp;equipment=</link>
+        </item>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1604;&#1604;&#1591;&#1576;&#1575;&#1593;&#1607;</Arname>
+            <Enname>Print Preview</Enname>
+            <link>EquipmentServlet?op=getPrintEqpForm&amp;currentMode=Ar&amp;equipmentID=</link>
+        </item>
+        
+        <!--item>
+            <Arname>&#1581;&#1600;&#1600;&#1600;&#1584;&#1601; &#1575;&#1604;&#1600;&#1600;&#1605;&#1600;&#1600;&#1593;&#1600;&#1600;&#1583;&#1607;</Arname>
+            <Enname>Delete Equipment</Enname>
+            <link>EquipmentServlet?op=ConfirmEquipmentDelete&amp;currentMode=Ar&amp;equipmentID=</link>
+        </item-->
+        
+        <item>
+            <Arname>&#1605;&#1591;&#1575;&#1576;&#1602;&#1577; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607; </Arname>
+            <Enname>Approve Equipment</Enname>
+            <link>GenericApprovalStatusServlet?op=EquipmentAppovalForm&amp;currentMode=Ar&amp;equipmentID=</link>
+        </item>
+        
+        <item>
+            <Arname>&#1575;&#1604;&#1594;&#1575;&#1569; &#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1607; </Arname>
+            <Enname>Remove Menu</Enname>
+            <link>TaskServlet?op=removeFromSession&amp;equipmentID=</link>
+        </item>
+        
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>equipment</link>
+        </item>
+                
+    </elements>
+</menu>

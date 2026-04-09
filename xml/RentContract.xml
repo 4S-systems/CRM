@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>      
+    </table_supported>  
+   
+    <form_element>
+        <name>contractID</name>
+        <table>CONTRACT</table>
+        <column>CONTRACT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>projectID</name>
+        <table>CONTRACT</table>
+        <column>PROJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>clientID</name>
+        <table>CONTRACT</table>
+        <column>CLIENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>statusID</name>
+        <table>CONTRACT</table>
+        <column>STATUS_ID</column>
+        <class>com.silkworm.persistence.relational.</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>currentStatusSince</name>
+        <table>CONTRACT</table>
+        <column>CURRENT_STATUS_SINCE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>contractPeriod</name>
+        <table>CONTRACT</table>
+        <column>CONTRACT_PERIOD</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>startDatee</name>
+        <table>CONTRACT</table>
+        <column>START_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>endDatee</name>
+        <table>CONTRACT</table>
+        <column>END_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>monthlyRent</name>
+        <table>CONTRACT</table>
+        <column>MONTHLY_RENT</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+    
+    <form_element>
+        <name>sponcer</name>
+        <table>CONTRACT</table>
+        <column>SPONCER</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>  
+    
+    <form_element>
+        <name>option_1</name>
+        <table>CONTRACT</table>
+        <column>OPTION1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option_2</name>
+        <table>CONTRACT</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option_3</name>
+        <table>CONTRACT</table>
+        <column>OPTION3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>option_4</name>
+        <table>CONTRACT</table>
+        <column>OPTION4</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>  
+    
+    <form_element>
+        <name>option_5</name>
+        <table>CONTRACT</table>
+        <column>OPTION5</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>  
+   
+    <form_element>
+        <name>option_6</name>
+        <table>CONTRACT</table>
+        <column>OPTION6</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+   
+    <form_element>
+        <name>option_7</name>
+        <table>CONTRACT</table>
+        <column>OPTION7</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

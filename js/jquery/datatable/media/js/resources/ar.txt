@@ -1,0 +1,17 @@
+{
+	"processing": "انتظر من فضلك...",
+	"lengthMenu": "عرض _MENU_  نتائج",
+	"zeroRecords": "لا يوجد نتائج المتاحة.",
+	"info": "عرض _START_ الى _END_ من أجمالى  _TOTAL_",
+	"infoEmpty": "عرض 0 الى 0 من أجمالى  0",
+	"infoFiltered": "(تصفيتها بواسطة _MAX_  النتائج)",
+	"infoPostFix": "",
+	"search": "بحث",
+	"url": "",
+	"paginate": {
+		"first":    "الاول",
+		"previous": "السابق",
+		"next":     "التالى",
+		"last":     "الأخير"
+	}
+}

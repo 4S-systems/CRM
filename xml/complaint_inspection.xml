@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>COMPLAINT_INSPECTION</name>
+        <key>ID</key>
+        <key1>INSPECTION_ID</key1>
+        <key2>EQUIP_TYPE</key2>
+    </table_supported>  
+    
+    <form_element>
+        <name>Id</name>
+        <table>COMPLAINT_INSPECTION</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>inspectionId</name>
+        <table>COMPLAINT_INSPECTION</table>
+        <column>INSPECTION_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>complaintType</name>
+        <table>COMPLAINT_INSPECTION</table>
+        <column>COMPLAINT_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>descComplaintType</name>
+        <table>COMPLAINT_INSPECTION</table>
+        <column>DESC_COMP_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>descFLevel</name>
+        <table>COMPLAINT_INSPECTION</table>
+        <column>DESC_FLEVEL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+     <name>statusFLevel</name>
+     <table>COMPLAINT_INSPECTION</table>
+     <column>STATUS_FLEVEL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+        <name>descSLevel</name>
+        <table>COMPLAINT_INSPECTION</table>
+        <column>DESC_SLEVEL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+      <form_element>
+        <name>statusSLevel</name>
+        <table>COMPLAINT_INSPECTION</table>
+            <column>STATUS_SLEVEL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>  
+</form>

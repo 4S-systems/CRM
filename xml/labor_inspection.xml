@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>labor_inspection</name>
+      <key>ID</key>
+      <key1>INSPECTION_ID</key1>
+   </table_supported>
+
+   <form_element>
+     <name>id</name>
+     <table>labor_inspection</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>inspectionID</name>
+     <table>labor_inspection</table>
+     <column>INSPECTION_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>laborIDFirst</name>
+     <table>labor_inspection</table>
+     <column>LABOR_ID_FLEVEL</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>laborIDSecond</name>
+     <table>labor_inspection</table>
+     <column>LABOR_ID_SLEVEL</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+</form>

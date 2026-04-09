@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+     <name>emp_mgr</name>
+     <key>ID</key>
+     <key1>MGR_ID</key1>
+     <key2>EMP_ID</key2>
+   </table_supported>  
+   
+   <form_element>
+     <name>id</name>
+     <table>emp_mgr</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>mgrId</name>
+     <table>emp_mgr</table>
+     <column>MGR_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>empId</name>
+     <table>emp_mgr</table>
+     <column>EMP_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+  <form_element>
+     <name>comments</name>
+     <table>emp_mgr</table>
+     <column>COMMENTS</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

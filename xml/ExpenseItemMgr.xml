@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ManufactoryMgr.xml
+    Created on : October 29, 2011, 1:00 PM
+    Author     : Administrator
+    Description:
+        Purpose of the document follows.
+-->
+
+<form>
+    <table_supported>
+        <name>EXPENSE_ITEM</name>
+        <key>ID</key>
+        <key1>EXPENSE_ITEM_TYPE</key1>
+    </table_supported>
+    
+    <form_element>
+        <name>id</name>
+        <table>EXPENSE_ITEM</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>code</name>
+        <table>EXPENSE_ITEM</table>
+        <column>CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>arName</name>
+        <table>EXPENSE_ITEM</table>
+        <column>DESC_AR</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>enName</name>
+        <table>EXPENSE_ITEM</table>
+        <column>DESC_EN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>transType</name>
+        <table>EXPENSE_ITEM</table>
+        <column>TRANSACTION_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>indriveCalc</name>
+        <table>EXPENSE_ITEM</table>
+        <column>INDRIVE_CALC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>EXPENSE_ITEM</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>EXPENSE_ITEM</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>measureUnit</name>
+        <table>EXPENSE_ITEM</table>
+        <column>MEASURE_UNIT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>expenseItemAccountType</name>
+        <table>EXPENSE_ITEM</table>
+        <column>EXPENSE_ITEM_ACCOUNT_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>expenseItemType</name>
+        <table>EXPENSE_ITEM</table>
+        <column>EXPENSE_ITEM_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>calcType</name>
+        <table>EXPENSE_ITEM</table>
+        <column>CALC_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>calcType</name>
+        <table>EXPENSE_ITEM</table>
+        <column>CALC_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

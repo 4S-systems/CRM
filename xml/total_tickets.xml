@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>total_tickets</name>
+        <key>user_id</key>
+       
+      
+    </table_supported>  
+   
+    <form_element>
+        <name>userId</name>
+        <table>total_tickets</table>
+        <column>user_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>totalTickets</name>
+        <table>total_tickets</table>
+        <column>total_tickets</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>lastLogout</name>
+        <table>total_tickets</table>
+        <column>LAST_LOGOUT</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>lastLogin</name>
+        <table>total_tickets</table>
+        <column>LAST_LOGIN</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>option1</name>
+        <table>total_tickets</table>
+        <column>OPTION1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>option2</name>
+        <table>total_tickets</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>option3</name>
+        <table>total_tickets</table>
+        <column>OPTION3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+</form>

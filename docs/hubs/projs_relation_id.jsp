@@ -1,0 +1,1 @@
+<%String id = request.getAttribute("id").toString();%><%=id%>

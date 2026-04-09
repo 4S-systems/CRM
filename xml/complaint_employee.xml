@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>COMPLAINT_EMPLOYEE</name>
+       <key>ID</key>
+       <key1>COMPLAINT_ID</key1>
+       <key2>EMPLOYEE_ID</key2>
+       <key3>MAIL_GROUP_ID</key3>
+   </table_supported>  
+   
+    <form_element>
+     <name>id</name>
+     <table>complaint_employee</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>complaintId</name>
+     <table>complaint_employee</table>
+     <column>COMPLAINT_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>employeeId</name>
+     <table>complaint_employee</table>
+     <column>EMPLOYEE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>createdBy</name>
+     <table>complaint_employee</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>complaint_employee</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>responsiblity</name>
+     <table>complaint_employee</table>
+     <column>responsiblity</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>mailGroupId</name>
+     <table>complaint_employee</table>
+     <column>mail_group_id</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

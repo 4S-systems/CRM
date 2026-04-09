@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>item_type</name>
+      <key>ID</key>
+   </table_supported>
+
+    <form_element>
+     <name>id</name>
+     <table>item_type</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>nameAr</name>
+     <table>item_type</table>
+     <column>ar_name</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+
+     <name>nameEn</name>
+     <table>item_type</table>
+     <column>en_name</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>created_on</name>
+     <table>item_type</table>
+     <column>creation_date</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    </form>

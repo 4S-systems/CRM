@@ -1,0 +1,2 @@
+
+update issue set current_status = '41' where id in (select id from issue i right join (select count(BUSNIESS_OBJECT_ID) total_comment, BUSNIESS_OBJECT_ID from COMMENTS where BUSNIESS_OBJECT_ID in (select id from issue where issue_title = 'طلب تسليم') group by BUSNIESS_OBJECT_ID having count(BUSNIESS_OBJECT_ID) < 2) c on I.ID = C.BUSNIESS_OBJECT_ID where current_status = '34' and issue_title = 'طلب تسليم' and id in (select issue_id from client_complaints where current_status not in ('6', '7')));

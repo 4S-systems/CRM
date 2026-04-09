@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>JOB_ORDER_BY_RATE</name>
+        <key>id</key>
+        <key1>UNIT_SCHEDULE_ID</key1>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>unitSchedHistId</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>UNIT_SCHD_HIST_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>scheduleId</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>userID</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>jobOrderDate</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>JOB_ORDER_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>readingCounter</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>READING_COUNTER</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueId</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>rateNo</name>
+        <table>JOB_ORDER_BY_RATE</table>
+        <column>RATE_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

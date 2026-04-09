@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="900" pageHeight="600" orientation="Landscape" columnWidth="860" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a7e9c8e0-0ce4-44e8-9c00-61df959f51d6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="28"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["/home/yasmin/projects/src/crm/reports/"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="logo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="beginDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="endDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="oneStar" class="java.lang.String"/>
+	<parameter name="twoStars" class="java.lang.String"/>
+	<parameter name="threeStars" class="java.lang.String"/>
+	<parameter name="redCircle" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select sys_id, name, mobile, project_id, project_name, rate, case when (rate in (1,2)) then 1 when (rate = 3) then 2 Else 3 end As simple_rate 
+from client_survey inner join project on client_survey.question_id = project.project_id 
+                   inner join client on client_survey.client_id = client.sys_id 
+where TRUNC(client_survey.CREATION_TIME)between to_date($P{beginDate},'yyyy/MM/dd') and to_date($P{endDate},'yyyy/MM/dd')
+group by sys_id, name, mobile, project_id, project_name, rate
+order by sys_id, project_id]]>
+	</queryString>
+	<field name="SYS_ID" class="java.lang.String"/>
+	<field name="NAME" class="java.lang.String"/>
+	<field name="MOBILE" class="java.lang.String"/>
+	<field name="PROJECT_ID" class="java.lang.String"/>
+	<field name="PROJECT_NAME" class="java.lang.String"/>
+	<field name="RATE" class="java.math.BigDecimal"/>
+	<field name="SIMPLE_RATE" class="java.lang.String"/>
+	<title>
+		<band height="71">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="66" y="51" width="100" height="20" uuid="79971456-1d63-4087-b54d-5d9e7ec990ed"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="51" width="62" height="20" uuid="5cb4f137-2c83-42be-9ac4-ff2d0492dd41"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Date:]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement mode="Transparent" x="726" y="0" width="134" height="68" uuid="cd576d8e-1646-4b41-816d-51c684fd5913"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="482" y="17" width="190" height="27" uuid="10dcda6b-189b-431f-89ed-db871574610e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[استبيان العملاء عن الفترة من]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="371" y="17" width="110" height="27" forecolor="#FF0033" uuid="50356ce9-ed28-433e-a334-5fe2c839af6c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{beginDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="17" width="37" height="27" uuid="70376b14-ccee-469d-bde3-806ba5d49de7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الى]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="236" y="17" width="99" height="27" forecolor="#FF3333" uuid="4252622b-9b64-4c07-9092-ee39fd311a11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{endDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="166" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="860" height="2" uuid="1f392430-ed6e-476e-bf02-10da859c5809"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<crosstab>
+				<reportElement x="1" y="3" width="860" height="162" uuid="767c4830-9354-4da1-8dc2-0aa71fe03f42"/>
+				<crosstabHeaderCell>
+					<cellContents>
+						<staticText>
+							<reportElement style="Crosstab Data Text" mode="Opaque" x="0" y="0" width="145" height="30" backcolor="#99CDFF" uuid="fa96d01d-0dcb-44a7-984a-00c704257fb4"/>
+							<box>
+								<pen lineWidth="1.0"/>
+								<topPen lineWidth="1.0"/>
+								<leftPen lineWidth="1.0"/>
+								<bottomPen lineWidth="1.0"/>
+								<rightPen lineWidth="1.0"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="12" isBold="true"/>
+							</textElement>
+							<text><![CDATA[تفاصيل العميل / سؤال الاستبيان]]></text>
+						</staticText>
+					</cellContents>
+				</crosstabHeaderCell>
+				<rowGroup name="NAME" width="145" totalPosition="End">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabRowHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="0" width="145" height="12" uuid="d534d651-007d-415b-b4b6-4d9250b59e30"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{NAME}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement style="Crosstab Data Text" x="0" y="12" width="145" height="12" forecolor="#FF0066" uuid="c833b7b5-2e69-444d-b28f-be2fcf99db0b"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial" size="10"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{phoneMeasure}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabRowHeader>
+					<crosstabTotalRowHeader>
+						<cellContents backcolor="#BFE1FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="81" width="145" height="27" backcolor="#FFCCCC" uuid="566c6f47-a7d7-43df-a267-2764cc44c018"/>
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[مجموع التقييمات]]></text>
+							</staticText>
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="145" height="27" backcolor="#FFD72E" uuid="550ae388-7ba1-42ef-9448-1761c02c4486"/>
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[غير راض]]></text>
+							</staticText>
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="27" width="145" height="27" backcolor="#CCFC8A" uuid="e498f9f9-8a03-4bb6-8a62-a9f2934da5b9"/>
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[راض بعض الشيء]]></text>
+							</staticText>
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="54" width="145" height="27" backcolor="#66E133" uuid="3b465617-a88f-40d5-92e7-b518fa25f5ba"/>
+								<box>
+									<pen lineWidth="1.0"/>
+									<topPen lineWidth="1.0"/>
+									<leftPen lineWidth="1.0"/>
+									<bottomPen lineWidth="1.0"/>
+									<rightPen lineWidth="1.0"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Arial" size="12" isBold="true"/>
+								</textElement>
+								<text><![CDATA[راض]]></text>
+							</staticText>
+						</cellContents>
+					</crosstabTotalRowHeader>
+				</rowGroup>
+				<columnGroup name="PROJECT_NAME" height="30">
+					<bucket class="java.lang.String">
+						<bucketExpression><![CDATA[$F{PROJECT_NAME}]]></bucketExpression>
+					</bucket>
+					<crosstabColumnHeader>
+						<cellContents backcolor="#F0F8FF" mode="Opaque">
+							<box>
+								<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textField>
+								<reportElement style="Crosstab Data Text" positionType="Float" x="0" y="0" width="96" height="30" uuid="d989f037-e04e-4b3d-879a-61803bc424dc"/>
+								<textElement verticalAlignment="Middle">
+									<font fontName="Arial"/>
+									<paragraph leftIndent="2" rightIndent="2"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{PROJECT_NAME}]]></textFieldExpression>
+							</textField>
+						</cellContents>
+					</crosstabColumnHeader>
+					<crosstabTotalColumnHeader>
+						<cellContents/>
+					</crosstabTotalColumnHeader>
+				</columnGroup>
+				<measure name="SIMPLE_RATEMeasure" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[$F{SIMPLE_RATE}]]></measureExpression>
+				</measure>
+				<measure name="cellSimpleRateMeasure" class="java.lang.String">
+					<measureExpression><![CDATA[$F{SIMPLE_RATE}]]></measureExpression>
+				</measure>
+				<measure name="oneStarMeasure" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[($F{SIMPLE_RATE}.trim().equals("1") ? "1" : null)]]></measureExpression>
+				</measure>
+				<measure name="twoStarsMeasure" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[($F{SIMPLE_RATE}.trim().equals("2") ? "2" : null)]]></measureExpression>
+				</measure>
+				<measure name="threeStarsMeasure" class="java.lang.Integer" calculation="Count">
+					<measureExpression><![CDATA[($F{SIMPLE_RATE}.trim().equals("3") ? "3" :null)]]></measureExpression>
+				</measure>
+				<measure name="phoneMeasure" class="java.lang.String">
+					<measureExpression><![CDATA[$F{MOBILE}]]></measureExpression>
+				</measure>
+				<measure name="oneStarImg" class="java.lang.String">
+					<measureExpression><![CDATA[$P{oneStar}]]></measureExpression>
+				</measure>
+				<measure name="twoStarsImg" class="java.lang.String">
+					<measureExpression><![CDATA[$P{twoStars}]]></measureExpression>
+				</measure>
+				<measure name="threeStarsImg" class="java.lang.String">
+					<measureExpression><![CDATA[$P{threeStars}]]></measureExpression>
+				</measure>
+				<measure name="redCircleImg" class="java.lang.String">
+					<measureExpression><![CDATA[$P{redCircle}]]></measureExpression>
+				</measure>
+				<crosstabCell width="96" height="25">
+					<cellContents>
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<image>
+							<reportElement style="Crosstab Data Text" x="20" y="6" width="52" height="13" uuid="08a812ed-4792-4f97-a149-cc9404f848ed"/>
+							<imageExpression><![CDATA[($V{cellSimpleRateMeasure}.trim().equals("1") ? $V{oneStarImg} : ($V{cellSimpleRateMeasure}.trim().equals("2") ? $V{twoStarsImg} : ($V{cellSimpleRateMeasure}.trim().equals("3") ? $V{threeStarsImg} : $V{redCircleImg})))]]></imageExpression>
+						</image>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="96" height="108" rowTotalGroup="NAME">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" mode="Opaque" x="0" y="81" width="96" height="27" backcolor="#FFCCCC" uuid="48595499-69e1-4aa8-9761-f46a0c63b9b2"/>
+							<box>
+								<pen lineWidth="1.0"/>
+								<topPen lineWidth="1.0"/>
+								<leftPen lineWidth="1.0"/>
+								<bottomPen lineWidth="1.0"/>
+								<rightPen lineWidth="1.0"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="11" isBold="false"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{SIMPLE_RATEMeasure}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="Crosstab Data Text" mode="Opaque" x="0" y="0" width="96" height="27" backcolor="#FFD72E" uuid="7fe486b8-7936-4319-b715-8182f02b2b9b"/>
+							<box>
+								<pen lineWidth="1.0"/>
+								<topPen lineWidth="1.0"/>
+								<leftPen lineWidth="1.0"/>
+								<bottomPen lineWidth="1.0"/>
+								<rightPen lineWidth="1.0"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="11" isBold="false"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{oneStarMeasure}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="Crosstab Data Text" mode="Opaque" x="0" y="27" width="96" height="27" backcolor="#CCFC8A" uuid="be0be5df-de24-4c76-ab4c-1578717a5310"/>
+							<box>
+								<pen lineWidth="1.0"/>
+								<topPen lineWidth="1.0"/>
+								<leftPen lineWidth="1.0"/>
+								<bottomPen lineWidth="1.0"/>
+								<rightPen lineWidth="1.0"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="11" isBold="false"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{twoStarsMeasure}]]></textFieldExpression>
+						</textField>
+						<textField>
+							<reportElement style="Crosstab Data Text" mode="Opaque" x="0" y="54" width="96" height="27" backcolor="#66E133" uuid="6f9006aa-2fa4-421c-b354-9683f266173c"/>
+							<box>
+								<pen lineWidth="1.0"/>
+								<topPen lineWidth="1.0"/>
+								<leftPen lineWidth="1.0"/>
+								<bottomPen lineWidth="1.0"/>
+								<rightPen lineWidth="1.0"/>
+							</box>
+							<textElement verticalAlignment="Middle">
+								<font fontName="Arial" size="11" isBold="false"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$V{threeStarsMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell width="50" columnTotalGroup="PROJECT_NAME">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" uuid="f376106d-f1a4-4297-919f-fdff21c635df"/>
+							<textFieldExpression><![CDATA[$V{SIMPLE_RATEMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+				<crosstabCell rowTotalGroup="NAME" columnTotalGroup="PROJECT_NAME">
+					<cellContents backcolor="#BFE1FF" mode="Opaque">
+						<box>
+							<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textField>
+							<reportElement style="Crosstab Data Text" x="0" y="0" width="50" height="25" uuid="c02fead7-05f4-46f0-a4d4-21eaeae56018"/>
+							<textFieldExpression><![CDATA[$V{SIMPLE_RATEMeasure}]]></textFieldExpression>
+						</textField>
+					</cellContents>
+				</crosstabCell>
+			</crosstab>
+		</band>
+	</summary>
+</jasperReport>

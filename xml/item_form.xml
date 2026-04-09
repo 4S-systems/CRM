@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>item_form</name>
+        <key>CODE_FORM</key>
+         <keyname>FORMDESC</keyname>
+    </table_supported>
+
+<form_element>
+        <name>codeType</name>
+        <table>item_form</table>
+        <column>CODE_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>codeForm</name>
+        <table>item_form</table>
+        <column>CODE_FORM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>formDesc</name>
+        <table>item_form</table>
+        <column>FORMDESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+
+
+</form>
+   

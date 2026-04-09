@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>file_descriptor</name>
+      <key>FILE_TYPE</key>
+      <ObjectKey>fileType</ObjectKey>
+     <refintegkey>none</refintegkey>
+   </table_supported>  
+   
+   <form_element>
+     <name>fileType</name>
+     <table>file_descriptor</table>
+     <column>FILE_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>metaType</name>
+     <table>file_descriptor</table>
+     <column>META_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>iconFile</name>
+     <table>file_descriptor</table>
+     <column>ICON_FILE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>app</name>
+     <table>file_descriptor</table>
+     <column>APP</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>desc</name>
+     <table>file_descriptor</table>
+     <column>DESC</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

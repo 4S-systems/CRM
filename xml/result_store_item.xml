@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <table_supported>
+        <name>result_store_item</name>
+        <key1>JOB_ORDER_ID</key1>
+    </table_supported>
+    
+     <form_element>
+        <name>transactionNO</name>
+        <table>result_store_item</table>
+        <column>TRANSACTION_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>jobOrderID</name>
+        <table>result_store_item</table>
+        <column>JOB_ORDER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+        
+    <form_element>
+        <name>itemID</name>
+        <table>result_store_item</table>
+        <column>ITEM_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemQuantity</name>
+        <table>result_store_item</table>
+        <column>DEP_QTY1</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transactionCode</name>
+        <table>result_store_item</table>
+        <column>transaction_code</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+ </form>
+

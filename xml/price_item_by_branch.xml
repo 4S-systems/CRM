@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>price_item_by_branch</name>
+        <key>ITEM_CODE</key>
+        <key1>ITEM_FORM</key1>
+       
+    </table_supported>  
+    
+    <form_element>
+        <name>itemCode</name>
+        <table>price_item_by_branch</table>
+        <column>ITEM_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>itemform</name>
+        <table>price_item_by_branch</table>
+        <column>ITEM_FORM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>branch</name>
+        <table>price_item_by_branch</table>
+        <column>BRANCH</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>price</name>
+        <table>price_item_by_branch</table>
+        <column>I_PURCH_PRICE</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+   
+    
+   
+</form>

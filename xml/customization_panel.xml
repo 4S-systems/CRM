@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>CUSTOMIZATION_PANEL</name>
+        <key>ID</key>
+        <key1>USER_ID</key1>
+        <key2>NAME</key2>
+        <refintegkey>USER_ID</refintegkey>
+    </table_supported>
+   
+    <form_element>
+        <name>id</name>
+        <table>CUSTOMIZATION_PANEL</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>userId</name>
+        <table>CUSTOMIZATION_PANEL</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>name</name>
+        <table>CUSTOMIZATION_PANEL</table>
+        <column>NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>value</name>
+        <table>CUSTOMIZATION_PANEL</table>
+        <column>VALUE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>createdBy</name>
+        <table>CUSTOMIZATION_PANEL</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>CREATION_TIME</name>
+        <table>CUSTOMIZATION_PANEL</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

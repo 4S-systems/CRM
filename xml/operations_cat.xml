@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>operations_cat</name>
+      <key>ID</key>
+      
+      
+   </table_supported>  
+   
+   <form_element>
+     <name>id</name>
+     <table>operations_cat</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>catCode</name>
+     <table>operations_cat</table>
+     <column>CAT_Code</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>catName</name>
+     <table>operations_cat</table>
+     <column>CAT_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>relatedTo</name>
+     <table>operations_cat</table>
+     <column>RELATED_TO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>note</name>
+     <table>operations_cat</table>
+     <column>NOTE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

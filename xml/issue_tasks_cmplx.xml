@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>issue_tasks_cmplx</name>
+        <key>ID</key>
+        <key1>ISSUE_ID</key1>
+        <key2>CODE_TASK</key2>
+        <key2>CMPLX_ISSUE_INDEX</key2>
+        <refintegkey>none</refintegkey>
+    </table_supported>  
+    
+    <form_element>
+        <name>taskID</name>
+        <table>issue_tasks_cmplx</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueID</name>
+        <table>issue_tasks_cmplx</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>codeTask</name>
+        <table>issue_tasks_cmplx</table>
+        <column>CODE_TASK</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>desc</name>
+        <table>issue_tasks_cmplx</table>
+        <column>DESCR</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+        <form_element>
+        <name>cmplxIssueId</name>
+        <table>issue_tasks_cmplx</table>
+        <column>CMPLX_ISSUE_INDEX</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

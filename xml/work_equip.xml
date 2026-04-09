@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>work_equip</name>
+       <key>ID</key>
+       <key1>EQUIP_ID</key1>
+       <key2>WORK_PLACE_ID</key2>
+       <key3>FAILURE</key3>
+   </table_supported>  
+   
+    <form_element>
+     <name>id</name>
+     <table>work_equip</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>equipId</name>
+     <table>work_equip</table>
+     <column>EQUIP_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+   <form_element>
+     <name>workEquipPlaceId</name>
+     <table>work_equip</table>
+     <column>WORK_PLACE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>failure</name>
+     <table>work_equip</table>
+     <column>FAILURE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>jobOrder</name>
+     <table>work_equip</table>
+     <column>JOB_ORDER_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+        <name>getItemDate</name>
+        <table>work_equip</table>
+        <column>GET_ITEM_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+   <form_element>
+        <name>helpDate</name>
+        <table>work_equip</table>
+        <column>HELP_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+      <form_element>
+        <name>callType</name>
+        <table>work_equip</table>
+        <column>CALL_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element> 
+</form>

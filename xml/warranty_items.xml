@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>WARRANTY_ITEMS</name>
+       <key>ID</key>
+       <key1>QUANTIFIED_MNTENCE_ID</key1>
+   </table_supported>
+
+    <form_element>
+     <name>id</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>quantifiedId</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>QUANTIFIED_MNTENCE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>itemCode</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>ITEM_CODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>vendor</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>VENDOR</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>bDate</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>BEGIN_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>eDate</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>END_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>note</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>NOTE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>createdBy</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>creationTime</name>
+     <table>WARRANTY_ITEMS</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.TimeStamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

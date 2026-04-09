@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>failure_code</name>
+       <key>ID</key>
+        <keyname>TITLE</keyname>
+       
+   </table_supported>  
+   
+    <form_element>
+     <name>id</name>
+     <table>failure_code</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>title</name>
+     <table>failure_code</table>
+     <column>TITLE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>project</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>createdBy</name>
+     <table>project</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>description</name>
+     <table>failure_code</table>
+     <column>DESCRIPTION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>     
+   
+   <form_element>
+     <name>tradeId</name>
+     <table>failure_code</table>
+     <column>TRADE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

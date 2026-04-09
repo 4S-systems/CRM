@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="25e11747-6bde-4d5b-97f7-873598a87038">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="48"/>
+	<property name="ireport.y" value="12"/>
+	<parameter name="logo" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="CompanyName" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<field name="businessID" class="java.lang.String"/>
+	<field name="statusDate" class="java.lang.String"/>
+	<field name="customerName" class="java.lang.String"/>
+	<field name="businessIDbyDate" class="java.lang.String"/>
+	<field name="description" class="java.lang.String"/>
+	<field name="currentOwner" class="java.lang.String"/>
+	<variable name="customerName_1" class="java.lang.Integer" resetType="Group" resetGroup="CurrentOwner" calculation="Count">
+		<variableExpression><![CDATA[$F{customerName}]]></variableExpression>
+	</variable>
+	<group name="CurrentOwner">
+		<groupExpression><![CDATA[$F{currentOwner}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<textField>
+					<reportElement mode="Opaque" x="0" y="1" width="650" height="31" backcolor="#C0DEFF" uuid="b91c1ffc-eb35-4327-af86-1f8aeb5b494c"/>
+					<box rightPadding="20">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{currentOwner}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="650" y="1" width="151" height="31" backcolor="#98C6FF" uuid="7b47e02b-ac85-4d99-bd4a-aeb2857f9aa4"/>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[اسم الموظف المسؤل
+]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="26">
+				<staticText>
+					<reportElement mode="Opaque" x="668" y="0" width="133" height="24" backcolor="#F0C6F2" uuid="fdb4a2d1-57ba-4faf-a44c-fb4c626bef4c"/>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[إجمالي العملاء
+]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="433" y="0" width="234" height="24" backcolor="#FDE2FB" uuid="691d2ed9-dabb-43ce-b828-b16b2b9f1ffb"/>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{customerName_1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement x="153" y="38" width="382" height="28" backcolor="#E6E6FA" uuid="e76a8a36-44dd-4098-96e1-b3f36ca013fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[أحصائيات العملاء الذين ليس لهم تعليقات]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement mode="Transparent" x="654" y="9" width="120" height="81" uuid="4acdec6f-f780-4855-8c42-07f00a33ac37"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="668" y="1" width="91" height="20" backcolor="#C1C7E6" uuid="33fdff32-6516-4a71-bd32-67249b499f3f"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رقم المتابعة]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="433" y="1" width="234" height="20" backcolor="#C1C7E6" uuid="669d6831-e81e-4a96-bfd7-61744cbe97f4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[اسم العميل]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="120" y="1" width="313" height="20" backcolor="#C1C7E6" uuid="56d86475-7ae8-4a85-a817-6a990614f147"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[التعليق]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="1" width="120" height="20" backcolor="#C1C7E6" uuid="36b89d92-8b2a-474c-bf6d-eeb75e62b76a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تاريخ تسجيله]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="759" y="1" width="43" height="20" backcolor="#C1C7E6" uuid="2ee379ed-7392-4152-8111-cf102d794035"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رقم المتابعة]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="668" y="0" width="91" height="25" forecolor="#E62525" uuid="08abc799-d956-44d6-8731-923aab5ae2d9"/>
+				<box>
+					<pen lineColor="#080101"/>
+					<topPen lineWidth="1.0" lineColor="#080101"/>
+					<leftPen lineWidth="1.0" lineColor="#080101"/>
+					<bottomPen lineWidth="1.0" lineColor="#080101"/>
+					<rightPen lineWidth="1.0" lineColor="#080101"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{businessID}+"/"+$F{businessIDbyDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="120" height="25" uuid="e1da5f87-0e6e-4e95-b089-149c02fa3bb0"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{statusDate}.substring( 0, 10 )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="313" height="25" uuid="469940cd-a884-40ca-bad4-812ad73354b7"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="0" width="235" height="25" uuid="cb88ba59-5fe4-443c-9798-f9ec7253cfb4"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="759" y="0" width="42" height="25" forecolor="#000000" uuid="c9ac8970-7e5e-4b78-8456-e648ddd76185"/>
+				<box>
+					<pen lineColor="#080101"/>
+					<topPen lineWidth="1.0" lineColor="#080101"/>
+					<leftPen lineWidth="1.0" lineColor="#080101"/>
+					<bottomPen lineWidth="1.0" lineColor="#080101"/>
+					<rightPen lineWidth="1.0" lineColor="#080101"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="371" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="0" y="0" width="801" height="371" uuid="b7cac28b-5ec2-400c-8734-3e388c6f91ba"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend>
+						<font fontName="Arial"/>
+					</chartLegend>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[""]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{currentOwner}]]></categoryExpression>
+						<valueExpression><![CDATA[$V{CurrentOwner_COUNT}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot labelRotation="90.0"/>
+					<itemLabel/>
+					<categoryAxisFormat labelRotation="90.0">
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</summary>
+</jasperReport>

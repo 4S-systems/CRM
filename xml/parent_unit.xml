@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <table_supported>
+        <name>parent</name>
+        <key>PARENT_ID</key>
+         <key1>PARENT_NAME</key1>
+        <refintegkey></refintegkey>
+        <srefintegkey></srefintegkey>
+    </table_supported>
+    
+    
+    
+    <form_element>
+        <name>parentId</name>
+        <table>parent</table>
+        <column>PARENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+   
+     
+    <form_element>
+        <name>parentName</name>
+        <table>parent</table>
+        <column>PARENT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>
+

@@ -1,0 +1,27 @@
+{
+   "VG": {
+        "icon": "images/finical-rebort.png",
+        "menuItem": [
+            {"label": "\u0627\u0636\u0627\u0641\u0629 \u062d\u0633\u0627\u0628 \u0631\u0626\u064a\u0633\u064a"},
+            {"label": "\u062d\u0630\u0641 \u0627\u0644\u062d\u0633\u0627\u0628"},
+            {"label": "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062d\u0633\u0627\u0628"}
+        ]
+    },
+    "ACCTM":{
+        "icon": "images/icons/mainAccount.png",
+        "menuItem": [
+            {"label": "\u0627\u0636\u0627\u0641\u0629 \u062d\u0633\u0627\u0628 \u0631\u0626\u064a\u0633\u064a"},
+            {"label": "\u0627\u0636\u0627\u0641\u0629 \u062d\u0633\u0627\u0628 \u0641\u0631\u0639\u064a"},     
+            {"label": "\u062d\u0630\u0641 \u0627\u0644\u062d\u0633\u0627\u0628"},
+            {"label": "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062d\u0633\u0627\u0628"}
+        ]
+    },
+    
+    "ACCTB": {
+        "icon": "images/icons/branchAccount.png",
+        "menuItem": [     
+            {"label": "\u062d\u0630\u0641 \u0627\u0644\u062d\u0633\u0627\u0628"},
+            {"label": "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062d\u0633\u0627\u0628"}
+        ]
+    }
+}

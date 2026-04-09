@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>place</name>
+       <key>PLACE_ID</key>
+   </table_supported>  
+   
+    <form_element>
+     <name>placeID</name>
+     <table>place</table>
+     <column>PLACE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>placeName</name>
+     <table>place</table>
+     <column>PLACE_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>place</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>createdBy</name>
+     <table>place</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>placeDesc</name>
+     <table>place</table>
+     <column>PLACE_DESC</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

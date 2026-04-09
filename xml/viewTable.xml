@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>MAIN_TYPE_TABLES</name>
+    </table_supported>
+
+    <form_element>
+        <name>typeName</name>
+        <table>MAIN_TYPE_TABLES</table>
+        <column>TYPE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>maintTitle</name>
+        <table>MAIN_TYPE_TABLES</table>
+        <column>MAINTENANCE_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unitName</name>
+        <table>MAIN_TYPE_TABLES</table>
+        <column>UNIT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

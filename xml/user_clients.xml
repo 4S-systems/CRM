@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>USER_CLIENTS</name>
+        <key>ID</key>
+        <key1>USER_ID</key1>
+        <key2>CLIENT_ID</key2>
+        <key3>RELATION_TYPE</key3>
+        <key4>END_DATE</key4>
+    </table_supported>  
+   
+    <form_element>
+        <name>id</name>
+        <table>USER_CLIENTS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>userId</name>
+        <table>USER_CLIENTS</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>clientId</name>
+        <table>USER_CLIENTS</table>
+        <column>CLIENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>comments</name>
+        <table>USER_CLIENTS</table>
+        <column>COMMENTS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>creationTime</name>
+        <table>USER_CLIENTS</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>createdBy</name>
+        <table>USER_CLIENTS</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>fromDate</name>
+        <table>USER_CLIENTS</table>
+        <column>FROM_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>relationType</name>
+        <table>USER_CLIENTS</table>
+        <column>RELATION_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>endDate</name>
+        <table>USER_CLIENTS</table>
+        <column>END_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>option1</name>
+        <table>USER_CLIENTS</table>
+        <column>OPTION_ONE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>tradeId</name>
+        <table>USER_CLIENTS</table>
+        <column>TRADE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

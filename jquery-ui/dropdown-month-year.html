@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Datepicker - Display month &amp; year menus</title>
+	<link rel="stylesheet" href="../development-bundle/themes/base/jquery.ui.all.css">
+	<script src="../development-bundle/jquery-1.6.2.js"></script>
+	<script src="../development-bundle/ui/jquery.ui.core.js"></script>
+	<script src="../development-bundle/external/jquery.bgiframe-2.1.2.js"></script>    
+	<script src="../development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="../development-bundle/ui/jquery.ui.datepicker.js"></script>
+    <script src="../development-bundle/ui/jquery-ui-timepicker-addon.js"></script>
+    
+	<script src="../development-bundle/ui/jquery.ui.widget.js"></script>
+	<script src="../development-bundle/ui/jquery.ui.mouse.js"></script>
+	<script src="../development-bundle/ui/jquery.ui.slider.js"></script>    
+	<script src="../development-bundle/ui/jquery.ui.button.js"></script>
+	<script src="../development-bundle/ui/jquery.ui.draggable.js"></script>
+	<script src="../development-bundle/ui/jquery.ui.position.js"></script>
+	<script src="../development-bundle/ui/jquery.ui.dialog.js"></script>
+    
+	<link rel="stylesheet" href="../development-bundle/demos/demos.css">
+     
+	<script>
+	$(function() {
+		$('#e').datetimepicker({
+				showSecond:true,
+		 	  showMillisec:true,
+				timeFormat:'hh:mm:ss:l'
+});
+		$('#e1').datetimepicker({
+				timeFormat:'hh:mm'
+});
+		
+		$( "#datepicker" ).datepicker({
+			changeMonth: true,
+		     changeYear: true
+		});
+		
+		
+		
+	});
+	///////////////////
+	
+	$(function() {
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		$( "#dialog:ui-dialog" ).dialog( "destroy" );
+	
+		$( "#dialog-confirm" ).dialog({
+			resizable: false,
+			height:240,
+			draggable: false ,
+			width: 460,
+			modal: true,
+			buttons: {
+				"Delete all items": function() {
+					$( this ).dialog( "close" );
+									},
+				Cancel: function() {
+					$( this ).dialog( "close" );
+				}
+			}
+		});
+	});
+	</script>
+  
+</head>
+<body>
+
+<div id="dialog-confirm" title="Empty the recycle bin?">
+	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+     <input name="e1" type="text" id="e1" >
+</div>
+<div class="demo">
+
+<p>Date: <input type="text" id="datepicker"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>
+  <input type="text" id="e" >
+</p>
+<p>
+  
+</p>
+
+</div><!-- End demo -->
+<h1><a href="http://trentrichardson.com/examples/timepicker/">For others options </a></h1>
+<div class="demo-description">
+  <p>Show month and year dropdowns in place of the static month/year header to facilitate navigation through large timeframes.  Add the boolean <code>changeMonth</code> and <code>changeYear</code> options.</p>
+</div><!-- End demo-description -->
+
+</body>
+</html>

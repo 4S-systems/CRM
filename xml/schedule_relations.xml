@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>SCHEDULE_RELATIONS</name>
+        <key>ID</key>
+        <key1>SCHEDULE_ID</key1>
+        <key2>RELATED_SCHEDULE_ID</key2>
+        <key3>RELATION_TYPE</key3>
+
+        <refintegkey>none</refintegkey>
+    </table_supported>  
+    
+    <form_element>
+        <name>ID</name>
+        <table>RELATED_SCHEDULE_DETAILS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>scheduleID</name>
+        <table>SCHEDULE_RELATIONS</table>
+        <column>SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>relatedScheduleID</name>
+        <table>SCHEDULE_RELATIONS</table>
+        <column>RELATED_SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>relationType</name>
+        <table>SCHEDULE_RELATIONS</table>
+        <column>RELATION_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>measurement_unit</name>
+        <key>ID</key>
+        <keyname>AR_DESC</keyname>
+        <keyname1>EN_DESC</keyname1>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>measurement_unit</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>Base</name>
+        <table>measurement_unit</table>
+        <column>BASE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>arabicUnitName</name>
+        <table>measurement_unit</table>
+        <column>AR_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>englishUnitName</name>
+        <table>measurement_unit</table>
+        <column>EN_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>SYSTEM</name>
+        <table>measurement_unit</table>
+        <column>SYSTEM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+</form>

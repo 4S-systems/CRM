@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>ext_db_connection</name>
+      <key>ID</key>
+      <key1>TYPE</key1>
+   </table_supported>
+
+    <form_element>
+     <name>id</name>
+     <table>ext_db_connection</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>hostName</name>
+     <table>ext_db_connection</table>
+     <column>HOST_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>serviceName</name>
+     <table>ext_db_connection</table>
+     <column>SERVICE_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>userName</name>
+     <table>ext_db_connection</table>
+     <column>USER_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>password</name>
+     <table>ext_db_connection</table>
+     <column>PASSWORD</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>type</name>
+     <table>ext_db_connection</table>
+     <column>TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   </form>

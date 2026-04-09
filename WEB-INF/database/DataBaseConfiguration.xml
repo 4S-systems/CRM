@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <DatabaseConfiguration>
+        <url>jdbc:oracle:thin:@20.20.20.203:1521:cmmi</url>
+        <driverClass>oracle.jdbc.driver.OracleDriver</driverClass>
+        <user>maintenance</user>
+        <password>maintenance</password>
+    </DatabaseConfiguration>
+
+    <ErpDatabaseConfiguration>
+        <url>jdbc:oracle:thin:@20.20.20.203:1521:cmmi</url>
+        <driverClass>oracle.jdbc.driver.OracleDriver</driverClass>
+        <glUser>gl_11</glUser>
+        <glPassword>gl_11</glPassword>
+        <strUser>ksa_stores</strUser>
+        <strPassword>ksa_stores</strPassword>
+        <payUser>pay_10</payUser>
+        <payPassword>pay_10</payPassword>
+        <assetUser>gl_j16</assetUser>
+        <assetPassword>gl_j16</assetPassword>
+    </ErpDatabaseConfiguration>
+</Configuration>

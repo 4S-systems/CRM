@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>employee</name>
+      <key>EMP_ID</key>
+      <key1>IS_ACTIVE</key1>
+      <key2>EMP_NO</key2>
+      
+   </table_supported>  
+   
+   <form_element>
+     <name>empId</name>
+     <table>employee</table>
+     <column>EMP_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>empNO</name>
+     <table>employee</table>
+     <column>EMP_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>empName</name>
+     <table>employee</table>
+     <column>EMP_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>address</name>
+     <table>employee</table>
+     <column>ADDRESS</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>designation</name>
+     <table>employee</table>
+     <column>DESIGNATION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>workPhone</name>
+     <table>employee</table>
+     <column>WORK_PHONE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>extension</name>
+     <table>employee</table>
+     <column>EXTENSION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>homePhone</name>
+     <table>employee</table>
+     <column>HOME_PHONE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>fax</name>
+     <table>employee</table>
+     <column>FAX</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>email</name>
+     <table>employee</table>
+     <column>EMAIL</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>department</name>
+     <table>employee</table>
+     <column>DEPARTMENT</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>houreSalary</name>
+     <table>employee</table>
+     <column>HOURE_SALARY</column>
+     <class>com.silkworm.persistence.relational.FloatValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>overTime1</name>
+     <table>employee</table>
+     <column>OVER_TIME1</column>
+     <class>com.silkworm.persistence.relational.FloatValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>overTime2</name>
+     <table>employee</table>
+     <column>OVER_TIME2</column>
+     <class>com.silkworm.persistence.relational.FloatValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>overTime3</name>
+     <table>employee</table>
+     <column>OVER_TIME3</column>
+     <class>com.silkworm.persistence.relational.FloatValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>isActive</name>
+     <table>employee</table>
+     <column>IS_ACTIVE</column>
+     <class>com.silkworm.persistence.relational.IntValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>note</name>
+     <table>employee</table>
+     <column>NOTE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>employee</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+   <form_element>
+     <name>createdBy</name>
+     <table>employee</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>gender</name>
+     <table>employee</table>
+     <column>GENDER</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>maritalStatus</name>
+     <table>employee</table>
+     <column>MARITAL_STATUS</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>option1</name>
+     <table>employee</table>
+     <column>OPTION_1</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+  
+</form>

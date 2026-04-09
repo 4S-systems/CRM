@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle> </Entitle>
+        <Artitle> </Artitle>
+        <barText>Current Unit</barText>
+    </menu_style>
+
+    <elements>
+
+        <item>
+            <Arname>View Unit Details</Arname>
+            <Enname>View Unit Details</Enname>
+            <link>main.jsp</link>
+            <mlink>main.jsp</mlink>
+        </item>
+
+        <!--item>
+            <Arname>&#1593;&#1610;&#1606; &#1575;&#1604;&#1573;&#1583;&#1575;&#1585;&#1577; &#1575;&#1604;&#1601;&#1606;&#1610;&#1577;</Arname>
+            <Enname>Assign Trade</Enname>
+            <link>UsersServlet?op=assignTrades&amp;userId=</link>
+            <mlink>UsersServlet?op=assignTrades&amp;userId=</mlink>
+        </item-->
+
+        <item>
+            <Arname>Reserve</Arname>
+            <Enname>Reserve</Enname>
+            <link>main.jsp</link>
+            <mlink>main.jsp</mlink>
+        </item>
+        
+        
+        <item>
+            <Arname>Building Diagram</Arname>
+            <Enname>Building Diagram</Enname>
+            <link>ProjectServlet?op=getViewUnits&amp;projectId=ID&amp;unitId=UNIT&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>ProjectServlet?op=getViewUnits&amp;projectId=ID&amp;unitId=UNIT&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        <item>
+            <Arname>Attach Document</Arname>
+            <Enname>Attach Document</Enname>
+            <link>main.jsp</link>
+            <mlink>main.jsp</mlink>
+        </item>
+<!--        <item>
+            <Arname>عين الصلاحيات</Arname>
+            <Enname>Assign Prevliges</Enname>
+            <link>UsersServlet?op=assignStores&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>UsersServlet?op=assignStores&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>-->
+
+<!--        <item>
+            <Arname>عين أمان التطبيق </Arname>
+            <Enname>Assign Functional Security</Enname>
+            <link>BussinessOpSecurityServlet?op=assignFuncSecutiry&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>BussinessOpSecurityServlet?op=assignFuncSecutiry&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>
+        
+         <item>
+            <Arname>مشاهدة أمان التطبيق   </Arname>
+            <Enname>Assign Functional Security</Enname>
+            <link>BussinessOpSecurityServlet?op=viewFuncSecutiry&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</link>
+            <mlink>BussinessOpSecurityServlet?op=viewFuncSecutiry&amp;userId=ID&amp;numberOfUsers=NUM&amp;index=INDX</mlink>
+        </item>-->
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>unit</link>
+            <mlink>unit</mlink>
+        </item>
+
+    </elements>
+</menu>

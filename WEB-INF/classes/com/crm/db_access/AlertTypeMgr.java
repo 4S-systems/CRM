@@ -1,0 +1,89 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.crm.db_access;
+
+import com.silkworm.business_objects.BusinessForm;
+import com.silkworm.business_objects.DOMFabricatorBean;
+import com.silkworm.business_objects.WebBusinessObject;
+import com.silkworm.persistence.relational.RDBGateWay;
+import com.silkworm.persistence.relational.SQLCommandBean;
+import com.silkworm.persistence.relational.StringValue;
+import com.silkworm.persistence.relational.UniqueIDGen;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Vector;
+import javax.servlet.http.HttpSession;
+import org.apache.log4j.xml.DOMConfigurator;
+
+/**
+ *
+ * @author Administrator
+ */
+public class AlertTypeMgr extends RDBGateWay {
+
+    private static final AlertTypeMgr ALERT_TYPE_MGR = new AlertTypeMgr();
+
+    private AlertTypeMgr() {
+    }
+
+    public static AlertTypeMgr getInstance() {
+        logger.info("Getting AlertTypeMgr Instance ....");
+        return ALERT_TYPE_MGR;
+    }
+
+    @Override
+    public boolean saveObject(WebBusinessObject wbo) throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    protected void initSupportedForm() {
+        if (webInfPath != null) {
+            DOMConfigurator.configure(webInfPath + "/LogConfig.xml");
+        }
+        if (supportedForm == null) {
+            try {
+                supportedForm = new BusinessForm(DOMFabricatorBean.getDocument(metaDataMgr.getMetadata("alert_type.xml")));
+            } catch (Exception e) {
+                logger.error("Could not locate XML Document");
+            }
+        }
+    }
+
+    public boolean saveObject(WebBusinessObject wbo, HttpSession session) {
+        WebBusinessObject user = (WebBusinessObject) session.getAttribute("loggedUser");
+
+        Vector parameters = new Vector();
+        String Id = UniqueIDGen.getNextID();
+        parameters.addElement(new StringValue(Id));
+        parameters.addElement(new StringValue((String) wbo.getAttribute("name")));
+        parameters.addElement(new StringValue((String) wbo.getAttribute("createdBy")));
+        parameters.addElement(new StringValue((String) user.getAttribute("userId")));
+        SQLCommandBean getInfo = new SQLCommandBean();
+        int executeQuery = 0;
+        try {
+            beginTransaction();
+            getInfo.setConnection(transConnection);
+            getInfo.setSQLQuery(getQuery("alertTypeMgr").trim());
+            getInfo.setparams(parameters);
+            executeQuery = getInfo.executeUpdate();
+            endTransaction();
+        } catch (SQLException e) {
+            logger.error("Could not Get Data");
+        }
+        return (executeQuery > 0);
+    }
+
+    @Override
+    protected void initSupportedQueries() {
+        queriesIS = metaDataMgr.getQueries(queriesPropFileName);
+    }
+
+    @Override
+    public ArrayList getCashedTableAsArrayList() {
+        ArrayList al = null;
+        return al;
+    }
+}

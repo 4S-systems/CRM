@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>temp_total_item</name>
+        <key>item_id</key>
+        
+        
+    </table_supported>   
+    
+    
+    
+    <form_element>
+        <name>itemId</name>
+        <table>temp_total_item</table>
+        <column>item_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemName</name>
+        <table>temp_total_item</table>
+        <column>item_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>total</name>
+        <table>temp_total_item</table>
+        <column>total</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+     <form_element>
+        <name>totalPrice</name>
+        <table>temp_total_item</table>
+        <column>TOTALPRICE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+</form>

@@ -1,0 +1,46 @@
+.button2{
+                font-family: "Brush Script MT", cursive;
+                font-size: 18px;
+                font-style: normal;
+                font-variant: normal;
+                font-weight: 400;
+                line-height: 20px;
+                width: 134px;
+                height: 32px;
+                 text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.8s;
+                cursor: pointer;
+                border-radius: 12px;
+                  border: 2px solid #008CBA;
+                  padding-left:2%;
+                  text-align: center;
+            }
+
+            
+            .button2:hover {
+                background-color: #afdded;
+                padding-top: 0px;
+            }
+            
+            .attach
+            {
+                 background:  url('images/comment.png') no-repeat;
+                 background-position-y: 1.3px;
+                 background-position-x: 5%;
+            }
+            
+             .comment
+                {
+                     background:  url('images/Attach.png') no-repeat;
+                     background-position-y: 50%;
+                     background-position-x: 5%;
+                }
+                .notify
+                {
+                     background:  url('images/notify3.png') no-repeat;
+                     background-position-y: 50%;
+                     background-position-x: 5%;
+                }

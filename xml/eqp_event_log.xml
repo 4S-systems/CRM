@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>EQP_EVENT_LOG</name>
+        <key>ID</key>
+        <key1>UNIT_ID</key1>
+        
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>EQP_EVENT_LOG</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    <form_element>
+        <name>unitId</name>
+        <table>EQP_EVENT_LOG</table>
+        <column>UNIT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    <form_element>
+        <name>lastActionReading</name>
+        <table>EQP_EVENT_LOG</table>
+        <column>LAST_ACTION_READING</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>lastActionTotalReading</name>
+        <table>EQP_EVENT_LOG</table>
+        <column>LAST_ACTION_TOTAL_READING</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>action</name>
+        <table>EQP_EVENT_LOG</table>
+        <column>ACTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>entryDate</name>
+        <table>EQP_EVENT_LOG</table>
+        <column>ENTRY_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <element>
+        <ProductionLine>
+            <display>no</display>
+            <default>1</default><!-- 1 is id for refer to Default Production Line -->
+        </ProductionLine>
+    </element>
+</form>

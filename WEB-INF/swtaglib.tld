@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+
+
+<taglib>
+  <tlib-version>2.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>sw</short-name>
+  <uri>/WEB-INF/swtaglib.tld</uri>
+  <description>
+    A tag library to simplify web application development
+  </description>
+
+<!--
+  This validator is just an example and is not really needed for an
+  application that uses the example tag library. It's commented out
+  to avoid the JDOM depencency (JDOM is used by the validator).
+  <validator>
+    <validator-class>com.ora.jsp.tlv.OraTLV</validator-class>
+  </validator>
+-->
+
+  <tag>
+    <name>fileWrite</name>
+    <tag-class>com.silkworm.jsptags.FileWriteTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+       Writes its body content to the specified file
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+
+    <attribute>
+      <name>fileName</name>
+      <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>debug</name>
+    <tag-class>com.silkworm.jsptags.DebugTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+       Writes the specified debug info to the response, System.out or
+       the application log file based on the value of the debug
+       request parameter
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+
+    <attribute>
+      <name>type</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>addCookie</name>
+    <tag-class>com.silkworm.jsptags.AddCookieTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+	Adds a cookie to the response.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>maxAge</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>forward</name>
+    <tag-class>com.silkworm.jsptags.ForwardTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Encodes possible param tags in the body, adds them as a
+      query string to the URI defined by the page attribute
+      and forwards to the specified page. 
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+
+    <attribute>
+      <name>page</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+  
+  <tag>
+    <name>param</name>
+    <tag-class>com.silkworm.jsptags.ParamTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Adds a URL encoded param value to the parent action.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>menuItem</name>
+    <tag-class>com.silkworm.jsptags.MenuItemTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+	Inserts HTML in the body, as an HTML reference if "page" is not
+        the current page, otherwise as is.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+    <attribute>
+      <name>page</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>noCache</name>
+    <tag-class>com.silkworm.jsptags.NoCacheTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Sets headers to prevent caching
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+  </tag>
+
+  <tag>
+    <name>ifValidEmailAddr</name>
+    <tag-class>com.silkworm.jsptags.IfValidEmailAddrTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Evaluates its body if the specified value is in the format of
+      a valid SMTP email address, and optionally saves the result
+      of the validation as a Boolean in a variable specified by the
+      var and scope attributes.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>var</name>
+      <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>ifUserInRole</name>
+    <tag-class>com.silkworm.jsptags.IfUserInRoleTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Evaluates its body if the current, authenticated, user belongs to
+      the specified security role, and optionally saves the result
+      of the test as a Boolean in a variable specified by the var and 
+      scope attributes.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>var</name>
+      <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>ifContains</name>
+    <tag-class>com.silkworm.jsptags.IfContainsTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+      Evaluates its body if the specified value contains the specified
+      substring, and optionally saves the result of the test as a Boolean 
+      in a variable specified by the var and scope attributes.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>substring</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>var</name>
+      <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>scope</name>
+      <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>invalidateSession</name>
+    <tag-class>com.silkworm.jsptags.InvalidateSessionTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Invalidates the session, causing all session scope variables to
+      be removed and the session to be terminated (marked as invalid).
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+  </tag>
+
+  <tag>
+    <name>setHeader</name>
+    <tag-class>com.silkworm.jsptags.SetHeaderTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Set the specified response header to the specified value.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <!-- 
+    Tag handlers for example actions, not intended for general use.
+  -->
+  <tag>
+    <name>motd</name>
+    <tag-class>com.silkworm.jsptags.xmp.MixedMessageTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+       Adds a message to the page
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags.xmp</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+
+    <attribute>
+      <name>category</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>forEachOption</name>
+    <tag-class>com.silkworm.jsptags.xmp.ForEachOptionTag</tag-class>
+    <body-content>JSP</body-content>
+    <description>
+       Loops through a Map with option texts and values and exposes
+       a bean with "text", "value" and "selected" properties.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags.xmp</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+
+    <attribute>
+      <name>options</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+
+    <attribute>
+      <name>selections</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+
+    <attribute>
+      <name>var</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>buildCheckbox</name>
+    <tag-class>com.silkworm.jsptags.xmp.BuildCheckboxTag</tag-class>
+    <body-content>empty</body-content>
+    <description>
+      Builds a checkbox element and adds it to the response.
+    </description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags.xmp</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>TagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+
+    <attribute>
+      <name>selections</name>
+      <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+        <example></example>
+  </tag>
+<tag>
+    <name>OptionList</name>
+        <tag-class>com.silkworm.jsptags.OptionList</tag-class>
+        <body-content>JSP</body-content>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+    <attribute>
+      <name>optionList</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+    <attribute>
+      <name>locale</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+    </attribute>
+        <attribute>
+            <name>scrollTo</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                
+                
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+        </attribute>
+  </tag>
+    <tag>
+        <name>WBOOptionList</name>
+        <tag-class>com.silkworm.jsptags.WBOOptionList</tag-class>
+        <body-content>empty</body-content>
+        <display-name>WBO Option Lis</display-name>
+        <description></description>
+        <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+        <tldx>
+            <packagename>com.silkworm.jsptags</packagename>
+            <extendsSupportClass>TRUE</extendsSupportClass>
+            <supportClass>BodyTagSupport</supportClass>
+            <implementsTryCatchFinally>FALSE</implementsTryCatchFinally>
+            <findparent>FALSE</findparent>
+        </tldx>
+        -->
+        <attribute>
+            <name>wboList</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.List</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <javaVariable>wboList</javaVariable>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                
+                
+                
+                
+                
+                
+                
+                
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+        </attribute>
+        <attribute>
+            <name>displayAttribute</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <javaVariable>displayAttribute</javaVariable>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                
+                
+                
+                
+                
+                
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+        </attribute>
+        <attribute>
+            <name>valueAttribute</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+            <!-- Forte4J_TLDX:  This comment contains code generation information. Do not delete.
+            <tldx>
+                <javaVariable>valueAttribute</javaVariable>
+                <IsReferenceID>FALSE</IsReferenceID>
+                <ReferencesTag>FALSE</ReferencesTag>
+                <ReferenceScope>Session</ReferenceScope>
+                
+                
+                
+                
+                
+                
+                <ReferencesTagReferentFirst>TRUE</ReferencesTagReferentFirst>
+            </tldx>
+            -->
+        </attribute>
+        <attribute>
+            <name>scrollTo</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>scrollToValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <example></example>
+    </tag>
+    
+    <tag>
+        <name>LiteWBOOptionList</name>
+        <tag-class>com.silkworm.jsptags.LiteWebBusinessObject</tag-class>
+        <body-content>empty</body-content>
+        <display-name>WBO Option Lis</display-name>
+        <description></description>
+        <attribute>
+            <name>wboList</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.List</type>
+        </attribute>
+        <attribute>
+            <name>displayAttribute</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>valueAttribute</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>scrollTo</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>scrollToValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <example></example>
+    </tag>
+    
+    <tag>
+        <name>CustomOptionList</name>
+        <tag-class>com.silkworm.jsptags.CustomOptionList</tag-class>
+        <body-content>empty</body-content>
+        <display-name>Custom Option List</display-name>
+        <description></description>
+        <attribute>
+            <name>start</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Integer</type>
+        </attribute>
+        <attribute>
+            <name>stop</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.Integer</type>
+        </attribute>
+        <attribute>
+            <name>scrollTo</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <example></example>
+    </tag>
+
+    <tag>
+        <name>OptionsList</name>
+        <tag-class>com.silkworm.jsptags.Options</tag-class>
+        <body-content>empty</body-content>
+        <display-name>WBO Option Lis</display-name>
+        <description></description>
+        <attribute>
+            <name>listAsArrayList</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.ArrayList</type>
+        </attribute>
+        <attribute>
+            <name>listAsVector</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.Vector</type>
+        </attribute>
+        <attribute>
+            <name>displayAttribute</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>valueAttribute</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>scrollTo</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <example></example>
+    </tag>
+    
+    <tag>
+    <name>xinput</name>
+    <tag-class>com.silkworm.jsptags.selfcheckers.XInput</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>pattern</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>allowedEmpty</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+    </attribute>
+    <attribute>
+      <name>message</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+
+  <tag>
+    <name>xiudv</name>
+    <tag-class>com.silkworm.jsptags.selfcheckers.XInputUDV</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>maxlength</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+    <attribute>
+      <name>method</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+  </tag>
+
+</taglib>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>machine_cats_config</name>
+      <key>ID</key>
+      <key1>EQUIPMENT_CAT_ID</key1>
+   </table_supported>  
+   
+    <form_element>
+     <name>id</name>
+     <table>machine_cats_config</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>equipCatId</name>
+     <table>machine_cats_config</table>
+     <column>EQUIPMENT_CAT_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>itemId</name>
+     <table>machine_cats_config</table>
+     <column>ITEM_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>categoryName</name>
+     <table>machine_cats_config</table>
+     <column>CATEGORY_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>itemDesc</name>
+     <table>machine_cats_config</table>
+     <column>ITEM_DSCRPTN</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+        <name>itemPrice</name>
+        <table>machine_cats_config</table>
+        <column>ITEM_PRICE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+  
+   
+</form>

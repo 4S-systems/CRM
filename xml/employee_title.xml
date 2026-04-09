@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>employee_title</name>
+      <key>TITLE</key>
+      <key1>NAME</key1>
+      
+      
+   </table_supported>  
+   
+   <form_element>
+     <name>id</name>
+     <table>employee_title</table>
+     <column>TITLE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>name</name>
+     <table>employee_title</table>
+     <column>NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+  
+</form>

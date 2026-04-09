@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <element>
+        <Shift>
+            <display>no</display>
+            <default>1</default><!-- 1 is id for refer to Shift -->
+        </Shift>
+    </element>
+    <element>
+        <Trade>
+            <display>no</display>
+            <default>1</default><!-- 1 is id for refer to Trade Maneger in table Trade in Database -->
+        </Trade>
+    </element>
+</form>

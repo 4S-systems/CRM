@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>PROJECT_BY_GROUP</name>
+        <key>ID</key>
+        <key1>GROUP_ID</key1>
+        <key2>PROJECT_ID</key2>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>PROJECT_BY_GROUP</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>groupId</name>
+        <table>PROJECT_BY_GROUP</table>
+        <column>GROUP_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+      <form_element>
+        <name>projectId</name>
+        <table>PROJECT_BY_GROUP</table>
+        <column>PROJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>createdBy</name>
+        <table>PROJECT_BY_GROUP</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>creationTime</name>
+        <table>PROJECT_BY_GROUP</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

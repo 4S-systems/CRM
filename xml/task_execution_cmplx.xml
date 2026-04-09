@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>task_execution_cmplx</name>
+        <key>ID</key>
+        <key1>ISSUE_TASK_ID</key1>
+        <key2>LABOR_ID</key2>
+        <key3>ISSUE_ID</key3>
+        <key4>CMPLX_ISSUE_INDEX</key4>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>task_execution_cmplx</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueTaskID</name>
+        <table>task_execution_cmplx</table>
+        <column>ISSUE_TASK_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>laborID</name>
+        <table>task_execution_cmplx</table>
+        <column>LABOR_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>actualHours</name>
+        <table>task_execution_cmplx</table>
+        <column>ACTUAL_HOURS</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>deviationHours</name>
+        <table>task_execution_cmplx</table>
+        <column>DEVIATION_HOURS</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+        <form_element>
+        <name>issueId</name>
+        <table>task_execution_cmplx</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+        <form_element>
+        <name>cmplxIssueIndex</name>
+        <table>task_execution_cmplx</table>
+        <column>CMPLX_ISSUE_INDEX</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>instructions</name>
+        <key>INST_ID</key>
+        <key2>INST_TITLE</key2>
+        <key3>UNIT_SCHEDULE_ID</key3>
+        <refintegkey>INST_ID</refintegkey>
+        <srefintegkey>ACCOUNT</srefintegkey>
+    </table_supported>  
+    
+    <form_element>
+        <name>instID</name>
+        <table>instructions</table>
+        <column>INST_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>instTitle</name>
+        <table>instructions</table>
+        <column>INST_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>unitScheduleID</name>
+        <table>instructions</table>
+        <column>UNIT_SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>description</name>
+        <table>instructions</table>
+        <column>DESCRIPTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>instDate</name>
+        <table>instructions</table>
+        <column>INST_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>fromDate</name>
+        <table>instructions</table>
+        <column>INST_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>></matchon>
+    </form_element> 
+    
+    <form_element>
+        <name>toDate</name>
+        <table>instructions</table>
+        <column>INST_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>LESS</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdById</name>
+        <table>instructions</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>instructions</table>
+        <column>CREATED_BY_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>metaType</name>
+        <table>instructions</table>
+        <column>DOC_META_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>docType</name>
+        <table>instructions</table>
+        <column>DOC_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>configItemType</name>
+        <table>instructions</table>
+        <column>CONFIG_ITEM_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>instructions</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

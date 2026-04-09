@@ -1,0 +1,87 @@
+/* 
+    Document   : projRelations
+    Created on : Feb 16, 2012, 2:14:45 PM
+    Author     : khaled abdo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+.editable{
+
+    width: 80px;
+    text-align: center;
+    float: right;
+    display: none;
+}
+.clickable{
+    width: 80px;
+    text-align: center;
+    float: right;
+}
+table .tableStyle{
+    border: 0px solid black;
+    border-spacing: 0px;
+}
+
+table.tableStyle thead tr{
+    font-family: Arial, monospace;
+    font-size: 14px;
+}
+
+table.tableStyle thead tr th{
+    border-bottom: 2px solid black;
+    border-top: 1px solid black;
+    margin: 0px;
+    padding: 2px;
+    background: url('../images/th_bg.JPG') repeat-x;
+    background-color: #cccccc;
+    height: 50px;
+}
+
+table.tableStyle tr {
+    font-family: arial, monospace;
+    color: black;
+    font-size:12px;
+    background-color: white;
+}
+
+table.tableStyle tr.odd {
+    background-color: #AAAAAA;
+}
+
+table.tableStyle tr td, th{
+    border-bottom: 1px solid black;
+    padding: 2px;
+    font-size: 12px;
+}
+
+a:link{
+    font-family:arial, monospace;
+    text-decoration: none;
+    color: teal;
+}
+
+.tableStyle a:hover{
+    text-decoration: underline;
+}
+
+.tableStyle a:visited{
+    color:black;
+    text-decoration: none;
+}
+
+.td{
+    /*border: 1px solid #0099cc;*/
+    /*background: #66ffcc;*/
+}
+img{background-repeat: no-repeat;
+    background-position: 0 -100px;}
+.th{
+    text-align: center;
+}
+
+.tabletitle{font-size: 13px;}

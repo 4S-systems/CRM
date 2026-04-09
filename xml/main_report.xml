@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>mainreport</name>
+   </table_supported>  
+   
+   <form_element>
+     <name>expectedBeginDate</name>
+     <table>mainreport</table>
+     <column>EXPECTED_B_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>expectedEndDate</name>
+     <table>mainreport</table>
+     <column>EXPECTED_E_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>total</name>
+     <table>mainreport</table>
+     <column>TOTAL</column>
+     <class>com.silkworm.persistence.relational.IntValue</class>
+     <jclass>java.lang.Integer</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>totalEmergency</name>
+     <table>mainreport</table>
+     <column>TOTAL_EMERGENCY</column>
+     <class>com.silkworm.persistence.relational.IntValue</class>
+     <jclass>java.lang.Integer</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>totalExternal</name>
+     <table>mainreport</table>
+     <column>TOTAL_EXTERNAL</column>
+     <class>com.silkworm.persistence.relational.IntValue</class>
+     <jclass>java.lang.Integer</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>totalOther</name>
+     <table>mainreport</table>
+     <column>TOTAL_OTHER</column>
+     <class>com.silkworm.persistence.relational.IntValue</class>
+     <jclass>java.lang.Integer</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

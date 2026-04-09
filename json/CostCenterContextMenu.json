@@ -1,0 +1,16 @@
+{
+   "VG": {
+         "icon": "images/icons/cstcntr.png",
+        "menuItem": [
+            {"label": "اضافة مركز تكلفة"}
+        ]
+    },
+    
+    "CSTCNTR": {
+         "icon": "images/icons/cstcntr.png",
+        "menuItem": [
+            {"label": "حذف مركز تكلفة"},
+            {"label": "تعديل مركز تكلفة"}
+        ]
+    }
+}

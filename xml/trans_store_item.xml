@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <table_supported>
+        <name>trans_store_item</name>
+        <key1>transaction_code</key1>
+        <key2>JOB_ORDER_ID</key2>
+        <key3>ITEM_ID</key3>
+    </table_supported>
+    
+     <form_element>
+        <name>transactionNO</name>
+        <table>trans_store_item</table>
+        <column>TRANSACTION_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>jobOrderID</name>
+        <table>trans_store_item</table>
+        <column>JOB_ORDER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transDate</name>
+        <table>trans_store_item</table>
+        <column>TRANS_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemID</name>
+        <table>trans_store_item</table>
+        <column>ITEM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemQuantity</name>
+        <table>trans_store_item</table>
+        <column>ITEM_QUANNTITY</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>detailId</name>
+        <table>trans_store_item</table>
+        <column>detail_id</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>transactionCode</name>
+        <table>trans_store_item</table>
+        <column>transaction_code</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>cost_center_id</name>
+        <table>trans_store_item</table>
+        <column>cost_center_id</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+ </form>
+

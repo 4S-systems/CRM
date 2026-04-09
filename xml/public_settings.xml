@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<public-settings>
+    <reservation-default-period>
+        <value>1</value>
+        <title>Reservation Period</title>
+        <type>Hours</type>
+        <description>Reservation Default Period</description>
+    </reservation-default-period>
+</public-settings>

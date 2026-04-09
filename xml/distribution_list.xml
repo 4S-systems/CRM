@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <table_supported>
+        <name>DISTRIBUTION_LIST</name>
+        <key>SYS_ID</key>
+        <key1>CLIENT_COM_ID</key1>
+        <key2>SENDER_ID</key2>
+        <key3>RECEIP_ID</key3>
+      
+      
+    </table_supported>  
+   
+    <form_element>
+        <name>sysId</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>SYS_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>clientCompId</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>CLIENT_COM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>senderId</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>SENDER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>receipId</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>RECEIP_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>receiveDate</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>RECEIVE_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>resp_Context</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>RESP_CONTEXT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>acknowDate</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>ACKNOWLEDGE_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+    <jclass>java.lang.String</jclass>
+    <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>isAcknow</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>IS_ACKNOWLEDGED</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>ignoreDur</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>IGNORE_DURATION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>anyComments</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>ANY_COMMENT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>option1</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>option1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>option2</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>option2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>option3</name>
+        <table>DISTRIBUTION_LIST</table>
+        <column>option3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+   
+</form>

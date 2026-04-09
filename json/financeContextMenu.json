@@ -1,0 +1,51 @@
+{
+   "VG": {
+        "icon": "images/finical-rebort.png",
+        "menuItem": [
+            {"label": "اضافة حساب رئيسي"},
+            {"label": "حذف الحساب"},
+            {"label": "تعديل الحساب"}
+        ]
+    },
+    "BANKS": {
+        "icon": "images/finical-rebort.png",
+        "menuItem": [
+            {"label": "اضافة بنك "}        
+        ]
+    },
+    "SAFS": {
+        "icon": "images/finical-rebort.png",
+        "menuItem": [
+            {"label": "اضافة خزنة"}
+        ]
+    },
+    "FIN_BNK": {
+        "icon": "images/finical-rebort.png",
+        "menuItem": [
+           
+        ]
+    },
+    "FIN_SAFE": {
+        "icon": "images/finical-rebort.png",
+        "menuItem": [
+          
+        ]
+    },
+    "ACCTM":{
+        "icon": "images/icons/mainAccount.png",
+        "menuItem": [
+            {"label": "اضافة حساب رئيسي"},
+            {"label": "اضافة حساب فرعي"},     
+            {"label": "حذف الحساب"},
+            {"label": "تعديل الحساب"}
+        ]
+    },
+    
+    "ACCTB": {
+        "icon": "images/icons/branchAccount.png",
+        "menuItem": [     
+            {"label": "حذف الحساب"},
+            {"label": "تعديل الحساب"}
+        ]
+    }
+}

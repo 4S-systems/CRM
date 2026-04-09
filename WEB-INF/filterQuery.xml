@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<filter>
+<jobOreder>
+    <byTrade>
+        <query>AND WORK_ORDER_TRADE in (select trade_id from user_trade where user_id =?)</query>
+        <stAr>&#1575;&#1604;&#1573;&#1583;&#1575;&#1585;&#1577; &#1575;&#1604;&#1601;&#1606;&#1610;&#1577;</stAr>
+        <stEn>Technical Department</stEn>
+    </byTrade>
+    <byUser>
+        <query>AND USER_ID =?</query>
+        <stAr>&#1575;&#1604;&#1605;&#1587;&#1578;&#1582;&#1583;&#1605;</stAr>
+        <stEn>User</stEn>
+    </byUser>
+    <bySite>
+        <query>AND PROJECT_NAME in (select project_id from user_group where user_id =?)</query>
+        <stAr>&#1575;&#1604;&#1601;&#1585;&#1593;</stAr>
+        <stEn>Banch</stEn>
+    </bySite>
+    <byTradeAndSite>
+        <query>AND WORK_ORDER_TRADE in (select trade_id from user_trade where user_id =?) AND PROJECT_NAME in (select project_id from user_group where user_id =?)</query>
+         <stAr>&#1575;&#1604;&#1573;&#1583;&#1575;&#1585;&#1577; &#1575;&#1604;&#1601;&#1606;&#1610;&#1577; &#1608;&#1575;&#1604;&#1601;&#1585;&#1593;</stAr>
+        <stEn>Technical Department &amp; Branch</stEn>
+    </byTradeAndSite>
+</jobOreder>
+<equipment>
+
+    <byUser>
+
+    </byUser>
+    <bySite>
+
+    </bySite>
+    
+</equipment>
+    
+</filter>

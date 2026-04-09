@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+     <name>business_op_security</name>
+     <key>ID</key>
+     <key1>op_code</key1>
+     <orderby>SERVLET_NAME</orderby>
+   </table_supported>  
+   
+   <form_element>
+     <name>id</name>
+     <table>business_op_security</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>servletName</name>
+     <table>business_op_security</table>
+     <column>SERVLET_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>opCode</name>
+     <table>business_op_security</table>
+     <column>op_code</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+  <form_element>
+     <name>fullURL</name>
+     <table>business_op_security</table>
+     <column>full_url</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>arDesc</name>
+     <table>business_op_security</table>
+     <column>ar_desp</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>menuNavigation</name>
+     <table>business_op_security</table>
+     <column>menu_navigation</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

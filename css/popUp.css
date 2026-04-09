@@ -1,0 +1,29 @@
+html{
+    border: 1px solid #4297d7;
+    width: 99%;
+    height: 99%;
+    margin: 0 auto;
+    
+}
+body{background-image:url(../img/popUpBg.jpeg);
+
+}
+fieldset{
+    border: 1px solid #000000;
+    padding: 15px;
+    
+}
+legend{
+    
+    font-size: 30px;
+    
+}
+#tableSearch{
+    background-color:lightyellow;
+    border: 1px solid #0066cc;
+}
+#contenttable{
+     background-color:lightyellow;
+     border: 1px solid #0066cc;
+    
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>schedule_tasks</name>
+        <key>ID</key>
+        <key1>SCHEDULE_ID</key1>
+         
+        <refintegkey>none</refintegkey>
+    </table_supported>  
+    
+    <form_element>
+        <name>scheduleID</name>
+        <table>schedule_tasks</table>
+        <column>SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>priority</name>
+        <table>schedule_tasks</table>
+        <column>PRIORITY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>codeTask</name>
+        <table>schedule_tasks</table>
+        <column>CODE_TASK</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    
+    <form_element>
+        <name>desc</name>
+        <table>schedule_tasks</table>
+        <column>DESCR</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

@@ -1,0 +1,38 @@
+{
+    "VG": {
+        "icon": "img/base.gif",
+        "menuItem": [
+            {"label": "\u0627\u0636\u0627\u0641\u0629 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f"}
+        ]
+    },
+    
+    "44": {
+        "icon": "img/company.gif",
+        "menuItem": [
+            {"label": "\u0639\u0631\u0636 \u062e\u0631\u064a\u0637\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639"},
+            {"label": "أرفاق خريطة للمشروع"},
+            {"label": "نموذج سكني"}
+        ]
+    },
+    
+    "CMPLX-UNIT": {
+        "icon": "images/building.gif",
+        "menuItem": [
+            {"label": "\u0639\u0631\u0636"}
+        ]
+    },
+    
+    "RES-MODEL": {
+        "icon": "img/projectplan.gif",
+        "menuItem": [
+            {"label": "عرض"}
+        ]
+    },
+    
+    "RES-UNIT": {
+        "icon": "img/home_page.png",
+        "menuItem": [
+            {"label": "عرض"}
+        ]
+    }
+}

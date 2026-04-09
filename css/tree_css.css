@@ -1,0 +1,38 @@
+/* 
+    Document   : treeCss
+    Created on : Jan 1, 2012, 2:27:05 PM
+    Author     : khaled abdo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#showHide{
+    /*background: #0066cc;*/
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0066cc;
+    cursor: pointer;
+    padding: 5px;
+}
+#dropDown{
+    position: relative;
+}
+.backStyle{
+    border-bottom-width:0px;
+    border-left-width:0px;
+    border-right-width:0px;
+    border-top-width:0px
+}
+.backgroundHeader{
+    background: #BBC4D0;
+}
+.blueHeaderTD {
+    background-image: url("../images/thbg.jpg");
+}

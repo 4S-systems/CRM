@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>issue_meta_data</name>
+        <key>ID</key>
+        <key1>ISSUE_ID</key1>
+        
+        <refintegkey></refintegkey>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>issue_meta_data</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueID</name>
+        <table>issue_meta_data</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>flagTasks</name>
+        <table>issue_meta_data</table>
+        <column>FLAG_TASKS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    
+</form>

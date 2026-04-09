@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>change_date_history</name>
+      <key>id</key>
+      <key1>USER_ID</key1>
+      <key2>ISSUE_ID</key2>
+   </table_supported>  
+   
+   <form_element>
+     <name>id</name>
+     <table>change_date_history</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>issueID</name>
+     <table>change_date_history</table>
+     <column>ISSUE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>userID</name>
+     <table>change_date_history</table>
+     <column>USER_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>reason</name>
+     <table>change_date_history</table>
+     <column>REASON</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>change_date_history</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>beginDate</name>
+     <table>change_date_history</table>
+     <column>BEGIN_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>endDate</name>
+     <table>change_date_history</table>
+     <column>END_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

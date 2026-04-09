@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>functional_area</name>
+      <key>FA_NAME</key>
+      <key1>EQ_ID</key1>
+   </table_supported>  
+   
+   <form_element>
+     <name>functionID</name>
+     <table>functional_area</table>
+     <column>FA_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>functionName</name>
+     <table>functional_area</table>
+     <column>FA_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>eqID</name>
+     <table>functional_area</table>
+     <column>EQ_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>functionDesc</name>
+     <table>functional_area</table>
+     <column>FA_DESCRIPTION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>functional_area</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>createdBy</name>
+     <table>functional_area</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.sql.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

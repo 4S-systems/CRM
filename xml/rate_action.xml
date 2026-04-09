@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>RATE_ACTION</name>
+        <key>ID</key>
+        <key1>RATE_ID</key1>
+        <key2>ACTION_VALUE</key2>
+        <refintegkey></refintegkey>
+    </table_supported>  
+
+    <form_element>
+        <name>id</name>
+        <table>RATE_ACTION</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>rateID</name>
+        <table>RATE_ACTION</table>
+        <column>RATE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>actionValue</name>
+        <table>RATE_ACTION</table>
+        <column>ACTION_VALUE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

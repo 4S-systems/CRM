@@ -1,0 +1,663 @@
+<%@ page import="com.silkworm.business_objects.*,com.silkworm.business_objects.*,java.util.*,com.silkworm.common.*"%>
+<%@ page import="com.silkworm.international.TouristGuide,com.maintenance.db_access.*,com.silkworm.db_access.*"%>
+<%@ taglib prefix="sw" uri="/WEB-INF/swtaglib.tld" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+
+
+MetaDataMgr metaMgr = MetaDataMgr.getInstance();
+String context = metaMgr.getContext();
+
+String status = (String) request.getAttribute("status");
+
+GroupMgr groupMgr = GroupMgr.getInstance();
+TradeMgr tradeMgr = TradeMgr.getInstance();
+GrantsMgr grantsMgr =GrantsMgr.getInstance();
+GrantUserMgr grantUserMgr= GrantUserMgr.getInstance();
+
+UserTradeMgr userTradeMgr = UserTradeMgr.getInstance();
+
+Vector groups = groupMgr.getCashedTable();
+Vector trades = tradeMgr.getCashedTable();
+Vector grants = grantsMgr.getAllgrants();
+
+int l = groups.size();
+int tradesize = trades.size();
+
+WebBusinessObject wbo = null;
+ArrayList sites=new ArrayList();
+sites=(ArrayList)request.getAttribute("sites");
+WebBusinessObject user = (WebBusinessObject) request.getAttribute("user");
+
+//WebBusinessObject userTradeWbo = userTradeMgr.getOnSingleKey1(user.getAttribute("userId").toString());
+TouristGuide tGuide = new TouristGuide("/com/silkworm/international/BasicForms");
+String stat= (String) request.getSession().getAttribute("currentMode");
+String align=null;
+String dir=null;
+String style=null;
+String lang,langCode;
+
+String saving_status_ok,saving_status_fail;
+String sTitle,title_2;
+String sUserName,sUserDesc;
+String cancel_button_label;
+String save_button_label, sPadding, sMenu, sSelect, sPassword, sEmail, sGroup, sTrade,project;
+
+String isDefault,sGrantUser,sSelectAll,filterQuery,sFullName;
+
+if(stat.equals("En")){
+    
+    align="center";
+    dir="LTR";
+    style="text-align:left";
+    lang="   &#1593;&#1585;&#1576;&#1610;    ";
+    
+    sUserName="User Name";
+    sUserDesc="User Description";
+    sTitle="Update User";
+    title_2="All information are needed";
+    cancel_button_label="Back To List";
+    save_button_label="Save";
+    langCode="Ar";
+    sPadding = "left";
+    sMenu = "Menu";
+    sSelect = "Select";
+    sPassword = "Password";
+    sEmail = "Email Address";
+    sGroup = "Group";
+    sTrade = "Trade";
+    project="Site";
+    saving_status_ok="Saving Successfully";
+    saving_status_fail="Fail To Save";
+    isDefault = "Is Default";
+    sGrantUser = "Grants user";
+    sSelectAll = "All";
+    filterQuery="Search by";
+    sFullName="Full Name";
+}else{
+    
+    align="center";
+    dir="RTL";
+    style="text-align:Right";
+    lang="English";
+    
+    
+    
+    sUserName="&#1575;&#1587;&#1605; &#1575;&#1604;&#1605;&#1587;&#1578;&#1582;&#1583;&#1605;";
+    sUserDesc="&#1608;&#1589;&#1601; &#1575;&#1604;&#1605;&#1580;&#1605;&#1608;&#1593;&#1577;";
+    sTitle="&#1578;&#1581;&#1583;&#1610;&#1579; &#1605;&#1587;&#1578;&#1582;&#1583;&#1605;";
+    title_2="&#1603;&#1604; &#1575;&#1604;&#1605;&#1593;&#1604;&#1608;&#1605;&#1575;&#1578; &#1605;&#1591;&#1604;&#1608;&#1576;&#1607;";
+    cancel_button_label="&#1593;&#1608;&#1583;&#1577;";
+    save_button_label="&#1578;&#1587;&#1580;&#1610;&#1604;";
+    langCode="En";
+    sPadding = "right";
+    sMenu = "&#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1577;";
+    sSelect = "&#1575;&#1582;&#1578;&#1575;&#1585;";
+    sPassword = "&#1603;&#1604;&#1605;&#1577; &#1575;&#1604;&#1605;&#1585;&#1608;&#1585;";
+    sEmail = "&#1575;&#1604;&#1576;&#1585;&#1610;&#1583; &#1575;&#1604;&#1573;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610;";
+    sGroup = "&#1605;&#1580;&#1605;&#1608;&#1593;&#1577;";
+    sTrade = "&#1575;&#1604;&#1573;&#1583;&#1575;&#1585;&#1577; &#1575;&#1604;&#1601;&#1606;&#1610;&#1577;";
+    project="&#1575;&#1604;&#1605;&#1608;&#1602;&#1593;";
+    saving_status_ok="&#1578;&#1605; &#1575;&#1604;&#1578;&#1587;&#1580;&#1610;&#1604; &#1576;&#1606;&#1580;&#1575;&#1581;";
+    saving_status_fail="&#1604;&#1605; &#1610;&#1578;&#1605; &#1575;&#1604;&#1578;&#1587;&#1580;&#1610;&#1604;";
+    isDefault = "&#1573;&#1601;&#1578;&#1585;&#1575;&#1590;&#1609;";
+    sGrantUser = "&#1589;&#1604;&#1575;&#1581;&#1610;&#1575;&#1578; &#1575;&#1604;&#1605;&#1587;&#1578;&#1582;&#1583;&#1605;";
+    sSelectAll ="&#1575;&#1604;&#1603;&#1604;";
+    filterQuery="&#1575;&#1604;&#1576;&#1581;&#1579; &#1576;&#1608;&#1575;&#1587;&#1591;&#1577;";
+    sFullName="الاسم بالكامل";
+}
+UserGroupMgr  userGroupMgr = UserGroupMgr.getInstance();
+Vector userGroupVec = new Vector();
+WebBusinessObject userGroupWbo = new WebBusinessObject();
+Vector grantVec = new Vector();
+String userId= (String) request.getAttribute("userId");
+List filterList=(ArrayList) request.getAttribute("filterList");
+boolean viewIsDefualt = (Boolean) request.getAttribute("viewIsDefualt");
+%>
+
+<HTML>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    
+    <HEAD>
+        <TITLE>Document Viewer - add new user</TITLE>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="CSS.css">
+        <script src='ChangeLang.js' type='text/javascript'></script>
+    </HEAD>
+    
+    <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+
+        function submitForm()
+        {    
+            if (!validateData("req", document.USERS_FORM.password, "Please, enter Password.")) {
+                document.USERS_FORM.password.focus();
+            } else if (!validateData("email", document.USERS_FORM.email, "Please, enter a valid Email.")) { //!validateData("req", document.USERS_FORM.email, "Please, enter Email.") ||
+                document.USERS_FORM.email.focus();
+            } else if (document.USERS_FORM.userTrades.checked  == false) {
+                alert ("You must select a management ");
+            } else {
+                 if (checkGroup() == true) {
+                    if (checkRadioDefault() == true) {
+//                        if(checkGrant() == true){
+
+                document.USERS_FORM.action = "<%=context%>/UsersServlet?op=UpdateUser";
+                document.USERS_FORM.submit();
+//                }else {
+//                        alert ("Select default grant for user.");
+//                }
+                }else {
+                        alert ("Select default group for user.");
+                    }
+                } else {
+                        alert ("Select at least one group for user");
+                }
+            }
+        }
+        function cancelForm()
+        {    
+        document.USERS_FORM.action = "<%=context%>/ListerServlet?op=ListUsers";
+        document.USERS_FORM.submit();  
+        }
+        function checkDefault(i)
+        {
+            var check = document.getElementById('group'+i);
+            var rows = document.getElementById('rows').value;
+            var count = 0;
+             for (x=0;x<rows;x++){
+                    if(document.getElementById('isDefault'+x).checked == true){
+                        count = count +1;
+                    }
+                }
+
+            if ( check.checked == true ){
+                   document.getElementById('isDefault'+i).disabled = false;
+
+            } else {
+                document.getElementById('isDefault'+i).checked = false;
+                document.getElementById('isDefault'+i).disabled = true;
+            }
+
+        }
+        function  checkRadioDefault ()
+        {
+
+            var rows = document.getElementById('rows').value;
+            var countDefault = 0;
+
+             for (x=0;x<rows;x++){
+                    if(document.getElementById('isDefault'+x).checked == true){
+                        countDefault = countDefault +1;
+                    }
+                }
+                 if(countDefault >0){
+                 return true;
+               }else {
+                 return false;
+                }
+        }
+
+         function  checkGroup()
+        {
+
+            var rows = document.getElementById('rows').value;
+            var countGroup = 0;
+
+             for (x=0;x<rows;x++){
+                    if(document.getElementById('group'+x).checked == true){
+                        countGroup = countGroup +1;
+                    }
+                }
+                 if(countGroup >0){
+
+                  return true;
+               }else {
+                 return false;
+
+                }
+        }
+
+        function checkAll(checkObj){
+            var i = 0;
+            var count = document.getElementById('totalGrant').value;
+            var check = document.getElementById('allGrant');
+
+
+            if ( check.checked==true ){
+
+                        for (i=0;i<count;i++ ) {
+                        document.getElementById('grant['+i+']').checked = true;
+                            }
+                 } else {
+
+                        for (i=0;i<count;i++ ) {
+                        document.getElementById('grant['+i+']').checked = false;
+                 }
+        }
+        }
+
+        function addId(){
+            var i = 0;
+            var count = document.getElementById('totalGrant').value;
+            var checkAll = 0;
+
+                    for (i=0;i<count;i++ ) {
+                        if( document.getElementById('grant['+i+']').checked == true ){
+                       checkAll = checkAll+1;
+
+                        } else {
+                            document.getElementById("allGrant").checked = false;
+                        }
+
+                    }
+
+                    if (count == checkAll){
+                        document.getElementById("allGrant").checked = true;
+                    }
+
+
+
+        }
+
+          function  checkGrant()
+        {
+
+            var count = document.getElementById('totalGrant').value;
+            var checkAll = 0;
+
+             for (x=0;x<count;x++){
+                    if(document.getElementById('grant['+x+']').checked == true){
+                        checkAll = checkAll +1;
+                    }
+                }
+                 if(checkAll >0){
+
+                  return true;
+               }else {
+                 return false;
+
+                }
+        }
+        
+    </SCRIPT>
+    
+    <BODY>
+        <FORM NAME="USERS_FORM" METHOD="POST">
+            <DIV align="left" STYLE="color:blue;">
+                <input type="button"  value="<%=lang%>"  onclick="reloadAE('<%=langCode%>')" class="button">
+                <button    onclick="cancelForm()" class="button"><%=cancel_button_label%> <IMG VALIGN="BOTTOM"  HEIGHT="15" SRC="images/leftarrow.gif"></button>
+                <button  onclick="JavaScript:  submitForm();" class="button"><%=save_button_label%><IMG HEIGHT="15" SRC="images/save.gif"></button>
+            </DIV>
+            <fieldset class="set" align="center">
+                <legend align="center">
+                    <table align="<%=align%>" dir=<%=dir%>>
+                        <tr>
+                            
+                            <td class="td">
+                                <font color="blue" size="6">    <%=sTitle%>                
+                                </font>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </legend>
+                <%
+                if(null!=status) {
+    if(status.equalsIgnoreCase("ok")){
+                %>
+                <center>
+                    <h3>   <%=saving_status_ok%> </h3>
+                </center>
+                <br>
+                <%}else{%>
+                <center>
+                    <h3>   <%=saving_status_fail%> </h3>
+                </center>
+                <br>
+                <%}}
+                
+                %>
+                <TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" ALIGN="CENTER" DIR="<%=dir%>">
+                    <TR>
+                        <TD class='td'>
+                            <p><b style="margin-left: 5px;margin-left: 5px;font-weight: bold"><%=sFullName%></b></p>
+                        </TD>
+                        <%
+                            if(user.getAttribute("fullName")!=null){
+
+                        %>
+                        <TD class='td'>
+                            <input type="TEXT" name="fullName" ID="fullName" size="33" value="<%=user.getAttribute("fullName")%>" maxlength="255" style="width:100%;color: black; font-weight: bold; font-size: 12px">
+                        </TD>
+                        <%    
+                            }else{
+                        %>
+                        <TD class='td'>
+                            <input type="TEXT" name="fullName" ID="fullName" size="33" value="" maxlength="255" style="width:100%;color: black; font-weight: bold; font-size: 12px">
+                        </TD>
+                        <% 
+                            }
+                        %>
+                    </TR>
+                    <TR>
+                        <TD class='td'>
+                            <LABEL FOR="str_Function_Name">
+                                <p><b><%=sUserName%>:</b>&nbsp;
+                            </LABEL>
+                        </TD>
+                        <TD class='td'>
+                            <input disabled type="TEXT" name="userName" ID="userName" size="33" value="<%=user.getAttribute("userName")%>" maxlength="255">
+                        </TD>
+                    </TR>
+                    
+                    <TR>
+                        <TD class='td'>
+                            <LABEL FOR="str_Function_Desc">
+                                <p><b><%=sPassword%>:</b>&nbsp;
+                            </LABEL>
+                        </TD>
+                        <TD class='td'>
+                            <input type="PASSWORD" name="password" ID="password" size="33" value="" maxlength="255">
+                        </TD>
+                    </TR>
+                    
+                    <TR>
+                        <TD class='td'>
+                            <LABEL FOR="str_Function_Name">
+                                <p><b><%=sEmail%>:</b>&nbsp;
+                            </LABEL>
+                        </TD>
+                        <%
+                            if(user.getAttribute("email")!=null && user.getAttribute("email").equals("")) {
+                        %>
+                        <TD class='td'>
+                            <% if(user.getAttribute("email") != null && !user.getAttribute("email").equals("")) { %>
+                            <input type="TEXT" name="email" ID="email" size="33" value="<%=user.getAttribute("email")%>" maxlength="255">
+                            <% } else { %>
+                            <input type="TEXT" name="email" ID="email" size="33" value="" maxlength="255">
+                            <% } %>
+                        </TD>
+                        <%
+                           } else {
+                        %>
+                         <TD class='td'>
+                            <input type="TEXT" name="email" ID="email" size="33" maxlength="255">
+                        </TD>
+                        <%
+                           }
+                        %>
+                    </TR>
+                    
+<!--                    <TR>
+                        <TD class='td'>
+                            <LABEL FOR="str_Function_Name">
+                                <p><b><%=project%>:</b>&nbsp;
+                            </LABEL>
+                        </TD>
+                        <TD class='td' STYLE="<%=style%>">
+                            <%
+                                String  site = user.getAttribute("site").toString();
+                            %>
+                            <select name="siteId" id="siteId" dir="<%=dir%>" style="width:233">
+                                <sw:WBOOptionList wboList='<%=sites%>' displayAttribute="projectName" valueAttribute="projectID" scrollTo = "<%=site%>"/>
+                            </select>
+                        </TD>
+                    </TR>-->
+<!--                    <TR>
+                        <TD class='td' STYLE="<%=style%>">
+                            <p><b><%=filterQuery%></b>&nbsp;
+                        </TD>
+                        <TD class='td' STYLE="<%=style%>">
+                            <select name="searchBy" id="searchBy" dir="<%=dir%>" style="width:233">
+
+                                <%
+                                List queryList = new ArrayList();
+                                for(int i=0;i<filterList.size();i++){
+
+                                    queryList=(ArrayList)filterList.get(i);
+                                %>
+
+                               <%if(stat.equals("En")){ %>
+                               <% if(queryList.get(3).toString().equals(user.getAttribute("searchBy"))){ %>
+                                <option value="<%=queryList.get(3).toString()%>" selected><%=queryList.get(2).toString()%>
+                               <% } else { %>
+                               <option value="<%=queryList.get(3).toString()%>"><%=queryList.get(2).toString()%>
+                               <% } %>
+                               <%}else{%>
+                               <% if(queryList.get(3).toString().equals(user.getAttribute("searchBy"))){ %>
+                                <option value="<%=queryList.get(3).toString()%>" selected><%=queryList.get(1).toString()%>
+                               <% } else { %>
+                                <option value="<%=queryList.get(3).toString()%>"><%=queryList.get(1).toString()%>
+                               <% } %>
+                               <%}%>
+                                <%}%>
+
+                                <% if(stat.equals("En")){ %>
+                                <% if(user.getAttribute("searchBy").equals("all")){ %>
+                                <option value="all" selected><%=sSelectAll%>
+                                <% } else { %>
+                                <option value="all"><%=sSelectAll%>
+                                <% } %>
+                                <% }else{ %>
+                                <% if(user.getAttribute("searchBy").equals("all")){ %>
+                                <option value="all" selected><%=sSelectAll%>
+                                <% } else { %>
+                                <option value="all"><%=sSelectAll%>
+                                <% } %>
+                                <% } %>
+                            </select>
+                        </TD>
+                    </TR>-->
+                </TABLE>
+                <BR><BR>
+                
+                
+                <TABLE CLASS="blueBorder" style="border-color: silver; border-right-WIDTH:1px;" WIDTH="600" CELLPADDING="0" CELLSPACING="0"  ALIGN="center" DIR="<%=dir%>">
+                    <TR class="backgroundHeader">
+                        <TD VALIGN="BOTTOM" STYLE="border-top-WIDTH:0;color:white;" WIDTH="40">
+                            <B>
+                                &nbsp;<%=isDefault%>&nbsp;
+                            </B>
+                        </TD>
+                       <TD nowrap CLASS="firstname" WIDTH="570" STYLE="border-top-WIDTH:0; font-size:12;color:white;" nowrap >
+                            <%=sGroup%>
+                            </TD>
+                        <TD VALIGN="BOTTOM" STYLE="border-top-WIDTH:0;color:white;" WIDTH="30">
+                            <B>
+                                &nbsp;<%=sSelect%>&nbsp;
+                            </B>
+                        </TD>
+                    </TR>       
+                     <input type="hidden" name="rows" id="rows" value="<%=l%>">
+                    <%
+                    for(int i = 0;i<l;i++) {
+    wbo = (WebBusinessObject) groups.get(i);
+                    %>
+                    <TR>
+                          <%
+                        userGroupVec = userGroupMgr.getOnArbitraryDoubleKey(wbo.getAttribute("groupID").toString(), "key", user.getAttribute("userId").toString(), "refintegkey");
+                        if(userGroupVec.size()>0){
+                            userGroupWbo = (WebBusinessObject) userGroupVec.get(0);
+                        %>
+                        <% 
+                        if(viewIsDefualt){
+                            if(userGroupWbo.getAttribute("isDefault").toString().equals("1")){
+                            %>
+                        <TD  CLASS="cell">
+                            <INPUT TYPE="RADIO" NAME="isDefault" ID="isDefault<%=i%>" value="<%=wbo.getAttribute("groupID")%>" CHECKED >
+                            </TD>
+                           <% } else { %>
+                          <TD  CLASS="cell">
+                            <INPUT TYPE="RADIO" NAME="isDefault" ID="isDefault<%=i%>" value="<%=wbo.getAttribute("groupID")%>" >
+                            </TD>
+                         <% } %>
+                         <% } else { %>
+                          <TD  CLASS="cell">
+                            <INPUT TYPE="RADIO" NAME="isDefault" ID="isDefault<%=i%>" value="<%=wbo.getAttribute("groupID")%>" >
+                            </TD>
+                         <% } %>
+                        <TD  CLASS="cell" STYLE="padding-left:40;text-align:left;">
+                            <DIV ID="links">
+                                <A HREF="alert('');">
+                                    <%=wbo.getAttribute("groupName")%>
+                                    <SPAN>
+                                    </SPAN>
+                                </A>
+                            </DIV>
+                        </TD>
+
+                       <TD  CLASS="cell">
+                            <INPUT TYPE="CHECKBOX" NAME="userGroups" ONCLICK="checkDefault(<%=i%>)" value ="<%=wbo.getAttribute("groupName")%>" ID="group<%=i%>" checked>
+                            </TD>
+
+                        <% } else { %>
+
+                         <TD  CLASS="cell">
+                            <INPUT TYPE="RADIO" NAME="isDefault" ID="isDefault<%=i%>" value="<%=wbo.getAttribute("groupID")%>" disabled>
+                            </TD>
+
+                        <TD  CLASS="cell" STYLE="padding-left:40;text-align:left;">
+                            <DIV ID="links">
+                                <A HREF="alert('');">
+                                    <%=wbo.getAttribute("groupName")%>
+                                    <SPAN>
+                                    </SPAN>
+                                </A>
+                            </DIV>
+                        </TD>
+                       <TD  CLASS="cell">
+                            <INPUT TYPE="CHECKBOX" NAME="userGroups" ONCLICK="checkDefault(<%=i%>)" value ="<%=wbo.getAttribute("groupName")%>" ID="group<%=i%>">
+                            </TD>
+
+                        <% }%>
+                    </TR>
+                    <%
+                    }
+                    
+                    %>
+                    <tr>
+                        <INPUT TYPE='HIDDEN' name='userId' value="<%=user.getAttribute("userId")%>" > 
+                        <INPUT TYPE='HIDDEN' name='userName' value="<%=user.getAttribute("userName")%>" > 
+                    </tr>
+                </TABLE>
+                <BR>
+<!--                     <TABLE WIDTH="500" CELLPADDING="0" CELLSPACING="0" STYLE="border-right-WIDTH:1px;" ALIGN="center" DIR="<%=dir%>">
+                    <TR CLASS="head" STYLE="background:#9B9B00;">
+                        <TD nowrap CLASS="firstname" WIDTH="500" STYLE="border-top-WIDTH:0; font-size:12;color:white;">
+                            <%=sGrantUser%>
+                        </TD>
+                         <%
+                         int checkAll=0;
+                    for(int i = 0;i<grants.size();i++) {
+                        
+                                    wbo = (WebBusinessObject) grants.get(i);
+                                    grantVec = (Vector) grantUserMgr.getOnArbitraryDoubleKey(wbo.getAttribute("id").toString(), "key1",userId,"key2");
+
+                    %>
+                    <% if(grantVec.size()>0){
+                                checkAll = checkAll + 1;
+                                 }}%>
+                        <TD VALIGN="BOTTOM" STYLE="border-top-WIDTH:0;color:white;" WIDTH="30">
+                            <B>
+                                &nbsp;<%=sSelect%>&nbsp;
+                                <% if(checkAll == grants.size()){ %>
+                                <INPUT TYPE="CHECKBOX" NAME="allGrant" value ="" ID="allGrant" onclick="javascript:checkAll(this);" CHECKED>
+                                <% } else { %>
+                                <INPUT TYPE="CHECKBOX" NAME="allGrant" value ="" ID="allGrant" onclick="javascript:checkAll(this);" >
+                                <% } %>
+                            </B>
+                        </TD>
+                    </TR>
+
+                    <%
+                    for(int i = 0;i<grants.size();i++) {
+                        
+                                    wbo = (WebBusinessObject) grants.get(i);
+                                    grantVec = (Vector) grantUserMgr.getOnArbitraryDoubleKey(wbo.getAttribute("id").toString(), "key1",userId,"key2");
+
+                    %>
+                    <TR>
+
+                        <TD  CLASS="cell" STYLE="padding-left:40;text-align:left;">
+                            <DIV ID="links">
+                                <A HREF="alert('');">
+                                    <%=wbo.getAttribute("grantName")%>
+                                    <SPAN>
+                                    </SPAN>
+                                </A>
+                            </DIV>
+                        </TD>
+                        <TD  CLASS="cell" style="border-left:black">
+                            <% if(grantVec.size()>0){
+                               
+                                 %>
+                            <INPUT TYPE="CHECKBOX" NAME="grantUser" value ="<%=wbo.getAttribute("id")%>" ID="grant[<%=i%>]" onclick="addId();" checked >
+                            <% }else { %>
+                             <INPUT TYPE="CHECKBOX" NAME="grantUser" value ="<%=wbo.getAttribute("id")%>" ID="grant[<%=i%>]" onclick="addId();"  >
+                            <% } %>
+                            </TD>
+                            <input type="hidden" id="totalGrant" value="<%=grants.size()%>">
+                    </TR>
+                    <%
+                    }
+
+                    %>
+
+
+                </TABLE>
+                <BR>-->
+<!--                <TABLE WIDTH="600" CELLPADDING="0" CELLSPACING="0" STYLE="border-right-WIDTH:1px;" ALIGN="center" DIR="<%=dir%>">
+                    <TR CLASS="backgroundHeader">
+                        <TD nowrap CLASS="firstname" WIDTH="570" STYLE="border-top-WIDTH:0; font-size:12;color:white;" nowrap >
+                            <%=sTrade%>
+                            </TD>
+                        <TD VALIGN="BOTTOM" STYLE="border-top-WIDTH:0;color:white;" WIDTH="30">
+                            <B>
+                                &nbsp;<%=sSelect%>&nbsp;
+                            </B>
+                        </TD>
+                    </TR>       -->
+                    
+                    <%
+                    //for(int i = 0;i<tradesize;i++) {
+                    //wbo = (WebBusinessObject) trades.get(i);
+                    //if(wbo.getAttribute("tradeId").toString().equalsIgnoreCase(userTradeWbo.getAttribute("tradeId").toString())) {
+                    %>
+<!--                    <TR>
+                        <TD  CLASS="cell" STYLE="padding-left:40;text-align:left;">
+                            <DIV ID="links">
+                                <A HREF="alert('');">
+                                    <%//=wbo.getAttribute("tradeName")%>
+                                    <SPAN>
+                                    </SPAN>
+                                </A>
+                            </DIV>
+                        </TD>
+                        <TD  CLASS="cell" style="border-left:black">
+                            <input type="radio" name="userTrades" id="userTrades" checked value ="<%//=wbo.getAttribute("tradeId")%>" />
+                        </TD>
+                    </TR>-->
+                    <%
+                    //} else { %>
+<!--                     <TR>
+                        <TD  CLASS="cell" STYLE="padding-left:40;text-align:left;">
+                            <DIV ID="links">
+                                <A HREF="alert('');">
+                                    <%//=wbo.getAttribute("tradeName")%>
+                                    <SPAN>
+                                    </SPAN>
+                                </A>
+                            </DIV>
+                        </TD>
+                        <TD  CLASS="cell" style="border-left:black">
+                            <input type="radio" name="userTrades" id="userTrades" value ="<%//=wbo.getAttribute("tradeId")%>" />
+                        </TD>
+                    </TR>-->
+                    <%//}
+                    //}
+                    %>
+                <!--</table>-->
+                <BR><BR>
+            </fieldset>
+        </FORM>
+    </BODY>
+</HTML>     

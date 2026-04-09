@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>mchn_item_categories</name>
+        <key>ID</key>
+        <key1>EQUIPMENT_ID</key1>
+    </table_supported>  
+    
+    <form_element>
+        <name>categoryID</name>
+        <table>mchn_item_categories</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>equipmentID</name>
+        <table>mchn_item_categories</table>
+        <column>EQUIPMENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemID</name>
+        <table>mchn_item_categories</table>
+        <column>ITEM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>catName</name>
+        <table>mchn_item_categories</table>
+        <column>CATEGORY_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemDesc</name>
+        <table>mchn_item_categories</table>
+        <column>ITEM_DSCRPTN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemPrice</name>
+        <table>periodic_maintenance</table>
+        <column>ITEM_PRICE</column>
+        <class>com.silkworm.persistence.relational.floatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

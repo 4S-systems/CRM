@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Active Job Order Now</Entitle>
+        <Artitle>&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1606;&#1588;&#1591; &#1581;&#1575;&#1604;&#1610;&#1575;</Artitle>
+        <barText>Job Order Menu</barText>
+    </menu_style>  
+    
+    <elements>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604;</Arname>
+            <Enname>View Job Order</Enname>
+            <nlink>AssignedIssueServlet?op=VIEWDETAILS&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=viewDetailsCmplx&amp;issueId=</clink>
+        </item>
+        
+        <!--<item>
+            <Arname>&#1578;&#1606;&#1601;&#1610;&#1584; &#1571;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604;</Arname>
+            <Enname>Execute Job Order</Enname>
+            <nlink>AssignedIssueServlet?op=internalAssign&amp;state=SCHEDULE&amp;viewOrigin=null&amp;direction=forward&amp;issueId=</nlink>
+            <clink>AssignedIssueServlet?op=internalAssign&amp;state=SCHEDULE&amp;viewOrigin=null&amp;direction=forward&amp;issueId=</clink>
+        </item> -->
+        
+        <item>
+            <Arname>&#1573;&#1590;&#1575;&#1601;&#1607; &#1576;&#1606;&#1608;&#1583; &#1589;&#1610;&#1575;&#1606;&#1607;</Arname>
+            <Enname>Add Maintenance Items</Enname>
+            <nlink>IssueServlet?op=GetTasksForm&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=addTasksCmplxForm&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1573;&#1590;&#1575;&#1601;&#1577; &#1575;&#1604;&#1605;&#1587;&#1578;&#1607;&#1604;&#1603;&#1575;&#1578;</Arname>
+            <Enname>Add Used Spare Parts</Enname>
+            <nlink>AssignedIssueServlet?op=configUsedParts&amp;attachedEqFlag=notatt&amp;issueId=</nlink>
+            <clink>AssignedIssueServlet?op=configUsedParts&amp;attachedEqFlag=notatt&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</Arname>
+            <Enname>Add Spare Parts</Enname>
+            <nlink>AssignedIssueServlet?op=configParts&amp;page=sparePares&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=Complexparts&amp;page=sparePares&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1571;&#1591;&#1604;&#1576; &#1605;&#1606; &#1575;&#1604;&#1605;&#1582;&#1586;&#1606;</Arname>
+            <Enname>Request from Store</Enname>
+            <nlink>TransactionServlet?op=GetTransactionForm&amp;issueId=</nlink>
+            <clink>TransactionServlet?op=GetTransactionForm&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1573;&#1590;&#1575;&#1601;&#1607; &#1593;&#1605;&#1575;&#1604;&#1607;</Arname>
+            <Enname>Add Workers</Enname>
+            <nlink>ScheduleServlet?op=AddWorkersForm&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=AddWorkersCmplxForm&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1607;</Arname>
+            <Enname>View Maintenance Items</Enname>
+            <nlink>IssueServlet?op=Re_Jops&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=ViewMItemsCmplx&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</Arname>
+            <Enname>View Spare Parts</Enname>
+            <nlink>TransactionServlet?op=GetSubtractCaseStore&amp;viewParts=ok&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=viewComplexparts&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1604;&#1593;&#1605;&#1575;&#1604;&#1607;</Arname>
+            <Enname>View Workers</Enname>
+            <nlink>ScheduleServlet?op=WorkersReport&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=viewWorkersCmplx&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1573;&#1590;&#1575;&#1601;&#1607; &#1588;&#1603;&#1608;&#1609; &#1593;&#1575;&#1605;&#1604;</Arname>
+            <Enname>Add Labor Complaints</Enname>
+            <nlink>AssignedIssueServlet?op=AddLabourCompalint&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=AddLabourCompalint&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1588;&#1603;&#1575;&#1608;&#1609; &#1575;&#1604;&#1593;&#1575;&#1605;&#1604;&#1610;&#1606;</Arname>
+            <Enname>View Labor Complaints</Enname>
+            <nlink>IssueServlet?op=viewComp&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=viewLabourCompalint&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1585;&#1576;&#1591; &#1575;&#1604;&#1588;&#1603;&#1575;&#1608;&#1609; &#1576;&#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1607;</Arname>
+            <Enname>Assign Complaints</Enname>
+            <nlink>IssueServlet?op=compose&amp;issueId=</nlink>
+            <clink>ComplexIssueServlet?op=assignComplaints&amp;issueId=</clink>
+        </item>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</Arname>
+            <Enname>View Equipment</Enname>
+            <nlink>UnitDocReaderServlet?op=ViewImages&amp;issueId=</nlink>
+            <clink>UnitDocReaderServlet?op=ViewImages&amp;issueId=</clink>
+        </item>
+
+        <item>
+            <Arname>&#1581;&#1584;&#1601; &#1571;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604;</Arname>
+            <Enname>Delete Job Order</Enname>
+            <nlink>AssignedIssueServlet?op=confirmDelete&amp;issueId=</nlink>
+            <clink>AssignedIssueServlet?op=confirmDelete&amp;issueId=</clink>
+        </item>
+
+        <item>
+            <Arname>&#1575;&#1604;&#1594;&#1575;&#1569; &#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1607; </Arname>
+            <Enname>Stop Menu</Enname>
+            <nlink>TaskServlet?op=removeFromSession&amp;issueId=</nlink>
+            <clink>TaskServlet?op=removeFromSession&amp;issueId=</clink>
+        </item>
+
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <nlink>jobOrder</nlink>
+            <clink>jobOrder</clink>
+        </item>
+        
+    </elements>
+</menu>

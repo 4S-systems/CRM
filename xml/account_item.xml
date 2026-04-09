@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>account_item</name>
+       <key>SURROGATE</key>
+      <refintegkey>TITLE</refintegkey>
+      <srefintegkey>ACCNT_ITEM_NAME</srefintegkey>
+   </table_supported>  
+
+   <form_element>
+     <name>surrogate</name>
+     <table>account_item</table>
+     <column>SURROGATE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+
+   <form_element>
+     <name>itemTitle</name>
+     <table>account_item</table>
+     <column>ITEM_TITLE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>title</name>
+     <table>account_item</table>
+     <column>TITLE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+ 
+   <form_element>
+     <name>accntItemName</name>
+     <table>account_item</table>
+     <column>ACCNT_ITEM_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   
+   <form_element>
+     <name>description</name>
+     <table>account_item</table>
+     <column>DESCRIPTION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>account_item</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>
+

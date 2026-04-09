@@ -1,0 +1,6 @@
+UPDATE PROJECT SET PROJECT_NAME = 'Following up' WHERE PROJECT_NAME = 'Followingg up';
+UPDATE PROJECT SET PROJECT_NAME = 'Not interested' WHERE PROJECT_NAME = 'Not Interested';
+
+INSERT INTO PROJECT VALUES ('1508233715052', 'Closed', 'CLD','18-OCT-17', '1', 'Closed', '1484491028701', 'CL-RATE', '0', 'UL',	'UL', 'UL', 'red', '0', '0', null, null, '1');
+INSERT INTO PROJECT VALUES ('1508233715053', 'Out of segment', 'OOS','18-OCT-17', '1', 'Out of segment', '1484491028701', 'CL-RATE', '0', 'UL',	'UL', 'UL', 'brown', '0', '0', null, null, '1');
+INSERT INTO PROJECT VALUES ('1508233715054', 'Existing Owner', 'EX','18-OCT-17', '1', 'Existing Owner', '1484491028701', 'CL-RATE', '0', 'UL', 'UL', 'UL', 'client', '0', '0', null, null, '1');

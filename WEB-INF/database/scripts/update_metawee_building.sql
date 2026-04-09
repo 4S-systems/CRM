@@ -1,0 +1,1 @@
+update project set LOCATION_TYPE = 'CMPLX-UNIT' where PROJECTFLAG = '1' and LOCATION_TYPE = 'RES-UNIT' and MAIN_PROJ_ID in (select PROJECT_ID from project where MAIN_PROJ_ID = '1364111290870');

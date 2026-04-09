@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>schedules_on_equipment_by_item</name>
+        <key>schedule_id</key>
+        <key1>item_id</key1>
+        <key2>parent_name</key2>
+        <key3>model_id</key3>
+        <key4>main_type_id</key4>
+    </table_supported>   
+    
+    <form_element>
+        <name>scheduleId</name>
+        <table>schedules_on_equipment_by_item</table>
+        <column>schedule_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemId</name>
+        <table>schedules_on_equipment_by_item</table>
+        <column>item_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>scheduleTitle</name>
+        <table>schedules_on_equipment_by_item</table>
+        <column>schedule_title</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>parentName</name>
+        <table>schedules_on_equipment_by_item</table>
+        <column>parent_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+     <form_element>
+        <name>modelId</name>
+        <table>schedules_on_equipment_by_item</table>
+        <column>model_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>mainTypeId</name>
+        <table>schedules_on_equipment_by_item</table>
+        <column>main_type_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

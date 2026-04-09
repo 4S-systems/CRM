@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+ <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+ <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+$(function(){
+	$("#add_claim").click(function(){
+	$("#claim_division").css("visibility","visible").toggle();
+	
+	
+	});
+	$("#add_order").click(function(){
+	
+	$("#claim_division").show($("#order_division").css("visibility","visible").toggle());
+	});
+	
+	});
+
+</script>
+<style>
+
+	table td{
+	padding:2px;
+	}
+label{
+	font:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	color:#005599;
+	}
+#call_center{
+	direction:rtl;
+	padding:0px;
+	margin:0px;
+	color:#005599;
+		height:600px;
+	width:100%;
+	position:relative;
+	border:1px solid #f1f1f1;
+	font:Verdana, Geneva, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	
+	}
+#title{padding;10px;
+	margin:0px 10px;
+	height:30px;
+	width:95%;
+	text-align:center;
+	
+}
+.text-success{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:24px;
+	font-weight:bold;
+	}
+
+#unit_division {
+	width:45%;
+	float:left;
+	height:200px;
+	
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+
+}
+#customer_division {
+	width:49%;
+	height:200px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 49%;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	
+}
+#information { 
+	padding:10px;
+	width: 96%;
+	margin: 5px auto;
+	height:220px;
+}
+#left_info{
+	padding:5px;
+	width:49%;
+	float:left;
+	height:75%;
+	border:1px solid #555;
+	}
+#right_info{
+	padding:5px;
+	width:48.5%;
+	margin-left:51%;
+	height:75%;
+	border:1px solid #555;
+	}
+
+#claim_division {
+	padding: 10px;
+	width: 97%;
+	margin:3px auto;
+	border: 1px solid #999;
+}
+#order_division{
+	padding: 10px;
+	width: 97%;
+	margin:3px auto;
+	border: 1px solid #999;
+	}
+</style>
+<body>
+<div  id="call_center" class="controls" >
+  <div id="title" class="alert" ><label class="text-success" >Call Center</label></div>
+<div id="unit_division">
+  	  	<table align="right" border="1px" width="100%"  height="100%">
+    	<tr align="center">
+        	<td colspan="2" class="alert alert-info">الوحدات</td>
+        </tr>
+        <tr>
+        	<td width="100px">رقم الوحدة:</td>
+            <td><label></label></td>
+      	</tr>
+         <tr>
+        	<td>بيانات أخرى :</td>
+            <td><label></label></td>
+      	</tr>
+         <tr>
+        	<td>بيانات أخرى:</td>
+            <td><label></label></td>
+      	</tr>
+    </table>
+  
+  
+  </div>
+  <div id="customer_division">
+<table align="right" border="1px" width="100%"  height="100%">
+    	<tr align="center">
+        	<td colspan="2"class="alert alert-info">العميل/المتصل</td>
+        </tr>
+        <tr>
+        	<td class=" span2">اسم العميل:</td>
+            <td><label></label></td>
+      	</tr>
+         <tr>
+        	<td class="" >رقم الموبايل:</td>
+            <td><label></label></td>
+      	</tr>
+         <tr>
+        	<td><label>رقم التليفون:</label></td>
+            <td><label></label></td>
+      	</tr>
+    </table>
+  </div>
+  <div style="clear:both"></div>
+  <div id="information"  >
+  	<div id="left_info">
+       <table width="100%"  border="1px">
+  <tr>
+    <td class="span2 alert alert-info" align="center"><label> حالة المكالمة:</label></td>
+    <td><input name="call_status" type="radio" value="incoming" /><label>واردة</label></td>
+    <td><input name="call_status" type="radio" value="out_call" /><label>صادرة</label>
+    </td>
+    
+  </tr>
+
+</table>
+     <div style="margin:5px auto;text-align:center;">  <input name="save_info" type="button" id ="save_info" value="حفظ البيانات" class="btn btn-large btn-success" /></div>
+    </div>
+  	<div id="right_info">
+    <table width="100%"   dir="rtl" height="100%">
+      <tr>
+    <td>رقم المتابعة للعميل:</td>
+    <td><label></label></td>
+  </tr>
+  <tr>
+    <td>التاريخ:</td>
+    <td><input name="date" type="text" size="50" maxlength="50" /></td>
+  </tr>
+  <tr>
+    <td>تعليق عن :</td>
+    <td><textarea rows="4" cols="10" resize="false" ></textarea></td>
+  </tr>
+</table>
+
+    </div>
+
+  </div>
+      <div style="width:96%;text-align:right;margin-top:2px; margin-right:5px">
+    
+     <input name="add_claim" id="add_claim" type="button" value="إضافة شكوى" class="btn btn-large btn-danger" />
+      <input name="add_order" type="button" id="add_order" value="إضافة طلب" class="btn btn-large btn-primary" />
+    </div>
+    
+  <div id="claim_division" style="visibility:hidden">
+  الشكاوى
+  <table width="100%" border="1">
+  <tr class="">
+    <th scope="col" class="span1">الرقم</th>
+    <th scope="col" class="span5">الشكوى</th>
+    <th scope="col" class="span3">الإدارة المختصة</th>
+    <th scope="col"></th>
+  </tr>
+
+  <tr>
+    <td><label></label></td>
+    <td><input type="text" name="claim_content"  class="span5"/></td>
+    <td>
+    <select >
+    
+    <option>empty</option>
+    </select>
+   
+    </td>
+    <td style="line-height:normal">
+   <span > <input type="checkbox" name="delete_claim" /><label>حذف</label></span>
+    </td>
+  </tr>
+
+ 
+</table>
+   <div style="margin:5px;">
+  	<input name="add_c" type="button" value="إضافة" class="btn btn-primary"/>
+    	<input name="delete_c" type="button" value="حذف " class="btn btn-danger"/>
+    </div>
+  </div>
+    <div id="order_division" style="visibility:hidden">
+الطلبات
+  <table width="100%" border="1">
+  <tr class="">
+    <th scope="col" class="span1">الرقم</th>
+    <th scope="col" class="span5">الطلب</th>
+    <th scope="col" class="span3">الإدارة المختصة</th>
+    <th scope="col"></th>
+  </tr>
+
+  <tr>
+    <td><label ></label></td>
+    <td><input type="text" name="order_content" class="span5" /></td>
+    <td>
+    <select >
+    
+    <option>empty</option>
+    </select>
+   
+    </td>
+    <td style="line-height:normal">
+   <span > <input type="checkbox" name="delete_order" /><label>حذف</label></span>
+    </td>
+  </tr>
+
+ 
+</table>
+   <div style="margin:5px;">
+  	<input name="add_o" type="button" value="إضافة" class="btn btn-primary"/>
+    	<input name="delete_o" type="button" value="حذف " class="btn btn-danger"/>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : menu.xml
+    Created on : January 7, 2004, 5:14 AM
+    Author     : walid
+    Description:
+        Purpose of the document follows.
+-->
+<menu_list>
+    <menu_rendering>
+        <name>mainMenu</name>
+        <color>#550000</color>
+        <border>0</border>
+        <border_color>red</border_color>
+        <curr_item_color>#3399FF</curr_item_color>
+        <context>/ArMaint</context>
+        <sumup>false</sumup>
+        <audio>applet</audio>
+        <mnu>2</mnu>
+    </menu_rendering>
+
+    <menu id="01/000/000"  >
+        <menuInfo>
+            <id>01/000/000</id>
+            <nameAr>معدات</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>gear.gif</sora>
+            <nameEn>Equipments</nameEn>
+            <display>1</display>
+        </menuInfo>
+        
+        <sub_menu id="01/001/000"  >
+            <submenuInfo>
+                <id>01/001/000</id>
+                <nameAr>&#1578;&#1589;&#1606;&#1610;&#1601; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Equipment Classification</nameEn>
+                <display>1</display>
+            </submenuInfo>
+
+            <!--<menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>قيد الانشاء</nameAr>
+                <target>/CategoryEngineeringServlet?op=insertJspTypeForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Under Constuction</nameEn>
+                <display>1</display>
+            </menu_element>-->
+
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>&#1606;&#1608;&#1593; &#1571;&#1587;&#1575;&#1587;&#1609;</nameAr>
+                <target>/EquipmentServlet?op=getMainTypeForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Basic Type</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="01/001/002"  >
+                <id>01/001/002</id>
+                <nameAr>ماركة / موديل</nameAr>
+                <target>/EquipmentServlet?op=GetCategoryForm&amp;type=Base</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Brand/Model</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id=" 01/001/003"  >
+                <id>01/001/003</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1571;&#1606;&#1608;&#1575;&#1593; &#1575;&#1604;&#1571;&#1587;&#1575;&#1587;&#1610;&#1577;</nameAr>
+                <target>/EquipmentServlet?op=ListMainCategory</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>2</pos>
+                <nameEn>List Basic Type</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="01/001/004"  >
+                <id>01/001/004</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1608;&#1583;&#1610;&#1604;&#1575;&#1578;</nameAr>
+                <target>/EquipmentServlet?op=ListCategory</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>2</pos>
+                <nameEn>List Models</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            
+        </sub_menu>
+        
+        <sub_menu id="01/002/000"  >
+            <submenuInfo>
+                <id>01/002/000</id>
+                <nameAr>&#1605;&#1593;&#1583;&#1607;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Equipment</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <!--
+            <menu_element id="01/002/001"  >
+                <id>01/002/001</id>
+                <nameAr>&#1605;&#1593;&#1583;&#1607; &#1580;&#1583;&#1610;&#1583;&#1607;</nameAr>
+                <target>/EquipmentServlet?op=GetEquipmentForm&amp;base=category</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>3</pos>
+                <nameEn>New Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="01/002/001"  >
+                <id>01/002/001</id>
+                <nameAr>&#1605;&#1593;&#1583;&#1607; &#1580;&#1583;&#1610;&#1583;&#1607; &#1605;&#1576;&#1587;&#1591;&#1607;</nameAr>
+                <target>/EquipmentServlet?op=GetSimpleEqpForm&amp;base=category</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>3</pos>
+                <nameEn>New Simple Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            -->
+            
+            <menu_element id="01/002/001"  >
+                <id>01/002/001</id>
+                <nameAr>&#1605;&#1600;&#1593;&#1600;&#1583;&#1607; &#1580;&#1600;&#1600;&#1583;&#1610;&#1600;&#1600;&#1583;&#1607;</nameAr>
+                <target>/EquipmentServlet?op=GetPrimaEqpForm&amp;base=category</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>3</pos>
+                <nameEn>New Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+    <!--        <menu_element id="01/002/002"  >
+                <id>01/002/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>/EquipmentServlet?op=ListEquipment</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>4</pos>
+                <nameEn>List Equipments</nameEn>
+                <display>1</display>
+            </menu_element> -->
+            <!--menu_element id="01/002/003"  >
+                <id>01/002/003</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578; &#1578;&#1581;&#1578; &#1575;&#1604;&#1590;&#1605;&#1575;&#1606;</nameAr>
+                <target>/EquipmentServlet?op=ListInWarranty</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>5</pos>
+                <nameEn>List Equipments Under Warranty</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="01/002/004"  >
+                <id>01/002/004</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578; &#1582;&#1575;&#1585;&#1580; &#1575;&#1604;&#1590;&#1605;&#1575;&#1606;</nameAr>
+                <target>/EquipmentServlet?op=ListOutWarranty</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>6</pos>
+                <nameEn>List Equipments Out Warranty</nameEn>
+                <display>1</display>
+            </menu_element-->
+            
+            <menu_element id="01/002/005"  >
+                <id>01/002/005</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578; &#1581;&#1587;&#1576; &#1575;&#1604;&#1605;&#1575;&#1585;&#1603;&#1577;/&#1575;&#1604;&#1605;&#1608;&#1583;&#1610;&#1604;</nameAr>
+                <target>/EquipmentServlet?op=EquipmentsByCategories</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>7</pos>
+                <nameEn>List Equipments By make/model</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="01/002/005">
+                <id>01/002/005</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578; &#1581;&#1587;&#1576; &#1575;&#1604;&#1571;&#1606;&#1608;&#1575;&#1593; &#1575;&#1604;&#1575;&#1587;&#1575;&#1587;&#1610;&#1607;</nameAr>
+                <target>/EquipmentServlet?op=EquipmentsByMainCat</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>7</pos>
+                <nameEn>List Equipments By Main Type</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="01/002/006"  >
+                <id>01/002/006</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578; &#1575;&#1604;&#1578;&#1609; &#1610;&#1605;&#1603;&#1606; &#1575;&#1604;&#1581;&#1575;&#1602;&#1607;&#1575;</nameAr>
+                <target>/EquipmentServlet?op=ListAttachedEquipment</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>8</pos>
+                <nameEn>List Attached Equipments</nameEn>
+                <display>1</display>
+            </menu_element>
+
+        </sub_menu>
+        
+        <sub_menu>
+                
+            <submenuInfo>
+                <id>01/003/000</id>
+                <nameAr>&#1588;&#1580;&#1585;&#1577; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Equipment Tree</nameEn>
+                <display>1</display>
+            </submenuInfo>
+                
+            <menu_element id="01/003/000">
+                <id>01/003/000</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1588;&#1580;&#1585;&#1577; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>/EquipmentServlet?op=ListMainTypes</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>2</pos>
+                <nameEn>Show Equipment Tree</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            
+        </sub_menu>
+        
+        
+        
+        <sub_menu>
+                
+            <submenuInfo>
+                <id>01/004/000</id>
+                <nameAr>&#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585; </nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Spare Parts</nameEn>
+                <display>1</display>
+            </submenuInfo>
+                
+            <menu_element id="01/004/000">
+                <id>01/004/000</id>
+                <nameAr>&#1575;&#1590;&#1575;&#1601;&#1577; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; </nameAr>
+                <target>/OutOfStorePartsServlet?op=GetItemForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>2</pos>
+                <nameEn>Add Spare Parts</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            
+        </sub_menu>
+        
+        
+        
+    </menu>
+    
+    <menu id="02/000/000"  >
+        <menuInfo>
+            <id>02/000/000</id>
+            <nameAr>التخطيط</nameAr>
+            <nameEn>Schedules</nameEn>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <display>1</display>
+        </menuInfo>
+
+        <sub_menu id=" 04/001/000"  >
+            <submenuInfo>
+                <id>04/001/000</id>
+                <nameAr>إنشاء خطة</nameAr>
+                <target>/PlanServlet?op=getCreatePlanForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>90</pos>
+                <nameEn>Create Plan</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+        
+        <sub_menu id="02/001/000"  >
+            <submenuInfo>
+                <id>02/001/000</id>
+                <nameAr>&#1575;&#1590;&#1575;&#1601;&#1577; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <nameEn>Add New Schedule</nameEn>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <display>1</display>
+            </submenuInfo>
+            
+            
+            <menu_element id="02/001/001"  >
+                <id>02/001/001</id>
+                <nameAr>&#1604;&#1606;&#1608;&#1593; &#1571;&#1587;&#1575;&#1587;&#1609; ( &#1571;&#1610;&#1607;&#1605;&#1575; &#1571;&#1602;&#1585;&#1576; )</nameAr>
+                <nameEn>For Basic Type ( Which Closer )</nameEn>
+                <target>/ScheduleServlet?op=MainTypeSchForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>9</pos>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/001/001"  >
+                <id>02/001/001</id>
+                <nameAr>&#1604;&#1605;&#1608;&#1583;&#1610;&#1604; ( &#1571;&#1610;&#1607;&#1605;&#1575; &#1571;&#1602;&#1585;&#1576; )</nameAr>
+                <nameEn>For Model ( Which Closer )</nameEn>
+                <target>/ScheduleServlet?op=createSchedule&amp;unitCats=non</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>9</pos>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/001/002"  >
+                <id>02/001/002</id>
+                <nameAr>&#1604;&#1605;&#1593;&#1583;&#1577; ( &#1571;&#1610;&#1607;&#1605;&#1575; &#1571;&#1602;&#1585;&#1576; )</nameAr>
+                <target>/ScheduleServlet?op=createEqpSchedule&amp;unit=non</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>10</pos>
+                <nameEn>For Equipment ( Which Closer )</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!--menu_element id="02/001/003"  >
+                <id>02/001/003</id>
+                <nameAr>&#1573;&#1590;&#1575;&#1601;&#1577; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1577; &#1604;&#1605;&#1593;&#1583;&#1577; &#1576;&#1575;&#1604;&#1603;&#1610;&#1604;&#1608;&#1605;&#1578;&#1585;</nameAr>
+                <target>/ScheduleServlet?op=createEqpScheduleByKel&amp;unit=non</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>11</pos>
+                <nameEn>New Equipment Schedule By kilometer</nameEn>
+                <display>1</display>
+            </menu_element>
+           < <menu_element id="02/001/004"  >
+                <id>02/001/004</id>
+                <nameAr>&#1580;&#1583;&#1575;&#1608;&#1604; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577; &#1608;&#1575;&#1580;&#1576;&#1577; &#1575;&#1604;&#1578;&#1606;&#1601;&#1610;&#1584; &#1604;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578; &#1576;&#1575;&#1604;&#1603;&#1610;&#1604;&#1608;&#1605;&#1578;&#1585;</nameAr>
+                <target>/AverageUnitServlet?op=GetScheduleForUnitByKil</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>11</pos>
+                <nameEn>List Schedules for Machines by Kilometer</nameEn>
+                <display>1</display>
+            </menu_element>-->
+            
+            <menu_element id="02/001/003">
+                <id>02/001/003</id>
+                <nameAr>&#1573;&#1590;&#1575;&#1601;&#1577; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1577; &#1604;&#1605;&#1593;&#1583;&#1577; &#1576;&#1575;&#1604;&#1603;&#1610;&#1604;&#1608;&#1605;&#1578;&#1585;</nameAr>
+                <target>/ScheduleServlet?op=newScheduleForKMEqp&amp;unit=non</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>11</pos>
+                <nameEn>New Equipment Schedule By kilometer</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/001/005">
+                <id>02/001/005</id>
+                <nameAr>&#1571;&#1590;&#1575;&#1601;&#1607; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1607; &#1604;&#1605;&#1593;&#1583;&#1607; &#1576;&#1575;&#1604;&#1608;&#1602;&#1578;</nameAr>
+                <target>/ScheduleServlet?op=newScheduleForTimeEqp&amp;unit=non</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>12</pos>
+                <nameEn>Add Schedules for Machines by Time</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <sub_menu id="02/002/000"  >
+            <submenuInfo>
+                <id>02/002/000</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1580;&#1583;&#1575;&#1608;&#1604;</nameAr>
+                <nameEn>List Schedules</nameEn>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="02/002/001"  >
+                <id>02/002/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1603;&#1604; &#1575;&#1604;&#1580;&#1583;&#1575;&#1608;&#1604;</nameAr>
+                <nameEn>List All Schedules</nameEn>
+                <target>/ScheduleServlet?op=ListAll</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>10</pos>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/002/001"  >
+                <id>02/002/001</id>
+                <nameAr>&#1580;&#1583;&#1575;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1607; &#1575;&#1604;&#1575;&#1606;&#1608;&#1575;&#1593; &#1575;&#1604;&#1575;&#1587;&#1575;&#1587;&#1610;&#1607;</nameAr>
+                <nameEn>List Main Category Schedules</nameEn>
+                <target>/ScheduleServlet?op=ListSchByMainCat</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>10</pos>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/002/001"  >
+                <id>02/002/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1580;&#1583;&#1575;&#1608;&#1604; &#1571;&#1606;&#1608;&#1575;&#1593; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <nameEn>List Equipment Category Schedules</nameEn>
+                <target>/ScheduleServlet?op=ListSchedulesByCategoris</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>10</pos>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/002/002"  >
+                <id>02/002/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1580;&#1583;&#1575;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1577; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <nameEn>List Equipment Schedules</nameEn>
+                <target>/ScheduleServlet?op=ListSchedulesByEquipment</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>11</pos>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/002/003"  >
+                <id>02/002/003</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1580;&#1583;&#1608;&#1604;&#1577; &#1575;&#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1575;&#1578;</nameAr>
+                <target>/ScheduleServlet?op=ListEqpSchedules&amp;source=menu&amp;equipment=first</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>12</pos>
+                <nameEn>List Schedules on Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        
+        <sub_menu id="02/003/000"  >
+            
+            <submenuInfo>
+                <id>02/003/000</id>
+                <nameAr>&#1578;&#1601;&#1593;&#1610;&#1604; &#1575;&#1604;&#1580;&#1583;&#1608;&#1604;</nameAr>
+                <nameEn>Activate Schedule</nameEn>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="02/003/001"  >
+                <id>02/003/001</id>
+                <nameAr>&#1578;&#1601;&#1593;&#1610;&#1604; &#1575;&#1604;&#1580;&#1583;&#1608;&#1604;</nameAr>
+                <target>/ScheduleServlet?op=BindScheduleUnits</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>13</pos>
+                <nameEn>Activate Schedule</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="02/003/002"  >
+                <id>02/003/002</id>
+                <nameAr>&#1578;&#1601;&#1593;&#1610;&#1604; &#1580;&#1583;&#1608;&#1604; &#1604;&#1604;&#1606;&#1608;&#1593; &#1575;&#1604;&#1575;&#1587;&#1575;&#1587;&#1609;</nameAr>
+                <target>/ScheduleServlet?op=BindSchMainCatType</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>13</pos>
+                <nameEn>Activate Main Type Schedule</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <sub_menu id="03/001/000"  >
+            <submenuInfo>
+                <id>03/001/000</id>
+                <nameAr>ربط جدول بجداول</nameAr>
+                <nameEn>Relate Scheduls</nameEn>
+                <target>/ScheduleDependencyServlet?op=relateSchedules</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>14</pos>
+                <sora>other.gif</sora>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+        
+    </menu>
+    
+    <menu id="03/000/000"  >
+        
+        <menuInfo>
+            <id>03/000/000</id>
+            <nameAr>&#1575;&#1604;&#1575;&#1593;&#1605;&#1575;&#1604; &#1575;&#1604;&#1610;&#1608;&#1605;&#1610;&#1577;</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <nameEn>Daily Work</nameEn>
+            <display>1</display>
+        </menuInfo>
+        
+        <sub_menu id="03/001/000"  >
+            <submenuInfo>
+                <id>03/001/000</id>
+                <nameAr>&#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1593;&#1575;&#1583;&#1610;&#1607;</nameAr>
+                <nameEn>Normal Schedules</nameEn>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="03/001/001"  >
+                <id>03/001/001</id>
+                <nameAr>&#1571;&#1605;&#1585; &#1588;&#1594;&#1604; &#1593;&#1600;&#1600;&#1575;&#1583;&#1609;</nameAr>
+                <target>/ScheduleServlet?op=newJobOrder</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>14</pos>
+                <nameEn>New Job Order</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            
+        </sub_menu>
+        <!-- ___________________Inspection_________________________________ -->
+        <sub_menu id="03/001/000"  >
+            <submenuInfo>
+                <id>03/001/000</id>
+                <nameAr>&#1591;&#1604;&#1576;&#1575;&#1578; &#1575;&#1604;&#1601;&#1581;&#1589;</nameAr>
+                <nameEn>Inspections</nameEn>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <display>1</display>
+            </submenuInfo>
+
+            <menu_element id="03/001/001"  >
+                <id>03/001/001</id>
+                <nameAr>&#1575;&#1587;&#1578;&#1583;&#1593;&#1575;&#1569; &#1591;&#1604;&#1576;&#1575;&#1578; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>/InspectionServlet?op=getMaintenanceOrder</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>14</pos>
+                <nameEn>List Maintenance Order</nameEn>
+                <display>1</display>
+            </menu_element>
+
+            <menu_element id="03/001/002"  >
+                <id>03/001/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1591;&#1604;&#1576;&#1575;&#1578; &#1575;&#1604;&#1601;&#1581;&#1589;</nameAr>
+                <target>/InspectionServlet?op=listInitInspections</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>14</pos>
+                <nameEn>List Inspections</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <!-- _________________End Inspection_______________________________ -->
+
+        <!-- ________________________________________________ -->
+        <sub_menu id="03/001/000"  >
+            <submenuInfo>
+                <id>03/001/000</id>
+                <nameAr>&#1575;&#1604;&#1571;&#1593;&#1591;&#1575;&#1604;</nameAr>
+                <nameEn>Failure</nameEn>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <display>1</display>
+            </submenuInfo>
+
+            <menu_element id="03/001/001"  >
+                <id>03/001/001</id>
+                <nameAr>&#1573;&#1576;&#1604;&#1575;&#1594; &#1593;&#1591;&#1604;</nameAr>
+                <target>/WorkEquipServlet?op=getWorkEquipForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>14</pos>
+                <nameEn>Failure Order</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <!-- ________________________________________________ -->
+        <sub_menu id="03/002/000"  >
+            
+            <submenuInfo>
+                <id>03/002/000</id>
+                <nameAr>&#1605;&#1593;&#1583;&#1577; &#1578;&#1593;&#1605;&#1604; &#1576;&#1575;&#1604;&#1587;&#1575;&#1593;&#1575;&#1578;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Equiment by Hours</nameEn>
+                <display>1</display>
+            </submenuInfo>
+
+          <!--  <menu_element id="03/002/001"  >
+                <id>03/002/001</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1587;&#1575;&#1593;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</nameAr>
+                <target>/AverageUnitServlet?op=GetAverageUnitForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>16</pos>
+                <nameEn>Update Equipment Hours</nameEn>
+                <display>1</display>
+            </menu_element> -->
+            
+            <menu_element id="03/002/001"  >
+                <id>03/002/001</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1587;&#1575;&#1593;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</nameAr>
+                <target>/HoursWorkingEquipmentServlet?op=getUpdateHoursEquipmentForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>16</pos>
+                <nameEn>Update Equipment Hours</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <!--<menu_element id="03/002/002"  >
+                <id>03/002/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1587;&#1575;&#1593;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</nameAr>
+                <target>/AverageUnitServlet?op=ListAverageUnit</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>17</pos>
+                <nameEn>List Equipment Hours</nameEn>
+                <display>0</display>
+            </menu_element>-->
+        </sub_menu>
+        
+        <sub_menu id="03/003/000"  >
+            <submenuInfo>
+                <id>03/003/000</id>
+                <nameAr>&#1605;&#1593;&#1583;&#1577; &#1578;&#1593;&#1605;&#1604; &#1576;&#1575;&#1604;&#1603;&#1610;&#1604;&#1608;&#1605;&#1578;&#1585;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Equiment by Odometer</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="03/003/001"  >
+                <id>03/003/001</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1603;&#1610;&#1604;&#1608; &#1605;&#1578;&#1585;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</nameAr>
+                <target>/HoursWorkingEquipmentServlet?op=getUpdateKiloEquipmentForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>18</pos>
+                <nameEn>Update Equipment By Odometer</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!--<menu_element id="03/003/002"  >
+                <id>03/003/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1603;&#1610;&#1604;&#1608; &#1605;&#1578;&#1585;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>/AverageUnitServlet?op=ListAverageeKelUnitForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>19</pos>
+                <nameEn>List Equipment By Odometer</nameEn>
+                <display>1</display>
+            </menu_element>-->
+        </sub_menu>
+        
+        <sub_menu id="03/003/000"  >
+            <submenuInfo>
+                <id>03/003/000</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Update Equipment</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="03/003/001"  >
+                <id>03/003/001</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1602;&#1585;&#1575;&#1569;&#1577; &#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>/HoursWorkingEquipmentServlet?op=getUpdateWhichCloserEquipmentForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>18</pos>
+                <nameEn>Update Equipment Reading</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+
+        <sub_menu id="03/004/000"  >
+            <submenuInfo>
+                <id>03/004/000</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1602;&#1585;&#1575;&#1569;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>/HoursWorkingEquipmentServlet?op=getUpdateReadingsOfEquipmentsForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>85</pos>
+                <nameEn>Update Readings of Equipments</nameEn>
+                <display>1</display>
+            </submenuInfo>
+
+            <menu_element>
+                <id>03/004/000</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1602;&#1585;&#1575;&#1569;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>/HoursWorkingEquipmentServlet?op=getUpdateReadingsOfEquipmentsForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>86</pos>
+                <nameEn>Update Readings of Equipments</nameEn>
+                <display>1</display>
+            </menu_element>
+
+            <menu_element id="01/002/006"  >
+                <id>01/002/006</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1602;&#1585;&#1575;&#1569;&#1575;&#1578; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578; &#1575;&#1578;&#1608;&#1605;&#1575;&#1578;&#1610;&#1603;&#1610;&#1575;</nameAr>
+                <target>/EquipmentServlet?op=showTestPage&amp;base=category</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>87</pos>
+                <nameEn>Auto Update Reading machine</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        
+    </menu>
+
+    <menu id="04/000/000"  >
+        <menuInfo>
+            <id>04/000/000</id>
+            <nameAr>&#1575;&#1604;&#1576;&#1581;&#1579;</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <nameEn>Search</nameEn>
+            <display>1</display>
+        </menuInfo>
+        <sub_menu id="04/001/000"  >
+            <submenuInfo>
+                <id>04/001/000</id>
+                <nameAr>&#1593;&#1606; &#1571;&#1605;&#1585; &#1588;&#1594;&#1604;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Job Order</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="04/001/001"  >
+                <id>04/001/001</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1575;&#1605; &#1593;&#1606; &#1571;&#1605;&#1585; &#1588;&#1594;&#1604;</nameAr>
+                <target>/SearchServlet?op=ListByStatusAll</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>20</pos>
+                <nameEn>MGR List By Status</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/001/002"  >
+                <id>04/001/002</id>
+                <nameAr>&#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1605;&#1578;&#1571;&#1582;&#1585;&#1607;</nameAr>
+                <target>/SearchServlet?op=ListLateJOForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>21</pos>
+                <nameEn>Late Job Orders</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/001/003"  >
+                <id>04/001/003</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1575;&#1604;&#1593;&#1606;&#1608;&#1575;&#1606;</nameAr>
+                <target>/SearchServlet?op=SearchFormTitle</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>21</pos>
+                <nameEn>Search By Title</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/001/004"  >
+                <id>04/001/004</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1575;&#1604;&#1605;&#1604;&#1581;&#1608;&#1592;&#1575;&#1578;</nameAr>
+                <target>/SearchServlet?op=SearchFormNote</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>22</pos>
+                <nameEn>Search By Note</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            
+            <menu_element id="04/001/005"  >
+                <id>04/001/005</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1575;&#1604;&#1608;&#1585;&#1583;&#1610;&#1577; &#1608;&#1575;&#1604;&#1605;&#1580;&#1605;&#1608;&#1593;&#1577;</nameAr>
+                <target>/SearchServlet?op=SearchByShiftWithGroup</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>23</pos>
+                <nameEn>Search By Shift with Group</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/001/006"  >
+                <id>04/001/006</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1604;&#1573;&#1583;&#1575;&#1585;&#1577; &#1575;&#1604;&#1591;&#1575;&#1604;&#1576;&#1577;</nameAr>
+                <target>/SearchServlet?op=SearchByDepartment</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>24</pos>
+                <nameEn>Search By Department</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            
+            <menu_element id="04/001/007"  >
+                <id>04/001/007</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1585;&#1602;&#1605; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>/SearchServlet?op=SearchJobOrderTabForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Search By Job ID</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/001/008"  >
+                <id>04/001/008</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1578;&#1575;&#1585;&#1610;&#1582; &#1575;&#1604;&#1576;&#1583;&#1575;&#1610;&#1607;</nameAr>
+                <target>/SearchServlet?op=searchfromBeginDate</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Search By Begin Date</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/001/009"  >
+                <id>04/001/009</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1578;&#1575;&#1585;&#1610;&#1582; &#1575;&#1604;&#1606;&#1607;&#1575;&#1610;&#1607;</nameAr>
+                <target>/SearchServlet?op=searchfromEndDate</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Search By End Date</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <sub_menu id="04/002/000"  >
+            <submenuInfo>
+                <id>04/002/000</id>
+                <nameAr>&#1593;&#1606; &#1582;&#1591;&#1607;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Plan</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="04/002/007"  >
+                <id>04/002/007</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1582;&#1591;&#1607;</nameAr>
+                <target>/SearchServlet?op=searchFromPlan</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Search For Plan</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <sub_menu id="04/002/000"  >
+            <submenuInfo>
+                <id>04/002/000</id>
+                <nameAr>&#1593;&#1606; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1607;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Schedule</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="04/002/007"  >
+                <id>04/002/007</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1607;</nameAr>
+                <target>/SearchServlet?op=searchFromSchedule</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Search For Schedule</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="04/002/007"  >
+                <id>04/002/007</id>
+                <nameAr>بين تاريخين</nameAr>
+                <target>/SearchServlet?op=searchScheduleByDate</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Between Two Dates </nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <sub_menu id="04/002/000"  >
+            <submenuInfo>
+                <id>04/002/000</id>
+                <nameAr>&#1593;&#1606; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1577; &#1604;&#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Equipment Schedule</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="04/002/007"  >
+                <id>04/002/007</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1580;&#1583;&#1608;&#1604; &#1589;&#1610;&#1575;&#1606;&#1577; &#1604;&#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>/SearchServlet?op=searchSchedulesByEquipmentForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Search For Equipment Schedule</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="04/002/007"  >
+                <id>04/002/007</id>
+                <nameAr>بحث عن جدول صيانة باسم المعدة</nameAr>
+                <target>/EquipmentServlet?op=listEquipmentsSearch</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>25</pos>
+                <nameEn>Search For Schedule by name of Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <sub_menu id="04/003/000"  >
+            <submenuInfo>
+                <id>04/003/000</id>
+                <nameAr>&#1593;&#1606; &#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Equipment</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="04/003/001"  >
+                <id>04/003/001</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1605;&#1593;&#1583;&#1607;</nameAr>
+                <target>/EquipmentServlet?op=SearchEquipmentForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>26</pos>
+                <nameEn>Search For Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="04/003/002"  >
+                <id>04/003/002</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1575;&#1604;&#1605;&#1593;&#1583;&#1577; &#1576;&#1575;&#1604;&#1602;&#1587;&#1605;</nameAr>
+                <target>/EquipmentServlet?op=SearchEquipByDep</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>27</pos>
+                <nameEn>Search By Department</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/003/003"  >
+                <id>04/003/003</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1582;&#1591; &#1575;&#1604;&#1571;&#1606;&#1578;&#1575;&#1580;</nameAr>
+                <target>/EquipmentServlet?op=SearchEquipByPro</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>28</pos>
+                <nameEn>Search By Production Line</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/003/003"  >
+                <id>04/003/003</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1576;&#1575;&#1604;&#1605;&#1608;&#1602;&#1593;</nameAr>
+                <target>/EquipmentServlet?op=SearchEqpBySite</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>28</pos>
+                <nameEn>Search By Site</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <sub_menu id="04/004/000"  >
+            <submenuInfo>
+                <id>04/004/000</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1575;&#1604;&#1571;&#1593;&#1591;&#1575;&#1604;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Failure Code</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="04/004/001"  >
+                <id>04/004/001</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1571;&#1593;&#1591;&#1575;&#1604; &#1589;&#1606;&#1601; &#1575;&#1604;&#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>/SearchServlet?op=SearchFailureMachine</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>28</pos>
+                <nameEn>Failure For Category Machine</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <!--sub_menu id="04/005/000"  >
+            <submenuInfo>
+                <id>04/005/000</id>
+                <nameAr>&#1593;&#1606; &#1605;&#1607;&#1605;&#1577;</nameAr>
+                <target>main.jsp</target> 
+                <class>nav_bar</class> 
+                <image>images/d_arrow.gif</image> 
+                <spanid>navspan</spanid> 
+                <divid>nav</divid> 
+                <length>4</length> 
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Schedule</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="04/004/001"  >
+                <id>04/004/001</id>
+                <nameAr>&#1575;&#1604;&#1576;&#1581;&#1579; &#1593;&#1606; &#1605;&#1607;&#1605;&#1577;</nameAr> 
+                <target>/ScheduleServlet?op=searchSchedule</target> 
+                <alttarget>security.jsp</alttarget> 
+                <class>nav_td</class> 
+                <divid>menu</divid> 
+                <spanid>opt</spanid> 
+                <turnOn>1</turnOn> 
+                <sora>other.gif</sora>
+                <pos>29</pos>
+                <nameEn>Search for Schedule</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="04/004/002"  >
+                <id>04/004/002</id>
+                <nameAr>&#1575;&#1604;&#1576;&#1581;&#1579; &#1593;&#1606; &#1605;&#1607;&#1605;&#1577; &#1576;&#1575;&#1604;&#1603;&#1608;&#1583;</nameAr>
+                <target>/ScheduleServlet?op=SearchScheduleTabForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>30</pos>
+                <nameEn>Search For Schedule by ID</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu -->
+        
+        <sub_menu id="04/006/000"  >
+            <submenuInfo>
+                <id>04/006/000</id>
+                <nameAr>&#1593;&#1606; &#1576;&#1606;&#1583; &#1589;&#1610;&#1575;&#1606;&#1607;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Maintenance Items</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="04/006/001"  >
+                <id>04/006/001</id>
+                <nameAr>&#1576;&#1581;&#1579; &#1593;&#1606; &#1576;&#1606;&#1583; &#1589;&#1610;&#1575;&#1606;&#1607;</nameAr>
+                <target>/TaskServlet?op=tasksByName</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>29</pos>
+                <nameEn>Search for Maintenance Items</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        
+        
+        <sub_menu id="04/007/000"  >
+            <submenuInfo>
+                <id>04/007/000</id>
+                <nameAr>&#1593;&#1606; &#1605;&#1575;&#1585;&#1603;&#1607;/&#1605;&#1608;&#1583;&#1610;&#1604;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Maintenance Brands</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="04/007/001"  >
+                <id>04/007/001</id>
+                <nameAr> &#1576;&#1581;&#1579; &#1593;&#1606; &#1605;&#1575;&#1585;&#1603;&#1607;/&#1605;&#1608;&#1583;&#1610;&#1604;</nameAr>
+                <target>/EquipmentServlet?op=searchByName</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>29</pos>
+                <nameEn>Search for Brands</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+
+        <sub_menu id="04/008/000"  >
+            <submenuInfo>
+                <id>04/008/000</id>
+                <nameAr>عن نوع أساسى</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>For Main Type</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="04/008/001"  >
+                <id>04/008/001</id>
+                <nameAr>بحث عن نوع أساسى</nameAr>
+                <target>/EquipmentServlet?op=searchMainType</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>29</pos>
+                <nameEn>Search for Main Type</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        
+    </menu>
+    
+    <menu id="05/000/000"  >
+        <menuInfo>
+            <id>05/000/000</id>
+            <nameAr>&#1573;&#1583;&#1575;&#1585;&#1577; &#1575;&#1604;&#1606;&#1592;&#1575;&#1605;</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <nameEn>Business Admin</nameEn>
+            <display>1</display>
+        </menuInfo>
+        <sub_menu id="05/001/000"  >
+            <submenuInfo>
+                <id>05/001/000</id>
+                <nameAr>&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1571;&#1587;&#1575;&#1587;&#1610;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Basic Settings</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            
+            <menu_element id="05/001/002"  >
+                <id>05/001/002</id>
+                <nameAr>&#1605;&#1580;&#1605;&#1608;&#1593;&#1577; &#1601;&#1606;&#1610;&#1577;</nameAr>
+                <target>/TradeServlet?op=GetTradeForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>32</pos>
+                <nameEn>New Trade</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/001/003"  >
+                <id>05/001/003</id>
+                <nameAr>&#1602;&#1587;&#1605; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/DepartmentServlet?op=GetDepartmentForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>33</pos>
+                <nameEn>New Department</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!-- _________________________________________ -->
+            <menu_element id="05/001/003"  >
+                <id>05/001/003</id>
+                <nameAr>&#1571;&#1605;&#1575;&#1603;&#1606; &#1593;&#1605;&#1604; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>/WorkEquipServlet?op=getWorkPlaceForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>33</pos>
+                <nameEn>Work Place Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!-- _________________________________________ -->
+            <menu_element id="05/001/004"  >
+                <id>05/001/004</id>
+                <nameAr>&#1582;&#1591; &#1573;&#1606;&#1578;&#1575;&#1580; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/ProductionLineServlet?op=GetProductionLineForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>34</pos>
+                <nameEn>New Production Line</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/001/005"  >
+                <id>05/001/005</id>
+                <nameAr>&#1605;&#1608;&#1592;&#1601; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/EmployeeServlet?op=GetEmployee</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>35</pos>
+                <nameEn>New Employee</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/001/006"  >
+                <id>05/001/006</id>
+                <nameAr>&#1605;&#1608;&#1585;&#1583; &#1582;&#1575;&#1585;&#1580;&#1609; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/SupplierServlet?op=GetSupplierForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>36</pos>
+                <nameEn>New External Supplier</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/001/007"  >
+                <id>05/001/007</id>
+                <nameAr>&#1605;&#1582;&#1586;&#1606; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/StoreServlet?op=GetStoreForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>37</pos>
+                <nameEn>New Store</nameEn>
+                <display>0</display>
+            </menu_element>
+            
+            <menu_element id="05/001/008"  >
+                <id>05/001/008</id>
+                <nameAr>وحدة قياس جديدة</nameAr>
+                <target>/MeasurementUnitsServlet?op=GetMeasuerUnitForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>38</pos>
+                <nameEn>New Measurement Unit</nameEn>
+                <display>0</display>
+            </menu_element>
+
+            <menu_element id="05/001/008"  >
+                <id>05/001/008</id>
+                <nameAr>مقياس جديد</nameAr>
+                <target>/MeasurementsServlet?op=GetMeasurementForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>38</pos>
+                <nameEn>New Measurement</nameEn>
+                <display>0</display>
+            </menu_element>
+            
+            <menu_element id="05/001/009"  >
+                <id>05/001/009</id>
+                <nameAr>&#1606;&#1608;&#1593; &#1605;&#1587;&#1578;&#1606;&#1583; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/BusinessDocServlet?op=NewDocClass</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>39</pos>
+                <nameEn>New Document Type</nameEn>
+                <display>1</display>
+            </menu_element>
+
+            
+        </sub_menu>
+        
+        <sub_menu id="05/002/000"  >
+            <submenuInfo>
+                <id>05/002/000</id>
+                <nameAr>&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1601;&#1585;&#1602; &#1575;&#1604;&#1593;&#1605;&#1604;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Staff Settings</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/002/001"  >
+                <id>05/002/001</id>
+                <nameAr>&#1601;&#1585;&#1602; &#1593;&#1605;&#1604; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/CrewMissionServlet?op=GetCrewForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>40</pos>
+                <nameEn>New Crew Mission</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id=" 05/002/002"  >
+                <id>05/002/002</id>
+                <nameAr>&#1603;&#1608;&#1583; &#1580;&#1583;&#1610;&#1583; &#1604;&#1601;&#1585;&#1610;&#1602;</nameAr>
+                <target>/StaffCodeServlet?op=GetStaffCode</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>41</pos>
+                <nameEn>New Staff Code</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            
+            <menu_element id="05/002/003"  >
+                <id>05/002/003</id>
+                <nameAr>&#1573;&#1606;&#1588;&#1575;&#1569; &#1575;&#1604;&#1593;&#1575;&#1605;&#1604;&#1610;&#1606; &#1576;&#1601;&#1585;&#1602; &#1593;&#1605;&#1604;</nameAr>
+                <target>/CrewMissionServlet?op=CreateStaff</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>42</pos>
+                <nameEn>Create Staff</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        
+        <sub_menu id="05/003/000"  >
+            <submenuInfo>
+                <id>05/003/000</id>
+                <nameAr>&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1575;&#1604;&#1578;&#1588;&#1594;&#1610;&#1604;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Operating Settings</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/003/001"  >
+                <id>05/003/001</id>
+                <nameAr>&#1576;&#1606;&#1583; &#1589;&#1610;&#1575;&#1606;&#1577; &#1604;&#1605;&#1608;&#1583;&#1610;&#1604;</nameAr>
+                <target>/TaskServlet?op=GetTaskForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>43</pos>
+                <nameEn>Create Maintenance Item</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/003/002"  >
+                <id>05/003/002</id>
+                <nameAr>&#1576;&#1606;&#1583; &#1589;&#1610;&#1575;&#1606;&#1577; &#1604;&#1606;&#1608;&#1593; &#1571;&#1587;&#1575;&#1587;&#1609;</nameAr>
+                <target>/TaskServlet?op=GetTaskMainForm</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>43</pos>
+                <nameEn>New Item On Main Type</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/003/003"  >
+                <id>05/003/003</id>
+                <nameAr>&#1603;&#1608;&#1583; &#1593;&#1591;&#1604; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/FailureCodeServlet?op=GetFailureCode</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>New Failure Code</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/003/004"  >
+                <id>05/003/004</id>
+                <nameAr>&#1571;&#1583;&#1575;&#1607; &#1582;&#1601;&#1610;&#1601;&#1607; &#1580;&#1583;&#1610;&#1583;&#1607;</nameAr>
+                <target>/TaskServlet?op=addToolForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>New Tool</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="05/004/001"  >
+                <id>05/004/001</id>
+                <nameAr>&#1578;&#1593;&#1610;&#1610;&#1606; &#1605;&#1580;&#1605;&#1608;&#1593;&#1575;&#1578; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</nameAr>
+                <target>/ReportsServlet?op=addCodeForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>Assigned Code Form</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!--menu_element id="05/003/006"  >
+                <id>05/003/006</id>
+                <nameAr>&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1575;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</nameAr>
+                <target>/ReportsServlet?op=chooseActivateStore</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>Settings Stores</nameEn>
+                <display>1</display>
+            </menu_element-->
+            <menu_element id="05/003/006"  >
+                <id>05/003/006</id>
+                <nameAr>&#1606;&#1608;&#1593; &#1576;&#1606;&#1583; &#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>/TaskTypeServlet?op=getTaskTypeForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>New Maintenance Item Type</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        
+        <!--sub_menu id="05/004/000"  >
+            <submenuInfo>
+                <id>05/004/000</id>
+                <nameAr>&#1575;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Local Stores</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/004/001"  >
+                <id>05/004/001</id>
+                <nameAr>&#1575;&#1590;&#1575;&#1601;&#1577; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1604;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</nameAr>
+                <target>/LocalStoresItemsServlet?op=addNewItems</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>Add Stores Spare Parts</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/004/002"  >
+                <id>05/004/002</id>
+                <nameAr>&#1573;&#1590;&#1575;&#1601;&#1577; &#1603;&#1605;&#1610;&#1575;&#1578; &#1571;&#1582;&#1585;&#1609; &#1604;&#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</nameAr>
+                <target>/LocalStoresItemsServlet?op=updateQuantityItems</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>Add new quantity for spare parts</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="05/004/003"  >
+                <id>05/004/003</id>
+                <nameAr>&#1578;&#1600;&#1594;&#1600;&#1610;&#1600;&#1610;&#1600;&#1585; &#1575;&#1604;&#1600;&#1605;&#1600;&#1582;&#1600;&#1586;&#1606; &#1575;&#1604;&#1600;&#1581;&#1600;&#1575;&#1604;&#1600;&#1600;&#1609;</nameAr>
+                <target>/StoreServlet?op=changeSiteStoreForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>44</pos>
+                <nameEn>Change Current Store</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu-->
+        
+        <sub_menu id="05/005/000"  >
+            <submenuInfo>
+                <id>05/005/000</id>
+                <nameAr>&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1575;&#1604;&#1606;&#1592;&#1575;&#1605;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>System Settings</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>&#1605;&#1580;&#1605;&#1608;&#1593;&#1577; &#1580;&#1583;&#1610;&#1583;&#1577;</nameAr>
+                <target>/GroupServlet?op=GetForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>New Group</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!--menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>&#1589;&#1604;&#1575;&#1581;&#1610;&#1575;&#1578; &#1575;&#1604;&#1575;&#1587;&#1578;&#1582;&#1583;&#1575;&#1605;</nameAr>
+                <target>/GrantsServlet?op=GetForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>New Grant</nameEn>
+                <display>1</display>
+            </-->
+            <menu_element id="05/005/002"  >
+                <id>05/005/002</id>
+                <nameAr>&#1605;&#1587;&#1578;&#1582;&#1583;&#1605; &#1580;&#1583;&#1610;&#1583;</nameAr>
+                <target>/UsersServlet?op=GetForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>46</pos>
+                <nameEn>New User</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="05/005/002"  >
+                <id>05/005/002</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1583; &#1605;&#1608;&#1575;&#1589;&#1601;&#1577; &#1575;&#1604;&#1573;&#1606;&#1588;&#1575;&#1569; &#1604;&#1604;&#1581;&#1585;&#1603;&#1575;&#1578; &#1575;&#1604;&#1582;&#1575;&#1585;&#1580;&#1610;&#1577;</nameAr>
+                <target>/TransactionServlet?op=getFoundationSpecificationForExternalTransactionsForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>46</pos>
+                <nameEn>Set Foundation Specification for External Transactions</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <!-- Customize System -->
+        <sub_menu id="05/005/000"  >
+            <submenuInfo>
+                <id>05/005/000</id>
+                <nameAr>&#1578;&#1607;&#1610;&#1574;&#1577; &#1575;&#1604;&#1606;&#1592;&#1575;&#1605;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Customize System</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>&#1588;&#1575;&#1588;&#1577; &#1571;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604;</nameAr>
+                <target>/CustomizationServlet?op=issueForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>Job Order Screen</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>&#1588;&#1575;&#1588;&#1577; &#1575;&#1604;&#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>/CustomizationServlet?op=equipmentForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>Equipment Screen</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <!-- Customize End -->
+        <!--manufacture  -->
+        <sub_menu id="05/005/000"  >
+            <submenuInfo>
+                <id>05/005/000</id>
+                <nameAr>إعدادات صناعية</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Industrial Data</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>المصنع</nameAr>
+                <target>/IndustrialInfo?op=GetForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>Manufacturer</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="05/005/000"  >
+            <submenuInfo>
+                <id>05/005/000</id>
+                <nameAr>العملاء</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Clients</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>اضافة عميل</nameAr>
+                <target>/ClientServlet?op=GetClientForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>New client</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="05/005/000"  >
+            <submenuInfo>
+                <id>05/005/000</id>
+                <nameAr>المواسم</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Seasons</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>نوع موسم جديد</nameAr>
+                <target>/SeasonServlet?op=insertSeason</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>New season</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="05/005/001"  >
+                <id>05/005/001</id>
+                <nameAr>تسجيل موسم</nameAr>
+                <target>/SeasonServlet?op=recordSeason</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>Record season</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="05/006/000"  >
+            <submenuInfo>
+                <id>05/005/000</id>
+                <nameAr>المواقع</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Locations</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="05/001/001"  >
+                <id>05/001/001</id>
+                <nameAr>نوع موقع جديد</nameAr>
+                <target>/ProjectServlet?op=newLocationType</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>31</pos>
+                <nameEn>New Location Type</nameEn>
+                <display>0</display>
+            </menu_element>
+            
+            <menu_element id="05/001/001"  >
+                <id>05/001/001</id>
+                <nameAr>موقع جديد</nameAr>
+                <target>/ProjectServlet?op=NewLocation</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>31</pos>
+                <nameEn>New Location</nameEn>
+                <display>0</display>
+            </menu_element>
+
+            <menu_element id="05/001/001"  >
+                <id>05/001/001</id>
+                <nameAr>موقع فرعي جديد</nameAr>
+                <target>/ProjectServlet?op=GetProjectForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>31</pos>
+                <nameEn>New Branch Location</nameEn>
+                <display>0</display>
+            </menu_element>
+            
+            <menu_element id="06/002/001"  >
+                <id>06/002/001</id>
+                <nameAr>عرض أنواع المواقع</nameAr>
+                <target>/ProjectServlet?op=listLocationType</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>51</pos>
+                <nameEn>List Locations Types</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/002"  >
+                <id>06/002/002</id>
+                <nameAr>عرض شجرة المواقع</nameAr>
+                <target>/ProjectServlet?op=showTree</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>52</pos>
+                <nameEn>Show Projects Tress</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    
+        <sub_menu id="05/006/000"  >
+            <submenuInfo>
+                <id>05/005/000</id>
+                <nameAr>قطع الغيار</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Spare parts</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="05/001/001"  >
+                <id>05/001/001</id>
+                <nameAr>نوع جديد</nameAr>
+                <target>/OutOfStorePartsServlet?op=newPartType</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>31</pos>
+                <nameEn>New Type</nameEn>
+                <display>0</display>
+            </menu_element>
+
+            <menu_element id="05/001/001"  >
+                <id>05/001/001</id>
+                <nameAr>عرض الانواع</nameAr>
+                <target>/OutOfStorePartsServlet?op=ViewParts</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>31</pos>
+                <nameEn>View Types </nameEn>
+                <display>0</display>
+            </menu_element>
+            <menu_element id="05/001/001"  >
+                <id>05/001/001</id>
+                <nameAr>إضافة قطعة غيار</nameAr>
+                <target>/OutOfStorePartsServlet?op=newSparePart</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>31</pos>
+                <nameEn>Add spare part</nameEn>
+                <display>0</display>
+            </menu_element>
+            <menu_element id="05/001/001"  >
+                <id>05/001/001</id>
+                <nameAr>عرض قطع الغيار</nameAr>
+                <target>/OutOfStorePartsServlet?op=showingSpareParts</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>31</pos>
+                <nameEn>Showing spare parts</nameEn>
+                <display>0</display>
+            </menu_element>
+        </sub_menu>
+
+
+    <!-- End of manufacture -->
+    </menu>
+    
+    <menu id="06/000/000"  >
+        <menuInfo>
+            <id>06/000/000</id>
+            <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1587;&#1585;&#1610;&#1593;&#1577;</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <nameEn>Quick Reports</nameEn>
+            <display>1</display>
+        </menuInfo>
+        <!--sub_menu id="06/001/000"  >
+            <submenuInfo>
+                <id>06/001/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1573;&#1581;&#1589;&#1575;&#1574;&#1610;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Statistics Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="06/001/001"  >
+                <id>06/001/001</id>
+                <nameAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1593;&#1606; &#1581;&#1575;&#1604;&#1577; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593;</nameAr>
+                <target>/SearchServlet?op=Projects&amp;type=Status</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>47</pos>
+                <nameEn>Site Status Report</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/001/002"  >
+                <id>06/001/002</id>
+                <nameAr>&#1573;&#1581;&#1589;&#1575;&#1574;&#1610;&#1575;&#1578; &#1575;&#1604;&#1605;&#1588;&#1585;&#1608;&#1593;  Pie Chart</nameAr>
+                <target>/SearchServlet?op=Projects&amp;type=Statistics&amp;chart=pie</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>48</pos>
+                <nameEn>Site Statistics Pie Chart</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/001/003"  >
+                <id>06/001/003</id>
+                <nameAr>&#1573;&#1581;&#1589;&#1575;&#1574;&#1610;&#1575;&#1578; &#1575;&#1604;&#1605;&#1588;&#1585;&#1608;&#1593;   Bar Chart</nameAr>
+                <target>/SearchServlet?op=Projects&amp;type=Statistics&amp;chart=bar</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>49</pos>
+                <nameEn>Site Statistics Bar Chart</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/001/004"  >
+                <id>06/001/004</id>
+                <nameAr>&#1573;&#1581;&#1589;&#1575;&#1574;&#1610;&#1575;&#1578; &#1571;&#1603;&#1608;&#1575;&#1583; &#1575;&#1604;&#1571;&#1593;&#1591;&#1575;&#1604;</nameAr>
+                <target>/SearchServlet?op=FailureCodeChart</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>50</pos>
+                <nameEn>Failure Code Statistics</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu-->
+        
+        <sub_menu id="06/002/000"  >
+            
+            <submenuInfo>
+                <id>06/002/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1575;&#1604;&#1571;&#1587;&#1575;&#1587;&#1610;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Basic Settings Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/002/001"  >
+                <id>06/002/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1608;&#1575;&#1602;&#1593;</nameAr>
+                <target>/ProjectServlet?op=ListProjects</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>51</pos>
+                <nameEn>List Locations</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/001"  >
+                <id>06/002/001</id>
+                <nameAr>عرض أنواع المواقع</nameAr>
+                <target>/ProjectServlet?op=listLocationType</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>51</pos>
+                <nameEn>List Locations Types</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/002"  >
+                <id>06/002/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1580;&#1605;&#1608;&#1593;&#1575;&#1578; &#1575;&#1604;&#1601;&#1606;&#1610;&#1577;</nameAr>
+                <target>/TradeServlet?op=ListTrades</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>52</pos>
+                <nameEn>List Trades</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/003"  >
+                <id>06/002/003</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1571;&#1602;&#1587;&#1575;&#1605;</nameAr>
+                <target>/DepartmentServlet?op=ListDepartments</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>53</pos>
+                <nameEn>List Departments</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/004"  >
+                <id>06/002/004</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1582;&#1591;&#1608;&#1591; &#1575;&#1604;&#1573;&#1606;&#1578;&#1575;&#1580;</nameAr>
+                <target>/ProductionLineServlet?op=ListProductionLine</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>34</pos>
+                <nameEn>List Production Line</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/005"  >
+                <id>06/002/005</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1608;&#1592;&#1602;&#1610;&#1606;</nameAr>
+                <target>/EmployeeServlet?op=ListEmployee</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>54</pos>
+                <nameEn>List Employee</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/006"  >
+                <id>06/002/006</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1608;&#1585;&#1583;&#1610;&#1610;&#1606; &#1575;&#1604;&#1582;&#1575;&#1585;&#1580;&#1610;&#1610;&#1606;</nameAr>
+                <target>/SupplierServlet?op=ListSuppliers</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>55</pos>
+                <nameEn>List External Suppliers</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/002/007"  >
+                <id>06/002/007</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</nameAr>
+                <target>/StoreServlet?op=ListStores</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>56</pos>
+                <nameEn>List Stores</nameEn>
+                <display>0</display>
+            </menu_element>
+            
+            <menu_element id="06/002/008"  >
+                <id>06/002/008</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1608;&#1581;&#1583;&#1575;&#1578;</nameAr>
+                <target>/MeasurementUnitsServlet?op=ListMeasuerUnits</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>57</pos>
+                <nameEn>List Units</nameEn>
+                <display>0</display>
+            </menu_element>
+
+            <menu_element id="06/002/008"  >
+                <id>06/002/008</id>
+                <nameAr>عرض المقاييس</nameAr>
+                <target>/MeasurementsServlet?op=ListMeasurements</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>57</pos>
+                <nameEn>List Measurements</nameEn>
+                <display>0</display>
+            </menu_element>
+            
+            <menu_element id="06/002/009"  >
+                <id>06/002/009</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1571;&#1606;&#1608;&#1575;&#1593; &#1575;&#1604;&#1605;&#1587;&#1578;&#1606;&#1583;&#1575;&#1578;</nameAr>
+                <target>/BusinessDocServlet?op=ListDocClass</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>58</pos>
+                <nameEn>List Document Types</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!-- ___________________________________ -->
+            <menu_element id="06/002/009"  >
+                <id>06/002/009</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1571;&#1605;&#1575;&#1603;&#1606; &#1575;&#1604;&#1593;&#1605;&#1604;</nameAr>
+                <target>/WorkEquipServlet?op=listWorkPlace</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>58</pos>
+                <nameEn>List Work Place</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!-- ___________________________________ -->
+            <menu_element id="06/002/010"  >
+                <id>06/002/010</id>
+                <nameAr>عرض العملاء</nameAr>
+                <target>/ClientServlet?op=ListClients</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>55</pos>
+                <nameEn>List Clients</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="06/003/000"  >
+            <submenuInfo>
+                <id>06/003/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1601;&#1585;&#1602; &#1575;&#1604;&#1593;&#1605;&#1604;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Staffs Settings Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/003/001"  >
+                <id>06/003/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1601;&#1585;&#1602; &#1575;&#1604;&#1593;&#1605;&#1604;</nameAr>
+                <target>/CrewMissionServlet?op=ListCrew</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>59</pos>
+                <nameEn>List Crew Mission</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/003/002"  >
+                <id>06/003/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1603;&#1608;&#1583; &#1575;&#1604;&#1601;&#1585;&#1602;</nameAr>
+                <target>/StaffCodeServlet?op=ListStaffCode</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>60</pos>
+                <nameEn>List Staff Code</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/003/003"  >
+                <id>06/003/003</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1601;&#1585;&#1602;</nameAr>
+                <target>/CrewMissionServlet?op=ShowStaff</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>61</pos>
+                <nameEn>List Staff</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="06/004/000"  >
+            <submenuInfo>
+                <id>06/004/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1573;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1575;&#1604;&#1578;&#1588;&#1594;&#1610;&#1604;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Operating Settings Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/004/001"  >
+                <id>06/004/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1571;&#1580;&#1586;&#1575;&#1569; &#1575;&#1604;&#1605;&#1608;&#1585;&#1583;&#1610;&#1606;</nameAr>
+                <target>/ItemsServlet?op=SupplierItemsReport</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>62</pos>
+                <nameEn>List Supplier Parts</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/004/002"  >
+                <id>06/004/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1603;&#1608;&#1583; &#1575;&#1604;&#1571;&#1593;&#1591;&#1575;&#1604;</nameAr>
+                <target>/FailureCodeServlet?op=ListFailureCode</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>63</pos>
+                <nameEn>List Failure Code</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/004/003"  >
+                <id>06/004/003</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>/TaskServlet?op=tasks</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>64</pos>
+                <nameEn>List Maintenance Items</nameEn>
+                <display>1</display>
+            </menu_element>
+
+            <menu_element id="06/004/003"  >
+                <id>06/004/003</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1571;&#1606;&#1608;&#1575;&#1593; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>/TaskTypeServlet?op=listTaskType</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>64</pos>
+                <nameEn>List Maintenance Item Type</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/004/004"  >
+                <id>06/004/004</id>
+                <nameAr> &#1593;&#1585;&#1590; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577; &#1581;&#1587;&#1576; &#1589;&#1606;&#1601; &#1575;&#1604;&#1605;&#1593;&#1583;&#1575;&#1578;</nameAr>
+                <target>/TaskServlet?op=tasksByCategory</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>65</pos>
+                <nameEn>List Maintenance Items By category</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="06/004/005"  >
+                <id>06/004/005</id>
+                <nameAr> &#1593;&#1585;&#1590; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577; &#1581;&#1587;&#1576; &#1575;&#1604;&#1605;&#1580;&#1605;&#1608;&#1593;&#1575;&#1578; &#1575;&#1604;&#1601;&#1606;&#1610;&#1577;</nameAr>
+                <target>/TaskServlet?op=tasksByTrade</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>66</pos>
+                <nameEn>List Maintenance Items By Trade</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/004/006"  >
+                <id>06/004/006</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1607; &#1576;&#1580;&#1586;&#1569; &#1605;&#1606; &#1575;&#1604;&#1575;&#1587;&#1605; &#1575;&#1608; &#1576;&#1575;&#1604;&#1603;&#1608;&#1583; </nameAr>
+                <target>/TaskServlet?op=tasksByName</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>67</pos>
+                <nameEn>List Maintenance Items By SubName Or SubCode</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+        
+        <!--sub_menu id="06/005/000"  >
+            
+            <submenuInfo>
+                <id>06/005/000</id>
+                <nameAr>&#1575;&#1604;&#1605;&#1582;&#1575;&#1586;&#1606;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Local Stores</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/005/001"  >
+                <id>06/005/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</nameAr>
+                <target>/LocalStoresItemsServlet?op=listItems</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>44</pos>
+                <nameEn>List Stores Spare Parts</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/005/002"  >
+                <id>06/005/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585; &#1576;&#1578;&#1575;&#1585;&#1610;&#1582; &#1575;&#1604;&#1578;&#1587;&#1580;&#1610;&#1604;</nameAr>
+                <target>/LocalStoresItemsServlet?op=ItemsByDate</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>44</pos>
+                <nameEn>List Stores Spare Parts By Date</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu-->
+        
+        <!--sub_menu id="06/006/000"  >
+            <submenuInfo>
+                <id>06/006/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1586;&#1605;&#1606;&#1610;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Timer Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="06/006/001"  >
+                <id>06/006/001</id>
+                <nameAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1571;&#1587;&#1576;&#1608;&#1593;&#1610;&#1577;</nameAr>
+                <target>/SearchServlet?op=JobOrderReport</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>67</pos>
+                <nameEn>Job Orders Report by Week</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/006/002"  >
+                <id>06/006/002</id>
+                <nameAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1571;&#1608;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1577; &#1575;&#1587;&#1576;&#1608;&#1593;&#1610;&#1575;&#1611;</nameAr>
+                <target>/SearchServlet?op=JobOrderReportByEquip</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>68</pos>
+                <nameEn>Job Orders Report by Equipment by Week</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="06/006/003"  >
+                <id>06/006/003</id>
+                <nameAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1588;&#1607;&#1585;&#1610;&#1577;</nameAr>
+                <target>/SearchServlet?op=JobOrderReportByMonth</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>69</pos>
+                <nameEn>Job Orders Report by Month</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/006/004"  >
+                <id>06/006/004</id>
+                <nameAr>&#1578;&#1602;&#1585;&#1610;&#1585; &#1571;&#1608;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1577; &#1588;&#1607;&#1585;&#1610;&#1575;&#1611;</nameAr>
+                <target>/SearchServlet?op=JobOrderReportByEquipByMonth</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>70</pos>
+                <nameEn>Job Orders Report by Equipment by Month</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/006/005"  >
+                <id>06/006/005</id>
+                <nameAr>&#1606;&#1587;&#1576;&#1577; &#1606;&#1580;&#1575;&#1581; &#1575;&#1604;&#1582;&#1591;&#1577;</nameAr>
+                <target>/SearchServlet?op=RatioSuccess</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>71</pos>
+                <nameEn>Ratio Success of the Plan per Month</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="06/006/006"  >
+                <id>06/006/006</id>
+                <nameAr>&#1575;&#1604;&#1580;&#1583;&#1608;&#1604; &#1575;&#1604;&#1586;&#1605;&#1606;&#1610; &#1604;&#1589;&#1610;&#1575;&#1606;&#1577; &#1575;&#1604;&#1605;&#1593;&#1583;&#1577;</nameAr>
+                <target>/ScheduleServlet?op=GetEqpScheduleCalendar&amp;peroid=currentMonth</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>72</pos>
+                <nameEn>Euipment Schedule Calendar</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu-->
+        <!--sub_menu id="06/007/000"  >
+            <submenuInfo>
+                <id>06/007/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Spare Parts Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/007/001"  >
+                <id>06/007/001</id>
+                <nameAr>&#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1605;&#1591;&#1604;&#1608;&#1576;&#1577;</nameAr>
+                <target>/ItemsServlet?op=GetItemsSearchForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>73</pos>
+                <nameEn>Required Spare Parts</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu-->
+        <sub_menu id="06/008/000"  >
+            <submenuInfo>
+                <id>06/008/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1606;&#1592;&#1575;&#1605;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>System Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/008/001"  >
+                <id>06/008/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1580;&#1605;&#1608;&#1593;&#1575;&#1578;</nameAr>
+                <target>/GroupServlet?op=ListAll</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>73</pos>
+                <nameEn>List Groups</nameEn>
+                <display>1</display>
+            </menu_element>
+            <!--menu_element id="06/008/001"  >
+                <id>06/008/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1589;&#1604;&#1575;&#1581;&#1610;&#1575;&#1578;</nameAr>
+                <target>/GrantsServlet?op=ListGrants</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>73</pos>
+                <nameEn>List Grants</nameEn>
+                <display>1</display>
+            </menu_element-->
+            <menu_element id="06/008/002"  >
+                <id>06/008/002</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1587;&#1578;&#1582;&#1583;&#1605;&#1610;&#1606;</nameAr>
+                <target>/ListerServlet?op=ListUsers</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>74</pos>
+                <nameEn>List Users</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+                <!--manufacture  -->
+        <sub_menu id="06/009/000"  >
+            <submenuInfo>
+                <id>06/009/000</id>
+                <nameAr>تقرير اعدادات اصناعية</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Industrial Info.</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/009/001"  >
+                <id>06/009/001</id>
+                <nameAr>المصنع</nameAr>
+                <target>/IndustrialInfo?op=searchIndustrial</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>Manufacturer Report</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+
+        <sub_menu id="06/010/000"  >
+            <submenuInfo>
+                <id>06/010/000</id>
+                <nameAr>تقارير الخطط</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Plan Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/010/001"  >
+                <id>06/010/001</id>
+                <nameAr>عرض الخطط</nameAr>
+                <target>/PlanServlet?op=listPlans</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>List Plans</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="06/011/000"  >
+            <submenuInfo>
+                <id>06/011/000</id>
+                <nameAr>تقارير المواسم</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Season Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/011/001"  >
+                <id>06/010/001</id>
+                <nameAr>عرض المواسم</nameAr>
+                <target>/SeasonServlet?op=listSeasons</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>Seasons List</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="06/011/002"  >
+                <id>06/011/002</id>
+                <nameAr>عرض المواسم المسجله</nameAr>
+                <target>/SeasonServlet?op=listRecordSeasons</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>45</pos>
+                <nameEn>Record Seasons List</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    
+    <!-- End of manufacture -->
+        <!-- ___________________________ -->
+       <!-- <sub_menu>
+            <submenuInfo>
+                <id>06/008/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Maintenance Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="06/008/001"  >
+                <id>06/008/001</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577; &#1575;&#1604;&#1578;&#1601;&#1589;&#1610;&#1604;&#1609;</nameAr>
+                <target>/ReportsServletThree?op=searchMaintenanceDetails</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>73</pos>
+                <nameEn>Maintenance Reports Details</nameEn>
+                <display>1</display>
+            </menu_element>
+         </sub_menu> -->
+        <!-- ___________________________ -->
+    </menu>
+    
+    <!--menu id="08/000/000"  >
+        <menuInfo>
+            <id>08/000/000</id>
+            <nameAr>&#1575;&#1604;&#1605;&#1607;&#1575;&#1605;</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <nameEn>Tasks</nameEn>
+            <display>1</display>
+        </menuInfo>
+        <sub_menu id="08/001/000"  >
+            <submenuInfo>
+                <id>08/001/000</id>
+                <nameAr>&#1605;&#1607;&#1605;&#1607;</nameAr>
+                <target>main.jsp</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>83</pos>
+                <nameEn>Task</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="08/001/001"  >
+                <id>08/001/001</id>
+                <nameAr>&#1573;&#1606;&#1588;&#1575;&#1569; &#1605;&#1607;&#1605;&#1607;</nameAr>
+                <target>/WFTaskServlet?op=GetWFTaskForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>riskdel.jpg</sora>
+                <pos>84</pos>
+                <nameEn>Create Task</nameEn>
+                <display>1</display>
+            </menu_element >
+            <menu_element id="08/001/001"  >
+                <id>08/001/001</id>
+                <nameAr>&#1593;&#1585;&#1590; &#1575;&#1604;&#1605;&#1607;&#1575;&#1605;</nameAr>
+                <target>/WFTaskServlet?op=lisWFTasks</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>riskdel.jpg</sora>
+                <pos>84</pos>
+                <nameEn>List Work Flow Tasks</nameEn>
+                <display>1</display>
+            </menu_element >
+        </sub_menu>
+        
+    </menu-->
+    
+    <menu id="07/000/000"  >
+        <menuInfo>
+            <id>07/000/000</id>
+            <nameAr>&#1602;&#1575;&#1593;&#1583;&#1577; &#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578;</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>database.png</sora>
+            <nameEn>Database</nameEn>
+            <display>1</display>
+        </menuInfo>
+        <sub_menu id="07/001/000"  >
+            <submenuInfo>
+                <id>07/001/000</id>
+                <nameAr>&#1573;&#1575;&#1604;&#1594;&#1575;&#1569; &#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelAllJobOrder</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>database.png</sora>
+                <pos>75</pos>
+                <nameEn>Delete Job Orders</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="07/001/001"  >
+                <id>07/001/001</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1578;&#1588;&#1594;&#1610;&#1604; &#1576;&#1575;&#1604;&#1578;&#1591;&#1576;&#1610;&#1602;</nameAr>
+                <target>/DatabaseControllerServlet?op=confirmDeleteAllIssues</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>76</pos>
+                <nameEn>Delete All Job Orders</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id=" 07/001/002"  >
+                <id>07/001/002</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1571;&#1608;&#1575;&#1605;&#1585; &#1588;&#1594;&#1604; &#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1577; &#1605;&#1593;&#1610;&#1606;&#1577; &#1604;&#1605;&#1607;&#1605;&#1577; &#1605;&#1593;&#1610;&#1606;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetSeparteSchForEquip</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>77</pos>
+                <nameEn>Delete Job Order for Specify Equipment and Specify Task</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/001/003"  >
+                <id>07/001/003</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1571;&#1605;&#1585; &#1588;&#1594;&#1604; &#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1607; &#1605;&#1593;&#1610;&#1606;&#1607;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelJoborderForEquip</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>78</pos>
+                <nameEn>Delete Job Order for Specify Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/001/004"  >
+                <id>07/001/004</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1575;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1591;&#1575;&#1585;&#1574;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelEmgJobOrder</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>79</pos>
+                <nameEn>Delete All Emergency Job Orders</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/001/005"  >
+                <id>07/001/005</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1575;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1582;&#1575;&#1585;&#1580;&#1610;&#1577; &#1575;&#1604;&#1591;&#1575;&#1585;&#1574;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelExrJobOrder</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>80</pos>
+                <nameEn>Delete All External Job Orders by Emergency</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/001/006"  >
+                <id>07/001/006</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1591;&#1575;&#1585;&#1574;&#1577; &#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1577; &#1605;&#1593;&#1610;&#1606;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelEmgForEquip</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>81</pos>
+                <nameEn>Delete Emergency Job Orders for Specify Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/001/007"  >
+                <id>07/001/007</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1575;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1582;&#1575;&#1585;&#1580;&#1610;&#1577; &#1575;&#1604;&#1591;&#1575;&#1585;&#1574;&#1577; &#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1577; &#1605;&#1593;&#1610;&#1606;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelExrForEquip</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>82</pos>
+                <nameEn>Delete External Job Orders for Specify Equipment by Emergency</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="07/002/000"  >
+            <submenuInfo>
+                <id>07/002/000</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1578;&#1593;&#1610;&#1610;&#1606; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelAllTask</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>database.png</sora>
+                <pos>83</pos>
+                <nameEn>Delete Configurations</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="07/002/001"  >
+                <id>07/002/001</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1578;&#1593;&#1610;&#1610;&#1606; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585; &#1604;&#1580;&#1583;&#1608;&#1604; &#1604;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelAllTask</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>84</pos>
+                <nameEn>Delete All Configurations</nameEn>
+                <display>1</display>
+            </menu_element >
+        </sub_menu>
+        <sub_menu id="07/003/000"  >
+            <submenuInfo>
+                <id>07/003/000</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1580;&#1583;&#1608;&#1604;&#1577; &#1589;&#1610;&#1575;&#1606;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelUnAssignJobOrder</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>database.png</sora>
+                <pos>85</pos>
+                <nameEn>Delete Schedules</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="07/003/001"  >
+                <id>07/003/001</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1580;&#1583;&#1608;&#1604;&#1577; &#1589;&#1610;&#1575;&#1606;&#1577; &#1594;&#1610;&#1585; &#1605;&#1585;&#1578;&#1576;&#1591;&#1577; &#1576;&#1571;&#1605;&#1585; &#1578;&#1588;&#1594;&#1610;&#1604;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelUnAssignJobOrder</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>86</pos>
+                <nameEn>Delete All Unused Schedules</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/003/002"  >
+                <id>07/003/002</id>
+                <nameAr>&#1573;&#1604;&#1594;&#1575;&#1569; &#1580;&#1583;&#1608;&#1604;&#1577; &#1589;&#1610;&#1575;&#1606;&#1577; &#1594;&#1610;&#1585; &#1605;&#1585;&#1578;&#1576;&#1591;&#1577; &#1576;&#1571;&#1605;&#1585; &#1588;&#1594;&#1604; &#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1577; &#1605;&#1593;&#1610;&#1606;&#1577;</nameAr>
+                <target>/DataBaseControlServlet?op=GetDelUnAssignJobOrderforEquip</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>87</pos>
+                <nameEn>Delete Unused Schedules for Specify Equipment</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/003/003"  >
+                <id>07/003/002</id>
+                <nameAr>إلغاء جداول صيانة قبل تاريخ</nameAr>
+                <target>/SearchServlet?op=getSearchSchedulesBeforeDateForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>87</pos>
+                <nameEn>Delete Schedules Before Date</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="07/003/000"  >
+            <submenuInfo>
+                <id>07/003/000</id>
+                <nameAr>&#1571;&#1593;&#1583;&#1575;&#1583;&#1575;&#1578; &#1602;&#1575;&#1593;&#1583;&#1577; &#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578;</nameAr>
+                <target>main.jsp</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>database.png</sora>
+                <pos>85</pos>
+                <nameEn>Settings Database</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="07/003/001"  >
+                <id>07/003/000</id>
+                <nameAr>&#1578;&#1581;&#1583;&#1610;&#1579; &#1602;&#1575;&#1593;&#1583;&#1577; &#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578;</nameAr>
+                <target>/DatabaseControllerServlet?op=updateDatabase</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>85</pos>
+                <nameEn>Update Database</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/003/001"  >
+                <id>07/003/001</id>
+                <nameAr>ReCompile Views</nameAr>
+                <target>/DatabaseControllerServlet?op=getRecreateAllViewForm</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>86</pos>
+                <nameEn>ReCompile Views</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/003/001"  >
+                <id>07/003/001</id>
+                <nameAr>Views</nameAr>
+                <target>/DatabaseControllerServlet?op=checkForAllViews</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>86</pos>
+                <nameEn>Views</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/003/001"  >
+                <id>07/003/001</id>
+                <nameAr>&#1602;&#1608;&#1575;&#1593;&#1583; &#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1581;&#1575;&#1604;&#1610;&#1577;</nameAr>
+                <target>/DatabaseControllerServlet?op=currentDatabases</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>86</pos>
+                <nameEn>Current Databases</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="07/003/001"  >
+                <id>07/003/001</id>
+                <nameAr>Log Display</nameAr>
+                <target>/DatabaseControllerServlet?op=viewLog</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>databases.png</sora>
+                <pos>86</pos>
+                <nameEn>Log Display</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    
+    <menu id="08/000/000"  >
+        <menuInfo>
+            <id>08/000/000</id>
+            <nameAr>&#1575;&#1604;&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; </nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <nameEn>Report</nameEn>
+            <display>1</display>
+        </menuInfo>
+        
+        <sub_menu id=" 08/001/000"  >
+            <submenuInfo>
+                <id>08/001/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585;</nameAr>
+                <target>/ReportsServlet?op=startReport</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>90</pos>
+                <nameEn>Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+
+        <sub_menu id=" 08/002/000"  >
+            <submenuInfo>
+                <id>08/002/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1571;&#1582;&#1585;&#1609;</nameAr>
+                <target>/ReportsServletThree?op=otherReports</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>90</pos>
+                <nameEn>Other Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+        
+        <sub_menu id=" 08/001/000"  >
+            <submenuInfo>
+                <id>08/001/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1578;&#1603;&#1604;&#1601;&#1577; &#1576;&#1575;&#1604;&#1605;&#1578;&#1608;&#1587;&#1591;</nameAr>
+                <target>/ReportsServletThree?op=AvgCostReports</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>90</pos>
+                <nameEn>Average Cost Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu >
+        <sub_menu id=" 08/001/0000"  >
+            <submenuInfo>
+                <id>08/001/000</id>
+                <nameAr>تقارير هامة</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>90</pos>
+                <nameEn>Important Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>تقارير التكلفة</nameAr>
+                <target>/EquipmentServlet?op=showReportTree</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Cost Reports</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>احصائيات</nameAr>
+                <target>/ReportsServletThree?op=Statistics</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Statistics</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>الخطة</nameAr>
+                <target>/ReportsServletThree?op=Planning</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Planning</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>اوامر الشغل</nameAr>
+                <target>/ReportsServletThree?op=JobOrder</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Job Order</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>بنود الصيانة</nameAr>
+                <target>/ReportsServletThree?op=tasksTree</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Job Order</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>قطع الغيار</nameAr>
+                <target>/ReportsServletThree?op=sparePartsTree</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Spare Parts</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+        </sub_menu>
+
+        <sub_menu id=" 08/001/000"  >
+            <submenuInfo>
+                <id>08/001/000</id>
+                <nameAr>&#1578;&#1602;&#1575;&#1585;&#1610;&#1585; &#1575;&#1604;&#1578;&#1603;&#1604;&#1601;&#1577; &#1575;&#1604;&#1601;&#1593;&#1604;&#1610;&#1577;</nameAr>
+                <target>/ReportsServletThree?op=costReportsFromStores</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>90</pos>
+                <nameEn>Actual Cost Reports</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+        
+       <!-- <sub_menu id="01/001/000"  >
+            <submenuInfo>
+                <id>01/001/000</id>
+                <nameAr>&#1575;&#1604;&#1578;&#1603;&#1604;&#1601;&#1577;</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Costing</nameEn>
+                <display>1</display>
+            </submenuInfo>
+
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>&#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1605;&#1580;&#1583;&#1608;&#1604;&#1577;</nameAr>
+                <target>/ReportsServlet?op=costScheduleJobOrder</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Schedule Job Order</nameEn>
+                <display>1</display>
+            </menu_element>
+
+            <menu_element id="01/001/002"  >
+                <id>01/001/002</id>
+                <nameAr>&#1571;&#1608;&#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604; &#1575;&#1604;&#1593;&#1575;&#1583;&#1610;&#1577;</nameAr>
+                <target>/ReportsServlet?op=costNormalJobOrder</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Normal Job Order</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu> -->
+        
+        <!--sub_menu id="08/002/000"  >
+            <submenuInfo>
+                <id>08/002/000</id>
+                <nameAr>&#1575;&#1604;&#1605;&#1604;&#1582;&#1589;</nameAr>
+                <target>/left_menu.jsp</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>88</pos>
+                <nameEn>Summary</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu-->
+        
+        <sub_menu id=" 08/003/000"  >
+            <submenuInfo>
+                <id>08/003/000</id>
+                <nameAr>&#1575;&#1604;&#1593;&#1605;&#1604;&#1610;&#1575;&#1578;</nameAr>
+                <target>/ReportsServletThree?op=operationReports</target>
+                <alttarget>/ReportsServletThree?op=operationReports</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>89</pos>
+                <nameEn>Operations</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+        
+        <sub_menu id=" 08/003/000"  >
+            <submenuInfo>
+                <id>08/003/000</id>
+                <nameAr>&#1605;&#1587;&#1575;&#1593;&#1583;&#1577;</nameAr>
+                <target>/HelpServlet?op=Help</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>89</pos>
+                <nameEn>Help</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+        
+        <!--sub_menu>
+            <submenuInfo id="08/004/000"  >
+                <id>08/004/000</id>
+                <nameAr>&#1582;&#1585;&#1608;&#1580;</nameAr>
+                <target>/LogoutServlet</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>90</pos>
+                <nameEn>Logout</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu-->
+    </menu>
+    <menu id="08/000/000"  >
+        <menuInfo>
+            <id>08/000/000</id>
+            <nameAr>ضمان الجودة</nameAr>
+            <target>main.jsp</target>
+            <class>nav_bar</class>
+            <image>images/d_arrow.gif</image>
+            <spanid>navspan</spanid>
+            <divid>nav</divid>
+            <length>4</length>
+            <turnOn>1</turnOn>
+            <sora>other.gif</sora>
+            <nameEn>Quality Assurance</nameEn>
+            <display>1</display>
+        </menuInfo>
+        <sub_menu id="01/001/000"  >
+            <submenuInfo>
+                <id>01/001/000</id>
+                <nameAr>جودة محتوى</nameAr>
+                <target>main.jsp</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Content Quality</nameEn>
+                <display>1</display>
+            </submenuInfo>
+            
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>بنود الصيانة</nameAr>
+                <target>/TaskServlet?op=searchToReview</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Maintenance Items</nameEn>
+                <display>1</display>
+            </menu_element>
+
+            <menu_element id="01/001/001"  >
+                <id>01/001/001</id>
+                <nameAr>تقرير بنود الصيانة وقطع الغيار</nameAr>
+                <target>/TaskServlet?op=tasksItemsToReview</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Maintenance Tasks-Items </nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id="01/001/002"  >
+                <id>01/001/002</id>
+                <nameAr>معدات</nameAr>
+                <target>/EquipmentServlet?op=searchEquipmentReview</target>
+                <alttarget>security.jsp</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <pos>1</pos>
+                <nameEn>Equipments</nameEn>
+                <display>1</display>
+            </menu_element>
+            
+            <menu_element id=" 01/001/003"  >
+                <id>01/001/003</id>
+                <nameAr>جداول صيانة</nameAr>
+                <target>/ScheduleServlet?op=searchSchByDateToReview</target>
+                <alttarget>/HelpServlet?op=Security</alttarget>
+                <class>nav_td</class>
+                <divid>menu</divid>
+                <spanid>opt</spanid>
+                <turnOn>1</turnOn>
+                <sora>list.gif</sora>
+                <pos>2</pos>
+                <nameEn>Scheduales</nameEn>
+                <display>1</display>
+            </menu_element>
+           
+            
+        </sub_menu>
+        <sub_menu id="01/001/000"  >
+            <submenuInfo>
+                <id>01/001/000</id>
+                <nameAr>ضمان عمليات</nameAr>
+                <target>/ReportsServletThree?op=getDeviationsInEquipmentsReadingsForm</target>
+                <class>nav_bar</class>
+                <image>images/d_arrow.gif</image>
+                <spanid>navspan</spanid>
+                <divid>nav</divid>
+                <length>4</length>
+                <turnOn>1</turnOn>
+                <sora>other.gif</sora>
+                <nameEn>Process quality</nameEn>
+                <display>1</display>
+            </submenuInfo>
+        </sub_menu>
+        
+    </menu>
+     
+</menu_list>

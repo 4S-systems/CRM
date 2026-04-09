@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Client Name</Entitle>
+        <Artitle>إسم العميل</Artitle>
+        <barText>Client Menu</barText>
+    </menu_style>  
+    
+    <elements>
+        
+        <item>
+            <Arname>بيانات العميل</Arname>
+            <Enname>Client Data</Enname>
+            <link>ClientServlet?op=clientDetails&amp;clientId=CId</link>
+        </item>
+        
+        <!--item>
+            <Arname>طلب جديد</Arname>
+            <Enname>View Details</Enname>
+            <link>ClientServlet?op=&amp;clientID=CId</link>
+        </item>
+        
+    
+      
+        <item>
+            <Arname>ربط العميل بالموظفين</Arname>
+            <Enname>List Comments</Enname>
+            <link>ClientServlet?op=attachEmployeesToCLient&amp;businessObjectId=</link>
+        </item-->
+        
+        <item>
+            <Arname> إضافة خطة دفع </Arname>
+            <Enname> Add Payment Plan </Enname>
+            <link>UnitServlet?op=listAvailableApartments&amp;clientID=CId</link>
+        </item>
+        
+        <item>
+            <Arname> عرض خطط الدفع </Arname>
+            <Enname> Display Payment Plans </Enname>
+            <link>UnitServlet?op=displaypaymentPlans&amp;clientID=CId</link>
+        </item>
+        
+        <item>
+            <Arname> بحث وحدات سمسرة </Arname>
+            <Enname> Broker Search </Enname>
+            <link>SearchServlet?op=BokerUnitsList&amp;clientID=CId</link>
+        </item>
+        
+        <item>
+            <Arname> عرض الوحدات </Arname>
+            <Enname> View Cart </Enname>
+            <link>IssueServlet?op=clientUnits&amp;clientID=CId</link>
+        </item>
+        
+        <!--item>
+            <Arname>حجز</Arname>
+            <Enname>Reserve</Enname>
+            <link>IssueServlet?op=ReserveFromClientMenu&amp;clientID=CId</link>
+        </item-->
+        
+        <item>
+            <Arname>&#1575;&#1604;&#1594;&#1575;&#1569; &#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1607; </Arname>
+            <Enname>Remove Menu</Enname>
+            <link>ClientServlet?op=closeClientSideMenu&amp;clientID=CId</link>
+        </item>
+        
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>client</link>
+        </item>
+        
+    </elements>
+</menu>

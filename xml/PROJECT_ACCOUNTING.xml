@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>project_acc</name>
+        <key>PROJECT_ACC_ID</key>
+        <key1>MAX_INSTALMENT</key1>
+        <key2>PROJECT_ID</key2>
+        <key3>OPTION_1</key3>
+        <key4>OPTION_2</key4>
+        <key5>OPTION_3</key5>
+        <key6>CRETAION_TIME</key6>
+        <key7>CREATED_BY</key7>
+        <key8>METER_PRICE</key8>
+        <key9>GARAGE_NUM</key9>
+        <key10>LOCKER_NUM</key10>
+        
+       
+        <keyname>PROJECT_ACC_ID</keyname>
+        
+    </table_supported>  
+   
+    <form_element>
+        <name>projectAccID</name>
+        <table>project_acc</table>
+        <column>PROJECT_ACC_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>maxInstalments</name>
+        <table>project_acc</table>
+        <column>MAX_INSTALMENT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>projectId</name>
+        <table>project</table>
+        <column>PROJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>OPTION_1</name>
+        <table>project</table>
+        <column>OPTION_1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+   
+    <form_element>
+        <name>OPTION_2</name>
+        <table>project</table>
+        <column>OPTION_2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>OPTION_3</name>
+        <table>project</table>
+        <column>OPTION_3</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>creationTime</name>
+        <table>project</table>
+        <column>CRETAION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>createdBy</name>
+        <table>project</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>meterPrice</name>
+        <table>project</table>
+        <column>METER_PRICE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>garageNumber</name>
+        <table>project</table>
+        <column>GARAGE_NUM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>lockerNumber</name>
+        <table>project</table>
+        <column>LOCKER_NUM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

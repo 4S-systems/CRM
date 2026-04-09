@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>BUSINESS_EVENT</name>
+        <key>id</key>
+        <srefintegkey></srefintegkey>
+    </table_supported>  
+   
+    <form_element>
+        <name>description</name>
+        <table>BUSINESS_EVENT</table>
+        <column>EVENT_DESCRIPTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>busniessId</name>
+        <table>BUSINESS_EVENT</table>
+        <column>BUSINESS_OBJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>businessType</name>
+        <table>BUSINESS_EVENT</table>
+        <column>BUSINESS_OBJECT_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>causedBy</name>
+        <table>BUSINESS_EVENT</table>
+        <column>CAUSED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>creationTime</name>
+        <table>BUSINESS_EVENT</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>source</name>
+        <table>BUSINESS_EVENT</table>
+        <column>EVENT_SOURCE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>dist</name>
+        <table>BUSINESS_EVENT</table>
+        <column>EVENT_DIST</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>      
+      <form_element>
+        <name>note</name>
+        <table>BUSINESS_EVENT</table>
+        <column>NOTE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>      
+   
+   
+</form>

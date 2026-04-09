@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<variables>
+    <mailContents>
+        <mailSubject>Updated Ticket</mailSubject>
+        <mailHead>Dear User:</mailHead>
+        <mailBody>Thank you for posting this ticket , A technical support will answer you within 2 days .</mailBody>
+        <mailFoot>your ticket no is</mailFoot>
+    </mailContents>
+    <customerMailContent>
+        <mailSubject>Attention Requird</mailSubject>
+        <mailHead>A request for further clarification has been issued for yor ticket #</mailHead>
+        <mailBody>Please to respond follow this link</mailBody>
+        <mailFoot>Thanks</mailFoot>
+    </customerMailContent>
+    <autoCloseTicket>
+        <duration>7</duration>
+    </autoCloseTicket>
+    <technicalSupport>
+        <id>1272294408585</id>
+        <email>hhussien@4s-systems.com</email>
+    </technicalSupport>
+</variables>

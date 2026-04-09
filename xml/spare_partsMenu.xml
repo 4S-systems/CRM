@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Active Spare Parts Now</Entitle>
+        <Artitle>&#1575;&#1604;&#1602;&#1591;&#1593;&#1607; &#1575;&#1604;&#1606;&#1588;&#1591;&#1607; &#1581;&#1575;&#1604;&#1610;&#1575;</Artitle>
+        <barText>Spare Parts Menue</barText>
+    </menu_style>  
+    
+    <elements>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1577; &#1578;&#1601;&#1575;&#1589;&#1610;&#1604; &#1575;&#1604;&#1602;&#1591;&#1593;&#1607; </Arname>
+            <Enname>View Item Details</Enname>
+            <link>OutOfStorePartsServlet?op=viewItem&amp;manufactoryNo=</link>
+            <mlink>OutOfStorePartsServlet?op=viewItem&amp;manufactoryNo=</mlink>
+        </item>
+        
+        <!--<item>
+            <Arname>&#1578;&#1581;&#1583;&#1610;&#1579; &#1575;&#1604;&#1602;&#1591;&#1593;&#1607;</Arname>
+            <Enname>Update Item</Enname>
+            <link>OutOfStorePartsServlet?op=updateItem&amp;manufactoryNo=</link>
+            <mlink>OutOfStorePartsServlet?op=updateItem&amp;manufactoryNo=</mlink>
+        </item>
+        -->
+     
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>spareParts</link>
+            <mlink>spareParts</mlink>
+        </item>
+        
+    </elements>
+</menu>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : jsp_types.xml
+    Created on : February 29, 2012, 11:49 AM
+    Author     : khaled abdo
+    Description:
+        Purpose of the document follows.
+-->
+
+<form>
+   <table_supported>
+      <name>JSP_TYPES</name>
+       <key>ID</key>
+        <keyname>JSP_NAME</keyname>
+
+   </table_supported>
+
+    <form_element>
+     <name>id</name>
+     <table>JSP_TYPES</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>jspName</name>
+     <table>JSP_TYPES</table>
+     <column>JSP_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>labelType</name>
+     <table>JSP_TYPES</table>
+     <column>LABEL_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>jspMode</name>
+     <table>JSP_TYPES</table>
+     <column>JSP_MODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>departType</name>
+     <table>JSP_TYPES</table>
+     <column>DEPART_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>creationTime</name>
+     <table>project</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>createdBy</name>
+     <table>project</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+</form>

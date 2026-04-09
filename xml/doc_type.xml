@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>doc_type</name>
+      <key>TYPE_ID</key>
+      <key1>TYPE_NAME</key1>
+      <refintegkey></refintegkey>
+   </table_supported>  
+   
+   
+    <form_element>
+     <name>typeID</name>
+     <table>doc_type</table>
+     <column>TYPE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>typeName</name>
+     <table>doc_type</table>
+     <column>TYPE_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>desc</name>
+     <table>doc_type</table>
+     <column>DESCRIPTION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+     
+   <form_element>
+     <name>iconFile</name>
+     <table>doc_type</table>
+     <column>ICON_FILE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+  
+</form>

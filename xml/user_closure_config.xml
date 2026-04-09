@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>user_closure_config</name>
+      <key>ID</key>
+      <key1>CLOSURE_ID</key1>
+      <key2>USER_ID</key2>
+     <refintegkey>USER_ID</refintegkey>
+   </table_supported>  
+   
+   <form_element>
+     <name>ID</name>
+     <table>user_closure_config</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>closure_id</name>
+     <table>user_closure_config</table>
+     <column>CLOSURE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>user_id</name>
+     <table>user_closure_config</table>
+     <column>USER_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>isDefault</name>
+     <table>user_closure_config</table>
+     <column>IS_DEFAULT</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>creationTime</name>
+     <table>user_closure_config</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>
+

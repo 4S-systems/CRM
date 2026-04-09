@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Active Inspection Now</Entitle>
+        <Artitle>&#1591;&#1604;&#1576; &#1575;&#1604;&#1601;&#1581;&#1589; &#1575;&#1604;&#1606;&#1588;&#1591; &#1575;&#1604;&#1571;&#1606;</Artitle>
+        <barText>Inspection Menu</barText>
+    </menu_style>  
+    
+    <elements>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1604;&#1578;&#1601;&#1575;&#1589;&#1610;&#1604;</Arname>
+            <Enname>View Inspection Details</Enname>
+            <link>InspectionServlet?op=view&amp;inspectionId=</link>
+            <mlink>InspectionServlet?op=view&amp;inspectionId=</mlink>
+        </item>
+        
+        <item>
+            <Arname>&#1575;&#1590;&#1575;&#1601;&#1577; &#1588;&#1603;&#1575;&#1608;&#1609;</Arname>
+            <Enname>Add Complaints</Enname>
+            <link>ComplaintInspectionServlet?op=addComplaints&amp;inspectionId=</link>
+            <mlink>ComplaintInspectionServlet?op=addComplaints&amp;inspectionId=</mlink>
+        </item>
+        
+        <item>
+            <Arname>&#1573;&#1590;&#1575;&#1601;&#1607; &#1575;&#1605;&#1585; &#1588;&#1594;&#1604;</Arname>
+            <Enname>Add job order</Enname>
+            <link>InspectionServlet?op=getIssue&amp;inspectionId=</link>
+            <mlink>InspectionServlet?op=getIssue&amp;inspectionId=</mlink>
+        </item>
+        
+        <item>
+            <Arname>&#1575;&#1590;&#1575;&#1601;&#1577; &#1575;&#1604;&#1601;&#1606;&#1610;&#1610;&#1606;</Arname>
+            <Enname>Add Technical</Enname>
+            <link>InspectionServlet?op=addTechnical&amp;inspectionId=</link>
+            <mlink>InspectionServlet?op=addTechnical&amp;inspectionId=</mlink>
+        </item>
+        
+        <item>
+            <Arname>&#1575;&#1604;&#1594;&#1575;&#1569; &#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1607; </Arname>
+            <Enname>Stop Menu</Enname>
+            <link>InspectionServlet?op=removeFromSession&amp;taskId=</link>
+            <mlink>InspectionServlet?op=removeFromSession&amp;taskId=</mlink>
+        </item>
+        
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>inspection</link>
+            <mlink>inspection</mlink>
+        </item>
+        
+    </elements>
+</menu>

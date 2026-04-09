@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>issue_tasks_compalints</name>
+        <key>ID</key>
+        <key1>ISSUE_ID</key1>
+        <key2>TASK_ID</key2>
+        <key3>COMPLAIN_ID</key3>
+       
+        
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>issue_tasks_compalints</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueID</name>
+        <table>issue_tasks_compalints</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>taskID</name>
+        <table>issue_tasks_compalints</table>
+        <column>TASK_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>compalinID</name>
+        <table>issue_tasks_compalints</table>
+        <column>COMPLAIN_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>instrct</name>
+        <table>issue_tasks_compalints</table>
+        <column>EXCTION_INSTRCT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    
+</form>

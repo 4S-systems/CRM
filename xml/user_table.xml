@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+     <name>users</name>
+     <key>USER_ID</key>
+     <key1>USER_NAME</key1>
+     <key2>USER_TYPE</key2>
+     <key3>FULL_NAME</key3>
+     <key4>CAN_SEND_EMAIL</key4>
+     <orderby>USER_NAME</orderby>
+   </table_supported>  
+   
+   <form_element>
+     <name>userId</name>
+     <table>users</table>
+     <column>USER_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>userName</name>
+     <table>users</table>
+     <column>USER_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>password</name>
+     <table>users</table>
+     <column>PASSWORD</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+  <form_element>
+     <name>userHome</name>
+     <table>users</table>
+     <column>USER_HOME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+        <name>createdBy</name>
+        <table>users</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+   <form_element>
+     <name>CREATION_TIME</name>
+     <table>users</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>email</name>
+     <table>users</table>
+     <column>EMAIL</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>isSuperUser</name>
+     <table>users</table>
+     <column>IS_SUPER_USER</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>fullName</name>
+     <table>users</table>
+     <column>FULL_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>canSendEmail</name>
+     <table>users</table>
+     <column>CAN_SEND_EMAIL</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+        <name>userType</name>
+        <table>users</table>
+        <column>USER_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>average_unit</name>
+      <key>ID</key>
+      <key1>UNIT_ID</key1>
+         
+   </table_supported>  
+   
+   <form_element>
+     <name>id</name>
+     <table>average_unit</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+   <form_element>
+     <name>unitName</name>
+     <table>average_unit</table>
+     <column>UNIT_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+    <form_element>
+     <name>current_Reading</name>
+     <table>average_unit</table>
+     <column>CURRENT_READING</column>
+     <class>com.silkworm.persistence.relational.IntValue</class>
+     <jclass>java.lang.Integer</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>acual_Reading</name>
+     <table>average_unit</table>
+     <column>ACUAL_READING</column>
+     <class>com.silkworm.persistence.relational.IntValue</class>
+     <jclass>java.lang.Integer</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>entry_Time</name>
+     <table>average_unit</table>
+     <column>ENTRY_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>previousTime</name>
+     <table>average_unit</table>
+     <column>PREVIOUS_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+    <form_element>
+     <name>description</name>
+     <table>average_unit</table>
+     <column>DESCRIPTION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+     
+</form>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : logo.xml
+    Created on : March 3, 2009, 3:03 PM
+    Author     : Administrator
+    Description:
+        Purpose of the document follows.
+-->
+
+<configration>
+
+    <splash>                                 <!-- Lehaa Logos  ** Prima Logos --> 
+        <indexLogo>index_logo.jpg</indexLogo>  <!-- pic_menu.jpg  ** prima.jpg -->
+    </splash>    
+    <printEqp>
+        <printEqLogo>lehaaLogo.JPG</printEqLogo>  <!-- lehaaLogo.JPG  ** primaLogo.jpg -->  
+        <printEqLogo2>eqpSheet.jpg</printEqLogo2> <!-- eqpSheet.jpg  ** eqpSheet.jpg -->
+        <printEqLogo3>taskSheet.JPG</printEqLogo3><!-- taskSheet.JPG  ** taskSheet.JPG -->
+        <headReport1>Leha_Logo.jpg</headReport1><!-- lehaaLogo.JPG  ** headReport1.jpg -->
+        <headReport2>lehaaTitle.JPG</headReport2><!-- lehaaTitle.JPG  ** headReport2.jpg -->
+        <headReport3>EGYPTO.PNG</headReport3>
+        <ReportTitle>شركة ايجيبتو للاستثمار العقاري</ReportTitle>
+        <primaTitle>lehaaTitle.JPG</primaTitle>   <!-- lehaaTitle.JPG  ** primaTitle.JPG -->
+    </printEqp>
+
+    <laterOrders>                                 <!-- Lehaa Logos  ** Prima Logos -->
+        <weeksNumber>2</weeksNumber>  <!-- number of weeks for later orders -->
+    </laterOrders>
+    
+    <equipment>
+        <newEqpPage>/docs/equipment/new_equipment.jsp</newEqpPage>
+    </equipment>
+    
+    <userSite>    
+        <userType>single</userType>
+        <siteName>&#1575;&#1604;&#1587;&#1575;&#1583;&#1575;&#1578;</siteName>
+    </userSite>
+    
+    <project>
+        
+        <site>
+            <siteInfo>
+                <id>01</id>
+                <name>&#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;(&#1575;&#1604;&#1585;&#1575;&#1580;&#1581;&#1609;)</name>
+            </siteInfo>
+            <store>
+                <id>01215</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>01212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1608;&#1586;&#1610;&#1608;&#1578; &#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>02</id>
+                <name>&#1581;&#1575;&#1574;&#1604;</name>
+            </siteInfo>
+            <store>
+                <id>02501</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1581;&#1575;&#1574;&#1604;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>02212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1581;&#1575;&#1574;&#1604;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>03</id>
+                <name>&#1575;&#1604;&#1602;&#1589;&#1610;&#1605;</name>
+            </siteInfo>
+            <store>
+                <id>03215</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1602;&#1589;&#1610;&#1605;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>03212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1575;&#1604;&#1602;&#1589;&#1610;&#1605;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>05</id>
+                <name>&#1575;&#1604;&#1580;&#1608;&#1601;</name>
+            </siteInfo>
+            <store>
+                <id>05215</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1580;&#1608;&#1601;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>05212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1575;&#1604;&#1580;&#1608;&#1601;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>06</id>
+                <name>&#1575;&#1604;&#1608;&#1585;&#1588;&#1577;</name>
+            </siteInfo>
+            <store>
+                <id>00501</id>
+                <name>&#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1605;&#1587;&#1578;&#1608;&#1585;&#1583; &#1605;&#1581;&#1604;&#1610;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>06501</id>
+                <name>&#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1608;&#1585;&#1588;&#1577; &#1608;&#1575;&#1604;&#1606;&#1602;&#1604;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>08</id>
+                <name>&#1575;&#1604;&#1608;&#1585;&#1588;&#1577;</name>
+            </siteInfo>
+            <store>
+                <id>08102</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1588;&#1580;&#1575;&#1593;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>08103</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1588;&#1580;&#1575;&#1593;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>18</id>
+                <name>&#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;(&#1588;&#1583;&#1609;)</name>
+            </siteInfo>
+            <store>
+                <id>18103</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1588;&#1583;&#1609;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>18102</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1575;&#1604;&#1588;&#1583;&#1609;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+    </project>
+    
+ <dateFormat>
+      <!-- Date Format Like Format in Java Script Calendar File like "y/m/d" -->
+      <jsDateFormat>y/m/d</jsDateFormat>
+      
+      <!-- 
+      Date Format That Written In Java to get Today Date Like "yyyy/MM/dd" this
+      is equevlent to "y/m/d" in js Calendar File Note Captel Letters in Month
+      -->
+      <javaDateFormat>yyyy/MM/dd</javaDateFormat>
+      
+      <!-- 
+      Virtual End date for job order status
+      -->
+      <virtualEndDate>2010/12/31</virtualEndDate>
+      
+  </dateFormat>  
+  
+   <jobOrderType>
+        <emgTypeAr>
+            &#1591;&#1575;&#1585;&#1574;
+        </emgTypeAr>
+         <emgTypeEn>
+            Emergency
+        </emgTypeEn>
+        <plannedTypeAr>
+            &#1605;&#1606; &#1582;&#1591;&#1577;
+        </plannedTypeAr>
+        <plannedTypeEn>
+            From Plan
+        </plannedTypeEn>
+    </jobOrderType>
+   <engineJobOrderType>
+      <Emergency>
+          <DescAr>&#1591;&#1575;&#1585;&#1574;</DescAr>
+          <DescEn>Emergency</DescEn>
+      </Emergency>
+      <Planned>
+          <DescAr>&#1589;&#1610;&#1575;&#1606;&#1577; &#1605;&#1580;&#1583;&#1608;&#1604;&#1577;</DescAr>
+          <DescEn>Planned</DescEn>
+      </Planned>
+  </engineJobOrderType>
+     
+  <scheduleConstants>
+      <averageKmEqp>100</averageKmEqp>   <!-- Set the avrage of K.M. equipment working per day Exm.(100 K.M. / day) -->
+  </scheduleConstants>
+
+  <updateEquipmentsSince>
+      <day>7</day>
+  </updateEquipmentsSince>
+  
+  
+   <context-param>
+        <param-name>Email</param-name>
+        <param-value>paradise@paradiserassudr.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>SMTPServer</param-name>
+        <param-value>mail.paradiserassudr.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>EmailPassword</param-name>
+        <param-value>PRD@3225</param-value>
+    </context-param>
+    <context-param>
+        <param-name>EmailPort</param-name>
+        <param-value>8889</param-value>
+    </context-param>
+    <context-param>
+        <param-name>EmailSSL</param-name>
+        <param-value>true</param-value>
+    </context-param>
+</configration>

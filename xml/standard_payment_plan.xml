@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<form>
+    <table_supported>
+        <name>STANDARED_PAYMENT_PLAN</name>
+        <key>SPLAN_ID</key>
+        <key1>SPLAN_ID</key1>
+        <key2>PROJECT_ID</key2>
+    </table_supported> 
+    
+     <form_element>
+        <name>id</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>SPLAN_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>planTitle</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>PLAN_TITEL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>paymentAMT</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>PMT_AMT</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>downAMT</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>DOWN_PMT_AMT</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>downDate</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>DOWN_PMT_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>fristInstallDate</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>FRIST_INSTALLMENT_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>installmentSys</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>INSTALLMENT_SYS</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>installNum</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>INSTALLMENT_NUM</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>reservation</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>RESERVATION_AMT</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>creationDate</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>CREATION_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>installmentAmt</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>INSTALLMENT_AMT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>projectID</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>PROJECT_ID</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    <form_element>
+        <name>yearInsPayTyp</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>YEARINSPAYTYP</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>yearInsPayVal</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>YEARINSPAYVAL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>yearMinInsPayVal</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>YEARMININSPAYVAL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>mainType</name>
+        <table>STANDARED_PAYMENT_PLAN</table>
+        <column>MAINTYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>item_balance</name>
+        <key>ID</key>
+        <key1>ITEM_ID</key1>
+    </table_supported>
+   
+    <form_element>
+        <name>id</name>
+        <table>item_balance</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>itemId</name>
+        <table>item_balance</table>
+        <column>ITEM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        
+        <name>incrementBalance</name>
+        <table>item_balance</table>
+        <column>INCREMENT_BALANCE</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>currentBalance</name>
+        <table>item_balance</table>
+        <column>CURRENT_BALANCE</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>preBalance</name>
+        <table>item_balance</table>
+        <column>PREVIOUS_BALANCE</column>
+        <class>com.silkworm.persistence.relational.DoubleValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>price</name>
+        <table>item_balance</table>
+        <column>PRICE</column>
+        <class>com.silkworm.persistence.relational.FloatValue</class>
+        <jclass>java.lang.Float</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>date</name>
+        <table>item_balance</table>
+        <column>BALANCE_DATE</column>
+        <class>com.silkworm.persistence.relational.DateValue</class>
+        <jclass>java.util.Date</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

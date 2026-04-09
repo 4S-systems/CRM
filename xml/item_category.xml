@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>item_category</name>
+        <key>CATEGORY_ID</key>
+        <key1>ITEM_DSCRPTN</key1>
+        <keyname>CATEGORY_NAME</keyname>
+    </table_supported>  
+    
+    
+    
+    <form_element>
+        <name>categoryId</name>
+        <table>item_category</table>
+        <column>CATEGORY_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>categoryName</name>
+        <table>item_category</table>
+        <column>CATEGORY_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>catDsc</name>
+        <table>item_category</table>
+        <column>CATEGORY_DSCRPTN</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+      
+    <form_element>
+        <name>creationTime</name>
+        <table>item_category</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    
+    
+</form>

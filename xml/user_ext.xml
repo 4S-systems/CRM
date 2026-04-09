@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>USERS_EXT</name>
+        <key>USER_ID</key>
+    </table_supported>  
+   
+    <form_element>
+        <name>userID</name>
+        <table>USERS_EXT</table>
+        <column>USER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>CommercialRegister</name>
+        <table>USERS_EXT</table>
+        <column>COMMERCIAL_RECORD</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>TaxCardNumber</name>
+        <table>USERS_EXT</table>
+        <column>TAX_CARD_NUMBER</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>AuthorizedPerson</name>
+        <table>USERS_EXT</table>
+        <column>AUTHORIZED_PERSON</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>companyAddress</name>
+        <table>USERS_EXT</table>
+        <column>COMPANY_ADDRESS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+     <form_element>
+        <name>phoneNumber</name>
+        <table>USERS_EXT</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>RecordDate</name>
+        <table>USERS_EXT</table>
+        <column>RECORD_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+  
+</form>

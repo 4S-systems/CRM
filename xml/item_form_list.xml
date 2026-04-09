@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>item_form_list</name>
+        <key>CODE_FORM</key>
+        <key1>STORE_CODE</key1>
+        <key2>BRANCH_CODE</key2>
+        <keyname>FORMDESC</keyname>
+    </table_supported>  
+    
+    <form_element>
+        <name>codeForm</name>
+        <table>item_form_list</table>
+        <column>CODE_FORM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>formDesc</name>
+        <table>item_form_list</table>
+        <column>FORMDESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>branchCode</name>
+        <table>item_form_list</table>
+        <column>BRANCH_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>remainStoreCode</name>
+        <table>item_form_list</table>
+        <column>REMAIN_STORECODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>storeCode</name>
+        <table>item_form_list</table>
+        <column>STORE_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>   
+    
+   
+</form>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<form>
+    
+   <table_supported>
+      <name>stor_trns</name>
+      <key>TRNS_CODE</key>
+   </table_supported>
+
+   <form_element>
+     <name>trnsCode</name>
+     <table>stor_trns</table>
+     <column>TRNS_CODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>trnsDesc</name>
+     <table>stor_trns</table>
+     <column>TRNS_DESC</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>transType</name>
+     <table>stor_trns</table>
+     <column>TRNS_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+</form>

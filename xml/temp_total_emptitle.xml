@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>temp_total_emptitle</name>
+        <key>emp_title</key>
+        
+        
+    </table_supported>   
+    
+    
+    
+    <form_element>
+        <name>empTitle</name>
+        <table>temp_total_emptitle</table>
+        <column>emp_title</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>titleName</name>
+        <table>temp_total_emptitle</table>
+        <column>title_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>total</name>
+        <table>temp_total_emptitle</table>
+        <column>total</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+</form>

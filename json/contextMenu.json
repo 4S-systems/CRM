@@ -1,0 +1,211 @@
+{
+    "general": {
+        "icon": "images/icons/institute.png",
+        "menuItem": [
+            {"label": "عنصر فرعي جديد"}
+        ]
+    },
+    "site": {
+        "icon": "images/icons/gear_red.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    "subsite": {
+        "icon": "images/icons/gear_red.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    "project-node": {
+        "icon": "images/icons/gear_red.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"},
+            {"label": "تحديث الموقع الجغرافى"},
+            {"label": "الموقع الجغرافى"}
+        ]
+    },
+    "dep": {
+        "icon": "images/icons/department.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    "region": {
+        "icon": "images/icons/region.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    "branch": {
+        "icon": "images/icons/branches.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    "project": {
+        "icon": "images/icons/project.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    "account": {
+        "icon": "images/icons/finance.jpg",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    
+     "cstcntr": {
+        "icon": "images/icons/cstcntr.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    
+    
+      "bnk": {
+        "icon": "images/icons/bank.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    
+      "FTT": {
+        "icon": "images/icons/ftrans.jpg",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+      },
+      
+      "FTSIDE": {
+        "icon": "images/icons/trans_sides.png",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    },
+    
+    "ACCNTS": {
+        "icon": "images/finical-rebort.png",
+        "menuItem": [
+            {"label": "اضافة حساب رئيسي"},
+            {"label": "حذف الحساب"},
+            {"label": "تعديل الحساب"}
+            
+        ]
+    },
+    "ACCTM":{
+        "icon": "images/icons/mainAccount.png",
+        "menuItem": [
+            {"label": "اضافة حساب رئيسي"},
+            {"label": "اضافة حساب فرعي"},
+            {"label": "حذف الحساب"},
+            {"label": "تعديل الحساب"}
+        ]
+    },
+    
+    "ACCTB": {
+        "icon": "images/icons/branchAccount.png",
+        "menuItem": [
+            {"label": "حذف الحساب"},
+            {"label": "تعديل الحساب"}
+        ]
+    },
+      "FTRANS-PURP": {
+        "icon": "images/icons/pay_purpose.jpg",
+        "menuItem": [
+            {"label": "البيانات الأساسية"},
+            {"label": "عنصر فرعي جديد"},
+            {"label": "حذف العنصر"},
+            {"label": "تحديث العنصر"},
+            {"label": "أرفاق مستند"},
+            {"label": "عرض المرفقات"},
+            {"label": "نقل العنصر"},
+            {"label": "المستندات المرفقة"}
+        ]
+    }
+}

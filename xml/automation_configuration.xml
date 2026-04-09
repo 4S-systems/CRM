@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration-automation>
+    <reservation-automation>
+        <interval-value>600</interval-value><!-- this value by seconds -->
+        <type>Seconds</type>
+        <title>Reservation Automation</title>
+        <description>Reservation Automation controlled by runAutomationReports in web.xml</description>
+    </reservation-automation>
+    
+    <appointment-notification-alarm>
+        <!-- By Yasser -->
+        <!-- this value by milli seconds -->
+        <alarm-delay-interval>120000</alarm-delay-interval>
+        <alarm-delay-type>Milli Seconds</alarm-delay-type>
+        <!-- this value by mintues -->
+        <appointment-remaining-time>120</appointment-remaining-time>
+        <appointment-remaining-type>Minutes</appointment-remaining-type>
+        <title>Appointment Notification Alarm</title>
+        <description>Appointment Notification Alarm</description>
+    </appointment-notification-alarm>
+    
+    <sla-notification-alarm>
+        <!-- By Yasser -->
+        <!-- this value by milli seconds -->
+        <alarm-delay-interval>120000</alarm-delay-interval>
+        <alarm-delay-type>Milli Seconds</alarm-delay-type>
+        <!-- this value by mintues -->
+        <sla-remaining-time>4320</sla-remaining-time>
+        <sla-remaining-type>Minutes</sla-remaining-type>
+        <title>SLA Notification Alarm</title>
+        <description>SLA Notification Alarm</description>
+    </sla-notification-alarm>
+    
+    <closed-client-complaints-automation>
+        <!-- all values by seconds (31536000 is one year) -->
+        <interval-value>31104000000</interval-value>
+        <type>Seconds</type>
+        <title>Closed Client Complaints Automation</title>
+        <description>Closed Client Complaints Automation</description>
+    </closed-client-complaints-automation>
+    
+    <defualt-refresh-pages>
+        <!-- all values by seconds (31536000 is one year) -->
+        <interval-value>31104000000</interval-value>
+        <type>Seconds</type>
+        <title>Default Refresh Pages</title>
+        <description>Default Refresh Pages</description>
+    </defualt-refresh-pages>
+    
+    <auto-closure-configuration>
+        <department>
+            <department_id>1365238791104</department_id>
+            <complaint-type-list>
+                <complaint-type>
+                    <type>Extracting</type>
+                    <action-id>7</action-id>
+                    <interval-value>24</interval-value> <!-- interval value by hours - auto run interval -->
+                    <closure-interval>72</closure-interval> <!-- interval value by hours - interval to close complaints -->
+                </complaint-type>
+            </complaint-type-list>
+        </department>
+        <type>Hours</type>
+        <title>Auto Closure Configuration</title>
+        <description>Auto Closure Configuration</description>
+    </auto-closure-configuration>
+    
+    <batchQC-configuration>
+        <interval-value>1</interval-value> <!-- by minutes -->
+        <type>Minutes</type>
+        <title>Batch QC Configuration</title>
+        <description>Batch QC Configuration</description>
+    </batchQC-configuration>
+    
+    <calling-plan-configuration>
+        <interval-value>5</interval-value> <!-- by minutes -->
+        <type>Minutes</type>
+        <title>Calling Plan Configuration</title>
+        <description>Calling Plan Configuration</description>
+    </calling-plan-configuration>
+    
+    <quality-plan-configuration>
+        <interval-value>120</interval-value> <!-- by minutes -->
+        <type>Minutes</type>
+        <title>Quality Plan Configuration</title>
+        <description>Quality Plan Configuration</description>
+    </quality-plan-configuration>
+    
+    <authorization-configuration>
+        <interval-value>1440</interval-value> <!-- by minutes -->
+        <type>Minutes</type>
+        <title>Authorization Configuration</title>
+        <description>Authorizations Configuration</description>
+    </authorization-configuration>
+    
+    <session-kill-automation>
+        <interval-value>30</interval-value> <!--By minutes-->
+        <type>Minutes</type>
+        <title>Sessions Kill Automation</title>
+        <description>Kill Inactive Sessions controlled by local flag (0 or 1) regardless</description>
+    </session-kill-automation>
+    
+    <contract-expire-notification>
+        <interval-value>1440</interval-value><!--By minutes-->
+        <type>Minutes</type>
+        <title>Contract Expire Notification</title>
+        <description>Create notifications for contracts about to expire. controlled by local flag (0 or 1) regardless</description>
+    </contract-expire-notification>
+    
+    <closed-auto-withdraw>
+        <interval-value>0</interval-value><!--By minutes-->
+        <type>Minutes</type>
+        <title>Auto Withdraw</title>
+        <description>Auto Withdraw all Clients Rated as 'Closed'. controlled by local flag (0 or 1) regardless</description>
+    </closed-auto-withdraw>
+    
+    <inter-local-auto-update>
+        <interval-value>1440</interval-value><!--By minutes-->
+        <type>Minutes</type>
+        <title>Inter-Local Auto Update</title>
+        <description>International Local Clients Auto Update. controlled by local flag (0 or 1) regardless</description>
+    </inter-local-auto-update>
+</configuration-automation>

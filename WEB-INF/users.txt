@@ -1,0 +1,65 @@
+1- To create job order
+	user name : e.gamal
+	password : 123
+	group : Client Help Desk
+
+2- display job order as technician
+	user name : i.elfeky
+	password : 123
+	group : Zone Maintenance Mananger
+
+3- display job order as client
+	user name : n.company
+	password : 123
+	group : Customer Job Order Tracking
+
+1- Quality assurance
+	user name : QA
+	password : 123
+	group : JO Quality Assurance
+
+
+Job Order Life Cycle.
+	1-	Create job order.
+			User name => e.gamal.
+			Password => 123.
+			Management group => Client Help Desk.
+			Steps => 
+				1- Choose client: n.cmpn.
+				2- Select branch: ãÔÑæÚ ÞØÚÉ 19 – (Íì ÇáäæÇÏì) –ÇáÔÑæÞ .
+				3- Select any equipment.
+				4- Choose field technician “Ibrahim El Feky”.
+				5- Fill job order form then save it. 
+
+
+
+
+	2-	Login as field technician or client.
+		a.	Field technician.
+			User name => i.elfeky.
+			Password => 123.
+			Management group => Zone Maintenance Manager.
+			He can do =>
+				1-	Display his job orders which is it not closed or finished.
+				2-	Remark, finish or close job order.
+				3-	Open order details.
+					a.	Add spare parts.
+					b.	Add work items.
+					c.	Add maintenance items.
+					d.	Display all client job Orders.
+					e.	Display and print order invoice.
+
+
+		b.	Client.
+			User name => n.cmpn.
+			Password => 123.
+			He can do =>
+				1-	Display and print job order invoice.
+				2-	Add job order complaint.
+
+
+
+
+	3-	Quality Assurance
+			User name => e.gamal.
+			Password => 123.

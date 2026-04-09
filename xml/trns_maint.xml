@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>trns_maint</name>
+      <key>TITLE</key>
+      <refintegkey>ISSUE_ID</refintegkey>
+   </table_supported>
+
+
+    <form_element>
+     <name>trnsNo</name>
+     <table>trns_maint</table>
+     <column>TRNS_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>unitNo</name>
+     <table>trns_maint</table>
+     <column>ASSET_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>unitName</name>
+     <table>trns_maint</table>
+     <column>ASSET_DESC</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>location</name>
+     <table>trns_maint</table>
+     <column>LOCATION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>locationName</name>
+     <table>trns_maint</table>
+     <column>LOCATION_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+
+</form>

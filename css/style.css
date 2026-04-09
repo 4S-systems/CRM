@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cleaner-h1 {clear:both; height:10px;}
+.cleaner-h2 {clear:both; height:20px;}
+.cleaner-h3 {clear:both; height:30px;}
+.cleaner-h4 {clear:both; height:40px;}
+
+body {
+    font-family:Georgia,"Times New Roman",Times,serif;
+}
+
+.first-form {
+    background:#b9d2ef;
+    border:1px solid black;
+    border-radius:7px;
+    padding:20px;
+}
+
+.first-form label {
+    margin-left:10px;
+}
+
+input.form-number {
+    width:50px;
+    margin-left:70px;
+}
+
+input.input-number-th {
+    width:70px;
+    margin-left:30px;
+    margin-right:10px;
+}
+
+.second-form {
+    background:#ffff99;
+    border:1px solid black;
+    border-radius:7px;
+    padding:20px;
+}
+
+.btn-group {
+    margin-left:120px;
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Active brand Now</Entitle>
+        <Artitle>&#1575;&#1604;&#1605;&#1575;&#1585;&#1603;&#1607; &#1575;&#1604;&#1606;&#1588;&#1591;&#1607; &#1581;&#1575;&#1604;&#1610;&#1575; </Artitle>
+        <barText>Brand Menue</barText>
+    </menu_style>  
+    
+    <elements>
+        
+        <item>
+            <Arname>&#1593;&#1585;&#1590; &#1578;&#1601;&#1575;&#1589;&#1610;&#1604; &#1575;&#1604;&#1605;&#1575;&#1585;&#1603;&#1607; </Arname>
+            <Enname>View Brand Details</Enname>
+            <link>EquipmentServlet?op=viewBrand&amp;brandId=</link>
+            <mlink>EquipmentServlet?op=viewBrand&amp;brandId=</mlink>
+        </item>
+        
+        <item>
+            <Arname>&#1578;&#1581;&#1583;&#1610;&#1579; &#1575;&#1604;&#1605;&#1575;&#1585;&#1603;&#1607; </Arname>
+            <Enname>Update Brand</Enname>
+            <link>EquipmentServlet?op=updateBrand&amp;brandId=</link>
+            <mlink>EquipmentServlet?op=updateBrand&amp;brandId=</mlink>
+        </item>
+     
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>brand</link>
+            <mlink>brand</mlink>
+        </item>
+        
+    </elements>
+</menu>

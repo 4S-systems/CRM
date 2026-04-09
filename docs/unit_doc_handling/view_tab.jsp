@@ -1,0 +1,543 @@
+<%@ page import="com.docviewer.business_objects.*,com.silkworm.business_objects.*,java.util.*,com.silkworm.common.*,com.silkworm.db_access.*"%>
+<%@ page import="com.silkworm.international.TouristGuide,com.docviewer.db_access.DocTypeMgr"%>
+<%@ page import="com.contractor.db_access.MaintainableMgr, com.maintenance.db_access.*, com.tracker.db_access.*"%>  
+<%@taglib prefix="sw" uri="/WEB-INF/swtaglib.tld" %>
+
+<%
+TouristGuide tGuide = new TouristGuide("/com/tracker/international/BasicOps");
+
+MetaDataMgr metaMgr = MetaDataMgr.getInstance();
+FileMgr fileMgr = FileMgr.getInstance();
+MaintainableMgr maintainableMgr = MaintainableMgr.getInstance();
+ProjectMgr projectMgr = ProjectMgr.getInstance();
+SupplierMgr supplierMgr = SupplierMgr.getInstance();
+DepartmentMgr deptMgr = DepartmentMgr.getInstance();
+//EmployeeMgr empMgr = EmployeeMgr.getInstance();
+EmpBasicMgr empMgr = EmpBasicMgr.getInstance();
+
+SupplierEquipmentMgr equipSupMgr = SupplierEquipmentMgr.getInstance();
+EquipOperationMgr eqpOpMgr = EquipOperationMgr.getInstance();
+AverageUnitMgr averageUnitMgr = AverageUnitMgr.getInstance();
+ProductionLineMgr  productionLineMgr = ProductionLineMgr.getInstance();
+
+String context = metaMgr.getContext();
+String backTarget=null;
+
+WebBusinessObject equipmentWBO = (WebBusinessObject) maintainableMgr.getOnSingleKey((String) request.getAttribute("equipID"));
+WebBusinessObject wboTemp = maintainableMgr.getOnSingleKey(equipmentWBO.getAttribute("parentId").toString());
+WebBusinessObject locationWBO = projectMgr.getOnSingleKey(equipmentWBO.getAttribute("site").toString());
+WebBusinessObject deptWBO = deptMgr.getOnSingleKey(equipmentWBO.getAttribute("department").toString());
+WebBusinessObject productionLineWBO = productionLineMgr.getOnSingleKey(equipmentWBO.getAttribute("productionLine").toString());
+
+MainCategoryTypeMgr mainCatTypeMgr=MainCategoryTypeMgr.getInstance();
+WebBusinessObject mainCatTypeWbo=mainCatTypeMgr.getOnSingleKey((String)equipmentWBO.getAttribute("maintTypeId"));
+
+//WebBusinessObject empWBO = empMgr.getOnSingleKey(equipmentWBO.getAttribute("empID").toString());
+//WebBusinessObject eqSupWBO = equipSupMgr.getOnSingleKey(equipmentWBO.getAttribute("id").toString());
+//WebBusinessObject supWBO = supplierMgr.getOnSingleKey((String) eqSupWBO.getAttribute("supplierID"));
+//WebBusinessObject contEmpWBO = empMgr.getOnSingleKey(eqSupWBO.getAttribute("contractEmp").toString());
+Vector eqpOpVector = eqpOpMgr.getOnArbitraryKey(equipmentWBO.getAttribute("id").toString(), "key1");
+WebBusinessObject eqpOpWbo = (WebBusinessObject) eqpOpVector.elementAt(0);
+
+String unitName=equipmentWBO.getAttribute("unitName").toString();
+request.setAttribute("unitName",unitName);
+
+Vector data=new Vector();
+data.add(equipmentWBO);
+
+request.getSession().setAttribute("info", data);
+response.addHeader("Pragma","No-cache");
+response.addHeader("Cache-Control","no-cache");
+response.addDateHeader("Expires",1);
+
+Vector imagePath = (Vector) request.getAttribute("imagePath");
+
+backTarget=context+"/main.jsp";
+
+//String dateAcquired = eqSupWBO.getAttribute("purchaseDate").toString();
+//String expiryDate = eqSupWBO.getAttribute("warrantyExpDate").toString();
+EqChangesMgr eqChangesMgr = EqChangesMgr.getInstance();
+Vector vecChanges = eqChangesMgr.getOnArbitraryKey(((String) equipmentWBO.getAttribute("id")), "key1");
+
+String equipmentID = (String) request.getAttribute("equipID");
+UnitDocMgr unitDocMgr = UnitDocMgr.getInstance();
+boolean active = maintainableMgr.hasSchedules(equipmentID);
+EquipmentStatusMgr equipmentStatusMgr = EquipmentStatusMgr.getInstance();
+WebBusinessObject tempWbo = equipmentStatusMgr.getLastStatus(equipmentID);
+int currentStatus = 2;
+if(tempWbo != null){
+    String stateID = (String) tempWbo.getAttribute("stateID");
+    currentStatus = new Integer(stateID).intValue();
+}
+
+SupplementMgr supplementMgr=SupplementMgr.getInstance();
+Vector attachedEqps=new Vector();
+attachedEqps=supplementMgr.search(equipmentID);
+int attachFlag=0;
+if(attachedEqps.size()>0) {
+    attachFlag=1;
+}
+
+String issueId=(String)request.getAttribute("issueId");
+String backTo=(String)request.getAttribute("backTo");
+String filterValue=(String)request.getAttribute("filterValue");
+String filterName=(String)request.getAttribute("filterName");
+String cMode= (String) request.getSession().getAttribute("currentMode");
+String url="";
+
+if(filterValue!=null){
+    if(filterValue.equalsIgnoreCase("null")) {
+        url=context+"/AssignedIssueServlet?op=VIEWDETAILS&issueId="+issueId+"&filterValue="+filterValue+"&filterName="+filterName;
+    }else{
+        String searchtype=filterValue.substring(filterValue.indexOf(">")+1,filterValue.indexOf("<"));
+        if(searchtype.equalsIgnoreCase("begin")||searchtype.equalsIgnoreCase("end"))
+            url= context+"/SearchServlet?op=getByoneDate&filterValue="+filterValue;
+        else
+            url=context+"/AssignedIssueServlet?op=VIEWDETAILS&issueId="+issueId+"&filterValue="+filterValue+"&filterName="+filterName;
+    }
+} else
+    url=context+"/AssignedIssueServlet?op=VIEWDETAILS&issueId="+issueId+"&filterValue="+filterValue+"&filterName="+filterName;
+
+int year,mon,day;
+String  stat=cMode;
+String align=null;
+String dir=null;
+String style=null;
+String lang,langCode,tit,save,BackToList,cancel,TT,SNA,tit1,RU,EMP,STAT,NO,Reading,Excellent,Good,Poor,eqType_odometer,
+        eqType_continues,Countinous, By_Order,byPrecentage;
+
+if(stat.equals("En")){
+    align="center";
+    dir="LTR";
+    style="text-align:left";
+    lang="   &#1593;&#1585;&#1576;&#1610;    ";
+    langCode="Ar";
+    tit="View File";
+    tit1="Select File Type";
+    save="Attach";
+    cancel="Back To List";
+    TT="Select File Type ";
+    SNA="Site Name";
+    RU="Waiting Business Rule";
+    EMP="Employee Name";
+    STAT="Attaching Status";
+    NO="Attach File Before Filling Information";
+    Excellent="Excellent";
+    Good="Good";
+    Poor="Poor";
+    eqType_odometer="Working by KM";
+    eqType_continues="Working by Hours";
+    Countinous = "Countinous";
+    By_Order = "By Order";
+    BackToList="Back To Job Order";
+    byPrecentage=" By ";
+    
+}else{
+    align="center";
+    dir="RTL";
+    style="text-align:Right";
+    lang="English";
+    langCode="En";
+    tit="  &#1605;&#1588;&#1575;&#1607;&#1583;&#1577; &#1575;&#1604;&#1605;&#1587;&#1578;&#1606;&#1583;  ";
+    tit1="&#1573;&#1582;&#1578;&#1575;&#1585; &#1606;&#1608;&#1593; &#1575;&#1604;&#1605;&#1587;&#1578;&#1606;&#1583;";
+    save="&#1573;&#1585;&#1601;&#1602;";
+    cancel=" &#1575;&#1604;&#1593;&#1608;&#1583;&#1577; &#1573;&#1604;&#1609; &#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1577; ";
+    TT="&#1573;&#1582;&#1578;&#1575;&#1585; &#1605;&#1604;&#1601;";
+    SNA="&#1573;&#1587;&#1605; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593;";
+    RU="&#1605;&#1606;&#1578;&#1592;&#1585; &#1602;&#1575;&#1593;&#1583;&#1577; &#1593;&#1605;&#1604;";
+    EMP="&#1573;&#1587;&#1605; &#1575;&#1604;&#1608;&#1592;&#1601;";
+    STAT=" &#1581;&#1575;&#1604;&#1577; &#1575;&#1604;&#1573;&#1585;&#1601;&#1575;&#1602;";
+    NO="&#1573;&#1585;&#1601;&#1602; &#1575;&#1604;&#1605;&#1587;&#1578;&#1606;&#1583; &#1602;&#1576;&#1604; &#1605;&#1604;&#1574; &#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578;";
+    Excellent="&#1605;&#1605;&#1578;&#1575;&#1586;&#1607;";
+    Good="&#1580;&#1610;&#1583;";
+    Poor="&#1585;&#1583;&#1610;&#1574;&#1607;";
+    eqType_odometer="&#1605;&#1593;&#1583;&#1607; &#1576;&#1603;&#1605;";
+    eqType_continues="&#1605;&#1593;&#1583;&#1607; &#1576;&#1575;&#1604;&#1587;&#1575;&#1593;&#1607;";
+    Countinous = "&#1605;&#1587;&#1578;&#1605;&#1585;&#1607;";
+    By_Order = "&#1576;&#1575;&#1604;&#1591;&#1604;&#1576;";
+    BackToList="&#1593;&#1608;&#1583;&#1607; &#1575;&#1604;&#1609; &#1575;&#1605;&#1585; &#1575;&#1604;&#1588;&#1594;&#1604;";
+    byPrecentage="&#1576;&#1606;&#1587;&#1576;&#1600;&#1600;&#1600;&#1577;";
+}
+%>
+
+<SCRIPT>
+    function changeMode(name){
+        if(document.getElementById(name).style.display == 'none'){
+            document.getElementById(name).style.display = 'block';
+        } else {
+             document.getElementById(name).style.display = 'none';
+        }
+    }
+            
+    function changePage(url){
+        window.navigate(url);
+    }
+    
+   
+</SCRIPT>
+
+<HTML>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    
+    <HEAD>
+        <TITLE>Maintenance - View Equipment Details</TITLE>
+        <LINK REL="stylesheet" TYPE="text/css" HREF="CSS.css">
+    </HEAD>
+    
+    <BODY>
+        
+        <%if(backTo!=null){
+        if(backTo.equalsIgnoreCase("jobOrder")){%>
+        <button  onclick="changePage('<%=url%>');" class="button" style="width:125;"><%=BackToList%> <IMG VALIGN="BOTTOM"   SRC="images/leftarrow.gif"> </button>
+        <%}}%>
+        
+        <fieldset align="center" class="set">
+            <legend align="center">
+                <table dir="rtl" align="center">
+                    <tr>
+                        <td class="td">
+                            <font color="blue" size="6">
+                                &#1605;&#1588;&#1575;&#1607;&#1583;&#1577; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607; / View Equipment
+                            </font>
+                        </td>
+                    </tr>
+                </table>
+            </legend>
+            
+            <br>
+            <table width="100%" align="center" style="border: 1px solid blue" bgcolor="#E5E9F3">
+                <tr>
+                    <td>
+                        <font color="red" size="3"> <b> <%=equipmentWBO.getAttribute("unitName")%></b></font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <TABLE DIR="LTR" WIDTH="100%" CELLPADDING="0" CELLSPACING="0">
+                <TR>
+                    <TD CLASS="td">
+                        
+                        <TABLE STYLE="border:1 solid black"  WIDTH="600" CELLPADDING="0" CELLSPACING="0">
+                            
+                            <TR VALIGN="MIDDLE">
+                                
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:center;color:white;font-size:14" WIDTH="200"><B>Asset No / &#1585;&#1602;&#1605; &#1575;&#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1607;</B></TD>
+                                
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:center;color:white;font-size:14" WIDTH="200"><B>Model No / &#1585;&#1602;&#1605; &#1575;&#1604;&#1605;&#1608;&#1583;&#1610;&#1604;</B></TD>
+                                
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:center;color:white;font-size:14" WIDTH="200"><B><%=tGuide.getMessage("equipmentname")%> / &#1573;&#1587;&#1605; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</B></TD>
+                            </tr>
+                            
+                            <TR VALIGN="MIDDLE">
+                                
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;color:Blue;font-size:12"><b><font  size="3" ><%=equipmentWBO.getAttribute("unitNo")%></font></b></TD>
+                                
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;color:Blue;font-size:12"><b><font  size="3" ><%=equipmentWBO.getAttribute("modelNo")%></font></b></TD>
+                                
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;color:Blue;font-size:12"><b><font  size="3" ><%=equipmentWBO.getAttribute("unitName")%></font></b></TD>
+                            </tr>
+                            
+                        </table>
+                        
+                        <br><br>
+                        
+                        <TABLE  WIDTH="600" CELLPADDING="0" CELLSPACING="0">
+                            <TR>
+                                <TD CLASS="td" bgcolor="darkgoldenrod" STYLE="text-align:center;color:white;font-size:16" COLSPAN="3">
+                                    <B>&#1602;&#1585;&#1575;&#1569;&#1607; &#1593;&#1583;&#1575;&#1583; &#1575;&#1604;&#1605;&#1593;&#1583;&#1577; / Equipment Counter Reading</B>
+                                </TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="td" bgcolor="goldenrod" STYLE="text-align:center;color:white;font-size:14">
+                                    <B>Previous Reading<br>&#1575;&#1604;&#1602;&#1585;&#1575;&#1569;&#1577; &#1575;&#1604;&#1587;&#1575;&#1576;&#1602;&#1577;</B>
+                                </TD>
+                                <TD CLASS="td" bgcolor="goldenrod" STYLE="text-align:center;color:white;font-size:14">
+                                    <B>Last Reading<br>&#1570;&#1582;&#1585; &#1602;&#1585;&#1575;&#1569;&#1577;</B>
+                                </TD>
+                                <TD CLASS="td" bgcolor="goldenrod" STYLE="text-align:center;color:white;font-size:14">
+                                    <B>Last Reading Date<br>&#1578;&#1575;&#1585;&#1610;&#1582; &#1570;&#1582;&#1585; &#1602;&#1585;&#1575;&#1569;&#1577;</B>
+                                </TD>                   
+                            </TR>
+                            
+                            <TR>
+                                <%
+                                Vector items = averageUnitMgr.getOnArbitraryKey(equipmentID, "key1");
+                                if(items.size() > 0){
+                                    for(int i = 0; i < items.size(); i++){
+                                        WebBusinessObject wbo = (WebBusinessObject) items.elementAt(i);
+                                        WebBusinessObject categoryName = (WebBusinessObject) maintainableMgr.getOnSingleKey(wbo.getAttribute("unitName").toString());
+                                        String unit = "";
+                                        if(equipmentWBO.getAttribute("rateType").equals("odometer")){
+                                            unit = "km";
+                                        } else {
+                                            unit = "hr";
+                                        }
+                                %>
+                                <TD CLASS="cell" bgcolor="#FFE391" STYLE="text-align:center;"><b><%=wbo.getAttribute("acual_Reading").toString()%>&nbsp;<%=unit%></b></TD>
+                                <TD CLASS="cell" bgcolor="#FFE391" STYLE="text-align:center;"><b><%=wbo.getAttribute("current_Reading").toString()%>&nbsp;<%=unit%></b></TD>
+                                <%
+                                Date d = Calendar.getInstance().getTime();
+                                String readingDate = (String) wbo.getAttribute("entry_Time");
+                                Long l = new Long(readingDate);
+                                long sl = l.longValue();
+                                d.setTime(sl);
+                                readingDate = d.toString();
+                                year=d.getYear()+1900;
+                                mon=d.getMonth()+1;
+                                day=d.getDate();
+                                readingDate=day+" / "+mon+" / "+year;
+                                //   readingDate = readingDate.substring(0,10)+readingDate.substring(24,29);
+                                %>
+                                <TD CLASS="cell" bgcolor="#FFE391" STYLE="text-align:center;"><b><%=readingDate%></b></TD>
+                                <%
+                                    }
+                                } else {
+                                %>
+                                <TD CLASS="cell" bgcolor="#FFE391" STYLE="text-align:center;" COLSPAN="3">No Reading for this equipment <br> &#1604;&#1575;&#1610;&#1608;&#1580;&#1583; &#1602;&#1585;&#1575;&#1569;&#1577; &#1604;&#1607;&#1584;&#1607; &#1575;&#1604;&#1605;&#1593;&#1583;&#1577;</TD>
+                                <%
+                                }
+                                %>
+                            </TR>
+                        </TABLE>
+                    </TD>
+                    
+                    <%--<TD CLASS="td" ALIGN="RIGHT">
+                        
+                        <%if(equipmentWBO.getAttribute("equipmentStatus").toString().equals("1")){%>
+                        <img src="images/workingEq.gif">
+                        <%}else{%>
+                        <img src="images/stoppedEq.gif">
+                        <%}%>
+                        <br>
+                        <% if (equipmentWBO.getAttribute("isStandalone").equals("1")) {
+                                    if(attachFlag==1){%>
+                        <img src="images/attachedEqps.JPG">
+                        <%}else{%>
+                        <img src="images/truck.JPG">
+                        <%}}else{
+                        Vector attached_Eqps=supplementMgr.getOnArbitraryKey(equipmentID,"key2");
+                        if(attached_Eqps.size()>0){%>
+                        <img src="images/attachedEqps.JPG">
+                        <%}else{%>
+                        <img src="images/semitrailer.JPG">
+                        <%}}%>
+                        
+                    </TD>--%>
+                    
+                </TR>
+                
+                <TR>
+                    <TD CLASS="td">&nbsp;</TD>
+                    <TD CLASS="td">&nbsp;</TD>
+                </TR>
+                
+                <TR>
+                    <TD CLASS="td">
+                        <TABLE WIDTH="600" BORDER="0" CELLSPACING="0">
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#808000" STYLE="text-align:center;color:white;font-size:14" COLSPAN="2">
+                                    <B>Basic Information / &#1575;&#1604;&#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1571;&#1587;&#1575;&#1587;&#1610;&#1607;</B>   
+                                </TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Asset No / &#1585;&#1602;&#1605; &#1575;&#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1607;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=equipmentWBO.getAttribute("unitNo")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B><%=tGuide.getMessage("equipmentname")%> / &#1573;&#1587;&#1605; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=equipmentWBO.getAttribute("unitName")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Engine Number / &#1585;&#1602;&#1605; &#1575;&#1604;&#1605;&#1581;&#1585;&#1603;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=equipmentWBO.getAttribute("engineNo")%></b></TD>
+                            </TR>
+                            <%--
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Auth. Employee / &#1575;&#1604;&#1605;&#1608;&#1592;&#1601; &#1575;&#1604;&#1605;&#1587;&#1574;&#1608;&#1604;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><%=empWBO.getAttribute("empName")%></TD>
+                            </TR>
+                            --%>
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Location / &#1575;&#1604;&#1605;&#1608;&#1602;&#1593;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=locationWBO.getAttribute("projectName")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Department / &#1575;&#1604;&#1602;&#1587;&#1605;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=deptWBO.getAttribute("departmentName")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Production Line / &#1582;&#1591; &#1575;&#1604;&#1573;&#1606;&#1578;&#1575;&#1580;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=productionLineWBO.getAttribute("code")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Main Category / &#1575;&#1604;&#1606;&#1608;&#1593; &#1575;&#1604;&#1575;&#1587;&#1575;&#1587;&#1609;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12;font:BOLD;"><B><%=mainCatTypeWbo.getAttribute("typeName")%></B></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Category / &#1575;&#1604;&#1589;&#1606;&#1601;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><B><%=wboTemp.getAttribute("unitName")%></B></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Status / &#1575;&#1604;&#1581;&#1575;&#1604;&#1607;</B></TD>
+                                <%
+                                String status;
+                                if (equipmentWBO.getAttribute("status").toString().equalsIgnoreCase("Excellent")) {
+                                    status = Excellent;
+                                } else if (equipmentWBO.getAttribute("status").toString().equalsIgnoreCase("Good")) {
+                                    status = Good;
+                                } else {
+                                    status = Poor;
+                                }
+                                %>
+                                <TD CLASS="cell" DIR="RTL" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12">
+                                    <b>
+                                        <%=status%>&nbsp;&nbsp;
+                                        <%=byPrecentage%>&nbsp;&nbsp;
+                                        <%=equipmentWBO.getAttribute("statusValue").toString()%>
+                                    </b>
+                                </TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Service Entry Date / &#1583;&#1582;&#1608;&#1604; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607; &#1575;&#1604;&#1582;&#1583;&#1605;&#1607;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12;font:BOLD;">
+                                    <%=(String)equipmentWBO.getAttribute("serviceEntryDATE")%></b>
+                                </TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B><%=tGuide.getMessage("equipmentdescription")%> / &#1608;&#1589;&#1601; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=equipmentWBO.getAttribute("desc")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#808000" STYLE="text-align:center;color:white;font-size:14" COLSPAN="2">
+                                    <B>Operation Data / &#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1593;&#1605;&#1604;</B>   
+                                </TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Equipment Type / &#1606;&#1608;&#1593; &#1575;&#1604;&#1605;&#1593;&#1583;&#1607;</B></TD>
+                                
+                                <%if(equipmentWBO.getAttribute("rateType").toString().equalsIgnoreCase("By Hour")){%>    
+                                <TD CLASS="cell" bgcolor="darkkhaki" STYLE="text-align:center;font-size:12;font:BOLD;"><B><%=eqType_continues%></B></TD>
+                                <%}else{%>
+                                <TD CLASS="cell" bgcolor="darkkhaki" STYLE="text-align:center;font-size:12;font:BOLD;"><B><%=eqType_odometer%></B></TD>
+                                <%}%>
+                                
+                                <%--    <TD CLASS="cell" bgcolor="darkkhaki" STYLE="text-align:center;font-size:12"><B><%=equipmentWBO.getAttribute("rateType")%></B></TD>--%>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Operation Type / &#1606;&#1608;&#1593; &#1575;&#1604;&#1593;&#1605;&#1604;</B></TD>
+                                
+                                <%if(eqpOpWbo.getAttribute("operation_type").toString().equalsIgnoreCase("Countinous")){%>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12;font:BOLD;"><%=Countinous%></TD>
+                                <%}else{%>
+                                
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12;font:BOLD;"><%=By_Order%></TD>
+                                <%}%>
+                                
+                                <%--     <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><%=eqpOpWbo.getAttribute("operation_type")%></TD>--%>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Average / &#1575;&#1604;&#1605;&#1578;&#1608;&#1587;&#1591;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=eqpOpWbo.getAttribute("average")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#808000" STYLE="text-align:center;color:white;font-size:14" COLSPAN="2">
+                                    <B>Manufacturing Data / &#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1578;&#1589;&#1606;&#1610;&#1593;</B>   
+                                </TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Manufacturer / &#1575;&#1604;&#1605;&#1589;&#1606;&#1593;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=equipmentWBO.getAttribute("manufacturer")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Model No / &#1585;&#1602;&#1605; &#1575;&#1604;&#1605;&#1608;&#1583;&#1610;&#1604;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=equipmentWBO.getAttribute("modelNo")%></b></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Serial No / &#1575;&#1604;&#1587;&#1585;&#1610;&#1575;&#1604;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><b><%=equipmentWBO.getAttribute("serialNo")%></b></TD>
+                            </TR>
+                            <%--
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Notes / &#1605;&#1604;&#1575;&#1581;&#1592;&#1575;&#1578;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><%=eqSupWBO.getAttribute("note")%></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#808000" STYLE="text-align:center;color:white;font-size:14" COLSPAN="2">
+                                    <B>Warranty Data / &#1576;&#1610;&#1575;&#1606;&#1575;&#1578; &#1575;&#1604;&#1590;&#1605;&#1575;&#1606;</B>   
+                                </TD>
+                            </TR>
+                            
+                            <!--TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Supplier / &#1575;&#1604;&#1605;&#1608;&#1585;&#1583;</B></TD>
+                            <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><%//=supWBO.getAttribute("name")%></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Contractor  / &#1575;&#1604;&#1605;&#1578;&#1593;&#1575;&#1602;&#1583;</B></TD>
+                            <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><%//=contEmpWBO.getAttribute("empName")%></TD>
+                            </TR-->
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>( Warranty / Contract) Date / &#1578;&#1575;&#1585;&#1610;&#1582; (&#1575;&#1604;&#1590;&#1605;&#1575;&#1606; / &#1575;&#1604;&#1578;&#1593;&#1575;&#1602;&#1583;)</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><%=expiryDate.substring(0,10)%></TD>
+                            </TR>
+                            
+                            <TR>
+                                <TD CLASS="cell" bgcolor="#9B9B00" STYLE="text-align:left;color:white;font-size:12" WIDTH="200"><B>Perchace Date / &#1578;&#1575;&#1585;&#1610;&#1582; &#1575;&#1604;&#1588;&#1585;&#1575;&#1569;</B></TD>
+                                <TD CLASS="cell" bgcolor="#EEE8AA" STYLE="text-align:center;font-size:12"><%=dateAcquired.substring(0,10)%></TD>
+                            </TR>
+                            --%>
+                        </TABLE>
+                    </TD>
+                    <TD CLASS="td3">
+                        <TABLE>
+                            <%
+                            if(imagePath.size() > 0){
+                                    for(int i = 0; i < imagePath.size(); i++){
+                            %>
+                            <TR>
+                                <TD class='td3'>
+                                    <img name='docImage' alt='document image' src='<%=imagePath.get(i).toString()%>'  width="250" height="200">
+                                </TD>
+                            </TR>
+                            <%
+                                    }
+                            } else {
+                            %>
+                            <TR>
+                                <TD class='td'>
+                                    <img name='docImage' alt='document image' src='images/no_image.jpg' border="2">
+                                </TD>
+                            </tr>
+                            <%
+                            }
+                            %>
+                        </Table>
+                    </TD>
+                </TR>
+            </TABLE>
+            <br>
+        </fieldset>
+    </BODY>
+</HTML>     

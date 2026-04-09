@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : menu.xml
+    Created on : January 7, 2004, 5:14 AM
+    Author     : walid
+    Description:
+        Purpose of the document follows.
+-->
+<menu_list>
+    <menu_rendering>
+        <name>mainMenu</name>
+        <context>/crm</context>
+    </menu_rendering>    
+    <!--fahd new menu-->
+    <menu id="FHD">
+        <nameAr>البيانات الأساسية</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="FHDC">
+            <titleAr>العملاء</titleAr>
+            <titleEn>Clients</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHDP">
+            <titleAr>المشروعات والوحدات</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHDI">
+            <titleAr>المستثمرين</titleAr>
+            <titleEn>Investors</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHDM">
+            <titleAr>الوسائل والأدوات التسويقية</titleAr>
+            <titleEn>Marketing means</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHI">
+        <nameAr>الاستثمار</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Investment</nameEn>
+        <display>1</display>
+        <sub_menu id="FHIC">
+            <titleAr>عقود الاستثمار</titleAr>
+            <titleEn>Investment Contracts</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHIS">
+            <titleAr>دراسات الجدوى</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHIL">
+            <titleAr>التراخيص</titleAr>
+            <titleEn>Licenses</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>التسويق</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Marketing</nameEn>
+        <display>1</display>
+        <sub_menu id="FHMO">
+            <titleAr>التسويق الإليكتروني</titleAr>
+            <titleEn>Online</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHMT">
+            <titleAr>البيع عن بعد</titleAr>
+            <titleEn>Tele Sales</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHMF">
+            <titleAr>المعارض والفعاليات التسويقية</titleAr>
+            <titleEn>OffLine</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHMP">
+            <titleAr>الخطة التسويقية</titleAr>
+            <titleEn>Marketing Plan</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHS">
+        <nameAr>المبيعات</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Sales</nameEn>
+        <display>1</display>
+        <sub_menu id="FHSS">
+            <titleAr>دعم المبيعات</titleAr>
+            <titleEn>Sales Admin</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHST">
+            <titleAr>المبيعات</titleAr>
+            <titleEn>Sales Team</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHSL">
+            <titleAr>الشئون القانونية</titleAr>
+            <titleEn>Legal Affairs</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHC">
+        <nameAr>خدمة العملاء</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Customer Services</nameEn>
+        <display>1</display>
+        <sub_menu id="FHCD">
+            <titleAr>سجل العملاء التفصيلي</titleAr>
+            <titleEn>Details Customer Record</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHCR">
+            <titleAr>طلبات وشكاوى العملاء</titleAr>
+            <titleEn>Customer Requests and Complaints</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHCI">
+            <titleAr>مقابلة عميل</titleAr>
+            <titleEn>Customer Interview</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHA">
+        <nameAr>الأرشيف</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Archive</nameEn>
+        <display>1</display>
+        <sub_menu id="FHAZ">
+            <titleAr>عملية تبويب وأرشفة مستند</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHAX">
+            <titleAr>تتبع حركة مستند</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>إدارة المشروعات</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="SACS">
+            <titleAr>Current Sessions</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="SAN">
+            <titleAr>Notification Sender</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>إدارة العمليات</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="SACS">
+            <titleAr>Current Sessions</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="SAN">
+            <titleAr>Notification Sender</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>الموارد البشرية</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="SACS">
+            <titleAr>Current Sessions</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="SAN">
+            <titleAr>Notification Sender</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>الإدارة المالية</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="SACS">
+            <titleAr>Current Sessions</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="SAN">
+            <titleAr>Notification Sender</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>إدارة النظام</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="SACS">
+            <titleAr>Current Sessions</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="SAN">
+            <titleAr>Notification Sender</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>الاستعلامات والتقارير</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="SACS">
+            <titleAr>Current Sessions</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="SAN">
+            <titleAr>Notification Sender</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+        
+</menu_list>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="chart_subReport" pageWidth="775" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="775" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="382a32cc-f43e-409c-8e78-3016244cd2e0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="381"/>
+	<property name="ireport.y" value="122"/>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<field name="current_owner" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<detail>
+		<band height="350" splitType="Stretch">
+			<barChart>
+				<chart>
+					<reportElement x="0" y="0" width="775" height="350" uuid="bd744241-e25b-4ae0-a78e-0bba2408059a"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[""]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{current_owner}]]></categoryExpression>
+						<valueExpression><![CDATA[Integer.parseInt($F{total})]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</detail>
+</jasperReport>

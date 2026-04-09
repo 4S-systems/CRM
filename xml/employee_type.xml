@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>employee_type</name>
+      <key>ID</key>
+      <key1>AR_TITLE</key1>
+      <key2>EN_TITLE</key2>
+      <key3>TYPE_CODE_ID</key3>
+      
+   </table_supported>  
+   
+   <form_element>
+     <name>id</name>
+     <table>employee_type</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>arTitle</name>
+     <table>employee_type</table>
+     <column>AR_TITLE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>enTitle</name>
+     <table>employee_type</table>
+     <column>EN_TITLE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>typeCodeID</name>
+     <table>employee_type</table>
+     <column>TYPE_CODE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+  
+</form>

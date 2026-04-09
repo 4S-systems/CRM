@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>EXPENSE_ITEM_RELATIVE</name>
+        <key>RELATIVE_ID</key>   
+        <key1>EXPENSE_ITEM_ID</key1> 
+        <key2>BUSS_OBJECT_TYPE</key2>
+    </table_supported>
+    
+    <form_element>
+        <name>id</name>
+        <table>EXPENSE_ITEM_RELATIVE</table>
+        <column>RELATIVE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>expenseId</name>
+        <table>EXPENSE_ITEM_RELATIVE</table>
+        <column>EXPENSE_ITEM_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>bussType</name>
+        <table>EXPENSE_ITEM_RELATIVE</table>
+        <column>BUSS_OBJECT_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>bussId</name>
+        <table>EXPENSE_ITEM_RELATIVE</table>
+        <column>BUSS_OBJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>acountMood</name>
+        <table>EXPENSE_ITEM_RELATIVE</table>
+        <column>ACCOUNT_MOOD</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>percent</name>
+        <table>EXPENSE_ITEM_RELATIVE</table>
+        <column>PERCENT</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>clientId</name>
+        <table>EXPENSE_ITEM_RELATIVE</table>
+        <column>CLIENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

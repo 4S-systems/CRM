@@ -1,0 +1,150 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+
+  <title>ContextMenu plugin</title>
+
+  <link rel="stylesheet" type="text/css" href="treemenu/page_style.css" />
+  <link rel="StyleSheet" href="treemenu/css/dtree.css" type="text/css" />
+	
+
+  <script type="text/javascript" src="treemenu/script/jquery-1.2.6.min.js"></script>
+
+  <script type="text/javascript" src="treemenu/script/contextmenu.js"></script>
+  <script type="text/javascript" src="treemenu/script/dtree.js"></script>
+
+  <script type="text/javascript">
+  
+    $(document).ready(function() {
+      $('.node').contextMenu('myMenu1', {
+		  
+		  
+		  bindings: {
+
+            'open': function(t) {
+ 
+               alert('Trigger was '+t.id+'\nAction was Open');
+			   $("#show").val("  "+t.id);
+
+              },
+
+              'email': function(t) {
+
+          alert('Trigger was '+t.id+'\nAction was Email');
+
+             },
+
+        'save': function(t) {
+
+            alert('Trigger was '+t.title+'\nAction was Save');
+
+        },
+
+        'delete': function(t) {
+
+          alert('Trigger was '+t.target+'\nAction was Delete');
+
+        }
+		  }
+		  
+		  
+		  });
+//$('.node').click(function(){
+	//alert('Left mouse bussss'+$(this).attr('id'));
+	
+	
+	//});
+$('#ww').mousedown(function(event) {
+    switch (event.which) {
+        case 1:
+            alert('Left mouse button pressed');
+            break;
+        case 2:
+            alert('Middle mouse button pressed');
+            break;
+        case 3:
+            alert('Right mouse button pressed');
+            break;
+        default:
+            alert('You have a strange mouse');
+    }
+  });
+    });
+	
+
+
+function getid(id){
+	
+	$("#show").val(id);
+	}
+
+
+  </script>
+
+</head>
+
+
+
+<body>
+<div id="ww">aaaaaaaaaaaaa</div>
+<div id="w1">aaaaaaaaaaaaa</div>
+<p><a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a>
+
+</p>
+<input id="show" type="text" size="5" value="" />
+<a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a>
+	<script type="text/javascript">
+		<!--
+		d = new dTree('d');
+
+		d.add(0,-1,'My example tree');
+		d.add(1,0,'Node 1','javascript: getid(this.id);','aaaaaaa','22222222');
+		d.add(2,0,'Node 2','#');
+		d.add(3,1,'Node 1.1','#');
+		d.add(4,0,'Node 3','javascript: d.closeAll();');
+		d.add(5,3,'Node 1.1.1','#');
+		d.add(6,5,'Node 1.1.1.1','#');
+		d.add(7,0,'Node 4','#');
+		d.add(8,1,'Node 1.2','#');
+		d.add(9,3,'My Pictures','#','Pictures I\'ve taken over the years','','','img/imgfolder.gif');
+		d.add(10,3,'The trip to Iceland','#','Pictures of Gullfoss and Geysir');
+		d.add(11,9,'Mom\'s birthday','#');
+		d.add(12,0,'Recycle Bin','#','','','img/trash.gif');
+        //d.closeAll();
+		d.openAll();
+		document.write(d);
+
+		//-->
+	</script>
+
+
+ <div class="contextMenu" id="myMenu1">
+
+    <ul>
+
+      <li id="open"> Open</li>
+
+      <li id="email"> Email</li>
+
+      <li id="save"> Save</li>
+
+      <li id="delete"> Delete</li>
+
+    </ul>
+
+  </div>
+
+
+</body>
+
+
+
+</html>

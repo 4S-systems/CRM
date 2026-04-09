@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>OUT_OF_STORE_PARTS</name>
+      <key>ID</key>
+   </table_supported>  
+   
+    <form_element>
+     <name>id</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>nameAr</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>NAME_AR</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+        
+     <name>nameEn</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>NAME_EN</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>pageNo</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>PAGE_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>itemNo</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>ITEM_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>manufactoryNo</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>MANUFACTORY_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+   
+   <form_element>
+     <name>price</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>EXPECTED_PRICE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>storeId</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>STORE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>comments</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>COMMENTS</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>itemType</name>
+     <table>OUT_OF_STORE_PARTS</table>
+     <column>ITEM_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>emp_tasks_hours</name>
+        <key>ISSUE_TASK_ID</key>
+        <key1>ISSUE_ID</key1>
+    </table_supported>  
+    
+    <form_element>
+        <name>id</name>
+        <table>emp_tasks_hours</table>
+        <column>ISSUE_TASK_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>actualHours</name>
+        <table>emp_tasks_hours</table>
+        <column>ACTUAL_HOURS</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>deviationHours</name>
+        <table>emp_tasks_hours</table>
+        <column>DEVIATION_HOURS</column>
+       <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>issueID</name>
+        <table>emp_tasks_hours</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+     <name>empId</name>
+     <table>emp_tasks_hours</table>
+     <column>EMPCODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+    
+    <form_element>
+     <name>empName</name>
+     <table>emp_tasks_hours</table>
+     <column>EMPNAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>empCostHour</name>
+     <table>emp_tasks_hours</table>
+     <column>EMP_COST_HOUR</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>empTotalCost</name>
+     <table>emp_tasks_hours</table>
+     <column>EMP_TOTAL_COST</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

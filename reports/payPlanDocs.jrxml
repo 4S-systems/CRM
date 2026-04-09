@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="clientDataSheet_subreport1" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="94984fc6-c3c7-4098-badd-c58f47fc5132">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="installmentStyle">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PAYMENT_TYPE}.equals("reservarion")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#DAF7A6"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PAYMENT_TYPE}.equals("downPayment")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#00FF00"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{PAYMENT_TYPE}.equals("installment")]]></conditionExpression>
+			<style mode="Opaque" backcolor="#FCFF00"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="project_id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT IMAGE FROM MNTNBLE_UNIT_DOC where unit_id = $P{project_id}]]>
+	</queryString>
+	<field name="IMAGE" class="java.awt.Image"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="28">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="28" backcolor="#CCCCFF" uuid="c2ebbc5d-2d53-4b5e-a858-d4bba7826b68"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true" pdfEncoding="Cp1256"/>
+				</textElement>
+				<text><![CDATA[صور الوحدة
+]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="115" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="115" uuid="5d62210a-429d-4b8a-9729-b1b1f2515b79"/>
+				<imageExpression><![CDATA[$F{IMAGE}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>

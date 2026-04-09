@@ -1,0 +1,1638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : menu.xml
+    Created on : January 7, 2004, 5:14 AM
+    Author     : walid
+    Description:
+        Purpose of the document follows.
+-->
+<menu_list>
+    <menu_rendering>
+        <name>mainMenu</name>
+        <context>/crm</context>
+    </menu_rendering>    
+    <!--ramadan new menu-->
+    <menu id="MD">
+        <nameAr>البيانات الأساسية</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Main Data</nameEn>
+        <display>1</display>
+        <sub_menu id="FHDC">
+            <titleAr>العملاء</titleAr>
+            <titleEn>Clients</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+            <menu_element id="SRCG">
+                <nameAr>عام</nameAr>
+                <target>/SearchServlet?op=getSearchForClientForm</target>
+                <nameEn>General</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCM">
+                <nameAr>عملائي</nameAr>
+                <target>/SearchServlet?op=searchForMyClients</target>
+                <nameEn>My Clients</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCU">
+                <nameAr>عملائي الغير موزعين</nameAr>
+                <target>/ClientServlet?op=myUnhandledClients</target>
+                <nameEn>UnDistributed Clients</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCS">
+                <nameAr>محدد</nameAr>
+                <target>/SearchServlet?op=getSearchClientsByUnit</target>
+                <nameEn>Specific</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCH">
+                <nameAr>الصحيفة التاريخية</nameAr>
+                <target>/SearchServlet?op=getSearchClientHistory</target>
+                <nameEn>Full Client History</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCC">
+                <nameAr>تصنيف العملاء</nameAr>
+                <target>/ClientServlet?op=getClientClass</target>
+                <nameEn>Clients' Classification</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCR">
+                <nameAr>تعديل حالات العملاء</nameAr>
+                <target>/ClientServlet?op=getClientRating</target>
+                <nameEn>Chacnge Clients' Rating</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHDP">
+            <titleAr>المشروعات والوحدات</titleAr>
+            <titleEn>Projects and Units</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="ADDP">
+                <nameAr> إضافة مشروع </nameAr>
+                <nameEn>Add Project</nameEn>
+                <target>/ProjectServlet?op=showTree</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="UNNB">
+                <nameAr> إضافة عمارة </nameAr>
+                <nameEn>Add Building</nameEn>
+                <target>/ProjectServlet?op=newBuilding</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="ADDU">
+                <nameAr> إضافة وحدة </nameAr>
+                <nameEn>Add Unit</nameEn>
+                <target>/UnitServlet?op=newApartment</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="ADDD">
+                <nameAr> إضافة حي </nameAr>
+                <nameEn>Add District</nameEn>
+                <target>/ProjectServlet?op=newBuilding</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="ADDAM">
+                <nameAr> إضافة نموذج سكني </nameAr>
+                <nameEn>Add apartment model</nameEn>
+                <target>/UnitServlet?op=newResidentialModel</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="ASUM">
+                <nameAr>ربط الوحدات بنماذج</nameAr>
+                <nameEn>Unit-Model Association</nameEn>
+                <target>/UnitServlet?op=getUnitsDetailsReport</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="UNPR">
+                <nameAr>تسعير الوحدات</nameAr>
+                <nameEn>Pricing units</nameEn>
+                <target>/UnitServlet?op=listApartments</target>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHDI">
+            <titleAr>التعريفات الاساسية</titleAr>
+            <titleEn>Basic Definations</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="SYONLT">
+                <nameAr>تعريف نوع عنصر جديد</nameAr>
+                <target>/ProjectServlet?op=newLocationType</target>
+                <nameEn>New Element Type</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYONL">
+                <nameAr>تعريف عنصر جديد</nameAr>
+                <target>/ProjectServlet?op=NewLocation</target>
+                <nameEn>New Element</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYONI">
+                <nameAr>تعريف عنصر فرعى جديد</nameAr>
+                <target>/ProjectServlet?op=GetProjectForm</target>
+                <nameEn>New Sub Element</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYOLI">
+                <nameAr>عرض أنواع العناصر</nameAr>
+                <target>/ProjectServlet?op=listLocationType</target>
+                <nameEn>List Types of Elements</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYONC">
+                <nameAr>نوع مستند جديد</nameAr>
+                <target>/BusinessDocServlet?op=NewDocClass</target>
+                <nameEn>New Document</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYCT">
+                <nameAr>إضافة مهنة</nameAr>
+                <target>/ClientServlet?op=GetJobForm</target>
+                <nameEn>New Job</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYPNT">
+                <nameAr>قنوات الاتصال التسويقية</nameAr>
+                <target>/SeasonServlet?op=insertSeason</target>
+                <nameEn>New Communication Channel</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="QRPTL">
+                <nameAr>عرض قنوات الاتصال</nameAr>
+                <target>/SeasonServlet?op=listSeasons</target>
+                <nameEn>Communication Channels</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYPNR">
+                <nameAr>أدوات الاتصال التسويقية</nameAr>
+                <target>/SeasonServlet?op=recordSeason</target>
+                <nameEn>New Communication Tool</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="QRPRL">
+                <nameAr>عرض ادوات الاتصال</nameAr>
+                <target>/SeasonServlet?op=listRecordSeasons</target>
+                <nameEn>Communication Tools</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYOT">
+                <nameAr>هيكل المؤسسة</nameAr>
+                <target>/ProjectServlet?op=showTree</target>
+                <nameEn>Corporation Structure</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    <menu id="INM">
+        <nameAr>الاستثمار</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Investment</nameEn>
+        <display>1</display>
+        <sub_menu id="FHIN">
+            <titleAr>سجل المستثمرين</titleAr>
+            <titleEn>Investors files</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHIC">
+            <titleAr>عقود الاستثمار</titleAr>
+            <titleEn>Investment Contracts</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHIS">
+            <titleAr>دراسات الجدوى</titleAr>
+            <titleEn>Feasibility Studies</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHIL">
+            <titleAr>التراخيص</titleAr>
+            <titleEn>Licenses</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="MAR">
+        <nameAr>التسويق</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Marketing</nameEn>
+        <display>1</display>
+        <sub_menu id="MAP">
+            <titleAr>الخطة التسويقية</titleAr>
+            <titleEn>Marketing Plan</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="INSMP">
+                <nameAr>ادخال خطة تسويقية</nameAr>
+                <target>/SessionsServlet?op=sendNotification</target>
+                <nameEn>Create Marketing Plan</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHMC">
+            <titleAr>الحملات التسويقية</titleAr>
+            <titleEn>Marketing Campaigns</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="SYPNP">
+                <nameAr>ادخال حملة تسويقية جديدة</nameAr>
+                <target>/CampaignServlet?op=getCampaignForm</target>
+                <nameEn>Create New Campaign</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="QRPPL">
+                <nameAr>استعراض جميع الحملات</nameAr>
+                <target>/CampaignServlet?op=listCampaigns</target>
+                <nameEn>Campaigns List</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYPIC">
+                <nameAr>حملة على عملاء مختارين</nameAr>
+                <target>/ClientServlet?op=generateCallingPlan</target>
+                <nameEn>Internal Campagins</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="QRPIC">
+                <nameAr>عرض الحملات الداخلية</nameAr>
+                <target>/ClientServlet?op=listCallingPlans</target>
+                <nameEn>List Internal Campagins</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHMO">
+            <titleAr>التسويق الالكتروني -اون لاين</titleAr>
+            <titleEn>Online</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+            <menu_element id="RPCXC">
+                <nameAr>أدخال العملاء من Excel</nameAr>
+                <target>/ManageWebClientServlet?op=uploadClientsFromExcel</target>
+                <nameEn>Upload Clients from Excel</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYCW">
+                <nameAr>سحب عملاء الويب</nameAr>
+                <target>/ManageWebClientServlet?op=ListClients</target>
+                <nameEn>Upload Clients from Web</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHMT">
+            <titleAr>البيع عبر الهاتف - تلي سيلز</titleAr>
+            <titleEn>TeleSales</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="RPCUH">
+                <nameAr>غير موزعين</nameAr>
+                <target>/ClientServlet?op=unHandledClients</target>
+                <nameEn>UnDistributed</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CONC">
+                <nameAr>التواصل مع العميل</nameAr>
+                <target>/main.jsp?withinDetails=10000</target>
+                <nameEn>Contact customer</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SENE">
+                <nameAr>رسائل إلكترونية</nameAr>
+                <nameEn>Emails</nameEn>
+                <target>/ClientServlet?op=email</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CTSMS">
+                <nameAr>رسائل قصيرة</nameAr>
+                <nameEn>SMS</nameEn>
+                <target>/ClientServlet?op=sms</target>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+         <sub_menu id="CUH">
+            <titleAr> توزيع العملاء </titleAr>
+            <titleEn> Distribute Clients </titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="CUHDIR">
+                <nameAr> توزيع مباشر </nameAr>
+                <target>/ClientServlet?op=unHandledClients</target>
+                <nameEn> Direct Distribution </nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CUHCST">
+                <nameAr> تخصيص </nameAr>
+                <target>/ClientServlet?op=customizeClient</target>
+                <nameEn> Customize </nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CUHDCUS">
+                <nameAr> توزيع المخصصات </nameAr>
+                <target>/ClientServlet?op=specialDistribute</target>
+                <nameEn> Distribute </nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    <menu id="FHS">
+        <nameAr>المبيعات</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Sales</nameEn>
+        <display>1</display>
+        <sub_menu id="FHSS">
+            <titleAr>دعم المبيعات - سيلز ادمن</titleAr>
+            <titleEn>Sales Admin</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+            <menu_element id="DISV">
+                <nameAr>توزيع الزيارات</nameAr>
+                <nameEn>Distribute Visits</nameEn>
+                <target>/main.jsp</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SALA">
+                <nameAr>إضافة عميل جديد</nameAr>
+                <nameEn>Add New Customer</nameEn>
+                <target>/main.jsp</target>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHST">
+            <titleAr>المبيعات</titleAr>
+            <titleEn>Sales Team</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="SLIN">
+                <nameAr>المهام الواردة</nameAr>
+                <nameEn>My Tasks</nameEn>
+                <target>/main.jsp</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SLRE">
+                <nameAr>حجز وحدة</nameAr>
+                <nameEn>Reservation</nameEn>
+                <target>/main.jsp</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SLRC">
+                <nameAr>عرض الحجوزات والتعاقدات</nameAr>
+                <nameEn>Show reservation and contracts</nameEn>
+                <target>/UnitServlet?op=myReservedUnitsReport</target>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHSL">
+            <titleAr>الشئون القانونية</titleAr>
+            <titleEn>Legal Affairs</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="LEGS">
+                <nameAr>عرض الحجوزات والتعاقدات</nameAr>
+                <nameEn>Show reservation and contracts</nameEn>
+                <target>/UnitServlet?op=reservedUnitsReport</target>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    <menu id="FHC">
+        <nameAr>خدمة العملاء</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Customer Services</nameEn>
+        <display>1</display>
+        <sub_menu id="SRCG">
+            <titleAr>عام</titleAr>
+            <target>/SearchServlet?op=getSearchForClientForm</target>
+            <titleEn>General</titleEn>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="CSRC">
+            <titleAr>طلبات وشكاوي العملاء</titleAr>
+            <target>/main.jsp</target>
+            <titleEn>Customers Complaints and Requests</titleEn>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="QRPCVL">
+            <titleAr>عرض هداياالعملاء</titleAr>
+            <target>/IncentiveServlet?op=viewClientIncentives&amp;firstTime=1</target>
+            <titleEn>List Clients Incentives</titleEn>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="FAR">
+        <nameAr>الأرشيف</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Archive</nameEn>
+        <display>1</display>
+        <sub_menu id="FHAZ">
+            <titleAr>عملية تبويب وأرشفة المستندات</titleAr>
+            <titleEn>Documentation</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHAX">
+            <titleAr>تتبع حركة مستند</titleAr>
+            <titleEn>Documentation Movement</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="QRSLDT">
+            <titleAr>عرض أنواع المستندات</titleAr>
+            <target>/BusinessDocServlet?op=ListDocClass</target>
+            <titleEn>List Document Types</titleEn>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="PM">
+        <nameAr>إدارة المشروعات</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Projects managment</nameEn>
+        <display>1</display>
+        <sub_menu id="CMC">
+            <titleAr>المقاولون</titleAr>
+            <titleEn>Contractors</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="CMCNC">
+                <nameAr>اضافة مقاول</nameAr>
+                <target>/ClientServlet?op=GetContractorForm</target>
+                <nameEn>New Contractor</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMCCL">
+                <nameAr>تقرير المقاولين</nameAr>
+                <target>/ClientServlet?op=getContractorsList</target>
+                <nameEn>Contractors Report</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMCNJ">
+                <nameAr>إضافة مهنة</nameAr>
+                <target>/ClientServlet?op=GetJobForm</target>
+                <nameEn>New Job</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMCLJ">
+                <nameAr>عرض المهن</nameAr>
+                <target>/ClientServlet?op=ViewJobs</target>
+                <nameEn>List Jobs</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMCEU">
+                <nameAr>إضافة وحدة هندسية</nameAr>
+                <target>/UnitServlet?op=newEngUnit</target>
+                <nameEn>Add Eng. Unit</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="CMW"><!--cmwork-->
+            <titleAr>بنود الاعمال</titleAr>
+            <titleEn>Work List</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="CMSWL"><!--CM Show Work List-->
+                <nameAr>عرض بنود الاعمال</nameAr>
+                <target>/ProjectServlet?op=GetWorkItemsList</target>
+                <nameEn>Show Work List</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="CMX">
+            <titleAr>بحث عن مستخلص</titleAr>
+            <titleEn>Search for Abstract</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="CMXG">
+                <nameAr>عام</nameAr>
+                <target>/SearchServlet?op=getSearchForDocuments</target>
+                <nameEn>General</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMXM">
+                <nameAr>طلباتي</nameAr>
+                <target>/SearchServlet?op=getSearchForMyDocuments</target>
+                <nameEn>MyDocuments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMXS">
+                <nameAr>محدد</nameAr>
+                <target>/IssueDocServlet?op=searchForDocument</target>
+                <nameEn>Specific</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="CMRQ">
+            <titleAr>بحث عن طلبات تسليم</titleAr>
+            <titleEn>Search for Delivery Reques</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="CMRQG">
+                <nameAr>عام</nameAr>
+                <target>/SearchServlet?op=getRequestsForAll</target>
+                <nameEn>General</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMRQM">
+                <nameAr>طلباتي</nameAr>
+                <target>/SearchServlet?op=getRequests</target>
+                <nameEn>MyRequests</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="CMQ">
+            <titleAr>بحث عن تسليم جودة</titleAr>
+            <titleEn>Search for Delivery Quality</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="CMQG">
+                <nameAr>عام</nameAr>
+                <target>/SearchServlet?op=getRequestsQForAll</target>
+                <nameEn>General</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQM">
+                <id>08/001/000</id>
+                <nameAr>طلباتي</nameAr>
+                <target>/SearchServlet?op=getRequestsQuality</target>
+                <nameEn>MyRequests</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="CMD">
+            <titleAr>حذف طلب تسليم</titleAr>
+            <titleEn>Delete Delivery Request</titleEn>
+            <target>/DatabaseControllerServlet?op=deleteRequestForm</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="CMR">
+            <titleAr>التقارير</titleAr>
+            <titleEn>Reports</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="CMRC">
+                <nameAr>بحث في التعليقات</nameAr>
+                <target>/SearchServlet?op=searchWithinComments</target>
+                <nameEn>Search within Comments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMRE">
+                <nameAr>أنتاجية القسم</nameAr>
+                <target>/ReportsServletTwo?op=getEngEmployeeProductions</target>
+                <nameEn>Department Productions</nameEn>
+                <display>1</display>
+            </menu_element>
+            <sub_menu id="CMG">
+                <titleAr>الجودة العامة</titleAr>
+                <titleEn>General Quality</titleEn>
+                <target>/IssueServlet?op=createGeneralQuality</target>
+                <display>1</display>
+            </sub_menu>
+        </sub_menu>
+        <sub_menu id="CMGP">
+            <titleAr>تخطيط الجودة</titleAr>
+            <titleEn>Quality Plan</titleEn>
+            <target>/IssueServlet?op=createQualityPlan</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="OM">
+        <nameAr>إدارة العمليات</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Operation</nameEn>
+        <display>1</display>
+        <sub_menu id="OMP">
+            <titleAr>تخطيط العمليات</titleAr>
+            <titleEn>Process Planning</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="HR">
+        <nameAr>الموارد البشرية</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>HR</nameEn>
+        <display>1</display>
+        <sub_menu id="HRE">
+            <titleAr>سجل العاملين</titleAr>
+            <titleEn>ُEmployees files</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="HRS">
+            <titleAr>هيكل الاجور والمزايا</titleAr>
+            <titleEn>Compentsations and Benefits</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="ANSS">
+                <nameAr>هيكل الاجور السنوي</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Annual salary structure</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="MNPR">
+                <nameAr>كشوف المرتبات الشهرية</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Monthly payroll</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="HCBS">
+                <nameAr>كشوف العمولات والحوافز</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Commissions and bonuses slips</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="EBES">
+                <nameAr>كشوف صرف مزايا العاملين</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Employees benefits Exchange slips</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="HRA">
+            <titleAr>الحضور والانصراف</titleAr>
+            <titleEn>Attendance</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="HRDA">
+                <nameAr>كشف الحضور والانصراف اليومي</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Daily attendance</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="HRLF">
+                <nameAr>نماذج الأجازات</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Leave forms</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="HROT">
+                <nameAr>نماذج مأموريات العمل</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Outside tasks</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="HRTF">
+                <nameAr>نماذج السفر الداخلي والخارجي</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Traveling forms</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="HRP">
+            <titleAr>تقييم الاداء</titleAr>
+            <titleEn>Performance Appraisal</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="HRPI">
+                <nameAr>مؤشرات الأداء</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Performance indicators</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="HREF">
+                <nameAr>نماذج تقييم الأداء</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Evaluation forms</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="HRT">
+            <titleAr>التدريب والتطوير</titleAr>
+            <titleEn>Training and development</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="HRTP">
+                <nameAr>خطة التدريب</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Training Plan</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="HRAF">
+                <nameAr>نماذج تنفيذ برنامج تدريب </nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Applying Forms For Training Plans</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    <menu id="FHM">
+        <nameAr>الإدارة المالية</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Finance</nameEn>
+        <display>1</display>
+        <sub_menu id="FHG">
+            <titleAr>الدليل المحاسبي</titleAr>
+            <titleEn>Accounting guide</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHC">
+            <titleAr>حركة الخزينة والبنك</titleAr>
+            <titleEn>Cash and Bank</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="FICR">
+                <nameAr>إيصال توريد نقدية - الخزينة</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Receipt Voucher</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="FIPV">
+                <nameAr>ايصال صرف نقدية - الخزينة</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Payment Voucher</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="FIBD">
+                <nameAr>اشعارات اضافة - بالبنك</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Bank Deposit Notice</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="FIBDN">
+                <nameAr>اشعارات خصم - بالبنك</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Bank Depit Notice</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="FICC">
+                <nameAr>جرد الخزينة</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Cash count</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHE">
+            <titleAr>القيود المحاسبية</titleAr>
+            <titleEn>Accounting Enteries</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="AERE">
+                <nameAr>حركة قيد محاسبي</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Applying Forms For Training Plans</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="AERP">
+                <nameAr>مراجعة وترحيل القيود</nameAr>
+                <target>/main.jsp</target>
+                <nameEn>Review and Post Entry</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="FHB">
+            <titleAr>الموازانات التخطيطية</titleAr>
+            <titleEn>Budgets</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHF">
+            <titleAr>التدفقات النقدية</titleAr>
+            <titleEn>Cash Flows</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHO">
+            <titleAr>الحصيل</titleAr>
+            <titleEn>Collection</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="FHA">
+            <titleAr>الاصول الثابتة</titleAr>
+            <titleEn>Fixed Assets</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="CMGP">
+            <titleAr>الشجرة المالية</titleAr>
+            <titleEn>Finance Tree</titleEn>
+            <target>/FinancialServlet?op=getFinanceTree</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="CMCS">
+            <titleAr>شجرة مراكز التكلفة</titleAr>
+            <titleEn>Cost Center Tree</titleEn>
+            <target>/FinancialServlet?op=getCostCenterTree</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="CMGP">
+            <titleAr>حركة محاسبية جديدة</titleAr>
+            <titleEn>New Finanical Transaction</titleEn>
+            <target>/FinancialServlet?op=newFinancialTransAction</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <menu id="DB">
+        <nameAr>قاعدة البيانات</nameAr>
+        <target>/main.jsp</target>
+        <sora>database.png</sora>
+        <nameEn>Database</nameEn>
+        <display>1</display>
+        <sub_menu id="DBS">
+            <titleAr>أعدادات قاعدة البيانات</titleAr>
+            <titleEn>Database Settings</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="DBSED">
+                <nameAr>تعيين قواعد البيانات الخارجية</nameAr>
+                <target>/DatabaseControllerServlet?op=SetExternalDatabase</target>
+                <nameEn>Set External Database</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSUD">
+                <nameAr>تحديث قاعدة البيانات</nameAr>
+                <target>/DatabaseControllerServlet?op=updateDatabase</target>
+                <nameEn>Update Database</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSCV">
+                <nameAr>ReCompile Views</nameAr>
+                <target>/DatabaseControllerServlet?op=getRecreateAllViewForm</target>
+                <nameEn>ReCompile Views</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSCD">
+                <nameAr>قواعد البيانات الحالية</nameAr>
+                <target>/DatabaseControllerServlet?op=currentDatabases</target>
+                <nameEn>Current Databases</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSRU">
+                <nameAr>إزالة المستخدمين</nameAr>
+                <target>/DatabaseControllerServlet?op=showToDeleteUsers</target>
+                <nameEn>Delete Users</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSRM">
+                <nameAr>إزالة المديرين</nameAr>
+                <target>/DatabaseControllerServlet?op=DisjoinEmpAndMgr</target>
+                <nameEn>Delete Managers</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSCT">
+                <nameAr>مسح المهمات الخطا</nameAr>
+                <target>/DatabaseControllerServlet?op=clearErrorTasks</target>
+                <nameEn>Clear Error Tasks</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSCO">
+                <nameAr>تصحيحات</nameAr>
+                <target>/DatabaseControllerServlet?op=sourceCorrection</target>
+                <nameEn>corrections</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSAC">
+                <nameAr>التشغيل الالى</nameAr>
+                <target>/ApplicationConfigurationServlet?op=saveAutomationConfiguration</target>
+                <nameEn>Automation Configuration</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSTEL">
+                <nameAr>تكرارات العملاء بالتيليفون</nameAr>
+                <target>/ClientServlet?op=repeatedClientsByTelephone</target>
+                <nameEn>Client Rating</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    <menu id="SYA">
+        <nameAr>إدارة النظام</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>System Admin</nameEn>
+        <display>1</display>
+        <sub_menu id="SYAS">
+            <titleAr>اعدادات النظام</titleAr>
+            <titleEn>System Setting</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+            <menu_element id="QRTLG">
+                <nameAr>عرض المجموعات</nameAr>
+                <target>/GroupServlet?op=ListAll</target>
+                <nameEn>List Groups</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="QRTLU">
+                <nameAr>عرض المستخدمين</nameAr>
+                <target>/ListerServlet?op=ListUsers</target>
+                <nameEn>List Users</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYSNG">
+                <nameAr>مجموعة جديدة</nameAr>
+                <target>/GroupServlet?op=GetForm</target>
+                <nameEn>New Group</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYSNU">
+                <nameAr>مستخدم جديد</nameAr>
+                <target>/UsersServlet?op=GetForm</target>
+                <nameEn>New User</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYRMD">
+                <nameAr>توجيه الإدارات</nameAr>
+                <target>/UsersServlet?op=assignManagerForDepartment</target>
+                <nameEn>Directing Department</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYREM">
+                <nameAr>ربط الموظفين بالمديرين</nameAr>
+                <target>/UsersServlet?op=attachEmpToMgr</target>
+                <nameEn>Employees-Managers</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYRAR">
+                <nameAr>قواعد الوحدات</nameAr>
+                <target>/UnitServlet?op=updateApartmentsRules</target>
+                <nameEn>Units Rules</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYRCR">
+                <nameAr>قواعد العملاء</nameAr>
+                <target>/ClientServlet?op=updateClientsRules</target>
+                <nameEn>Clients Rules</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYRDT">
+                <nameAr>صلاحيات  المهمات</nameAr>
+                <target>/ProjectServlet?op=DepartmentTasks</target>
+                <nameEn>Tasks Permissions authority</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYRSC">
+                <nameAr>صلاحيات المستندات</nameAr>
+                <target>/ProjectServlet?op=DepartmentDocuments</target>
+                <nameEn>Document Permissions authority</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="SYIO">
+            <titleAr>عمليات داخلية للنظام</titleAr>
+            <titleEn>Systme Internal operations</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="SYRAQ">
+                <nameAr>الأغلاق الاتوماتيكى للطلبات</nameAr>
+                <target>/QuartzSchedulerConfigurationServlet?op=clientCompliantClosedQuartzForm</target>
+                <nameEn>Automatic Closing for Requests</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYRAFQ">
+                <nameAr>الأنهاء الاتوماتيكى للطلبات</nameAr>
+                <target>/QuartzSchedulerConfigurationServlet?op=clientCompliantFinishQuartzForm</target>
+                <nameEn>Automatic Finishing for Requests</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYCB">
+                <nameAr>نقل الأعمال</nameAr>
+                <target>/ListerServlet?op=ListUsers</target>
+                <nameEn>Work Load Balance</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SYCD">
+                <nameAr>سحب عميل</nameAr>
+                <target>/DatabaseControllerServlet?op=dragClientForm&amp;businessID=nothing&amp;source=nothing</target>
+                <nameEn>Withdraw Client </nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="DBSCW">
+                <nameAr>سحب الطلبات</nameAr>
+                <target>/DatabaseControllerServlet?op=withdrawDistributions</target>
+                <nameEn>Withdraw Requests</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    <menu id="INQ">
+        <nameAr>الاستعلامات</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Quires</nameEn>
+        <display>1</display>
+        <sub_menu id="INQC">
+            <titleAr>استعلامات عملاء</titleAr>
+            <titleEn>Client Quires</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+            <menu_element id="SRCWD">
+                <nameAr>عملاء مع المساحات المرغوبة</nameAr>
+                <target>/SearchServlet?op=getClientsWithDesired</target>
+                <nameEn>Clients with the Desired Space </nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCPF">
+                <nameAr>عملاء بالمشروع</nameAr>
+                <target>/ClientServlet?op=getClientsByProjectForm</target>
+                <nameEn>Clients by Project</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCL">
+                <nameAr>أخر التعليقات</nameAr>
+                <target>/CommentsServlet?op=getLastCommentWithClient</target>
+                <nameEn>Last Comments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCLA">
+                <nameAr>أخر المتابعات</nameAr>
+                <target>/AppointmentServlet?op=getLastAppointmentWithClient</target>
+                <nameEn>Last Follow-ups</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCUH">
+                <nameAr>غير موزعين</nameAr>
+                <target>/ClientServlet?op=unHandledClients</target>
+                <nameEn>UnDistributed</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCDS">
+                <nameAr>موزعين</nameAr>
+                <target>/ClientServlet?op=distributedClients</target>
+                <nameEn>Distributed Clients</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCNF">
+                <nameAr>غير متابعين</nameAr>
+                <target>/ClientServlet?op=nonFollowers</target>
+                <nameEn>FU-Remider</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCWC">
+                <nameAr>عملاء بلا تعليقات أو مقابلات</nameAr>
+                <target>/ClientServlet?op=listClientsWithNoComments</target>
+                <nameEn>Clients With no Comments/no Apppointments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="QRSLT">
+                <nameAr>عرض المهن</nameAr>
+                <target>/ClientServlet?op=ViewJobs</target>
+                <nameEn>List Jobs</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="INQU">
+            <titleAr>استعلامات الوحدات والمشروعات</titleAr>
+            <titleEn>Units and projects Quries</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="SRUP">
+                <nameAr>البحث عن وحدة سكنية</nameAr>
+                <target>/SearchServlet?op=searchForProjectUnits</target>
+                <nameEn>Unit for Project</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="UNLB">
+                <nameAr> عرض العمائر </nameAr>
+                <nameEn>Buildings List</nameEn>
+                <target>/ProjectServlet?op=listBuildings</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="UNLM">
+                <nameAr>عرض النماذج السكنية</nameAr>
+                <nameEn>View apartment models</nameEn>
+                <target>/UnitServlet?op=listResidentialModel</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="UNLA">
+                <nameAr> الوحدات المتاحة</nameAr>
+                <nameEn>Available Units</nameEn>
+                <target>/UnitServlet?op=listAvailableApartments</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="QRSLP">
+                <nameAr>عرض المشاريع</nameAr>
+                <target>/ProjectServlet?op=getProjectList</target>
+                <nameEn>List Projects</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="INQR">
+            <titleAr>استعلامات طلبات</titleAr>
+            <titleEn>Requests Quries</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="SRRG">
+                <nameAr>عام</nameAr>
+                <target>/SearchServlet?op=getSearchForClosedCallCenter</target>
+                <nameEn>General</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRRM">
+                <nameAr>طلباتي</nameAr>
+                <target>/SearchServlet?op=getSearchForMyComplaints</target>
+                <nameEn>My Requests</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRRA">
+                <nameAr>أعمالي</nameAr>
+                <target>/SearchServlet?op=searchForMyActivity</target>
+                <nameEn>My Activities</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRRI">
+                <nameAr>الوارد</nameAr>
+                <target>/ComplaintEmployeeServlet?op=inbox</target>
+                <nameEn>Incoming</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRRC">
+                <nameAr>حملاتي</nameAr>
+                <target>/ClientServlet?op=myCallingPlans</target>
+                <nameEn>My Campagins</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+    </menu>
+    <menu id="REP">
+        <nameAr>التقارير</nameAr>
+        <target>/main.jsp</target>
+        <nameEn>Reports</nameEn>
+        <display>1</display>
+        <sub_menu id="REPC">
+            <titleAr>تقارير العملاء</titleAr>
+            <titleEn>Clients report</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+            <menu_element id="RCCS">
+                <nameAr>تحليل نسب العملاء</nameAr>
+                <target>/AppointmentServlet?op=viewClientStatistics</target>
+                <nameEn>ClientStatistics</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCRC">
+                <nameAr>متابعات العملاء</nameAr>
+                <nameEn>Client Appointments</nameEn>
+                <target>/AppointmentServlet?op=getAllClientAppointments</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCD">
+                <nameAr>تقرير العملاء المفصل </nameAr>
+                <target>/ClientServlet?op=getClientsWithDetails</target>
+                <nameEn>Detailed Clients Report</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="ERPTEL">
+                <nameAr>المسجلين من قبل</nameAr>
+                <target>/ClientServlet?op=repeatedClientsByTelephone</target>
+                <nameEn>Duplication with phone</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCN">
+                <nameAr>عميل جديد</nameAr>
+                <target>/SearchServlet?op=searchNewClients</target>
+                <nameEn>New Client</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCNG">
+                <nameAr>عميل جديد بالمجموعة</nameAr>
+                <target>/SearchServlet?op=searchNewClientsGroup</target>
+                <nameEn>New Client Grouped</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCO">
+                <nameAr>العملاء أصحاب التعاقدات</nameAr>
+                <nameEn>Clients with Contracts</nameEn>
+                <target>/ClientServlet?op=getClientsContracts</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCRC">
+                <nameAr>تعليقات العملاء</nameAr>
+                <nameEn>Client Comments</nameEn>
+                <target>/CommentsServlet?op=getAllClientComments</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCR">
+                <nameAr>تصنيف العملاء</nameAr>
+                <nameEn>Clients Classification</nameEn>
+                <target>/ReportsServletThree?op=clientClassificationReport</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCO">
+                <nameAr>سرعة الرد علي العملاء</nameAr>
+                <nameEn>Client Average Response Speed</nameEn>
+                <target>/ReportsServletThree?op=getAverageResponseSpeed</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCC">
+                <nameAr>ملفات مغلقة</nameAr>
+                <target>/ClientServlet?op=getClosedClients</target>
+                <nameEn>Closed Clients</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCLP">
+                <nameAr> تقرير المكالمات طبقا للعميل </nameAr>
+                <target>/ReportsServlet?op=getClientReport</target>
+                <nameEn>Report Calls by Client</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCO">
+                <nameAr>غير متابعين</nameAr>
+                <target>/ClientServlet?op=nonFollowers</target>
+                <nameEn>FU-Remider</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCEC">
+                <nameAr>العملاء بالموظفين</nameAr>
+                <target>/ClientServlet?op=getClientsPerEmployee</target>
+                <nameEn>Clients per Employees</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="RCC">
+            <titleAr>تحليل مركز الاتصال</titleAr>
+            <titleEn>Call Center Analysis</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="RCCK">
+                <nameAr>تحليل نسب العملاء</nameAr>
+                <target>/AppointmentServlet?op=viewClientStatistics</target>
+                <nameEn>ClientStatistics</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCCA">
+                <nameAr>متابعات العملاء</nameAr>
+                <nameEn>Client Appointments</nameEn>
+                <target>/AppointmentServlet?op=getAllClientAppointments</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCCALA">
+                <nameAr>تحليل المقابلات</nameAr>
+                <target>/AppointmentServlet?op=AppointmentStat</target>
+                <nameEn>Appointment Statistics</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCCj">
+                <nameAr>اتصالات الموظفين</nameAr>
+                <target>/ClientServlet?op=getClientsAppntmsPerEmployee</target>
+                <nameEn>Clients Appointments per Employees</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCMCS">
+                <nameAr>تحليل نسب عملائي</nameAr>
+                <target>/AppointmentServlet?op=viewMyClientStatistics</target>
+                <nameEn>My Clients Statistics</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCMSA">
+                <nameAr> تحليل مقابلاتى </nameAr>
+                <target>/AppointmentServlet?op=AppointmentStat&amp;rprtType=myReport</target>
+                <nameEn> My Appointments Statistics </nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCCEAC">
+                <nameAr> كشف إتصالات الموظفين </nameAr>
+                <target>/ClientServlet?op=getClientsAppntmsPerEmployee</target>
+                <nameEn> Employess Contacts </nameEn>
+                <display>1</display>
+            </menu_element>
+	    <menu_element id="RCCPCS">
+                <nameAr> إحصائيات مكالمات العملاء </nameAr>
+                <target>/AppointmentServlet?op=getDataCetnerClientStatistic</target>
+                <nameEn>Call Center Client Statistic</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCSTEL">
+                <nameAr>تكرارات العملاء بالتيليفون</nameAr>
+                <target>/ClientServlet?op=repeatedClientsByTelephone</target>
+                <nameEn>Client Rating</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RCCCCS">
+                <nameAr> إحصائيات محاولات العملاء </nameAr>
+                <target>/AppointmentServlet?op=getDataCetnerClientStatistic</target>
+                <nameEn> Customers attempts statistics </nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="REPI">
+            <titleAr>تقارير الاستثمار</titleAr>
+            <titleEn>Investment reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="REPM">
+            <titleAr>تقارير التسويق</titleAr>
+            <titleEn>Marketing Reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="QRPCPL">
+                <nameAr>عرض عملاء الحملات</nameAr>
+                <target>/CampaignServlet?op=getCampaignLoad</target>
+                <nameEn>List Clients of Campaigns</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPDPC">
+                <nameAr>نسب العملاء للحملة     </nameAr>
+                <target>/ReportsServletThree?op=campaignClientsReport</target>
+                <nameEn>Clients Campaign Ratios</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCPE">
+                <nameAr>أنتاجية الموظف</nameAr>
+                <target>/ReportsServletThree?op=getProductivityByUser</target>
+                <nameEn>Productivity by Employee</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCAU">
+                <nameAr>متابعات الموظف</nameAr>
+                <target>/ReportsServletThree?op=getAppointmentsByUserReport</target>
+                <nameEn>Employee's Appointments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCCU">
+                <nameAr>تعليقات الموظف</nameAr>
+                <target>/ReportsServletThree?op=getCommentsByUserReport</target>
+                <nameEn>Employee's Comments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCEC">
+                <nameAr>تعليقات الموظفين</nameAr>
+                <target>/ReportsServletTwo?op=listEmployeeComments</target>
+                <nameEn>Employee's Comments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPLOLS">
+                <nameAr>مهام الموظفين بالحالة</nameAr>
+                <target>/ReportsServlet?op=getEmployeeLoadByStatus</target>
+                <nameEn>tasks ByStatus</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPLOLD">
+                <nameAr>المهام الحالية</nameAr>
+                <target>/ReportsServlet?op=getEmployeeLoadDynamic</target>
+                <nameEn>Dynamically</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCL">
+                <nameAr>أخر التعليقات</nameAr>
+                <target>/CommentsServlet?op=getLastCommentWithClient</target>
+                <nameEn>Last Comments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="SRCLA">
+                <nameAr>أخر المتابعات</nameAr>
+                <target>/AppointmentServlet?op=getLastAppointmentWithClient</target>
+                <nameEn>Last Follow-ups</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPACM">
+                <nameAr>عرض عملاء الحملات</nameAr>
+                <target>/CampaignServlet?op=getCampaignLoad</target>
+                <nameEn>List Clients of Campaigns</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPACC">
+                <nameAr>تصنيف العملاء</nameAr>
+                <nameEn>Clients Classification</nameEn>
+                <target>/ReportsServletThree?op=clientClassificationReport</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPACP">
+                <nameAr>حملات العملاء</nameAr>
+                <nameEn>Clients Campaigns</nameEn>
+                <target>/ReportsServletThree?op=clientCampaignsReport</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPARC">
+                <nameAr>تكرار الحملات</nameAr>
+                <nameEn>Repeated Campaigns</nameEn>
+                <target>/ReportsServletThree?op=campaignsRepeatedReport</target>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="RPA">
+            <titleAr>تحليل الحملات</titleAr>
+            <titleEn>Campaign Analysis</titleEn>
+            <target>/main.jsp</target>
+            <display>1</display>
+            <menu_element id="RPACM">
+                <nameAr>عرض عملاء الحملات</nameAr>
+                <target>/CampaignServlet?op=getCampaignLoad</target>
+                <nameEn>List Clients of Campaigns</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPASRMCS">
+                <nameAr>تحليل نسب عملائي</nameAr>
+                <target>/AppointmentServlet?op=viewMyClientStatistics</target>
+                <nameEn>My Clients Statistics</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPACC">
+                <nameAr>تصنيف العملاء</nameAr>
+                <nameEn>Clients Classification</nameEn>
+                <target>/ReportsServletThree?op=clientClassificationReport</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPACP">
+                <nameAr>حملات العملاء</nameAr>
+                <nameEn>Clients Campaigns</nameEn>
+                <target>/ReportsServletThree?op=clientCampaignsReport</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPARC">
+                <nameAr>تكرار الحملات</nameAr>
+                <nameEn>Repeated Campaigns</nameEn>
+                <target>/ReportsServletThree?op=campaignsRepeatedReport</target>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPAPC">
+                <nameAr>نسب العملاء للحملة</nameAr>
+                <target>/ReportsServletThree?op=campaignClientsReport</target>
+                <nameEn>Clients Campaign Ratios</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPAAC">
+                <nameAr>نسب أستحواذ الموظفين</nameAr>
+                <target>/ReportsServletThree?op=campaignAgentClientsReport</target>
+                <nameEn>Agent's Ratio per Campaigns </nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPAPCB">
+                <nameAr>مقارنة الأداء</nameAr>
+                <target>/ReportsServletThree?op=clientEmployeeBarChartReport</target>
+                <nameEn>Performance Comparison</nameEn>
+                <display>1</display>
+            </menu_element>
+	    <menu_element id="RPACEB">
+                <nameAr>عملاء سبق أدخالهم</nameAr>
+                <target>/ClientServlet?op=reenteredClients</target>
+                <nameEn>Re-entered Clients</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPAD">
+                <nameAr>توزيع قنوات الأتصال</nameAr>
+                <target>/ClientServlet?op=channelsDistribution</target>
+                <nameEn>Distribution of Communication Channels</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="REPS">
+            <titleAr>تقارير المبيعات</titleAr>
+            <titleEn>Sales Report</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="RPCCAC">
+                <nameAr>مقابلات جميع العملاء</nameAr>
+                <target>/CalendarServlet?op=genericAppointmentCalendar</target>
+                <nameEn>Appoientments For Clients</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCUAC">
+                <nameAr>مقابلات جميع الموظفين</nameAr>
+                <target>/CalendarServlet?op=getUsersAppointmentCalendar</target>
+                <nameEn>Appoientments For Agents</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCSU">
+                <nameAr>نسب المقابلات للموظفين</nameAr>
+                <target>/ReportsServletThree?op=appointmentsStatisticsPerUser</target>
+                <nameEn>Appoientments Statisticals per Employee</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="RPCCSA">
+                <nameAr>المقابلات الناجحة</nameAr>
+                <target>/ReportsServletThree?op=successAppointmentsReport</target>
+                <nameEn>Successful Appointments</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="EMPSTAT">
+                <nameAr>احصائيات العاملين</nameAr>
+                <target>/AppointmentServlet?op=getCallCenterStatistics</target>
+                <nameEn>Emplyee Statistics</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="REPCS">
+            <titleAr>تقارير خدمة العملاء</titleAr>
+            <titleEn>Customer Serive Reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="REPHR">
+            <titleAr>تقارير الموارد البشرية</titleAr>
+            <titleEn>HR Reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="REPF">
+            <titleAr>التقارير المالية</titleAr>
+            <titleEn>Financial Reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="REPP">
+            <titleAr>تقارير إدارة المشروعات</titleAr>
+            <titleEn>Projects Reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+            <menu_element id="CMQRRI">
+                <nameAr>بنود الأعمال المكررة</nameAr>
+                <target>/RequestItemServlet?op=getRepeatedUnitItems</target>
+                <nameEn>Repeated Items Report</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQRIR">
+                <nameAr>بنود أعمال الوحدات</nameAr>
+                <target>/RequestItemServlet?op=getRequestItemsUnit</target>
+                <nameEn>Items Report</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQRDL">
+                <nameAr>تقرير الأعمال المتأخرة</nameAr>
+                <target>/CommentsServlet?op=getDelayWorkPDF</target>
+                <nameEn>Report Delayed Work</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQRCR">
+                <nameAr>(QC-AVR) متوسط سرعة الرد </nameAr>
+                <target>/CommentsServlet?op=getCommentResponseInterval</target>
+                <nameEn>AVR Response Report (QC-AVR)</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQRCRJ">
+                <nameAr>(PMJ-AVR) متوسط سرعة الرد </nameAr>
+                <target>/CommentsServlet?op=getThreeCommentResponseInterval</target>
+                <nameEn>AVR Response Report (PMJ-AVR)</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQRCRD">
+                <nameAr>(PMJ-QM) متوسط سرعة الرد </nameAr>
+                <target>/CommentsServlet?op=getEmptyThirdCommentResponseInterval</target>
+                <nameEn>AVR Response Report (PMJ-QM)</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQRAVR">
+                <nameAr> متوسط سرعة الرد على العميل</nameAr>
+                <target>/CommentsServlet?op=getClientCommentResponseInterval</target>
+                <nameEn>AVR Response to Customer</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQRUF">
+                <nameAr>قيد المتابعة</nameAr>
+                <target>/IssueServlet?op=getUnderFollowup</target>
+                <nameEn>Under Follow-up</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQROP">
+                <nameAr>الاداء العام</nameAr>
+                <target>/ReportsServletTwo?op=getOverallPerformance</target>
+                <nameEn>Overall Performance</nameEn>
+                <display>1</display>
+            </menu_element>
+            <menu_element id="CMQROP">
+                <nameAr>المنحني التكراري لبنود الأعمال</nameAr>
+                <target>/ReportsServletThree?op=getWorkItemsRecurringCurve</target>
+                <nameEn>Recurring Curve for Work Items</nameEn>
+                <display>1</display>
+            </menu_element>
+        </sub_menu>
+        <sub_menu id="REPO">
+            <titleAr>تقارير إدارة العمليات</titleAr>
+            <titleEn>Operation Reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="REPSA">
+            <titleAr>تقارير إدارة النظام</titleAr>
+            <titleEn>System Admin Reports</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+    <sub_menu id="INTRMRKT">
+        <titleAr>التسويق الدولي</titleAr>
+        <titleEn>International Marketing</titleEn>
+        <target>/main.jsp</target>
+        <display>1</display>
+        <menu_element id="INTRMRKT">
+            <nameAr>العملاء الدوليين</nameAr>
+            <target>/ClientServlet?op=InternationalClients</target>
+            <nameEn>International Clients</nameEn>
+            <display>1</display>
+        </menu_element>
+        <menu_element id="INTRCLNTCA">
+            <nameAr>العملاء الدوليين بلا تعليقات ولا مقابلات</nameAr>
+            <target>/ClientServlet?op=InterClientsNoCommApp</target>
+            <nameEn>International Clients</nameEn>
+            <display>1</display>
+        </menu_element>
+    </sub_menu>
+    <menu id="SAL">
+        <nameAr>المراقبة الحية</nameAr>
+        <target>/main.jsp</target>
+        <sora>other.gif</sora>
+        <nameEn>Monitoring Live</nameEn>
+        <display>1</display>
+        <sub_menu id="SALCS">
+            <titleAr>Current Sessions</titleAr>
+            <titleEn>Current Sessions</titleEn>
+            <target>/SessionsServlet?op=listUsers</target>
+            <display>1</display>
+        </sub_menu>
+        <sub_menu id="SALN">
+            <titleAr>Notification Sender</titleAr>
+            <titleEn>Notification Sender</titleEn>
+            <target>/SessionsServlet?op=sendNotification</target>
+            <display>1</display>
+        </sub_menu>
+    </menu>
+</menu_list>

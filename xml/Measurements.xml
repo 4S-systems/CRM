@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>MEASUREMENTS</name>
+        <key>ID</key>
+        <keyname>CODE</keyname>
+        <keyname1>ar_desc</keyname1>
+        <keyname2>en_desc</keyname2>
+    </table_supported>
+
+
+    <form_element>
+        <name>id</name>
+        <table>MEASUREMENTS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>arDesc</name>
+        <table>MEASUREMENTS</table>
+        <column>AR_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>enDesc</name>
+        <table>MEASUREMENTS</table>
+        <column>EN_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+
+    <form_element>
+        <name>code</name>
+        <table>MEASUREMENTS</table>
+        <column>CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>minAllow</name>
+        <table>MEASUREMENTS</table>
+        <column>MIN_ALLOW</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>maxAllow</name>
+        <table>MEASUREMENTS</table>
+        <column>MAX_ALLOW</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>action_Taken_Before_Allow</name>
+        <table>MEASUREMENTS</table>
+        <column>ACTION_TAKEN_BEFORE_ALLOW</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>action_Taken_Above_Allow</name>
+        <table>MEASUREMENTS</table>
+        <column>ACTION_TAKEN_ABOVE_ALLOW</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>frequency</name>
+        <table>MEASUREMENTS</table>
+        <column>frequency</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>measurementUnitId</name>
+        <table>MEASUREMENTS</table>
+        <column>MEASUREMENT_UNIT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>createdBy</name>
+        <table>MEASUREMENTS</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>creationTime</name>
+        <table>MEASUREMENTS</table>
+        <column>CREATION_TIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

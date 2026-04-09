@@ -1,0 +1,11 @@
+
+a {color:#006699; text-decoration:none; font-weight:bold;}
+a:hover {color:#000000; text-decoration:none; font-weight:bold;}
+a:active {color:#000000; text-decoration:none; font-weight:bold ;}
+.td {
+	border: none;
+	padding: 3px;
+	height: 30px;
+	text-align: left;
+	vertical-align: middle;
+}

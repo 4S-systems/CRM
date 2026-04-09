@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<form>
+    <table_supported>
+        <name>CLIENT_EMAILS</name>
+        <key>ID</key>
+        <key1>CLIENT_EMAIL</key1>
+        <key2>CLIENT_ID</key2>
+        <key3>THREAD_ID</key3>
+        <key4>MESSAGE_ID</key4>
+        <key5>DATE_EMAIL</key5>
+        <key6>IS_SENT_REC_DRAFT</key6>
+        <Key7>CREATEBY</Key7>
+        <Key8>CREATION_DATE</Key8>
+          
+    </table_supported>  
+   
+    <form_element>
+        <name>id</name>
+        <table>CLIENT_EMAILS</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>client_email</name>
+        <table>CLIENT_EMAILS</table>
+        <column>CLIENT_EMAIL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>client_id</name>
+        <table>CLIENT_EMAILS</table>
+        <column>CLIENT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>thread_id</name>
+        <table>CLIENT_EMAILS</table>
+        <column>THREAD_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>message_id</name>
+        <table>CLIENT_EMAILS</table>
+        <column>MESSAGE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>label_ids</name>
+        <table>CLIENT_EMAILS</table>
+        <column>LABEL_IDS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>to_emails</name>
+        <table>CLIENT_EMAILS</table>
+        <column>TO_EMAILS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>from_email</name>
+        <table>CLIENT_EMAILS</table>
+        <column>FROM_EMAIL</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>cc|_emails</name>
+        <table>CLIENT_EMAILS</table>
+        <column>CC_EMAILS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>bcc_emails</name>
+        <table>CLIENT_EMAILS</table>
+        <column>BCC_EMAILS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>date_email</name>
+        <table>CLIENT_EMAILS</table>
+        <column>DATE_EMAIL</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>subject</name>
+        <table>CLIENT_EMAILS</table>
+        <column>SUBJECT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+   
+    <form_element>
+        <name>plaintext</name>
+        <table>CLIENT_EMAILS</table>
+        <column>PLAINTEXT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>attachments</name>
+        <table>CLIENT_EMAILS</table>
+        <column>ATTACHMENTS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>to_ip</name>
+        <table>CLIENT_EMAILS</table>
+        <column>TO_IP</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>from_ip</name>
+        <table>CLIENT_EMAILS</table>
+        <column>FROM_IP</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>is_sent_rec_draft</name>
+        <table>CLIENT_EMAILS</table>
+        <column>IS_SENT_REC_DRAFT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>snippet</name>
+        <table>CLIENT_EMAILS</table>
+        <column>SNIPPET</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>key1</name>
+        <table>CLIENT_EMAILS</table>
+        <column>KEY1</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>key2</name>
+        <table>CLIENT_EMAILS</table>
+        <column>KEY2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>createdby</name>
+        <table>CLIENT_EMAILS</table>
+        <column>CREATEBY</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>creation_date</name>
+        <table>CLIENT_EMAILS</table>
+        <column>CREATION_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+     
+    
+</form>

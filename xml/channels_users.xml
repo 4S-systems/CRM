@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>CHANNELS_USERS</name>
+        <key1>CHANNELS_ID</key1>
+        <key2>USERS_ID</key2>
+    </table_supported>  
+   
+    <form_element>
+        <name>channelsId</name>
+        <table>CHANNELS_USERS</table>
+        <column>CHANNELS_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>usersId</name>
+        <table>CHANNELS_USERS</table>
+        <column>USERS_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>createdBy</name>
+        <table>CHANNELS_USERS</table>
+        <column>CREATED_BY</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>creationTime</name>
+        <table>CHANNELS_USERS</table>
+        <column>CRAETION_TIME</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.Integer</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>option1</name>
+        <table>CHANNELS_USERS</table>
+        <column>OPTION1</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>option2</name>
+        <table>CHANNELS_USERS</table>
+        <column>OPTION2</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>option3</name>
+        <table>CHANNELS_USERS</table>
+        <column>OPTION3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

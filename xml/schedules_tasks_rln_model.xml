@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : schedules_tasks_rln_model.xml
+    Created on : March 22, 2012, 4:15 PM
+    Author     : khaled abdo
+    Description:
+        Purpose of the document follows.
+-->
+
+<form>
+    <table_supported>
+        <name>SCHEDULES_TASKS_RLN_MODEL</name>
+        <key1>UNIT_NO</key1>
+        <key2>SCHEDULEID</key2>
+        <key2>TASK_ID</key2>
+    </table_supported>
+
+    <form_element>
+        <name>unitNO</name>
+        <table>SCHEDULES_TASKS_RLN_MODEL</table>
+        <column>UNIT_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>unitName</name>
+        <table>SCHEDULES_TASKS_RLN_MODEL</table>
+        <column>UNIT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>scheduleID</name>
+        <table>SCHEDULES_TASKS_RLN_MODEL</table>
+        <column>SCHEDULEID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>maintenanceTitle</name>
+        <table>SCHEDULES_TASKS_RLN_MODEL</table>
+        <column>MAINTENANCE_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>isFound</name>
+        <table>SCHEDULES_TASKS_RLN_MODEL</table>
+        <column>ISFOUND</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>taskId</name>
+        <table>SCHEDULES_TASKS_RLN_MODEL</table>
+        <column>TASK_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>taskName</name>
+        <table>SCHEDULES_TASKS_RLN_MODEL</table>
+        <column>TASK_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

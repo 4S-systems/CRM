@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="59" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9647da3-b72e-46cb-a9a8-6be6894de5b3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="pcrm"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="whereClause" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select EMP_NO,EMP_NAME,ADDRESS,HOME_PHONE,EMAIL,dept.PROJECT_NAME As dept ,HOURE_SALARY,NOTE,GENDER,MARITAL_STATUS,SOCIAL_NUMBER ,WORK_START_DATE,MELATRY_STATUS,INSURANCE_NUMBER,BIRTH_DATE,EDUCATION, position.project_name as position , IMAGE 
+from Employee inner join issue_Document on Employee.EMP_ID = issue_Document.BUSINESS_OBJ_ID 
+              inner join ISSUE_DOCUMENT_DATA on issue_Document.Document_ID = ISSUE_DOCUMENT_DATA.document_id 
+              inner join project dept on Employee.DEPARTMENT = dept.PROJECT_ID
+              inner join project position on Employee.POSITION = position.PROJECT_ID
+WHERE $P!{whereClause}]]>
+	</queryString>
+	<field name="IMAGE" class="java.awt.Image"/>
+	<field name="EMP_NO" class="java.lang.String"/>
+	<field name="EMP_NAME" class="java.lang.String"/>
+	<field name="ADDRESS" class="java.lang.String"/>
+	<field name="HOME_PHONE" class="java.lang.String"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="HOURE_SALARY" class="java.math.BigDecimal"/>
+	<field name="NOTE" class="java.lang.String"/>
+	<field name="GENDER" class="java.lang.String"/>
+	<field name="MARITAL_STATUS" class="java.lang.String"/>
+	<field name="SOCIAL_NUMBER" class="java.lang.String"/>
+	<field name="WORK_START_DATE" class="java.sql.Timestamp"/>
+	<field name="MELATRY_STATUS" class="java.lang.String"/>
+	<field name="INSURANCE_NUMBER" class="java.lang.String"/>
+	<field name="BIRTH_DATE" class="java.sql.Timestamp"/>
+	<field name="EDUCATION" class="java.lang.String"/>
+	<field name="DEPT" class="java.lang.String"/>
+	<field name="POSITION" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement mode="Transparent" x="420" y="2" width="134" height="68" uuid="903b90d9-80a0-46fa-885d-d4e6cbb3599a"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="68" width="550" height="5" uuid="ae09fbca-0d9a-4dd8-8979-637f3d8b3d83"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="66" y="51" width="100" height="20" uuid="ce46e388-8a2a-4e0f-a029-49f991d3b25a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="3" y="51" width="62" height="20" uuid="637ffe5b-b7d8-4049-be6b-33d97e712acf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report Date:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="616" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="170" height="200" uuid="ff828047-4370-4247-8ca3-d1e237cb84a6"/>
+				<imageExpression><![CDATA[$F{IMAGE}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="347" y="10" width="199" height="33" uuid="f0548916-c332-42ed-9f1e-722ae129bd43"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="26" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[البيانات الشخصية]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="56" width="220" height="30" uuid="b89f8d5d-9c15-46ee-abe7-d1176894e7e5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMP_NO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="56" width="136" height="30" uuid="1c6c9974-4b4b-46ec-9481-0119ef96965f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[كود الموظف]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="86" width="220" height="30" uuid="4a4cdaad-cb45-4284-954d-bd79ad8e6a51"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMP_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="86" width="136" height="30" uuid="e6d4d9dd-a81b-4748-865a-45c68bc6b9e0"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[اسم الموظف]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="146" width="220" height="30" uuid="68b470a2-93a0-46a0-aed8-6e1172244039"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HOME_PHONE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="146" width="136" height="30" uuid="4e0b4814-ca25-460a-b93d-c16b26ee0ecf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تيليفون]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="176" width="220" height="30" uuid="382aa8de-04c2-4c98-bdd5-783b294a8a2f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMAIL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="176" width="136" height="30" uuid="909bee52-79f0-41bf-afd0-ddd93ee83321"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="236" width="220" height="30" uuid="9b3cc1b2-bf59-4411-9cc4-933c5cc1871e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SOCIAL_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="236" width="136" height="30" uuid="d9f9fec5-4231-4389-8bc9-a7551901628f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الرقم القومي]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="266" width="220" height="30" uuid="0f0a3d29-50a2-471c-8e55-3a81d54f1c5c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INSURANCE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="266" width="136" height="30" uuid="67b38a0f-4f25-4b36-86a0-30f8745e4738"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الرقم التأميني]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="296" width="220" height="30" uuid="7f4dc06a-e8b0-4a0b-992b-8cf7466afdb8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GENDER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="296" width="136" height="30" uuid="a238fb52-fafa-4e26-8705-e2971e5428a6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[النوع]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="356" width="220" height="30" uuid="a7a1f287-c8f0-4680-9848-51765c50a00d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MARITAL_STATUS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="356" width="136" height="30" uuid="94e7b36b-2a14-4df6-b098-9e521ab17e02"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الحالة الاجتماعية]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="440" width="221" height="30" uuid="feb34191-eb1d-4d87-a9fd-1343d8a21e0a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HOURE_SALARY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="440" width="136" height="30" uuid="048c3b42-fe4c-46b2-9bb1-871f1415df76"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المرتب]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="530" width="220" height="30" uuid="2db81750-5cf2-4c60-a2f7-d3ea30255a79"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{WORK_START_DATE}.toString().substring(0,10)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="530" width="136" height="30" uuid="bf2f2163-b099-4b22-91b4-4249c5714538"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تاريخ بداية العمل]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="326" width="220" height="30" uuid="6fd2953d-6335-4692-b80c-795578b73db9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MELATRY_STATUS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="326" width="136" height="30" uuid="ccfdba49-689e-4cc5-b50a-596d35032195"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الموقف من التجنيد]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="206" width="220" height="30" uuid="3d68a169-db5d-4112-9608-abccd39c2e57"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BIRTH_DATE}.toString().substring(0, 10)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="206" width="135" height="30" uuid="5191e873-0fb4-462b-a8ae-70a05ac48885"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[تاريخ الميلاد]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="500" width="221" height="30" uuid="7a2aaab7-f9e7-476d-9e05-7b9629ea361c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EDUCATION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="500" width="135" height="30" uuid="ba6741af-1a34-4a95-aace-9d325bf53fbf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المؤهل العلمي]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="410" width="220" height="30" uuid="bc0c9593-fe54-4c88-a4f6-a021072c37aa"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DEPT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="410" width="136" height="30" uuid="f0e53848-5f87-46f1-8bed-519c7a66c794"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[القسم]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="470" width="220" height="30" uuid="d2a41478-5be0-453e-8692-20958a7a0b30"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{POSITION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="411" y="470" width="135" height="30" uuid="28bfe8e5-7f76-4484-a51d-5f20395fa837"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المسمى الوظيفي]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="116" width="220" height="30" uuid="8fa03567-2d41-4019-ab52-34bf7b07ae6b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ADDRESS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="410" y="116" width="136" height="30" uuid="67c0fbed-d91f-4243-9de0-3f7845d6aeb1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[العنوان]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="400" width="540" height="2" uuid="be822e44-b0d2-443c-9508-1904e71fdf0e"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

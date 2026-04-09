@@ -1,0 +1,405 @@
+a:link,a:visited,a:hover
+{	
+	color:#666666;
+	background-color: transparent;
+	text-decoration: none;
+}
+img
+{
+	border:none;
+}
+
+table
+{
+	border: 0px solid #C3C6C8;
+       
+}
+td
+{
+	border: 1px solid #C3C6C8; 		/* border color set here C3C6C8*/
+	border-right-width: 0px;
+	font-family:arial,verdana,tahoma, sans-serif;	/*Page Font*/
+	font-size:11; 				/*Page Font size, in font points*/
+	color:#666666; 				/*Page Font colour*/
+	padding:none;
+	height:16;
+	text-align:center;
+	/*text-transform:capitalize; */
+}
+
+tdForm
+{
+	border: 1px solid #C3C6C8; 		/* border color set here C3C6C8*/
+	border-right-width: 0px;
+	font-family:arial,verdana,tahoma, sans-serif;	/*Page Font*/
+	font-size:11; 				/*Page Font size, in font points*/
+	color:#666666; 				/*Page Font colour*/
+	padding:none;
+	height:16;
+	text-align:center;
+	/*text-transform:capitalize; */
+}
+
+.bordedTable
+{
+	border: 1px solid #C3C6C8;
+       
+}
+
+.td3 {
+	border: none;
+	padding: 3px;
+	height: 30px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.td2
+{
+        border: 0px solid #C3C6C8; 		/* border color set here C3C6C8*/
+	border-right-width: 0px;
+	font-family: arial,verdana,tahoma, sans-serif;	/*Page Font*/
+	font-size: 11; 				/*Page Font size, in font points*/
+	color: #666666; 				/*Page Font colour*/
+	text-align: left;
+        height: 16;
+	vertical-align: middle;
+	/* border color set here C3C6C8*/
+}
+
+.td {
+	border: none;
+	padding: 3px;
+	height: 30px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.tdForm {
+	border: none;
+	padding: 3px;
+	height: 30px;
+	text-align: left;
+	vertical-align: middle;
+        width: 140;
+}
+
+.calender {
+	text-align: left;
+	vertical-align: top;
+        border: 0px solid #C3C6C8; 		/* border color set here C3C6C8*/
+	border-right-width: 0px;
+	font-family: arial,verdana,tahoma, sans-serif;	/*Page Font*/
+	font-size: 11; 				/*Page Font size, in font points*/
+	color: #666666; 				/*Page Font colour*/
+        height: 16;
+}
+
+.inserttd {
+	font-family: Century Gothic;
+	font-size: 11pt;
+	border: none;
+	padding: 3px;
+	height: 30px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+body {
+	font-family: Century Gothic;
+}
+
+
+.brand_bar
+{
+	background:#9999FF;	/*Sets the Nav Bar Title background colour*/
+	text-align:center;
+	height:25px;
+	border:none;
+}
+
+.nav_bar
+{
+	background:#E5E9F3;	/*Sets the Nav Bar Title background colour*/
+	text-align:left;
+	height:15px;
+	padding-left:5; 
+	border-bottom-width:2px;
+	font-weight:bold;
+}
+
+.SP_line1
+{
+	background:#F2F1ED;
+	padding-left:5;	
+	border-top:none;
+	font-size:11;
+	height: 14px;
+	text-align:left;
+}
+.SP_line2
+{
+	background:#F2F1ED;
+	padding-left:5;	
+	border-bottom:none;
+	font-weight:bold;
+	font-size:11;
+	height: 14px;
+	text-align:left;
+}
+.tabletitle
+{
+	font-family: Century Gothic;
+	font-size:16;
+	/*text-transform:uppercase;*/
+	text-align:right;
+	color:#FFFFFF;  	/*Sets the Page Title (ie SE Workload Data Entry) text colour*/
+	font-weight:bolder;
+	padding-left:4;
+	border-top: none;
+	border-left-width: 0;
+	background:#DBA700; 	/*Sets the Page Title (ie SE Workload Data Entry) background colour*/
+}
+.tableright
+{
+	font-size:10;
+	text-align:right; 
+	padding-right:15;
+	border-top: none;
+	border-left-width: 0;
+	background:none;
+}
+.head
+{
+	background:#CFC8A4;	/*Sets the Details area (ie Activities/ customer name) background colour*/
+}
+.lastName
+{
+	border-top:none;
+	border-bottom:none;
+	height:10px;
+	padding-left:5;
+	padding-right:5;
+	padding-top:0;
+	font-weight:bold;
+	text-transform:uppercase;   
+}
+.firstName
+{
+	text-align:center;
+	border-top:none;
+	height:10px;
+	padding-left:5;
+	padding-right:5;
+	padding-bottom:0;
+	font-weight:bold;
+}
+.act_heading
+{
+	/*border-top:none;*/
+	font-weight:bolder;
+	text-transform:uppercase;   /*text-transform:uppercase*/
+	text-align:left;
+	padding-left:5;
+}
+.rpt_heading
+{
+	
+	/*border-right-width: 1px;*/
+	text-align:left;
+	font-weight:bold;
+	padding-left:5;
+	background: #F2F1ED;
+}
+.act_sub_heading
+{
+	border-top:none;
+	font-weight:bold;
+	text-align:center;
+	background: #F2F1ED; 	/*Activity Sub heading background colour*/
+}
+.cell
+{
+	border-top:none;
+        text-align:left;
+        vertical-align:middle;
+        padding:3px;
+}
+.taupe_cell
+{
+	border-top:none;
+	border-right:none;
+	text-align:left;
+	padding-left:10;
+	background:#CFC8A4
+}
+.tab_cell
+{
+	border-top-width:0;
+	border-right-width:0;
+	text-align:right;
+	padding-right:5;
+}
+.tab_cell_total
+{
+	border-top:none;
+	border-right:none;
+	text-align:right;
+	padding-right:5;
+	background:#DBA700;
+	font-weight:bold;
+	color: white;
+}
+.total
+{
+	background:#DBA700;	/*Total background colour*/
+	font-weight:bold;
+	text-align:left;
+	border-top:0;
+	color: white;
+}
+.shaded
+{
+	background: #F2F1ED;
+}
+
+.shadedView
+{
+	background: #F2F1ED;
+        text-align: left;
+        width: 170;
+}
+
+.arrows
+{
+	border-top-width:0;
+	border-bottom-width:0;
+	width:19px;
+}
+
+
+/*-- MENU STYLES--*/
+.nav_tab
+{
+	border:none;
+	
+}
+
+DIV#links 
+{
+	Z-INDEX: 100; 
+	POSITION: relative
+}
+DIV#links A:hover 
+{
+	BORDER-LEFT: white 0px double;
+}
+DIV#links A SPAN 
+{
+	DISPLAY: none
+}
+DIV#links A:hover SPAN 
+{
+	PADDING: 5px; 
+	DISPLAY: block; 
+	/*border: 1px solid #C3C6C8;*/
+	border: 1px solid black;
+  POSITION: absolute;
+	MARGIN: 20px;
+	Z-INDEX: 200; 
+	/*BACKGROUND: white;*/
+	BACKGROUND: #FFFFE2;
+  COLOR: #000000;
+	Left:230px;
+  Width:300px;
+  /*//???can i make it centered with respect to its height and <a>'s text???*/
+  Top:-50px;
+	/*WIDTH: 250px;*/
+}
+DIV#nav 
+{
+	Z-INDEX: 100; 
+	POSITION: relative
+}
+DIV#nav A:hover 
+{
+	BORDER-RIGHT: white 0px double;
+	BACKGROUND:#D5D9E3;
+}
+DIV#nav A SPAN 
+{
+	DISPLAY: none
+}
+DIV#nav A:hover SPAN 
+{
+	PADDING: 0px; 
+	DISPLAY: block; 
+	border: 1px solid #C3C6C8;
+	POSITION: absolute;
+	Z-INDEX: 200; 
+	BACKGROUND: #E5E9F3;
+	top:14px;
+	left:-6px;
+}
+.nav_td
+{
+	border-top-width:0px;
+	border-left-width:0;
+	border-right-width:0;
+	padding:2;
+	border-bottom-width:1px;
+	text-align:left;
+	font-weight:bold;
+	width:200px;
+         
+}
+DIV#menu SPAN#opt 
+{
+	border:none;
+	width:120px;
+	position:relative;
+	top:0;
+	left:0;
+       
+}
+div#menu A:hover span
+{
+	BACKGROUND:#D5D9E3;
+        Z-INDEX: 200;
+}
+/*-- END MENU STUFF-- */
+
+
+select
+{
+     font-family: sans-serif;
+     font-size: 10;
+}
+
+.textarea {
+        vertical-align: text-top;
+        text-align: left;
+	width: 290px;
+	height: 150px;
+        display: block;
+	}
+	
+.textview
+{
+overflow: auto;
+border-style: solid;
+border-color: Gray;
+border-width: 1px;
+width: 280px;
+height: 108px;
+text-align: left;
+padding: 3px;
+
+}
+
+p
+{
+ font-family: Century Gothic;
+ font-size: 11pt;
+ font-weight: normal;
+}

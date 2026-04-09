@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>GENERIC_COUNT</name>
+        <key>ID</key>
+     
+    </table_supported>  
+   
+    <form_element>
+        <name>id</name>
+        <table>GENERIC_COUNT</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+    <form_element>
+        <name>count</name>
+        <table>GENERIC_COUNT</table>
+        <column>COUNT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+   
+
+</form>

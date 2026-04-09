@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : logo.xml
+    Created on : March 3, 2009, 3:03 PM
+    Author     : Administrator
+    Description:
+        Purpose of the document follows.
+-->
+
+<configration>
+
+    <splash>                                 <!-- Lehaa Logos  ** Prima Logos --> 
+        <indexLogo>prima.jpg</indexLogo>  <!-- pic_menu.jpg  ** prima.jpg -->
+    </splash>    
+    <printEqp>
+        <printEqLogo>primaLogo.jpg</printEqLogo>  <!-- lehaaLogo.JPG  ** primaLogo.jpg -->  
+        <printEqLogo2>eqpSheet.jpg </printEqLogo2> <!-- eqpSheet.jpg  ** eqpSheet.jpg -->
+        <printEqLogo3>taskSheet.JPG</printEqLogo3><!-- taskSheet.JPG  ** taskSheet.JPG -->
+        <headReport1>headReport1.jpg</headReport1><!-- lehaaLogo.JPG  ** headReport1.jpg -->
+        <headReport2>headReport2.jpg</headReport2><!-- lehaaTitle.JPG  ** headReport2.jpg -->
+        <primaTitle>primaTitle.JPG</primaTitle>   <!-- lehaaTitle.JPG  ** primaTitle.JPG -->
+    </printEqp>  
+    
+    <equipment>
+        <newEqpPage>/docs/equipment/new_equipment.jsp</newEqpPage>
+    </equipment>
+    
+    <userSite>    
+        <userType>single</userType>
+        <siteName>&#1575;&#1604;&#1587;&#1575;&#1583;&#1575;&#1578;</siteName>
+    </userSite>
+    
+    <project>
+        
+        <site>
+            <siteInfo>
+                <id>01</id>
+                <name>&#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;(&#1575;&#1604;&#1585;&#1575;&#1580;&#1581;&#1609;)</name>
+            </siteInfo>
+            <store>
+                <id>01215</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>01212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1608;&#1586;&#1610;&#1608;&#1578; &#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>02</id>
+                <name>&#1581;&#1575;&#1574;&#1604;</name>
+            </siteInfo>
+            <store>
+                <id>02501</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1581;&#1575;&#1574;&#1604;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>02212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1581;&#1575;&#1574;&#1604;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>03</id>
+                <name>&#1575;&#1604;&#1602;&#1589;&#1610;&#1605;</name>
+            </siteInfo>
+            <store>
+                <id>03215</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1602;&#1589;&#1610;&#1605;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>03212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1575;&#1604;&#1602;&#1589;&#1610;&#1605;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>05</id>
+                <name>&#1575;&#1604;&#1580;&#1608;&#1601;</name>
+            </siteInfo>
+            <store>
+                <id>05215</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1580;&#1608;&#1601;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>05212</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1575;&#1604;&#1580;&#1608;&#1601;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>06</id>
+                <name>&#1575;&#1604;&#1608;&#1585;&#1588;&#1577;</name>
+            </siteInfo>
+            <store>
+                <id>00501</id>
+                <name>&#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1605;&#1587;&#1578;&#1608;&#1585;&#1583; &#1605;&#1581;&#1604;&#1610;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>06501</id>
+                <name>&#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1608;&#1585;&#1588;&#1577; &#1608;&#1575;&#1604;&#1606;&#1602;&#1604;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>08</id>
+                <name>&#1575;&#1604;&#1608;&#1585;&#1588;&#1577;</name>
+            </siteInfo>
+            <store>
+                <id>08102</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1588;&#1580;&#1575;&#1593;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>08103</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1588;&#1580;&#1575;&#1593;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+        <site>
+            <siteInfo>
+                <id>18</id>
+                <name>&#1575;&#1604;&#1583;&#1608;&#1575;&#1587;&#1585;(&#1588;&#1583;&#1609;)</name>
+            </siteInfo>
+            <store>
+                <id>18103</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585; &#1575;&#1604;&#1588;&#1583;&#1609;</name>
+                <isDefult>1</isDefult>
+            </store>
+            <store>
+                <id>18102</id>
+                <name>&#1605;&#1582;&#1586;&#1606; &#1583;&#1610;&#1586;&#1604; &#1575;&#1604;&#1588;&#1583;&#1609;</name>
+                <isDefult>0</isDefult>
+            </store>
+        </site>
+        
+    </project>
+    
+ <dateFormat>
+      <!-- Date Format Like Format in Java Script Calendar File like "y/m/d" -->
+      <jsDateFormat>y/m/d</jsDateFormat>
+      
+      <!-- 
+      Date Format That Written In Java to get Today Date Like "yyyy/MM/dd" this
+      is equevlent to "y/m/d" in js Calendar File Note Captel Letters in Month
+      -->
+      <javaDateFormat>yyyy/MM/dd</javaDateFormat>
+      
+      <!-- 
+      Virtual End date for job order status
+      -->
+      <virtualEndDate>2010/12/31</virtualEndDate>
+      
+  </dateFormat>  
+    
+  <scheduleConstants>
+      <averageKmEqp>100</averageKmEqp>   <!-- Set the avrage of K.M. equipment working per day Exm.(100 K.M. / day) -->
+  </scheduleConstants>
+
+  <!-- parametrize the names of JO workflow engine Status of Job Order By Arabic and English -->
+     <jobOrderStatus>
+         <Schedule>
+             <DescAr>&#1580;&#1575;&#1607;&#1586; &#1604;&#1604;&#1578;&#1606;&#1601;&#1610;&#1584;</DescAr>
+             <DescEn>Schedule</DescEn>
+         </Schedule>
+         <Assigned>
+             <DescAr>&#1578;&#1581;&#1578; &#1575;&#1604;&#1578;&#1606;&#1601;&#1610;&#1584;</DescAr>
+             <DescEn>Assigned</DescEn>
+         </Assigned>
+         <Onhold>
+             <DescAr>&#1605;&#1585;&#1580;&#1571;</DescAr>
+             <DescEn>Onhold</DescEn>
+         </Onhold>
+         <Closed>
+             <DescAr>&#1605;&#1594;&#1604;&#1602;</DescAr>
+             <DescEn>Closed</DescEn>
+         </Closed>
+         <Canceled>
+             <DescAr>&#1605;&#1604;&#1594;&#1609;</DescAr>
+             <DescEn>Canceled</DescEn>
+         </Canceled>
+         <Finished>
+             <DescAr>&#1575;&#1606;&#1578;&#1607;&#1610;</DescAr>
+             <DescEn>Finished</DescEn>
+         </Finished>
+     </jobOrderStatus>
+     
+     <jobOrderDates>
+        <Open>
+            <DescAr>&#1601;&#1578;&#1581;</DescAr>
+            <DescEn>Open</DescEn>
+        </Open>
+        <Close>
+            <DescAr>&#1573;&#1594;&#1604;&#1575;&#1602;</DescAr>
+            <DescEn>Close</DescEn>
+        </Close>
+        <Cancel>
+            <DescAr>&#1573;&#1604;&#1594;&#1575;&#1569;</DescAr>
+            <DescEn>Cancel</DescEn>
+        </Cancel>
+    </jobOrderDates>
+
+     <!-- Parameterse name of Work Equip engine of Call Type  -->
+ <callType>
+     <System>
+         <DescAr>&#1575;&#1604;&#1606;&#1592;&#1575;&#1605;</DescAr>
+         <DescEn>System</DescEn>
+     </System>
+     <Email>
+         <DescAr>&#1575;&#1604;&#1576;&#1585;&#1610;&#1583; &#1575;&#1604;&#1571;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1609;</DescAr>
+         <DescEn>Email</DescEn>
+     </Email>
+     <Tel>
+         <DescAr>&#1578;&#1604;&#1610;&#1601;&#1608;&#1606;</DescAr>
+         <DescEn>Telephone</DescEn>
+     </Tel>
+</callType>
+
+<!-- spacial var. to clear status not end yet and so on. -->
+    <NotEndYet>
+        <DescAr>&#1604;&#1605; &#1610;&#1606;&#1578;&#1607;&#1609; &#1581;&#1578;&#1609; &#1575;&#1604;&#1571;&#1606;</DescAr>
+        <DescEn>Dont End Until Now</DescEn>
+    </NotEndYet>
+    
+    <MaintenanceNotEndYet>
+        <DescAr>&#1604;&#1605; &#1578;&#1606;&#1578;&#1607;&#1609; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577; &#1581;&#1578;&#1609; &#1575;&#1604;&#1570;&#1606;</DescAr>
+        <DescEn>Maintenance Not End Until Now</DescEn>
+    </MaintenanceNotEndYet>
+    
+    <MaintenanceFinish>
+        <DescAr>&#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1577; &#1575;&#1606;&#1578;&#1607;&#1578;</DescAr>
+        <DescEn>Maintenance Finished</DescEn>
+    </MaintenanceFinish>
+    
+    <WorkingNotStartYet>
+        <DescAr>&#1604;&#1605; &#1610;&#1576;&#1583;&#1571; &#1575;&#1604;&#1593;&#1605;&#1604; &#1576;&#1593;&#1583;</DescAr>
+        <DescEn>Did not Start Work until now</DescEn>
+    </WorkingNotStartYet>
+
+</configration>

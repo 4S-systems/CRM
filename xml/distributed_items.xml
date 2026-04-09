@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>DISTRIBUTED_ITEMS</name>
+        <key>ITEM_CODE</key>        
+        <key1>ITEM_DESC</key1>
+        <key3>STORE_CODE</key3>
+        <keyname>ITEM_DESC</keyname>
+    </table_supported>  
+    
+    <form_element>
+        <name>itemForm</name>
+        <table>DISTRIBUTED_ITEMS</table>
+        <column>ITEM_FORM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemCode</name>
+        <table>DISTRIBUTED_ITEMS</table>
+        <column>ITEM_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemName</name>
+        <table>DISTRIBUTED_ITEMS</table>
+        <column>ITEM_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemQuantity</name>
+        <table>DISTRIBUTED_ITEMS</table>
+        <column>C_QTY1</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>storeCode</name>
+        <table>DISTRIBUTED_ITEMS</table>
+        <column>STORE_CODE</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemPrice</name>
+        <table>DISTRIBUTED_ITEMS</table>
+        <column>AV_PURCH_PRICE</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

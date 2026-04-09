@@ -1,0 +1,62 @@
+<form>
+    <table_supported>
+        <name>DELAY_RSN</name>
+        <key>ID</key>
+        <key1>ISSUE_ID</key1>
+    </table_supported>  
+    
+    
+    <form_element>
+        <name>id</name>
+        <table>DELAY_RSN</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>reason</name>
+        <table>DELAY_RSN</table>
+        <column>RSN_DESC</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueID</name>
+        <table>DELAY_RSN</table>
+        <column>ISSUE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>rsnCode</name>
+        <table>DELAY_RSN</table>
+        <column>RSN_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+     <form_element>
+        <name>creator</name>
+        <table>DELAY_RSN</table>
+        <column>RSN_CREATOR</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>    
+    
+    <form_element>
+        <name>creationTime</name>
+        <table>DELAY_RSN</table>
+        <column>CREATIONTIME</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

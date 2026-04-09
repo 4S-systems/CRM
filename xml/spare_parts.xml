@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>SPARE_PARTS</name>
+        <key>ITEMCODE_BY_ITEMFORM</key>
+        <key1>ITEM_CODE</key1>
+        <key2>ITEM_FORM</key2>
+        <key3>ITEM_NAME</key3>
+        <key4>CODE</key4>
+        <key5>KIND</key5>
+    </table_supported>
+
+     <form_element>
+        <name>itemCodeByItemForm</name>
+        <table>SPARE_PARTS</table>
+        <column>ITEMCODE_BY_ITEMFORM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemForm</name>
+        <table>SPARE_PARTS</table>
+        <column>ITEM_FORM</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemCode</name>
+        <table>SPARE_PARTS</table>
+        <column>ITEM_CODE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>itemName</name>
+        <table>SPARE_PARTS</table>
+        <column>ITEM_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <!-- this attribute can hold branch code or store code or none when contain '.' -->
+    <form_element>
+        <name>code</name>
+        <table>SPARE_PARTS</table>
+        <column>CODE</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+     <!--itemPrice-->
+     <form_element>
+        <name>itemPrice</name>
+        <table>SPARE_PARTS</table>
+        <column>ITEM_PRICE</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <!-- this attribute can hold 0 no store or branch , 1 this parts by branch or 2 this parts by store -->
+   <form_element>
+        <name>kind</name>
+        <table>SPARE_PARTS</table>
+        <column>KIND</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <!-- this is vertual attribute not found in spare parts view it visable when select by special query -->
+    <form_element>
+        <name>index</name>
+        <table>SPARE_PARTS</table>
+        <column>INDICES</column>
+        <class>com.silkworm.persistence.relational.IntValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

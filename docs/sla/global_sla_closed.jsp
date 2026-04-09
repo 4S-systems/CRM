@@ -1,0 +1,206 @@
+<%@page import="com.clients.db_access.ClientComplaintsMgr"%>
+<%@page import="com.clients.db_access.ClientProductMgr"%>
+<%@page import="java.math.MathContext"%>
+<%@page import="java.math.BigDecimal"%>
+<%@page import="com.clients.db_access.ClientComplaintsSLAMgr"%>
+<%@page import="com.silkworm.common.MetaDataMgr"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page import="com.silkworm.business_objects.WebBusinessObject,java.util.Vector,com.tracker.db_access.ProjectMgr"%>
+<%@ page pageEncoding="UTF-8"%>
+<%@taglib prefix="sw" uri="/WEB-INF/swtaglib.tld" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+    <%
+        MetaDataMgr metaMgr = MetaDataMgr.getInstance();
+        String context = metaMgr.getContext();
+        ClientComplaintsSLAMgr clientComplaintsSLAMgr = ClientComplaintsSLAMgr.getInstance();
+        ArrayList<WebBusinessObject> closedList = clientComplaintsSLAMgr.getCompletedComplaintsGSLA();
+        String stat = (String) request.getSession().getAttribute("currentMode");
+        String dir, style;
+        if (stat.equals("En")) {
+            dir = "LTR";
+            style = "text-align:left";
+        } else {
+            dir = "RTL";
+            style = "text-align:Right";
+        }
+    %>
+    <head>
+        <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"/>
+        <meta HTTP-EQUIV="Expires" CONTENT="0"/>
+        <link rel="stylesheet" href="jquery-ui/themes/base/jquery.ui.all.css"/>
+        <link rel="stylesheet" href="css/demo_table.css"/>
+        <link rel="stylesheet" href="css/CSS.css"/>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery-ui/ui/jquery.ui.core.js"></script>
+        <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="js/loading/loading.js"></script>
+        <script type="text/javascript" src="js/loading/spin.js"></script>
+        <script type="text/javascript" src="js/loading/spin.min.js"></script>
+        <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+            var oTable;
+            var users = new Array();
+            $(document).ready(function () {
+                oTable = $('#closedList').dataTable({
+                    bJQueryUI: true,
+                    sPaginationType: "full_numbers",
+                    "aLengthMenu": [[25, 50, 100, -1], [25, 50, 100, "All"]],
+                    iDisplayLength: 25,
+                    iDisplayStart: 0,
+                    "bPaginate": true,
+                    "bProcessing": true
+
+                }).fadeIn(2000);
+            });
+        </SCRIPT>
+        <style>  
+            .canceled {
+                background-color: #ffa722;
+                color: black;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#999999')";
+                filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2,Direction=135,Color='#999999');
+                -webkit-border-radius: 6px 6px 6px 6px;
+                -moz-border-radius: 6px 6px 6px 6px;
+            }
+            .confirmed {
+                background-color: #e1efbb;
+                color: black;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#999999')";
+                filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2,Direction=135,Color='#999999');
+                -webkit-border-radius: 6px 6px 6px 6px;
+                -moz-border-radius: 6px 6px 6px 6px;
+            }
+            .onhold {
+                background-color: #369bd7;
+                color: black;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#999999')";
+                filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2,Direction=135,Color='#999999');
+                -webkit-border-radius: 6px 6px 6px 6px;
+                -moz-border-radius: 6px 6px 6px 6px;
+            }
+
+            .titlebar {
+                height: 30px;
+                background-image: url(images/title_bar.png);
+                background-position-x: 50%;
+                background-position-y: 50%;
+                background-size: initial;
+                background-repeat-x: repeat;
+                background-repeat-y: no-repeat;
+                background-attachment: initial;
+                background-origin: initial;
+                background-clip: initial;
+                background-color: rgb(204, 204, 204);
+            }
+            #products
+            {
+                direction: rtl;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #products tr
+            {
+                padding: 5px;
+            }
+            #products td
+            {  
+                font-size: 12px;
+                font-weight: bold;
+            }
+            #products select
+            {                
+                font-size: 12px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="UNIT_LIST_FORM" method="post">
+            <fieldset class="set" style="width:98%;border-color: #006699">
+                <div style="width: 99%; margin-right: auto; margin-left: auto; ">
+                    <br/>
+                    <br/>
+                    <table align="center" dir="<%=dir%>" id="closedList" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <b>رقم المتابعة</b>
+                                </th>
+                                <th>
+                                    <b>كود الطلب</b>
+                                </th>
+                                <th>
+                                    <b>اسم العميل</b>
+                                </th>
+                                <th>
+                                    <b>الوحدة</b>
+                                </th>
+                                <th>
+                                    <b>المسؤول</b>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%
+                                String className, endDate, clientId;
+                                ClientProductMgr clientProductMgr = ClientProductMgr.getInstance();
+                                ClientComplaintsMgr clientComplaintsMgr = ClientComplaintsMgr.getInstance();
+                                StringBuilder unitsCodes = new StringBuilder();
+                                ArrayList<WebBusinessObject> complaintsList;
+                                boolean isClosed;
+                                for (WebBusinessObject wbo : closedList) {
+                                    isClosed = false;
+                                    complaintsList = new ArrayList<>(clientComplaintsMgr.getOnArbitraryKeyOracle((String) wbo.getAttribute("issueID"), "key1"));
+                                    for (WebBusinessObject complaintWbo : complaintsList) {
+                                        if (complaintWbo.getAttribute("businessCompID") != null
+                                                && ((String) complaintWbo.getAttribute("businessCompID")).indexOf("QM") > -1
+                                                && "7".equals(complaintWbo.getAttribute("currentStatus"))) {
+                                            isClosed = true;
+                                        }
+                                    }
+                                    className = "";
+                                    endDate = (String) wbo.getAttribute("endDate");
+                                    if(endDate != null && endDate.contains(" ")) {
+                                        endDate = endDate.split(" ")[0];
+                                    }
+                                    clientId = (String) wbo.getAttribute("clientID");
+                                    unitsCodes = new StringBuilder();
+                                    ArrayList<WebBusinessObject> unitsList = new ArrayList<>(clientProductMgr.getOnArbitraryDoubleKeyOracle(clientId,
+                                            "key1", "purche", "key4"));
+                                    for (WebBusinessObject unitWbo : unitsList) {
+                                        unitsCodes.append((String) unitWbo.getAttribute("productName")).append(",");
+                                    }
+                                    if (unitsCodes.length() > 0) {
+                                        unitsCodes.setLength(unitsCodes.length() - 1);
+                                    }
+                            %>
+                            <tr>
+                                <td class="<%=className%>" nowrap>
+                                    <a href="<%=context%>/IssueServlet?op=getCompl&issueId=<%=wbo.getAttribute("issueID")%>&compId=<%=wbo.getAttribute("clientComplaintID")%>&statusCode=<%=wbo.getAttribute("statusCode")%>&clientType=30-40"><b><font color="red"><%=wbo.getAttribute("businessID")%></font><font color="blue">/<%=wbo.getAttribute("businessIDbyDate")%></font></b></a>
+                                </td>
+                                <td class="<%=className%>">
+                                    <b onmouseover="JavaScript: getUnitsList('<%=wbo.getAttribute("clientID")%>', this)"><%=wbo.getAttribute("businessCompID")%></b>
+                                </td>
+                                <td class="<%=className%>" nowrap>
+                                    <b><%=wbo.getAttribute("clientName")%></b>
+                                    <img src="images/icons/done.png" style="display: <%=isClosed ? "block" : "none"%>; height: 25px; float: left;"/>
+                                </td>
+                                <td class="<%=className%>" nowrap>
+                                    <b><%=unitsCodes.toString()%></b>
+                                </td>
+                                <td class="<%=className%>">
+                                    <b><%=wbo.getAttribute("ownerName") != null ? wbo.getAttribute("ownerName") : ""%></b>
+                                </td>
+                            </tr>
+                            <% }%>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <br/>
+                </div>
+                <br/>
+            </fieldset>
+        </form>
+    </body>
+</html>

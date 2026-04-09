@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>class</name>
+      <key>CLASS_TITLE</key>
+      <refintegkey>IS</refintegkey>
+   </table_supported>  
+   
+   
+    <form_element>
+     <name>classTitle</name>
+     <table>class</table>
+     <column>CLASS_TITLE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>classDescription</name>
+     <table>class</table>
+     <column>DESCRIPTION</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+     
+   <form_element>
+     <name>CREATION_TIME</name>
+     <table>class</table>
+     <column>CREATION_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+ 
+</form>

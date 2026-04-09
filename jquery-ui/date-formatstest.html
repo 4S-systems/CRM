@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Datepicker - Format date</title>
+	<link rel="stylesheet" href="jquery-ui/themes/hot-sneaks/jquery.ui.all.css">
+	<script src="jquery-ui/jquery-1.6.2.js"></script>
+	<script src="jquery-ui/ui/jquery.ui.core.js"></script>
+	<script src="jquery-ui/ui/jquery.ui.widget.js"></script>
+	<script src="jquery-ui/ui/jquery.ui.datepicker.js"></script> 
+    	<script src="jquery-ui/ui/jquery.ui.widget.js"></script>
+	<script src="jquery-ui/ui/jquery.ui.mouse.js"></script> 
+	<script src="jquery-ui/ui/jquery.ui.slider.js"></script>
+      <script src="jquery-ui/ui/jquery-ui-timepicker-addon.js"></script>
+	<link rel="stylesheet" href="jquery-ui/demos/demos.css">
+	<script>
+	$(function() {
+		$('#datepi').datetimepicker({
+				timeFormat:'hh:mm'
+});
+$( "#datepi" ).datepicker( "option", "dateFormat", "yy/mm/dd" );
+	
+		
+	});
+	</script>
+</head>
+<body>
+
+<div class="demo">
+
+
+<div class="demo-description">
+<p>
+  <label for="datepi"></label>
+  <input type="text" name="datepi" id="datepi">
+  </p>
+<p>Display date feedback in a variety of ways.  Choose a date format from the dropdown, then click on the input and select a date to see it in that format.</p>
+</div><!-- End demo-description -->
+
+</body>
+</html>

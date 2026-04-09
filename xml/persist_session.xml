@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+     <name>PERSISTENT_SESSION</name>
+     <key>COMPUTER_IP</key>
+     <key1>USER_ID</key1>
+     </table_supported>  
+   
+   <form_element>
+     <name>computerId</name>
+     <table>PERSISTENT_SESSION</table>
+     <column>COMPUTER_IP</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>userId</name>
+     <table>PERSISTENT_SESSION</table>
+     <column>USER_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>loginDate</name>
+     <table>PERSISTENT_SESSION</table>
+     <column>LOGGIN_IN_TIME</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+   <form_element>
+     <name>userName</name>
+     <table>PERSISTENT_SESSION</table>
+     <column>USER_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   
+   
+   
+ 
+   <form_element>
+     <name>managerId</name>
+     <table>PERSISTENT_SESSION</table>
+     <column>MANAGER_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>optionOne</name>
+     <table>PERSISTENT_SESSION</table>
+     <column>OPTION_1</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+        <name>optionTwo</name>
+        <table>PERSISTENT_SESSION</table>
+        <column>OPTION_2</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>

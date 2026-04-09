@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>ACTION_TAKEN</name>
+      <key>id</key>
+      <key1>UNIT_SCHD_HIST_ID</key1>
+      <key2>READING_COUNTER</key2>
+   </table_supported>  
+   
+   
+    <form_element>
+     <name>id</name>
+     <table>ACTION_TAKEN</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>historyId</name>
+     <table>ACTION_TAKEN</table>
+     <column>UNIT_SCHD_HIST_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>schedualId</name>
+     <table>ACTION_TAKEN</table>
+     <column>SCHEDULE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>rateNo</name>
+     <table>ACTION_TAKEN</table>
+     <column>RATE_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>issueId</name>
+     <table>ACTION_TAKEN</table>
+     <column>ISSUE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>actionType</name>
+     <table>ACTION_TAKEN</table>
+     <column>ACTION_TYPE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>unitId</name>
+     <table>ACTION_TAKEN</table>
+     <column>UNIT_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>cancelReason</name>
+     <table>ACTION_TAKEN</table>
+     <column>CANCEL_REASON</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>creationDate</name>
+     <table>ACTION_TAKEN</table>
+     <column>CREATION_DATE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.sql.Timestamp</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>readingCounter</name>
+     <table>ACTION_TAKEN</table>
+     <column>READING_COUNTER</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>createdBy</name>
+     <table>ACTION_TAKEN</table>
+     <column>CREATED_BY</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+</form>

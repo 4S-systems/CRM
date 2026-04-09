@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>item_balance_at_time</name>
+      <key>ID</key>
+      <key1>NAME</key1>
+      <key2>CODE</key2>
+      <keyname>NAME</keyname>
+   </table_supported>  
+   
+   <form_element>
+     <name>itemCode</name>
+     <table>item_balance_at_time</table>
+     <column>item_code</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>itemForm</name>
+     <table>item_balance_at_time</table>
+     <column>item_form</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>storeCode</name>
+     <table>item_balance_at_time</table>
+     <column>store_code</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>quantity</name>
+     <table>item_balance_at_time</table>
+     <column>q1</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+</form>

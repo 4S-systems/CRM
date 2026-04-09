@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : business_rules.xml
+    Created on : October 9, 2011, 2:32 PM
+    Author     : Msaudi
+    Description:
+        Purpose of the document follows.
+-->
+
+<form>
+    <table_supported>
+        <name>business_rules</name>
+        <key>ID</key>
+    </table_supported>
+    
+    <form_element>
+        <name>id</name>
+        <table>business_rules</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>objectId</name>
+        <table>business_rules</table>
+        <column>OBJECT_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>ruleName</name>
+        <table>business_rules</table>
+        <column>RULE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

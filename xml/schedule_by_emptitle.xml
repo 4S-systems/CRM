@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>schedule_by_emptitle</name>
+        <key>schedule_id</key>
+        <key1>task_id</key1>
+        <key2>task_code</key2>
+        <key3>emp_title</key3>
+        
+    </table_supported>   
+    
+    <form_element>
+        <name>scheduleId</name>
+        <table>schedule_by_emptitle</table>
+        <column>schedule_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>taskId</name>
+        <table>schedule_by_emptitle</table>
+        <column>task_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>taskCode</name>
+        <table>schedule_by_emptitle</table>
+        <column>task_code</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>taskName</name>
+        <table>schedule_by_emptitle</table>
+        <column>task_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>empTitle</name>
+        <table>schedule_by_emptitle</table>
+        <column>emp_title</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>empTitleName</name>
+        <table>schedule_by_emptitle</table>
+        <column>emp_title_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+   <form_element>
+        <name>execHrs</name>
+        <table>schedule_by_emptitle</table>
+        <column>exec_hrs</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

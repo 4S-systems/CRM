@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    
+    <query>
+        <sqlindex>352</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE Employee_dates (
+            DATE_ID VARCHAR2(50) NOT NULL 
+            , EMP_ID VARCHAR2(50) NOT NULL 
+            , WORKING_DATE DATE 
+            , DATE_TYPE_ID varchar(50) 
+            , OPTION1 VARCHAR2(50) 
+            , OPTION2 VARCHAR2(50) 
+            , OPTION3 VARCHAR2(50) 
+            )
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>353</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE EMPLOYEE_TYPE
+            (	"ID" VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            "AR_TITLE" VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            "EN_TITLE" VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            "TYPE_CODE_ID" VARCHAR2(50 BYTE))
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>354</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            INSERT INTO EMPLOYEE_TYPE(ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('16', 'تاريخ التعيين', 'تاريخ التعيين','2');
+            INSERT INTO EMPLOYEE_TYPE(ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('17', 'تاريخ استلام العمل', 'تاريخ استلام العمل','2');
+            INSERT INTO EMPLOYEE_TYPE(ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('18', 'تاريخ الترقية', 'تاريخ الترقية','2');
+            INSERT INTO EMPLOYEE_TYPE(ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('19', 'تاريخ نهاية الخدمة', 'تاريخ نهاية الخدمة','2');
+            INSERT INTO EMPLOYEE_TYPE(ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('20', 'تاريخ الميلاد', 'تاريخ الميلاد','2');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('21', 'تلفون العمل', 'Work Telephone', '3');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('22', 'تلفون المنزل', 'Home Telephone', '3');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('23', 'فاكس', 'Fax', '3');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('24', 'تليفون محمول', 'Mobile', '3');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('25', 'تليفون داخلي', 'Extention', '3');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('26', 'مؤهل جامعي', 'Bsc', '4');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('27', 'مؤهل متوسط', 'High school', '4');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('28', 'ماجستير', 'Master', '4');
+            INSERT INTO EMPLOYEE_TYPE (ID, AR_TITLE, EN_TITLE, TYPE_CODE_ID) VALUES ('29', 'دكتوراه', 'Phd', '4');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>355</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE HR_TYPE_CODE 
+            (	"CODE_ID" VARCHAR2(50 BYTE), 
+            "CODE_NAME" VARCHAR2(50 BYTE)
+            )
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>356</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            INSERT INTO HR_TYPE_CODE (CODE_ID, CODE_NAME) VALUES ('1', 'وظيفة');
+            INSERT INTO HR_TYPE_CODE (CODE_ID, CODE_NAME) VALUES ('2', 'تاريخ');
+            INSERT INTO HR_TYPE_CODE (CODE_ID, CODE_NAME) VALUES ('3', 'تليفون');
+            INSERT INTO HR_TYPE_CODE (CODE_ID, CODE_NAME) VALUES ('4', 'مؤهل علمي');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>357</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE EMPLOYEE    
+            (	"EMP_ID" VARCHAR2(50 BYTE) DEFAULT 0 NOT NULL ENABLE, 
+            "EMP_NO" VARCHAR2(20 BYTE) DEFAULT 0, 
+            "EMP_NAME" VARCHAR2(255 BYTE) DEFAULT 0, 
+            "ADDRESS" VARCHAR2(255 BYTE) DEFAULT 0, 
+            "DESIGNATION" VARCHAR2(255 BYTE) DEFAULT 0, 
+            "WORK_PHONE" VARCHAR2(20 BYTE) DEFAULT 0, 
+            "EXTENSION" VARCHAR2(10 BYTE) DEFAULT 0, 
+            "HOME_PHONE" VARCHAR2(20 BYTE) DEFAULT 0, 
+            "FAX" VARCHAR2(15 BYTE) DEFAULT 0, 
+            "EMAIL" VARCHAR2(50 BYTE) DEFAULT 0, 
+            "DEPARTMENT" VARCHAR2(20 BYTE) DEFAULT 0, 
+            "HOURE_SALARY" NUMBER(10,2), 
+            "OVER_TIME1" NUMBER(10,2), 
+            "OVER_TIME2" NUMBER(10,2), 
+            "OVER_TIME3" NUMBER(10,2), 
+            "IS_ACTIVE" NUMBER(1,0) DEFAULT 0, 
+            "NOTE" VARCHAR2(100 BYTE), 
+            "CREATION_TIME" DATE, 
+            "CREATED_BY" VARCHAR2(50 BYTE), 
+            "GENDER" VARCHAR2(20 BYTE), 
+            "MARITAL_STATUS" VARCHAR2(20 BYTE), 
+            "EDUCATION" VARCHAR2(500 BYTE), 
+            "OPTION_1" VARCHAR2(250 BYTE), 
+            "OPTION_2" VARCHAR2(250 BYTE), 
+            "OPTION_3" VARCHAR2(250 BYTE),
+            "SOCIAL_NUMBER" VARCHAR2(50 BYTE),
+            "POSITION" VARCHAR2(50 BYTE),
+            "WORK_START_DATE" DATE,
+            "MELATRY_STATUS" VARCHAR2(50 BYTE),
+            "INSURANCE_NUMBER" VARCHAR2(50 BYTE),
+            "BIRTH_DATE" DATE)
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>363</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE "EMPLOYEE_REQUESTS" 
+            (	"ID" VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            "EMP_ID" VARCHAR2(50 BYTE), 
+            "REQ_ID" VARCHAR2(50 BYTE), 
+            "FROM_DATE" TIMESTAMP (6), 
+            "TO_DATE" TIMESTAMP (6), 
+            "REQ_AMOUNT" FLOAT,
+            "REQ_TYPE" VARCHAR2(200 BYTE),
+            "NOTE" VARCHAR2(200 BYTE), 
+            "CREATION_TIME" TIMESTAMP (6), 
+            "CREATED_BY" VARCHAR2(50 BYTE), 
+            "OPTION1" VARCHAR2(200 BYTE), 
+            "OPTION2" VARCHAR2(200 BYTE), 
+            "OPTION3" VARCHAR2(200 BYTE)
+            )
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>364</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            INSERT INTO STATUS_TYPE (ID, CASE_EN, CASE_AR, BUSINESS_TYPE) VALUES ('68', 'requested', 'مطلوب', 'empReq');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>365</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            INSERT INTO BUSINESS_OBJECT_TYPE (ID,NAME,DESCRIPTION) values ('9','Employee Requests',null)
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>366</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            INSERT INTO STATUS_TYPE (ID, CASE_EN, CASE_AR, BUSINESS_TYPE) VALUES ('69', 'accepted', 'مقبول', 'empReq');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>367</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            INSERT INTO STATUS_TYPE (ID, CASE_EN, CASE_AR, BUSINESS_TYPE) VALUES ('70', 'rejected', 'مرفوض', 'empReq');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>368</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            INSERT INTO STATUS_TYPE (ID, CASE_EN, CASE_AR, BUSINESS_TYPE) VALUES ('71', 'canceled', 'ألغي', 'empReq');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>369</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            CREATE TABLE "EMPLOYEE_PROFILE" (
+            "ID" VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            "EMP_ID" VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            "DEPT_ID" VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            "VACATIONS" Int, 
+            "TEMP_VACATIONS" Int, 
+            "TEMP_LEAVE" Int,
+            "WORKING_HOURS" Int,
+            "WORK_TYPE" VARCHAR2(50 BYTE), 
+            "SALARY" FLOAT(126),
+            "CREATION_TIME" TIMESTAMP (6), 
+            "CREATED_BY" VARCHAR2(50 BYTE), 
+            "OPTION1" VARCHAR2(50 BYTE), 
+            "OPTION2" VARCHAR2(50 BYTE), 
+            "OPTION3" VARCHAR2(50 BYTE),
+            CONSTRAINT "EMPLOYEE_PROFILE_UK1" UNIQUE ("EMP_ID", "DEPT_ID")
+            );
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>370</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1522671400800','Employees Requests','AERQ',to_date('02-APR-18','DD-MON-RR'),'1','Employees Requests','0','VG','1','UL','UL','1','0','0','0',null,null,'1');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>371</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1522914195709','Early Departure','EDEP',to_date('05-APR-18','DD-MON-RR'),'1','Early Departure','1522671400800','ERQ','1','UL','UL','2','0-1522671400800','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1522914119534','Casual Holiday','CASUALH',to_date('05-APR-18','DD-MON-RR'),'1','Casual Holiday','1522671400800','ERQ','1','UL','UL','2','0-1522671400800','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1522914237717','Late Attendence','LATT',to_date('05-APR-18','DD-MON-RR'),'1','Late Attendence','1522671400800','ERQ','1','UL','UL','2','0-1522671400800','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1522914151406','Standard Holiday','STANDARDH',to_date('05-APR-18','DD-MON-RR'),'1','Standard Holiday','1522671400800','ERQ','1','UL','UL','2','0-1522671400800','0','0',null,null,'1');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>376</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523780445717','درجات الموظفين','EMPCLAS',to_date('15-APR-18','DD-MON-RR'),'1','درجات الموظفين','0','VG','1','UL','UL','1','0','0','0',null,null,'1');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>377</sqlindex>
+        <isMultiStatement>1</isMultiStatement>
+        <statment>
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523780815624','مشرف فنى ','TECHSUP',to_date('15-APR-18','DD-MON-RR'),'1','مشرف فنى ','1523780445717','EMPCLAS','1','UL','UL','2','0-1523780445717','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523780725713','فنى','TECH',to_date('15-APR-18','DD-MON-RR'),'1','فنى','1523780445717','EMPCLAS','1','UL','UL','2','0-1523780445717','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523780867127','مشرف اول فنى','FTECHSUP',to_date('15-APR-18','DD-MON-RR'),'1','مشرف اول فنى','1523780445717','EMPCLAS','1','UL','UL','2','0-1523780445717','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523780964918','مهندس تنفيذى','EXECENG',to_date('15-APR-18','DD-MON-RR'),'1','مهندس تنفيذى','1523780445717','EMPCLAS','1','UL','UL','2','0-1523780445717','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523781043190','مهندس فنى ','TECHENG',to_date('15-APR-18','DD-MON-RR'),'1','مهندس فنى ','1523780445717','EMPCLAS','1','UL','UL','2','0-1523780445717','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523781124996','مشرف موقع','LOCSUP',to_date('15-APR-18','DD-MON-RR'),'1','مشرف موقع','1523780445717','EMPCLAS','1','UL','UL','2','0-1523780445717','0','0',null,null,'1');
+            Insert into PROJECT (PROJECT_ID,PROJECT_NAME,EQ_NO,CREATION_TIME,CREATED_BY,PROJECT_DESCRIPTION,MAIN_PROJ_ID,LOCATION_TYPE,FUTILE,COORDINATE,OPTION_ONE,OPTION_TWO,OPTION_THREE,IS_TRNSPRT_STN,IS_MNGMNT_STN,INTEGRATED_ID,NEW_CODE,PROJECTFLAG) values ('1523781193686','مدير قطاع','SECMGR',to_date('15-APR-18','DD-MON-RR'),'1','مدير قطاع','1523780445717','EMPCLAS','1','UL','UL','2','0-1523780445717','0','0',null,null,'1');
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>401</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE "PCRM"."EMPLOYEE_FINANCE" 
+            ("ID" VARCHAR2(50 BYTE), 
+            "EMP_ID" VARCHAR2(50 BYTE), 
+            "EXPENSE_ID" VARCHAR2(50 BYTE), 
+            "YEAR" VARCHAR2(20 BYTE), 
+            "MONTH" VARCHAR2(20 BYTE), 
+            "BASIC" FLOAT(126), 
+            "CURRENT_FINANCE" FLOAT(126), 
+            CREATED_BY VARCHAR2(50 BYTE), 
+            CREATION_TIME DATE , 
+            OPTION_1 VARCHAR2(50 BYTE), 
+            OPTION_2 VARCHAR2(50 BYTE),
+            OPTION_3 VARCHAR2(50 BYTE) 
+            )
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>403</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE EMPLOYEE_TRANSACTION 
+            (
+            TRANS_ID VARCHAR2(50) 
+            , EMP_ID VARCHAR2(50) 
+            , BUSINESS_ID VARCHAR2(50) 
+            , ISSUE_STATUS_ID VARCHAR(50)
+            , BUSINESS_TYPE VARCHAR(50)
+            , DEBIT FLOAT 
+            , CREDIT FLOAT 
+            , INITIAL_VALUE FLOAT 
+            , CREATION_TIME DATE 
+            , CREATED_BY VARCHAR2(20) 
+            , OPTION_1 VARCHAR2(50) 
+            , OPTION_2 VARCHAR2(50) 
+            , OPTION_3 VARCHAR2(50) 
+            )
+        </statment>
+    </query>
+    
+    <query>
+        <sqlindex>403</sqlindex>
+        <isMultiStatement>0</isMultiStatement>
+        <statment>
+            CREATE TABLE EMP_SALARY_CONFIG 
+            (	
+            ID VARCHAR2(50 BYTE) NOT NULL ENABLE, 
+            EMP_ID VARCHAR2(50 BYTE), 
+            EXPENSE_ID VARCHAR2(50 BYTE), 
+            CREATION_TIME DATE, 
+            CREATION_BY VARCHAR2(50 BYTE), 
+            CONFIG_VALUE NUMBER, 
+            CONFIG_PERSENTAGE VARCHAR2(50 BYTE), 
+            CONFIG_TYPE VARCHAR2(50 BYTE), 
+            OPTION_1 VARCHAR2(50 BYTE), 
+            OPTION_2 VARCHAR2(50 BYTE), 
+            OPTION_3 VARCHAR2(50 BYTE), 
+            OPTION_4 VARCHAR2(50 BYTE), 
+            CONSTRAINT "EMP_SALARY_CONFIG_PK" PRIMARY KEY ("ID"), 
+            CONSTRAINT "EMP_EXPENSE_DATE_UK" UNIQUE ("EMP_ID", "EXPENSE_ID", "CREATION_TIME")
+            )
+        </statment>
+    </query>
+</SQL>
+
+

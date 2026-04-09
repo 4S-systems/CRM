@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>ISSUE_BY_COMPLAINT_UNIQUE</name>
+        <key1>issue_id</key1>
+        <key2>customer_id</key2>
+        <key3>created_by</key3>
+        <key4>COMP_ID</key4>
+        <key5>client_com_id</key5>
+        <key6>BUSINESS_ID</key6>
+        <key7>entry_date</key7>
+        <key8>status_code</key8>
+        <key9>CURRENT_OWNER_ID</key9>
+    </table_supported>   
+    
+    <form_element>
+        <name>issue_id</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>issue_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>issueTitle</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>issue_title</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>projectName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>project_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>businessID</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>BUSINESS_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>businessIDbyDate</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>BUSINESS_ID_BY_DATE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>businessCompId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>BUSINESS_COMP_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdBy</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>created_by</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>createdByName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>created_by_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>compId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>COMP_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>customerId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>customer_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>customerName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>customer_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>senderId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>sender_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>senderName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>sender_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>senderFullName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>SENDER_FULL_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>entryDate</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>entry_date</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>acknowledgeDate</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>acknowledge_date</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>isAcknowledged</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>is_acknowledged</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>comments</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>comments</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>departmentId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>department_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>departmentName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>department_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>statusCode</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>status_code</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>statusArName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>status_ar_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>statusEnName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>status_en_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>clientComId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>client_com_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>departmentId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>department_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>departmentName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>department_name</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>compSubject</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>comp_subject</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>currentOwner</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CURRENT_OWNER</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>currentOwnerId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CURRENT_OWNER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>currentOwnerSince</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CURRENT_OWNER_SINCE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>flag</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>flag</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>bookmarkNote</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>bookmarkNote</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>option3</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>option3</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>receipId</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>receip_id</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>optionOne</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>option_one</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>age</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>age</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>ticketType</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>ticket_type</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>clientMobile</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>client_mobile</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>callType</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CALL_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>clientPhone</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CLIENT_PHONE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>otherPhone</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CLIENT_OTHER</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>recipientName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>RECIPIENT_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>recipientFullName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>RECIPIENT_FULL_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>interPhone</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>INTER_PHONE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>CustomerNo</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CUSTOMER_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>totalComments</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>TOTAL_COMMENTS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>totalAppointments</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>TOTAL_APPOINTMENTS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>managerName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>MANAGER_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>description</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>DESCRIPTION</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>statusDate</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>STATUS_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>subject</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>SUBJECT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>comments</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>COMMENTS</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>typeName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>TYPE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>clientNo</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CLIENT_NO</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    <form_element>
+        <name>groupName</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>GROUP_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>groupID</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>groupID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>campaignTitle</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>CAMPAIGN_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>typeTag</name>
+        <table>ISSUE_BY_COMPLAINT_UNIQUE</table>
+        <column>TYPE_TAG</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

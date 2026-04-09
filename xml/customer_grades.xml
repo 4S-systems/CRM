@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+
+    <table_supported>
+        <name>customer_grades</name>
+        <key>ID</key>
+        <key1>CUSTOMER_ID</key1>
+        <key2>GRADE_ID</key2>
+        <key3>END_DATE</key3>
+    </table_supported>
+
+    <form_element>
+        <name>id</name>
+        <table>customer_grades</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>customerId</name>
+        <table>customer_grades</table>
+        <column>CUSTOMER_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>gradeId</name>
+        <table>customer_grades</table>
+        <column>GRADE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>beginDate</name>
+        <table>customer_grades</table>
+        <column>START_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    <form_element>
+        <name>endDate</name>
+        <table>customer_grades</table>
+        <column>END_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+</form>
+

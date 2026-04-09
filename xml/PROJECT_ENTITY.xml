@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>PROJECT_ENTITIES</name>
+        
+        <key>ENTITY_ID</key>
+        <key1>PROJECT_ID</key1>
+        <key2>PROJECT_ACC_ID</key2>
+        <key3>ENTITY_TYPE</key3>
+        <key4>ENTITY_PRICE</key4>
+        <key5>ENTITY_AREA</key5>
+        <key6>CREATED_BY</key6>
+        <key7>CREATION_TIME</key7>
+        
+       
+        <keyname>ENTITY_ID</keyname>
+        
+    </table_supported>  
+   
+    <form_element>
+        <name>ENTITY_ID</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>entityID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>PROJECT_ID</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>projectID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>PROJECT_ACC_ID</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>projectAccID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>ENTITY_TYPE</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>entityType</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>ENTITY_PRICE</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>entityPrice</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>ENTITY_AREA</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>entityArea</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    
+    <form_element>
+        <name>CREATED_BY</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>createdBy</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>CREATION_TIME</name>
+        <table>PROJECT_ENTITIES</table>
+        <column>creationTime</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.sql.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SQL>
+    <!-- VIEWS FROM ERP -->
+
+    <view>
+        <viewindex>1</viewindex>
+        <viewname>issue_by_complaint_all_case</viewname>
+        <viewstatment>
+            create or replace view issue_by_complaint_all_case as
+            select i.id issue_id,i.issue_title,i.project_name,i.business_id,i.business_id_by_date
+            ,cm.business_comp_id,cm.id as comp_id,cm.ticket_type,cm.current_owner,cm.current_owner_id,cm.current_owner_since,tp.type_name
+            ,cu.sys_id as customer_id,cu.name as customer_name,cu.mobile as mobile,cu.age_group as age,u.user_id,u.user_name,u.full_name
+            ,s.user_id as sender_id,s.full_name as sender_name
+            ,IST.BEGIN_DATE as entry_date,dl.acknowledge_date,dl.option1 comp_subject,dl.resp_context as resp,dl.receip_id
+            ,dl.is_acknowledged,dl.any_comment as comments,dl.client_com_id,dl.option3,
+            p.project_id department_id,p.project_name department_name,p.option_one option_one,
+            ist.status_name status_code,ist.status_id,ist.action_taken action_taken,ist.total_time total_time,st.case_en status_en_name, st.case_ar status_ar_name
+            ,ist.end_date, cm.created_by client_complaint_created_by, cm.SERV_LEVEL_AGR urgency ,cu.phone as client_phone,
+            cu.mobile as client_mobile, cu.option3 as client_other
+            from issue i,client_complaints cm,client cu,users u,distribution_list dl,
+            project p,ticket_type tp,
+            users s, issue_status ist, status_type st
+            where
+            i.id=cm.issue_id
+            and
+            i.urgency_id=cu.sys_id
+            and
+            dl.receip_id=u.user_id
+            and
+            dl.sender_id=s.user_id
+            and
+            p.option_one = dl.receip_id
+            and
+            cm.id=dl.client_com_id
+            and
+            ist.business_obj_id=dl.client_com_id
+            and
+            st.id = ist.status_name
+            and ist.end_date is null
+            and cm.ticket_type=tp.type_id
+
+            union all 
+
+            select i.id issue_id,i.issue_title,i.project_name,i.business_id,i.business_id_by_date
+            ,cm.business_comp_id,cm.id as comp_id,cm.ticket_type,cm.current_owner,cm.current_owner_id,cm.current_owner_since,tp.type_name
+            ,cu.sys_id as customer_id,cu.name as customer_name,cu.mobile as mobile,cu.age_group as age,u.user_id,u.user_name,u.full_name
+            ,s.user_id as sender_id,s.full_name as sender_name
+            ,IST.BEGIN_DATE as entry_date,dl.acknowledge_date,dl.option1 comp_subject,dl.resp_context as resp,dl.receip_id
+            ,dl.is_acknowledged,dl.any_comment as comments,dl.client_com_id,dl.option3,
+            p.project_id department_id,p.project_name department_name,p.option_one option_one,
+            ist.status_name status_code,ist.status_id,ist.action_taken action_taken,ist.total_time total_time,st.case_en status_en_name, st.case_ar status_ar_name
+            ,ist.end_date, cm.created_by client_complaint_created_by, cm.SERV_LEVEL_AGR urgency,cu.phone as client_phone,
+            cu.mobile as client_mobile, cu.option3 as client_other
+            from issue i,client_complaints cm,client cu,users u,distribution_list dl,
+            project p,ticket_type tp,
+            users s, issue_status ist, status_type st
+            where
+            i.id=cm.issue_id
+            and
+            i.urgency_id=cu.sys_id
+            and
+            dl.receip_id=u.user_id
+            and
+            dl.sender_id=s.user_id
+            and
+            p.option_one = dl.receip_id
+            and
+            cm.id=dl.client_com_id
+            and
+            ist.business_obj_id=dl.client_com_id
+            and
+            st.id = ist.status_name
+            and cm.ticket_type=tp.type_id
+            and ist.end_date is not null
+            and ist.total_time=0
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>2</viewindex>
+        <viewname>issue_by_complaint</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW ISSUE_BY_COMPLAINT AS 
+            select i.id issue_id,i.issue_title,i.call_type,i.project_name,i.business_id,i.business_id_by_date, i.USER_ID created_by
+            ,cm.business_comp_id,cm.id as comp_id,cm.ticket_type,cm.current_owner,cm.current_owner_id,cm.current_owner_since,tp.type_name
+            ,cu.sys_id as customer_id,cu.name as customer_name,cu.age_group as age,u.user_id,u.user_name,u.full_name
+            ,s.user_id as sender_id,s.full_name as sender_name
+            ,IST.BEGIN_DATE as entry_date,dl.acknowledge_date,dl.option1 comp_subject,dl.resp_context as resp,dl.receip_id
+            ,dl.is_acknowledged,dl.any_comment as comments,dl.client_com_id,dl.option3,
+            p.project_id department_id,p.project_name department_name,p.option_one option_one,
+            ist.status_name status_code,ist.action_taken action_taken,st.case_en status_en_name, st.case_ar status_ar_name ,cu.phone as client_phone,
+            cu.mobile as client_mobile , cu.option3 as client_other, I.CURRENT_STATUS_SINCE, cu.inter_phone, CCT.TYPE_TAG
+            from issue i,client_complaints cm,client cu,users u,distribution_list dl,
+            project p,ticket_type tp, 
+            users s, issue_status ist, status_type st, CLIENT_COMPLAINTS_TYPE CCT
+            where
+            i.id=cm.issue_id
+            and
+            cm.id = CCT.id
+            and
+            i.urgency_id=cu.sys_id
+            and
+            dl.receip_id=u.user_id
+            and
+            dl.sender_id=s.user_id
+            and
+            p.option_one = dl.receip_id
+            and
+            cm.id=dl.client_com_id
+            and
+            ist.business_obj_id=dl.client_com_id
+            and
+            st.id = ist.status_name
+            and ist.end_date is null
+            and cm.ticket_type=tp.type_id and dl.RESP_CONTEXT = '1'
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>3</viewindex>
+        <viewname>issue_by_complaint2</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW "ISSUE_BY_COMPLAINT2" ("ISSUE_ID", "ISSUE_TITLE", "PROJECT_NAME", "BUSINESS_ID", "BUSINESS_ID_BY_DATE", "BUSINESS_COMP_ID", "COMP_ID", "TICKET_TYPE", "CURRENT_OWNER", "CURRENT_OWNER_ID", "CURRENT_OWNER_SINCE", "TYPE_NAME", "CUSTOMER_ID", "CUSTOMER_NAME", "AGE", "USER_ID", "USER_NAME", "FULL_NAME", "SENDER_ID", "SENDER_NAME", "ENTRY_DATE", "ACKNOWLEDGE_DATE", "COMP_SUBJECT", "RESP", "RECEIP_ID", "IS_ACKNOWLEDGED", "COMMENTS", "CLIENT_COM_ID", "OPTION3", "DEPARTMENT_ID", "DEPARTMENT_NAME", "OPTION_ONE", "STATUS_CODE", "ACTION_TAKEN", "TOTAL_TIME", "STATUS_EN_NAME", "STATUS_AR_NAME", "CLIENT_PHONE" ,"CLIENT_MOBILE" , "CLIENT_OTHER") AS 
+            select i.id issue_id,i.issue_title,i.project_name,i.business_id,i.business_id_by_date
+            ,cm.business_comp_id,cm.id as comp_id,cm.ticket_type,cm.current_owner,cm.current_owner_id,cm.current_owner_since,tp.type_name
+            ,cu.sys_id as customer_id,cu.name as customer_name,cu.age_group as age,u.user_id,u.user_name,u.full_name
+            ,s.user_id as sender_id,s.full_name as sender_name
+            ,IST.BEGIN_DATE as entry_date,dl.acknowledge_date,dl.option1 comp_subject,dl.resp_context as resp,dl.receip_id
+            ,dl.is_acknowledged,dl.any_comment as comments,dl.client_com_id,dl.option3,
+            p.project_id department_id,p.project_name department_name,p.option_one option_one,
+            ist.status_name status_code,ist.action_taken action_taken,ist.total_time total_time,st.case_en status_en_name, st.case_ar status_ar_name,cu.phone as client_phone,
+            cu.mobile as client_mobile , cu.option3 as client_other
+            from issue i,client_complaints cm,client cu,users u,distribution_list dl,
+            project p,ticket_type tp,
+            users s, issue_status ist, status_type st
+            where
+            i.id=cm.issue_id
+            and
+            i.urgency_id=cu.sys_id
+            and
+            dl.receip_id=u.user_id
+            and
+            dl.sender_id=s.user_id
+            and
+            p.option_one = dl.receip_id
+            and
+            cm.id=dl.client_com_id
+            and
+            ist.business_obj_id=dl.client_com_id
+            and
+            st.id = ist.status_name
+            and cm.ticket_type=tp.type_id
+            and ist.end_date is null
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+ 
+    <view>
+        <viewindex>4</viewindex>
+        <viewname>employee_view</viewname>
+        <viewstatment>
+            create or replace view employee_view as
+            select unique i.id issue_id,i.issue_title,i.project_name,i.business_id,i.business_id_by_date
+            ,cm.business_comp_id,cm.id as comp_id,cm.ticket_type,cm.current_owner,cm.current_owner_id,cm.current_owner_since,tp.type_name
+            ,cu.sys_id as customer_id,cu.name as customer_name,cu.age_group as age,u.user_id,u.user_name,u.full_name
+            ,dl.sender_id ,s.full_name as sender_name
+            ,IST.BEGIN_DATE as entry_date,dl.acknowledge_date,dl.option1 comp_subject,dl.option2 as manager_comment
+            ,dl.is_acknowledged,dl.any_comment as comments,dl.client_com_id,dl.receip_id,
+            dl.resp_context as resp,dl.sys_id,
+            ist.status_name status_code, st.case_en status_en_name, st.case_ar status_ar_name, ur.FULL_NAME display_created_by,cu.phone as client_phone,
+            cu.mobile as client_mobile , cu.option3 as client_other
+            from client_complaints cm
+            left join issue i on cm.issue_id = i.id
+            left join issue_status ist on cm.id = ist.business_obj_id and ist.end_date is null
+            left join client cu on i.urgency_id = cu.sys_id
+            left join (select client_com_id, max(sys_id) sys_id from distribution_list group by client_com_id) dl1 on dl1.client_com_id = cm.id
+            left join distribution_list dl on dl1.sys_id = dl.sys_id
+            left join users u on dl.receip_id = u.user_id
+            left join ticket_type tp on cm.ticket_type = tp.type_id 
+            left join users s on dl.sender_id = s.user_id 
+            left join status_type st on st.id = ist.status_name 
+            left join users ur on i.user_id = ur.user_id
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>5</viewindex>
+        <viewname>employee_view2</viewname>
+        <viewstatment>
+            create or replace view employee_view2 as
+            select unique i.id issue_id,i.issue_title,i.project_name,i.business_id,i.business_id_by_date
+            ,cm.business_comp_id,cm.id as comp_id,cm.ticket_type,cm.current_owner,cm.current_owner_id,cm.current_owner_since,tp.type_name
+            ,cu.sys_id as customer_id,cu.name as customer_name,cu.age_group as age,u.user_id,u.user_name,u.full_name
+            ,dl.sender_id ,s.full_name as sender_name
+            ,IST.BEGIN_DATE as entry_date,dl.acknowledge_date,dl.option1 comp_subject,dl.option2 as manager_comment
+            ,dl.is_acknowledged,dl.any_comment as comments,dl.client_com_id,dl.receip_id,
+            dl.resp_context as resp,dl.sys_id,
+            --p.project_id department_id,p.project_name department_name,
+            ist.status_name status_code, st.case_en status_en_name, st.case_ar status_ar_name, cu.phone as client_phone,
+            cu.mobile as client_mobile , cu.option3 as client_other, cu.created_by client_created_by
+            from client_complaints cm
+            left join issue i on i.id=cm.issue_id
+            left join issue_status ist on cm.id = ist.business_obj_id and ist.end_date is null
+            left join client cu on i.urgency_id = cu.sys_id
+            left join (select client_com_id, max(sys_id) sys_id from distribution_list group by client_com_id) dl1 on dl1.client_com_id = cm.id
+            left join distribution_list dl on dl1.sys_id = dl.sys_id
+            left join users u on dl.receip_id = u.user_id
+            left join ticket_type tp on cm.ticket_type = tp.type_id
+            left join users s on dl.sender_id = s.user_id 
+            left join status_type st on st.id = ist.status_name
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>6</viewindex>
+        <viewname>responsibilty_comp_emp_view</viewname>
+        <viewstatment>
+            create or replace view responsibilty_comp_emp_view as
+            select i.id issue_id,i.issue_title,i.project_name,i.business_id,i.business_id_by_date
+            ,cm.business_comp_id,cm.id as comp_id,cm.current_owner,cm.current_owner_id,cm.current_owner_since,cm.ticket_type
+            ,cu.sys_id as customer_id,cu.name as customer_name,cu.age_group as age,u.user_id,u.user_name,u.full_name
+            ,s.user_id as sender_id,s.full_name as sender_name
+            ,dl.receive_date as entry_date,dl.acknowledge_date,dl.option1 comp_subject,dl.option2 as manager_comment,dl.option3
+            ,dl.is_acknowledged,dl.any_comment as comments,dl.client_com_id,dl.receip_id,
+            dl.resp_context as resp,cu.phone as client_phone,
+            cu.mobile as client_mobile , cu.option3 as client_other
+            from issue i,client_complaints cm,client cu,users u,distribution_list dl,users s
+            where
+            i.id=cm.issue_id
+            and
+            i.urgency_id=cu.sys_id
+            and
+            dl.receip_id=u.user_id
+            and
+            dl.sender_id=s.user_id
+            and
+            cm.id=dl.client_com_id
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>7</viewindex>
+        <viewname>client_view</viewname>
+        <viewstatment>
+            create or replace view client_view as
+            select c.sys_id client_id,c.client_no client_no,c.name client_name,c.gender gender, c.address address, c.phone phone,
+            c.mobile mobile, c.email email, c.clientssn clientSsn, c.partner partner, c.job job, c.option1 option1, c.option2 option2,
+            c.matiral_status matiralStatus, c.age_group age,
+            cp.id client_project_id, cp.project_id project_id, cp.product_id product_id,
+            cp.product_category_id product_category_id, cp.budget budget, cp.period period, cp.payment_system payment_system,
+            cp.note cp_note, cp.product_name product_name, cp.product_category_name product_category_name,
+            cs.id client_season_id, cs.season_id season_id, cs.notes season_notes, cs.season_name season_name, c.option3 as client_other
+            from client c,client_projects cp,client_seasons cs
+            where
+            c.sys_id(+)=cp.client_id
+            and 
+            c.sys_id=cs.client_id
+            and 
+            cp.client_id=cs.client_id
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>8</viewindex>
+        <viewname>unit_status_view</viewname>
+        <viewstatment>
+            create or replace view unit_status_view as
+            select ist."STATUS_ID",ist."STATUS_NAME",ist."ISSUE_TITLE",ist."STATUS_NOTE",
+            ist."END_DATE",ist."BEGIN_DATE",ist."TOTAL_TIME",ist."CAUSE_DESCRIPTION",ist."ACTION_TAKEN",
+            ist."PREVENTION_TAKEN",ist."BUSINESS_OBJ_ID",ist."OBJECT_TYPE",ist."PARENT_ID",ist."CREATED_BY",
+            p.project_id,p.project_name,p.eq_no,p.main_proj_id,p.location_type,p.creation_time,p.option_one,p.option_two,
+            p.option_three,p.futile,p.coordinate,p.project_description
+            from issue_status ist, PROJECT P
+            where
+            ist.business_obj_id=p.project_id
+            and ist.end_date is null
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>9</viewindex>
+        <viewname>wf_task_comments</viewname>
+        <viewstatment>
+            create or replace view wf_task_comments as
+            select wf.ID, wf.business_obj_id, wf.object_type, wf.DESCR,wf.CREATION_DATE, u.USER_NAME
+            from WF_TASK_VISIT wf
+            INNER JOIN USERS u ON wf.CREATED_BY = u.USER_ID
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>10</viewindex>
+        <viewname>clients_units_view</viewname>
+        <viewstatment>
+            create or replace view clients_units_view as
+            select u.form_no, 
+            m.client_code, 
+            c.client_name, 
+            u.stage_code, 
+            stage_description, 
+            u.section_code, 
+            section_description, 
+            u.building_type, 
+            building_type_description, 
+            u.sample_code, 
+            u.building_code, 
+            building_description, 
+            u.unit_code 
+            from   UNITS_SCHEMA.reservation_form_m m, 
+            UNITS_SCHEMA.reserve_form_units u, 
+            UNITS_SCHEMA.clients_m c, 
+            UNITS_SCHEMA.stage_c st, 
+            UNITS_SCHEMA.sections_c sc, 
+            UNITS_SCHEMA.building_types_c bb, 
+            UNITS_SCHEMA.building_c bc 
+            where  m.reserve_form_no = u.form_no 
+            and m.client_code = c.client_code 
+            and u.stage_code = st.stage_code 
+            and u.stage_code = sc.stage_code 
+            and u.section_code = sc.section_code 
+            and u.building_type = bb.building_type_code 
+            and u.stage_code = bc.stage_code 
+            and u.section_code = bc.section_code 
+            and u.sample_code = bc.sample_code 
+            and u.building_code = bc.building_code 
+            and u.building_type = bc.building_type_code
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>11</viewindex>
+        <viewname>complaints_issue_view</viewname>
+        <viewstatment>
+            CREATE OR REPLACE view complaints_issue_view AS
+            SELECT i."DOCUMENT_ID",i."DOCUMENT_TITLE",i."BUSINESS_OBJ_ID",i."OBJECT_TYPE",i."DESCRIPTION",i."DOCUMENT_DATE",i."CREATED_BY",i."CREATED_BY_NAME",i."DOCUMENT_META_TYPE",i."DOCUMENT_TYPE",i."CONFIG_ITEM_TYPE",i."CREATION_TIME",i."OPTION1",i."OPTION2",i."OPTION3", 
+            c.business_comp_id, 
+            c.issue_id, 
+            s.business_id, 
+            s.business_id_by_date, 
+            t.TYPE_NAME 
+            FROM   issue_document i 
+            LEFT JOIN client_complaints c 
+            ON i.business_obj_id = c.id 
+            LEFT JOIN issue s 
+            ON c.issue_id = s.id 
+            LEFT JOIN DOC_TYPE t 
+            ON i.CONFIG_ITEM_TYPE = t.TYPE_ID
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>12</viewindex>
+        <viewname>notifications</viewname>
+        <viewstatment>
+            CREATE OR REPLACE VIEW NOTIFICATIONS AS
+            SELECT I.ID ISSUE_ID,
+            I.USER_ID ISSUE_CREATED_BY,
+            CM.ID CLIENT_COMPLAINT_ID, 
+            CM.CURRENT_OWNER_ID COMPLAINT_CURRENT_OWNER_ID,
+            CM.CURRENT_OWNER COMPLAINT_CURRENT_OWNER,
+            CM.CREATED_BY COMPLAINT_CREATED_BY, 
+            TT.TYPE_NAME COMPLAINT_TYPE_NAME, 
+            U.FULL_NAME COMPLAINT_CREATED_BY_NAME, 
+            CM.CURRENT_STATUS, 
+            CM.BUSINESS_COMP_ID,
+            A.ALERT_TYPE_ID, A.CREATED_BY ALERT_CREATED_BY, EMPLOYEE.FULL_NAME ALERT_CREATED_BY_NAME, A.CRAETION_DATE ALERT_CRAETION_TIME, 
+            AT.NAME ALERT_TYPE_NAME, I.BUSINESS_ID_BY_DATE, CM.BUSINESS_ID, A.OPTION1 STATUS_CODE, A.ID ALERT_ID,
+            CL.NAME CLIENT_NAME
+            FROM ISSUE I, CLIENT_COMPLAINTS CM, ALERT A, ALERT_TYPE AT, TICKET_TYPE TT, USERS U, USERS EMPLOYEE, CLIENT CL
+            WHERE I.ID = CM.ISSUE_ID AND CM.ID = A.BUSINESS_OBJ_ID AND A.ALERT_TYPE_ID = AT.ID AND CM.TICKET_TYPE = TT.TYPE_ID AND U.USER_ID = CM.CREATED_BY AND EMPLOYEE.USER_ID = A.CREATED_BY AND I.URGENCY_ID = CL.SYS_ID
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>13</viewindex>
+        <viewname>EMPLOYEES_LOADS</viewname>
+        <viewstatment>
+            CREATE OR REPLACE VIEW EMPLOYEES_LOADS AS 
+            SELECT CM.CURRENT_OWNER, 
+            CM.CURRENT_OWNER_ID,
+            U.FULL_NAME CURRENT_OWNER_FULL_NAME,
+            CM.CURRENT_STATUS STATUS_CODE,
+            ST.CASE_AR STATUS_NAME,
+            P.PROJECT_ID DEPARTMENT_ID,
+            P.PROJECT_NAME DEPARTMENT_NAME,
+            P.EQ_NO DEPARTMENT_CODE,
+            COUNT(*) NO_TICKET
+            FROM CLIENT_COMPLAINTS CM JOIN STATUS_TYPE ST ON CM.CURRENT_STATUS = ST.ID
+            JOIN USERS U ON U.USER_ID = CM.CURRENT_OWNER_ID
+            JOIN PROJECT P ON P.PROJECT_ID = GET_DEPARTMENT_BY_COMPLAINT_ID(CM.ID)
+            GROUP BY CM.CURRENT_OWNER, CM.CURRENT_OWNER_ID,CM.CURRENT_STATUS,ST.CASE_AR, P.PROJECT_ID, P.PROJECT_NAME, P.EQ_NO, U.FULL_NAME
+            ORDER BY CM.CURRENT_OWNER, NO_TICKET DESC
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>14</viewindex>
+        <viewname>APPOINTMENT_NOTIFICATION</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW APPOINTMENT_NOTIFICATION AS 
+            SELECT A.ID,
+            A.USER_ID,
+            U1.FULL_NAME AS USER_NAME,
+            A.CLIENT_ID,
+            C.NAME AS CLIENT_NAME,
+            C.MOBILE AS MOBILE,
+            C.INTER_PHONE AS PHONE,
+            A.TITLE, 
+            A.NOTE,
+            A.OPTION1,
+            A.OPTION2,
+            A.OPTION3,
+            CAST(A.APPOINTMENT_DATE AS TIMESTAMP) AS APPOINTMENT_DATE,               
+            ROUND(CAST((24 * 60 * (A.APPOINTMENT_DATE - SYSDATE)) AS NUMBER), 0) AS TIME_REMAINING_MINUTES,
+            A.CREATION_TIME,
+            A.APPOINTMENT_PLACE,
+            A.APPOINTMENT_FOR,
+            U2.FULL_NAME AS APPOINTMENT_FOR_NAME,
+            A.ISSUE_ID,
+            A.CLIENT_COMPLAINT_ID,
+            A.CURRENT_STATUS AS CURRENT_STATUS_CODE,
+            S.CASE_AR AS CURRENT_STATUS,
+            A.CURRENT_STATUS_SINCE ,
+            A."COMMENT",
+            A.OPTION4 AS DIRECTED_BY,
+            U3.FULL_NAME AS DIRECTED_BY_NAME,
+            A.OPTION5,
+            A.OPTION6,
+            A.CALL_DURATION,
+            A.OPTION7, 
+            A.OPTION8, 
+            A.OPTION9
+            FROM APPOINTMENT A INNER JOIN CLIENT C ON A.CLIENT_ID = C.SYS_ID INNER JOIN STATUS_TYPE S ON S.ID = A.CURRENT_STATUS INNER JOIN USERS U1 ON U1.USER_ID = A.USER_ID INNER JOIN USERS U2 ON U2.USER_ID = A.APPOINTMENT_FOR LEFT JOIN USERS U3 ON U3.USER_ID = A.OPTION4
+ 
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>15</viewindex>
+        <viewname>EMPLOYEES_LOADS_GROUP_SUMMARY</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW EMPLOYEES_LOADS_GROUP_SUMMARY AS
+            SELECT U.USER_ID, 
+            U.USER_NAME, 
+            U.FULL_NAME, 
+            UG.GROUP_ID, 
+            UG.GROUP_NAME,
+            UG.IS_DEFAULT,
+            NVL(LOADS.TOTAL, 0) AS TOTAL 
+            FROM USERS U 
+            LEFT OUTER JOIN 
+            (
+            SELECT CURRENT_OWNER_ID, 
+            CURRENT_OWNER_FULL_NAME, 
+            SUM(NO_TICKET) AS TOTAL 
+            FROM EMPLOYEES_LOADS 
+            WHERE (STATUS_CODE != 6 and STATUS_CODE != 7) 
+            GROUP BY CURRENT_OWNER_ID, CURRENT_OWNER_FULL_NAME
+            ) LOADS ON U.USER_ID = LOADS.CURRENT_OWNER_ID
+            LEFT OUTER JOIN USER_GROUP UG
+            ON U.USER_ID = UG.USER_ID
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>16</viewindex>
+        <viewname>RESERVATION_NOTIFICATION</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW RESERVATION_NOTIFICATION AS
+            SELECT R.ID,
+            R.PROJECT_ID AS UNIT_ID,
+            R.CREATED_BY,
+            U1.FULL_NAME AS USER_NAME,
+            R.CLIENT_ID,
+            C.NAME AS CLIENT_NAME,
+            R.CREATION_TIME,
+            R.PERIOD,
+            R.CURRENT_STATUS,
+            ROUND(CAST((24 * 60 * 60 * (CAST(R.CREATION_TIME AS DATE) - SYSDATE)) AS NUMBER) + (TO_NUMBER(R.PERIOD) * 60 * 60), 0) AS TIME_REMAINING_SECONDS
+            FROM RESERVATION R INNER JOIN CLIENT C ON R.CLIENT_ID = C.SYS_ID INNER JOIN USERS U1 ON U1.USER_ID = R.CREATED_BY 
+            WHERE REGEXP_LIKE(R.PERIOD, '^-?[0-9]+(\.[0-9]+)?$')
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    
+    <view>
+        <viewindex>17</viewindex>
+        <viewname>REQUEST_ITEMS_DETAILS</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW REQUEST_ITEMS_DETAILS AS
+            SELECT RI.ID,
+            RI.ISSUE_ID,
+            RI.PROJECT_ID, RI.QUANTITY, RI.VALID, RI.NOTE, RI.CREATED_BY, RI.CREATION_TIME,
+            RI.OPTION1, RI.OPTION2, RI.OPTION3, RI.OPTION4, RI.OPTION5, RI.OPTION6, 
+            I.BUSINESS_ID AS ISSUE_CODE,
+            P.EQ_NO AS ITEM_CODE, 
+            P.PROJECT_NAME AS ITEM_NAME
+            FROM REQUEST_ITEMS RI INNER JOIN PROJECT P ON RI.PROJECT_ID = P.PROJECT_ID INNER JOIN ISSUE I ON RI.ISSUE_ID = I.ID
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    
+    <view>
+        <viewindex>18</viewindex>
+        <viewname>ISSUE_BY_COMPLAINT_UNIQUE</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW ISSUE_BY_COMPLAINT_UNIQUE
+            AS SELECT I.ID ISSUE_ID,I.ISSUE_TITLE,I.CALL_TYPE,I.PROJECT_NAME,I.BUSINESS_ID,I.BUSINESS_ID_BY_DATE
+            ,I.USER_ID CREATED_BY, CS.FULL_NAME CREATED_BY_NAME
+            ,CM.BUSINESS_COMP_ID,CM.ID AS COMP_ID,CM.TICKET_TYPE,CM.CURRENT_OWNER,CM.CURRENT_OWNER_ID,CM.CURRENT_OWNER_SINCE
+            ,CU.SYS_ID AS CUSTOMER_ID,CU.CLIENT_NO AS CUSTOMER_NO, CU.NAME AS CUSTOMER_NAME,CU.AGE_GROUP AS AGE
+            ,CU.PHONE AS CLIENT_PHONE, CU.MOBILE AS CLIENT_MOBILE , CU.OPTION3 AS CLIENT_OTHER, CU.INTER_PHONE
+            ,IST.STATUS_NAME STATUS_CODE,IST.ACTION_TAKEN ACTION_TAKEN
+            ,ST.CASE_EN STATUS_EN_NAME, ST.CASE_AR STATUS_AR_NAME
+            ,IST.BEGIN_DATE AS ENTRY_DATE,DL.ACKNOWLEDGE_DATE,DL.OPTION1 COMP_SUBJECT,DL.RECEIP_ID
+            ,DL.IS_ACKNOWLEDGED,DL.ANY_COMMENT AS COMMENTS,DL.CLIENT_COM_ID,DL.OPTION3
+            ,U.USER_NAME RECIPIENT_NAME,U.FULL_NAME RECIPIENT_FULL_NAME
+            ,P.PROJECT_ID DEPARTMENT_ID,P.PROJECT_NAME DEPARTMENT_NAME
+            ,CMN.FULL_NAME MANAGER_NAME, TP.TYPE_NAME
+            ,CM.CREATED_BY SENDER_ID,S.USER_NAME AS SENDER_NAME, S.FULL_NAME AS SENDER_FULL_NAME, CCT.TYPE_TAG
+            FROM ISSUE I RIGHT JOIN CLIENT_COMPLAINTS CM ON I.ID = CM.ISSUE_ID
+            LEFT JOIN CLIENT_COMPLAINTS_TYPE CCT ON CM.ID = CCT.ID
+            LEFT JOIN CLIENT CU ON I.URGENCY_ID = CU.SYS_ID
+            LEFT JOIN TICKET_TYPE TP ON CM.TICKET_TYPE = TP.TYPE_ID
+            LEFT JOIN ISSUE_STATUS IST ON CM.ID = IST.BUSINESS_OBJ_ID AND IST.END_DATE IS NULL
+            LEFT JOIN STATUS_TYPE ST ON IST.STATUS_NAME = ST.ID
+            LEFT JOIN (SELECT D1.* FROM DISTRIBUTION_LIST D1 RIGHT JOIN 
+            (SELECT MAX(SYS_ID) SYS_ID, CLIENT_COM_ID FROM DISTRIBUTION_LIST WHERE RESP_CONTEXT = '1' GROUP BY CLIENT_COM_ID) D2 ON D1.SYS_ID = D2.SYS_ID) DL
+            ON CM.ID = DL.CLIENT_COM_ID
+            LEFT JOIN USERS U ON DL.RECEIP_ID = U.USER_ID
+            LEFT JOIN PROJECT P ON DL.RECEIP_ID = P.OPTION_ONE
+            LEFT JOIN USERS S ON CM.CREATED_BY = S.USER_ID
+            LEFT JOIN USERS CS ON I.USER_ID = CS.USER_ID
+            LEFT JOIN USERS CMN ON P.OPTION_ONE = CMN.USER_ID
+        </viewstatment>
+        <description-en>To get unique customer complaint</description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>19</viewindex>
+        <viewname>CLIENT_COMPLAINTS_TIME_LINE</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW CLIENT_COMPLAINTS_TIME_LINE AS
+            SELECT C.ID,
+            C.ISSUE_ID,
+            I.BUSINESS_ID,
+            I.BUSINESS_ID_BY_DATE,
+            I.USER_ID AS SOURCE_ID,
+            U.FULL_NAME AS SOURCE_NAME,
+            C.BUSINESS_COMP_ID,
+            C.CURRENT_OWNER,
+            SUBSTR(C.BUSINESS_COMP_ID, 0, INSTR(C.BUSINESS_COMP_ID, '-') - 1) AS DEPARTMENT_CODE,
+            C.CREATED_BY,
+            C.CREATION_TIME,
+            C.TICKET_TYPE,
+            TT.TYPE_NAME AS TICKET_TYPE_NAME,
+            ROUND(CAST((24 * 60 * 60 * (SYSDATE - CAST(C.CREATION_TIME AS DATE))) AS NUMBER)) AS TOTAL_TIME_SECONDS,
+            STATUS.STATUS_NAME AS STATUS_CODE,
+            ROUND(CAST((24 * 60 * 60 * (SYSDATE - CAST(STATUS.BEGIN_DATE AS DATE))) AS NUMBER)) AS LAST_TIME_UPDATED_SECONDS
+            FROM CLIENT_COMPLAINTS C 
+            INNER JOIN ISSUE I ON C.ISSUE_ID = I.ID 
+            INNER JOIN USERS U ON I.USER_ID = U.USER_ID
+            INNER JOIN ISSUE_STATUS STATUS ON C.ID = STATUS.BUSINESS_OBJ_ID AND STATUS.END_DATE IS NULL AND STATUS.STATUS_NAME = '6'
+            INNER JOIN TICKET_TYPE TT ON TT.TYPE_ID = C.TICKET_TYPE
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+    <view>
+        <viewindex>20</viewindex>
+        <viewname>SLA_NOTIFICATION</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW SLA_NOTIFICATION AS
+            SELECT SL.*, 
+            I.BUSINESS_ID,
+            I.BUSINESS_ID_BY_DATE, 
+            CC.BUSINESS_COMP_ID,
+            CC.ISSUE_ID,
+            U.FULL_NAME, 
+            CC.CURRENT_STATUS,
+            ST.CASE_AR STATUS_NAME, 
+            TRUNC(SL.CREATION_TIME) + SL.EXECUTION_PERIOD END_DATE, 
+            I.URGENCY_ID CLIENT_ID, 
+            C.NAME CLIENT_NAME ,
+            ROUND(CAST((24 * 60 * ((SL.CREATION_TIME + SL.EXECUTION_PERIOD) - SYSDATE)) AS NUMBER), 0) AS TIME_REMAINING_MINUTES
+            FROM CLIENT_COMPLAINTS_SLA SL JOIN CLIENT_COMPLAINTS CC ON SL.ID = CC.ID AND CC.CURRENT_STATUS != '7' 
+            LEFT JOIN ISSUE I ON CC.ISSUE_ID = I.ID 
+            LEFT JOIN USERS U ON CC.CURRENT_OWNER_ID = U.USER_ID 
+            LEFT JOIN STATUS_TYPE ST ON CC.CURRENT_STATUS = ST.ID 
+            LEFT JOIN CLIENT C ON I.URGENCY_ID = C.SYS_ID
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+     <view>
+        <viewindex>21</viewindex>
+        <viewname>GMAIL_CLIENT_EMAILS</viewname>
+       <viewstatment>
+            
+  CREATE OR REPLACE FORCE VIEW  GMAIL_CLIENT_EMAILS ("CLIENT_NO", "NAME", "EMAIL", "THREAD_ID", "MESSAGE_ID", "LABEL_IDS", "TO_EMAILS", "FROM_EMAIL", "CC_EMAILS", "BCC_EMAILS", "DATE_EMAIL", "SUBJECT", "PLAINTEXT", "ATTACHMENTS", "TO_IP", "FROM_IP", "IS_SENT_REC_DRAFT", "SNIPPET") AS 
+  SELECT CLIENT_NO, NAME, EMAIL
+,THREAD_ID, MESSAGE_ID, LABEL_IDS,  TO_EMAILS ,FROM_EMAIL, CC_EMAILS , BCC_EMAILS , DATE_EMAIL , SUBJECT , PLAINTEXT , 
+	 ATTACHMENTS , 
+	 TO_IP , 
+	 FROM_IP , 
+	 IS_SENT_REC_DRAFT , 
+	 SNIPPET
+    FROM CLIENT join CLIENT_EMAILS on CLIENT.EMAIL=CLIENT_EMAILS.CLIENT_EMAIL
+ 
+
+        </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>    
+    <view>
+        <viewindex>22</viewindex>
+        <viewname>CLIENT_CAMPAIGN_VIEW</viewname>
+        <viewstatment>
+            CREATE OR REPLACE FORCE VIEW CLIENT_CAMPAIGN_VIEW AS 
+            SELECT CL.*, CP.CAMPAIGN_TITLE, CM.CREATION_TIME CAMPAIGN_TIME,U.user_ID OWNER_ID, U.FULL_NAME OWNER_NAME,
+                CC.BUSINESS_COMP_ID, 24*(to_date(to_char(CM.CREATION_TIME, 'YYYY-MM-DD hh24:mi'), 'YYYY-MM-DD hh24:mi') - to_date(to_char(CL.CREATION_TIME, 'YYYY-MM-DD hh24:mi'), 'YYYY-MM-DD hh24:mi')) As Time_Diff,
+                (SYSDATE - CC.CREATION_TIME) REQUEST_AGE
+            FROM CLIENT CL LEFT JOIN CLIENT_CAMPAIGN CM ON CL.SYS_ID = CM.CLIENT_ID LEFT JOIN CAMPAIGN CP ON CM.CAMPAIGN_ID = CP.ID
+                LEFT JOIN ISSUE I ON I.URGENCY_ID = CL.SYS_ID RIGHT JOIN CLIENT_COMPLAINTS CC ON I.ID = CC.ISSUE_ID
+                LEFT JOIN USERS U ON CC.CURRENT_OWNER_ID = U.USER_ID
+         </viewstatment>
+        <description-en></description-en>
+        <description-ar></description-ar>
+    </view>
+</SQL>

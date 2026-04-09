@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ManagerReport" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8365dcba-ced2-477e-898f-9cecddc6ad3d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT Manager.USER_NAME as Manager_Name ,PROJECT.PROJECT_NAME  ,Employee.USER_NAME as Employee_Name ,
+LISTAGG(USER_GROUP.GROUP_NAME, ', ') WITHIN GROUP (ORDER BY USER_GROUP.GROUP_NAME) "Groups" 
+FROM USERS Manager
+INNER JOIN EMP_MGR ON Manager.USER_ID = EMP_MGR.MGR_ID
+INNER JOIN USERS Employee ON Employee.USER_ID =EMP_MGR.EMP_ID
+INNER JOIN USER_GROUP ON Employee.USER_ID = USER_GROUP.USER_ID 
+INNER JOIN PROJECT ON Manager.USER_ID = PROJECT.OPTION_ONE
+group by Manager.USER_NAME , Employee.USER_NAME ,PROJECT.PROJECT_NAME]]>
+	</queryString>
+	<field name="MANAGER_NAME" class="java.lang.String"/>
+	<field name="PROJECT_NAME" class="java.lang.String"/>
+	<field name="EMPLOYEE_NAME" class="java.lang.String"/>
+	<field name="Groups" class="java.lang.String"/>
+	<group name="Manager">
+		<groupExpression><![CDATA[$F{MANAGER_NAME}]]></groupExpression>
+		<groupHeader>
+			<band height="39">
+				<textField>
+					<reportElement mode="Opaque" x="79" y="9" width="100" height="20" backcolor="#FB7B7B" uuid="3d14335e-18d8-4658-8fa9-4cc14c1501b5"/>
+					<box>
+						<pen lineWidth="1.25" lineStyle="Solid"/>
+						<topPen lineWidth="1.25" lineStyle="Solid"/>
+						<leftPen lineWidth="1.25" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.25" lineStyle="Solid"/>
+						<rightPen lineWidth="1.25" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{MANAGER_NAME}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="76" y="38" width="308" height="1" uuid="90b397e7-eba7-4acc-8cb1-778a3868277e"/>
+					<graphicElement>
+						<pen lineWidth="2.0"/>
+					</graphicElement>
+				</line>
+				<textField>
+					<reportElement mode="Opaque" x="225" y="9" width="159" height="20" backcolor="#FB7B7B" uuid="1ef3d2ca-39e4-4280-a041-524634adf96a"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{PROJECT_NAME}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<title>
+		<band height="113" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="286" y="11" width="224" height="54" forecolor="#000000" backcolor="#F9F598" uuid="46343cae-9a1a-42f0-bb5e-9cf55299f4c4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Managers Report
+
+]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement mode="Transparent" x="23" y="11" width="215" height="102" uuid="cc27c4a8-c1ff-4dac-9f7b-b007de937981"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="79" y="0" width="100" height="20" uuid="e2d0f8ed-d2bf-4dd9-9d5d-218d4a176061"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EMPLOYEE_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="0" width="378" height="20" uuid="2acd8868-3d7b-4bea-9690-a94c5ace255d"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Groups}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<textField evaluationTime="Report">
+				<reportElement x="90" y="10" width="40" height="20" uuid="fe672d24-4fac-4f5a-9cf5-b84024181ba2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="10" width="80" height="20" uuid="32d77dcd-f7c8-4495-a2e3-60ea8a70ad2d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="455" y="10" width="100" height="20" uuid="c29d33d4-3cac-47ed-b754-74baa48202b8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true" pdfEncoding="Cp1256"/>
+				</textElement>
+				<text><![CDATA[ofok مؤسسة]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="79bfcc3d-6880-4d59-9499-20be63fd9e38"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

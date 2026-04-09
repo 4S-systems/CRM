@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>fixed_machine</name>
+      <key>MACHINE_NO</key>
+   </table_supported>  
+   
+   
+    <form_element>
+     <name>machineName</name>
+     <table>fixed_machine</table>
+     <column>MACHINE_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>machineNo</name>
+     <table>fixed_machine</table>
+     <column>MACHINE_NO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+
+ 
+</form>

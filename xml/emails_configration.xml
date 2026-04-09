@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configration>
+    <escalation-configration>
+        <title>Escalation Email</title>
+        <!--<body>Report from CRM System</body>-->
+        <body>test body content</body>
+        <emails>
+            <!--email>zakaria@taleed.com</email>
+            <email>it@zayeddunes.com</email>
+            <email>riham.samir@zayeddunes.com</email>-->
+            <email>walidhamzah90@gmail.com</email>
+            <!--<email>yasminabb80@gmail.com</email>-->
+        </emails>
+        <delay-value>1</delay-value><!-- this value by day -->
+        <interval-value>86400</interval-value><!-- this value by seconds -->
+    </escalation-configration>
+    
+    <new-client-configration>
+        <title>Congratulations</title>
+        <body>Welcom to METAWEE group.</body>
+        <emails></emails>
+    </new-client-configration>
+    
+    <sms-configration>
+        <username>metawee</username>
+        <password>123</password>
+        <sender>metawee</sender>
+        <client-message>Welcome to METAWEE Group.</client-message>
+    </sms-configration>
+    
+    <send-image-configuration>
+        <title>Model unit From Egypto</title>
+        <body>Model unit From Egypto\n Attached Images</body>
+        <emails></emails>
+    </send-image-configuration>
+    
+    <notification-configuration>
+        <interval>86400</interval><!-- this value by seconds -->
+        <email-title>إشعار بعدم أكمال العمل في الوقت المناسب</email-title>
+        <email-body>لم يتم أكمال العمل للطلبات التالية</email-body>
+        <emails>
+            <email>walidhamzah90@gmail.com</email>
+        </emails>
+    </notification-configuration>
+    
+    <clients-Employee-Configuration>
+        <Days-No>2</Days-No>
+        <group>1408016478381</group>
+    </clients-Employee-Configuration>
+    
+    <clients-comments-Configuration>
+        <Days-No>2</Days-No>
+    </clients-comments-Configuration>
+    
+    <complaint-notification-configuration>
+        <interval>30</interval><!-- this value by minutes -->
+    </complaint-notification-configuration>
+</configration>

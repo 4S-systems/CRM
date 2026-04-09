@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>equip_by_auto_update_reading</name>
+
+    </table_supported>
+
+    <form_element>
+        <name>Equip_ID</name>
+        <table>equip_by_auto_update_reading</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+
+    
+</form>

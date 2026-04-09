@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <menu_style>
+        <Entitle>Active Schedule Now</Entitle>
+        <Artitle>&#1580;&#1583;&#1608;&#1604; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1607; &#1575;&#1604;&#1606;&#1588;&#1591; &#1581;&#1575;&#1604;&#1610;&#1575;</Artitle>
+        <barText>Schedule Menu</barText>
+    </menu_style>  
+    
+    <elements>
+
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1604;&#1580;&#1583;&#1608;&#1604;</Arname>
+            <Enname>View Schedule</Enname>
+            <link>ScheduleServlet?op=ViewSchedule&amp;source=eqp</link>
+            <clink>ScheduleServlet?op=ViewSchedule&amp;source='cat'&amp;type=1</clink>
+            <mclink>ScheduleServlet?op=ViewSchedule&amp;type=1&amp;source=maincat</mclink>
+        </item>
+        
+        <item>
+            <Arname>&#1578;&#1601;&#1593;&#1610;&#1604; &#1575;&#1604;&#1580;&#1583;&#1608;&#1604;</Arname>
+            <Enname>Activate Schedule</Enname>
+            <link>ScheduleServlet?op=activateScheduleEqHR</link>
+            <clink>ScheduleServlet?op=assignCatSchToEqp</clink>
+            <mclink>ScheduleServlet?op=assignCatSchToEqp</mclink>
+        </item>
+
+        <item>
+            <Arname>&#1578;&#1581;&#1583;&#1610;&#1579; &#1575;&#1604;&#1580;&#1583;&#1608;&#1604;</Arname>
+            <Enname>Update Schedule</Enname>
+            <link>ScheduleServlet?op=GetUpdateSchedule&amp;source=eqp</link>
+            <clink>ScheduleServlet?op=GetUpdateSchedule&amp;source=cat</clink>
+            <mclink>ScheduleServlet?op=GetUpdateSchedule&amp;source=maincat</mclink>
+        </item>
+        
+        <item>
+            <Arname>&#1573;&#1590;&#1575;&#1601;&#1607; &#1576;&#1606;&#1608;&#1583; &#1589;&#1610;&#1575;&#1606;&#1607;</Arname>
+            <Enname>Add Maintenance Items</Enname>
+            <link>ScheduleServlet?op=find&amp;ToBakeTo=View&amp;fromView=true</link>
+            <clink>ScheduleServlet?op=find&amp;ToBakeTo=View&amp;fromView=true</clink>
+            <mclink>ScheduleServlet?op=find&amp;ToBakeTo=View&amp;fromView=true</mclink>
+        </item>
+        
+        <!--item>
+            <Arname>&#1573;&#1590;&#1575;&#1601;&#1607; &#1602;&#1591;&#1593; &#1594;&#1610;&#1575;&#1585;</Arname>
+            <Enname>Add Spare Parts</Enname>
+            <link>ScheduleServlet?op=ConfigureTimelySchedule&amp;fromView=true&amp;scr=ListAllEquipmentSchedules</link>
+            <clink>ScheduleServlet?op=ConfigureTimelySchedule&amp;fromView=true&amp;scr=listAllSchdual</clink>
+            <mclink>ScheduleServlet?op=ConfigureTimelySchedule&amp;fromView=true&amp;scr=ListAllMainCatSch</mclink>
+        </item-->
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1576;&#1606;&#1608;&#1583; &#1575;&#1604;&#1589;&#1610;&#1575;&#1606;&#1607;</Arname>
+            <Enname>View Maintenance Items</Enname>
+            <link>ScheduleServlet?op=viewLabor</link>
+            <clink>ScheduleServlet?op=viewLabor</clink>
+            <mclink>ScheduleServlet?op=viewLabor</mclink>
+        </item>
+        
+        <!--item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1602;&#1591;&#1593; &#1575;&#1604;&#1594;&#1610;&#1575;&#1585;</Arname>
+            <Enname>View Spare Parts</Enname>
+            <link>ScheduleServlet?op=viewConfg</link>
+            <clink>ScheduleServlet?op=viewConfg</clink>
+            <mclink>ScheduleServlet?op=viewConfg</mclink>
+        </item-->
+        
+        
+         <item>
+            <Arname>&#1605;&#1591;&#1575;&#1576;&#1602;&#1577; &#1575;&#1604;&#1580;&#1583;&#1608;&#1604;</Arname>
+            <Enname>Schedule Approval</Enname>
+            <link>GenericApprovalStatusServlet?op=ScheduleAppovalForm</link>
+            <clink>GenericApprovalStatusServlet?op=ScheduleAppovalForm</clink>
+            <mclink>GenericApprovalStatusServlet?op=ScheduleAppovalForm</mclink>
+        </item>
+        
+        <item>
+            <Arname>&#1605;&#1588;&#1575;&#1607;&#1583;&#1607; &#1575;&#1604;&#1605;&#1575;&#1603;&#1610;&#1606;&#1607;</Arname>
+            <Enname>Veiw Equipment</Enname>
+            <link>UnitDocReaderServlet?op=ViewImages</link>
+            <clink>EquipmentServlet?op=ViewCategory</clink>
+            <mclink>EquipmentServlet?op=ViewMainCategory</mclink>
+        </item>
+
+        <!--item>
+            <Arname>&#1581;&#1584;&#1601; &#1575;&#1604;&#1580;&#1583;&#1608;&#1604;</Arname>
+            <Enname>Delete Schedule</Enname>
+            <link>ScheduleServlet?op=DeleteSchedule</link>
+            <clink>ScheduleServlet?op=DeleteSchedule</clink>
+            <mclink>ScheduleServlet?op=DeleteSchedule</mclink>
+        </item-->
+
+        <item>
+            <Arname>&#1575;&#1604;&#1594;&#1575;&#1569; &#1575;&#1604;&#1602;&#1575;&#1574;&#1605;&#1607; </Arname>
+            <Enname>Stop Menu</Enname>
+            <link>TaskServlet?op=removeFromSession</link>
+            <clink>TaskServlet?op=removeFromSession</clink>
+            <mclink>TaskServlet?op=removeFromSession</mclink>
+        </item>
+        
+        <item>
+            <Arname>menuFor</Arname>
+            <Enname>menuFor</Enname>
+            <link>schedule</link>
+            <clink>schedule</clink>
+            <mclink>schedule</mclink>
+        </item>
+        
+    </elements>
+</menu>

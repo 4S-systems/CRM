@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    create view Related_schedule_details as 
+    select * from
+    (SELECT scr.id as relation_id , schedule_id, related_schedule_id, maintenance_title, relation_type FROM schedule sc inner join schedule_relations scr on sc.ID = related_schedule_id)
+-->
+
+<form>
+    <table_supported>
+        <name>RELATED_SCHEDULE_DETAILS</name>
+        <key>RELATION_ID</key>
+        <key1>SCHEDULE_ID</key1>
+        <key2>RELATED_SCHEDULE_ID</key2>
+        <key3>RELATION_TYPE</key3>
+
+        <refintegkey>none</refintegkey>
+    </table_supported>  
+    
+    <form_element>
+        <name>relationID</name>
+        <table>RELATED_SCHEDULE_DETAILS</table>
+        <column>RELATION_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>scheduleID</name>
+        <table>RELATED_SCHEDULE_DETAILS</table>
+        <column>SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>relatedScheduleID</name>
+        <table>RELATED_SCHEDULE_DETAILS</table>
+        <column>RELATED_SCHEDULE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>maintenanceTitle</name>
+        <table>RELATED_SCHEDULE_DETAILS</table>
+        <column>MAINTENANCE_TITLE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>relationType</name>
+        <table>RELATED_SCHEDULE_DETAILS</table>
+        <column>RELATION_TYPE</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+</form>

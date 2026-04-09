@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <table_supported>
+        <name>SYSTEM_IMAGES</name>
+        <key>ID</key>   
+    </table_supported>  
+   
+    <form_element>
+        <name>id</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>imageTypeId</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>IMAGE_TYPE_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>imageTypeName</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>IMAGE_TYPE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>height</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>HEIGHT</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>width</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>WIDTH</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>imageDataId</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>IMAGE_DATA_ID</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>imageName</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>IMAGE_NAME</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+    
+    <form_element>
+        <name>imagePath</name>
+        <table>SYSTEM_IMAGES</table>
+        <column>IMAGE_PATH</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+</form>

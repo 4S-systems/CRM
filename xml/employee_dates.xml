@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>EMPLOYEE_DATES</name>
+      <key>DATE_ID</key>
+      <key1>EMP_ID</key1>   
+   </table_supported>  
+   
+   <form_element>
+     <name>dateID</name>
+     <table>EMPLOYEE_DATES</table>
+     <column>DATE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>empID</name>
+     <table>EMPLOYEE_DATES</table>
+     <column>EMP_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>workingDate</name>
+     <table>EMPLOYEE_DATES</table>
+     <column>WORKING_DATE</column>
+     <class>com.silkworm.persistence.relational.DateValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+   <form_element>
+     <name>dateType</name>
+     <table>EMPLOYEE_DATES</table>
+     <column>DATE_TYPE_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+</form>

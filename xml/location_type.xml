@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>location_types</name>
+       <key>ID</key>
+       <key1>TYPE_CODE</key1>
+       <keyname>AR_DESC</keyname>
+       <keyname1>EN_DESC</keyname1>
+   </table_supported>  
+
+    <form_element>
+     <name>id</name>
+     <table>location_types</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+    <form_element>
+     <name>typeCode</name>
+     <table>location_types</table>
+     <column>TYPE_CODE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>arDesc</name>
+     <table>location_types</table>
+     <column>AR_DESC</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+
+   <form_element>
+     <name>enDesc</name>
+     <table>location_types</table>
+     <column>EN_DESC</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>jspPage</name>
+     <table>location_types</table>
+     <column>col_one</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>displayInTree</name>
+     <table>location_types</table>
+     <column>COL_TWO</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+</form>

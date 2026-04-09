@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>tempday</name>
+     
+   </table_supported>  
+   
+   
+   <form_element>
+        <name>expectedBeginDate</name>
+        <table>tempday</table>
+        <column>EXPECTED_B_DATE</column>
+        <class>com.silkworm.persistence.relational.TimeStampValue</class>
+        <jclass>java.lang.Timestamp</jclass>
+        <matchon>=</matchon>
+    </form_element>
+     
+   <form_element>
+        <name>dayOfWeek</name>
+        <table>tempday</table>
+        <column>day_of_week</column>
+        <class>com.silkworm.persistence.relational.StringValue</class>
+        <jclass>java.lang.String</jclass>
+        <matchon>=</matchon>
+    </form_element>
+ 
+</form>

@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>SmartMenus 6 Example</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+
+
+
+<!-- SmartMenus 6 config and script core files -->
+<script type="text/javascript" src="c_config.js"></script>
+<script type="text/javascript" src="c_smartmenus.js"></script>
+<!-- SmartMenus 6 config and script core files -->
+
+
+
+
+</head>
+
+<body style="margin:0;padding:2em;background:#fff;color:#000;text-align:right;">
+
+
+
+
+<!-- Sample menu definition -->
+<ul id="Menu1" class="MM">
+  <li class="NOSEPARATOR"><a href="#" style="width:80px;">بلد</a>
+    <ul>
+      <li><a href="#">الارجنتين</a></li>
+      <li><a href="#">كندا</a></li>
+      <li><a href="#">كوبا</a></li>
+      <li><a href="#">مصر</a></li>
+      <li><a href="#">فرنسا</a></li>
+      <li><a href="#">المغرب</a></li>
+      <li><a href="#">برتغال</a></li>
+      <li><a href="#">جنوب إفريقيا</a></li>
+      <li><a href="#">اسبانيا</a></li>
+    </ul>
+  </li>
+  <li><a href="#" style="width:80px;">الرياضة</a>
+    <ul>
+      <li><a href="#">بيسبول</a></li>
+      <li><a href="#">كرة السلة</a></li>
+      <li><a href="#">ملاكمة</a></li>
+      <li><a href="#">كرة القدم</a></li>
+      <li><a href="#">كرة القدم</a></li>
+      <li><a href="#">تنس</a></li>
+      <li><a href="#">الكرة الطائرة</a></li>
+    </ul>
+  </li>
+  <li><a href="#"  style="width:80px;">طعام</a>
+    <ul>
+      <li><a href="#">فواكه</a>
+        <ul>
+          <li><a href="#">تفاحة</a></li>
+          <li><a href="#">كرز</a></li>
+          <li><a href="#">شمام</a></li>
+          <li><a href="#">خوخ</a></li>
+          <li><a href="#">إجاص</a></li>
+        </ul>
+      </li>
+      <li><a href="#"  style="width:80px;">خضراوات</a>
+        <ul>
+          <li><a href="#">ملفوف</a></li>
+          <li><a href="#">جزر</a></li>
+          <li><a href="#">خيار</a></li>
+          <li><a href="#">باذنجان</a></li>
+          <li><a href="#">بصل</a></li>
+          <li><a href="#">سبانخ</a></li>
+        </ul>
+      </li>
+      <li><a href="#">لحم بقر</a></li>
+      <li><a href="#">خبز</a></li>
+      <li><a href="#">نقانق</a></li>
+      <li><a href="#">سكر</a></li>
+    </ul>
+  </li>
+  <li><a href="#"  style="width:80px;">حيوان</a>
+    <ul>
+      <li><a href="#">دب</a></li>
+      <li><a href="#">ثور</a></li>
+      <li><a href="#">الكلب</a></li>
+      <li><a href="#">قط</a></li>
+      <li><a href="#">قرد</a></li>
+      <li><a href="#">أرنب</a></li>
+      <li><a href="#">سلحفاة</a></li>
+    </ul>
+  </li>
+  <li><a href="#"  style="width:80px;">لون</a>
+    <ul>
+      <li><a href="#">أزرق</a></li>
+      <li><a href="#">بنَي</a></li>
+      <li><a href="#">أخضر</a></li>
+      <li><a href="#">أحمر</a></li>
+      <li><a href="#">أصفر</a></li>
+    </ul>
+  </li>
+</ul>
+<!-- Please leave at least one new line or white space symbol after the closing </ul>
+     tag of the root ul element of the menu tree. This will allow the browsers to init
+     the menu tree as soon as it is loaded and not wait for the page load event. -->
+
+
+
+
+<!-- =============================================================================== -->
+<!-- ================= YOU DO NOT NEED ANYTHING BELOW THIS COMMENT ================= -->
+<!-- =============================================================================== -->
+
+
+
+
+<div style="margin-left:auto;margin-right:0;padding-top:5.6em;width:60em;font:75% verdana,arial,helvetica,sans-serif;line-height:1.55em;text-align:left;">
+
+<h1 style="margin-top:0;font-size:1.83em;">Menus with Right-To-Left Text (Arabic)</h1>
+
+<p>This example demonstrates how you can use right-to-left text (e.g. Hebrew, Arabic etc.) in your menu trees.</p>
+<p>To use the script with <acronym title="right-to-left">RTL</acronym> text, you just need to set the following variable in the first section (i.e. GLOBAL SETTINGS) of the configuration file (c_config.js):</p>
+<p style="border:1px solid #FFF4C2;padding:0.25em;background:#FFFBE9;"><code style="font-family:courier,monospace;">c_rightToLeft=true;</code></p>
+<p>This will tell the script to take care of everything - like right-aligning your main menu(s), making the sub menus pop up from right to the left (instead of the normal left-to-right) and, of course, setting "rtl" direction for the text in the menu items. Please note that this variable is applied globally and will change the direction for all menu trees you might use on the page.</p>
+<p>RTL text is supported in SmartMenus 6 in all browsers that support RTL text.</p>
+<p>There is just one small difference in the script configuration when using RTL text - if you have a horizontal main menu and use separators between the main menu items, you do not have to add the "NOSEPARATOR" class to the last LI element of the root UL element but you have to add it to the first LI element - e.g.:</p>
+<p style="border:1px solid #FFF4C2;padding:0.25em;background:#FFFBE9;"><code style="font-family:courier,monospace;">&lt;ul id="MyMenu" class="someClass"&gt;<br />&nbsp; &lt;li class="NOSEPARATOR"&gt;&lt;a href="URL"&gt;text&lt;/a&gt;...<br />&nbsp; ...<br />&lt;/ul&gt;</code></p>
+<p>This is needed because the items of a horizontal main menu when using RTL text are right-floated (instead of left-floated) and their order is reversed visually.</p>
+
+</div>
+
+
+
+
+</body>
+</html>

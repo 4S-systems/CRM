@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <table_supported>
+      <name>client_location</name>
+      <key>ID</key>
+      <key1>CLIENT_ID</key1>
+   </table_supported>  
+   
+   
+    <form_element>
+     <name>ID</name>
+     <table>client_location</table>
+     <column>ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   
+    <form_element>
+     <name>clientID</name>
+     <table>client_location</table>
+     <column>CLIENT_ID</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+    <form_element>
+     <name>coordinate</name>
+     <table>client_location</table>
+     <column>COORDINATE</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+    <form_element>
+     <name>locName</name>
+     <table>client_location</table>
+     <column>LOCATION_NAME</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+    <form_element>
+     <name>currentStatusSince</name>
+     <table>client_location</table>
+     <column>CURRENT_STATUS_SINCE</column>
+     <class>com.silkworm.persistence.relational.TimeStampValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+   <form_element>
+     <name>option1</name>
+     <table>client_location</table>
+     <column>OPTION1</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+    <form_element>
+     <name>option2</name>
+     <table>client_location</table>
+     <column>OPTION2</column>
+     <class>com.silkworm.persistence.relational.StringValue</class>
+     <jclass>java.lang.String</jclass>
+     <matchon>=</matchon>
+   </form_element>
+    
+</form>
+
