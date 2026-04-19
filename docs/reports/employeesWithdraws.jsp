@@ -234,7 +234,7 @@
                         
                         
                         <td bgcolor="#F7F6F6" style="text-align:center; width: 33%; border: none;" valign="middle" rowspan="2">
-                            <button class="button" class="button2" onclick="getWithDraws();" style="width: 50%; color: #000; font-size:15; font-weight:bold;">
+                            <button class="button" class="button2" onclick="getWithDraws();" style="width: 50%; color: #27272A; font-size:15; font-weight:bold;">
                                  <%=srch%> 
                                  <IMG HEIGHT="15" SRC="images/search.gif" > 
                             </button>  

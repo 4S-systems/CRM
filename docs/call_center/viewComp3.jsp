@@ -2356,7 +2356,7 @@
                             <div style="width: 47%;float: right;">
                                 <table border="1px" width="100%" class="table" align="right" style="float: right;margin: 0px !important;">
                                     <tr>
-                                                <td style="color: #000;text-align: left;" colspan="3">
+                                                <td style="color: #27272A;text-align: left;" colspan="3">
                                                     <label style="font-size: smaller;">TASK STATUS</label>
                                                     <table align="right"  class="table" cellpadding="0" cellspacing="0" style="border: 0px black solid;">
                                                         <tr>

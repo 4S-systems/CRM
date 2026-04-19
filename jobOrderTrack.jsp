@@ -298,7 +298,7 @@
 
 
                         <td bgcolor="#F7F6F6" style="text-align:center; width: 26%; height: 100%; border: none;" valign="middle" rowspan="2">
-                            <button class="button" onclick="JavaScript: getComplaints();" style="width: 50%; color: #000; font-size:15; font-weight:bold;">
+                            <button class="button" onclick="JavaScript: getComplaints();" style="width: 50%; color: #27272A; font-size:15; font-weight:bold;">
                                  <%=search%> 
                                  <IMG HEIGHT="15" SRC="images/search.gif" > 
                             </button>  

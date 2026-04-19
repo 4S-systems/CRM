@@ -562,7 +562,7 @@
 </DIV-->
 
                 <div style="width: 95%;margin-left: auto;margin-right: auto;margin-bottom: 7px;">
-                    <button type="button" style="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15px;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
+                    <button type="button" style="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15px;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
                             onclick="JavaScript: exportToExcel();" title="Export to Excel">Excel &nbsp; &nbsp;<img height="15" src="images/icons/excel.png" />
                     </button>
                 </DIV>                

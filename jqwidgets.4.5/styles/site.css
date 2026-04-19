@@ -57,7 +57,7 @@ table, td {
 
 .jqx-menu-dropdown-demo {
     background-color: #343434;
-    border-color: #000;
+    border-color: #27272A;
     -moz-border-radius-bottomleft: 5px;
     -webkit-border-bottom-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -118,23 +118,23 @@ table, td {
 
 .jqx-menu-item-hover-demo {
     background: #686868;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
 }
 
 .jqx-menu-item-top-hover-demo {
     background: #343434;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
     color: inherit;
 }
 
 .jqx-menu-item-selected-demo {
     background: #343434;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
 }
 
 .jqx-menu-item-top-selected-demo {
     background: #343434;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
     border-bottom: 1px solid transparent;
     -moz-border-radius-bottomleft: 0px;
     -webkit-border-bottom-left-radius: 0px;
@@ -805,7 +805,7 @@ table, td {
     text-decoration: none;
     font-size: 14px;
     line-height: 40px;
-    color: #000;
+    color: #27272A;
     text-shadow: 1px 1px 0 #fff;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -1016,7 +1016,7 @@ table, td {
     -moz-border-radius-topleft: 5px;
     -webkit-border-top-left-radius: 5px;
     border-top-left-radius: 5px;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
     opacity: 0.95;
 }
 
@@ -1105,7 +1105,7 @@ table, td {
         -moz-border-radius-topleft: 5px;
         -webkit-border-top-left-radius: 5px;
         border-top-left-radius: 5px;
-        border: 1px solid #000;
+        border: 1px solid #27272A;
     }
 
     .jqx-menu-item-top-demo {

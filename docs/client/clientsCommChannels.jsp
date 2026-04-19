@@ -248,7 +248,7 @@
                     </tr>
                 </table>
             </form>
-            <button class="button" type="button" onclick="JavaScript: submitForm();" style="color: #000; font-size: 15px; font-weight: bold;"><%=search%><IMG HEIGHT="15" SRC="images/search.gif"> </button>
+            <button class="button" type="button" onclick="JavaScript: submitForm();" style="color: #27272A; font-size: 15px; font-weight: bold;"><%=search%><IMG HEIGHT="15" SRC="images/search.gif"> </button>
             <br>
             <br>
             <table dir="<%=dir%>" align="RIGHT" width="100%" cellpadding="0" cellspacing="0" style="border-right-WIDTH:1px;"></table>

@@ -556,7 +556,7 @@
             <form method="post"  name="emailForm" enctype="multipart/form-data" >
                 <table  class="table" style="width: 100%;border: none;margin-left: auto;margin-right: auto;" cellpadding="5" cellspacing="4">
                     <tr align="center" align="center">
-                        <td  style="color:#000; font-size: 18px;font-weight: bold;width:100% ;border: none;background-color: #f1f1f1;" colspan="3">رسائل إلكترونية</td>
+                        <td  style="color:#27272A; font-size: 18px;font-weight: bold;width:100% ;border: none;background-color: #f1f1f1;" colspan="3">رسائل إلكترونية</td>
                     <input type="hidden" value="Customer Service" id="from" />
                     </tr>
 
@@ -636,7 +636,7 @@
                         <td  style="color:#000080; font-size: 14px;font-weight: bold;width: 30%;border: none">محتوى الرسالة</td>
                         <td style="border: none; text-align:right;"colspan="2">
 
-                            <textarea placeholder="محتوى الرسالة" rows="5" cols="40" name="message" id="message" style="color: #000;border: none"></textarea>
+                            <textarea placeholder="محتوى الرسالة" rows="5" cols="40" name="message" id="message" style="color: #27272A;border: none"></textarea>
                         </td>
                     </tr> 
                     <tr>

@@ -548,7 +548,7 @@
                             <table ALIGN="center"  border="none">
                                 <tr>
                                     <td>
-                                        <button type="submit" onclick="JavaScript: search();"  STYLE="color: #000;font-size:15px;margin: 10px;font-weight:bold; width: 120px; "><%=srch%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                        <button type="submit" onclick="JavaScript: search();"  STYLE="color: #27272A;font-size:15px;margin: 10px;font-weight:bold; width: 120px; "><%=srch%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                                     </td>
 
                                     <td>
@@ -603,7 +603,7 @@
                         <td STYLE="text-align:center" bgcolor="#dedede" colspan="4">
                             <input type="hidden" name="reportType" value="<%=reportType%>"/>
                             <input type="hidden" name="appointmentType" value="<%=appointmentType%>"/>
-                            <button type="submit" onclick="JavaScript: search();"  STYLE="color: #000;font-size:15px;margin: 10px;font-weight:bold; width: 120px; "><%=srch%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                            <button type="submit" onclick="JavaScript: search();"  STYLE="color: #27272A;font-size:15px;margin: 10px;font-weight:bold; width: 120px; "><%=srch%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                         </td>
                     </tr>
                     <%

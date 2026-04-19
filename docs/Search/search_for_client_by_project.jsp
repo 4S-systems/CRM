@@ -404,14 +404,14 @@
                                 
                                 <tr>
                                     <td STYLE="text-align:center" CLASS="td" colspan="<%=privilegesList.contains("RELOCATE_CLIENT") ? "2" : "4"%>">  
-                                        <button onclick="JavaScript: getComplaints();" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; ">
+                                        <button onclick="JavaScript: getComplaints();" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; ">
                                              بحث 
                                              <img height="15" src="images/search.gif" /> 
                                         </button>  
                                     </td>
                                     
                                     <td STYLE="text-align:center; display: <%=privilegesList.contains("RELOCATE_CLIENT") ? "block" : "none"%>;" CLASS="td" colspan="2">  
-                                        <input type="button" onclick="JavaScript: relocate();" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; " value="<%=rlct%>">
+                                        <input type="button" onclick="JavaScript: relocate();" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; " value="<%=rlct%>">
                                     </td>
                                 </tr>
                             </table>

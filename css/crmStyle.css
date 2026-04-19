@@ -1,11 +1,8 @@
 
-.google-sans-<uniquifier> {
+.google-sans-bold {
   font-family: "Google Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 700;
   font-style: normal;
-  font-variation-settings:
-    "GRAD" 0;
 }
 /* ====== NAVBAR CONTAINER ====== */
 .crm-navbar {

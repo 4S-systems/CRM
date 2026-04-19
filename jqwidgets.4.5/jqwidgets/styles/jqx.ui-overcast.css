@@ -72,7 +72,7 @@
 .jqx-fill-state-focus-ui-overcast {border-color: #555555;}
 .jqx-fill-state-pressed-ui-overcast{border-color: #999999; background: #999999 url(images/overcast/ui-bg_inset-hard_75_999999_1x100.png) 50% 50% repeat-x; color: #ffffff; }
 .jqx-fill-state-pressed-ui-overcast a, .jqx-fill-state-pressed-ui-overcast a:link, .jqx-fill-state-pressed-ui-overcast a:visited{color:#ffffff; text-decoration:none}
-.jqx-fill-state-disabled-ui-overcast {cursor: default; color: #000; opacity: .55; filter:Alpha(Opacity=45);}
+.jqx-fill-state-disabled-ui-overcast {cursor: default; color: #27272A; opacity: .55; filter:Alpha(Opacity=45);}
 
 .jqx-input-button-content-ui-overcast{font-size:10px}
 .jqx-input-icon-ui-overcast{margin-left:2px; margin-top:-1px}

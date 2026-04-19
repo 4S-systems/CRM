@@ -394,10 +394,10 @@
                 <br/>
 
 
-                <button class="button" type="button" onclick="JavaScript: showMoveClientsDialog();" style="color: #000; font-size: 15px; margin-top: 20px; font-weight: bold; display: <%=privilegesList.contains("MOVE_CLIENTS") ? "inline-block" : "none"%>; height: 50px;"><fmt:message key="moveClients"/><img height="20" src="images/icons/transfer.png"> </button>
-                <button class="button" type="button" onclick="JavaScript: showClientsDialog();" style="color: #000; font-size: 15px; margin-top: 20px; font-weight: bold; display: <%=privilegesList.contains("ADD_CLIENTS") ? "inline-block" : "none"%>; height: 50px;"><fmt:message key="addClients"/><img height="15" src="images/icons/add_item.png"> </button>
-                <button class="button" type="button" onclick="JavaScript: deleteSelected();" style="color: #000; font-size: 15px; margin-top: 20px; font-weight: bold; display: <%=privilegesList.contains("DELETE_CLIENTS") ? "inline-block" : "none"%>; height: 50px;"><fmt:message key="deleteClients"/><img height="15" src="images/delete.png"> </button>
-                <button class="button" type="button" onclick="JavaScript: submitForm();"   STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; height: 50px; "><fmt:message key="print"/><IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                <button class="button" type="button" onclick="JavaScript: showMoveClientsDialog();" style="color: #27272A; font-size: 15px; margin-top: 20px; font-weight: bold; display: <%=privilegesList.contains("MOVE_CLIENTS") ? "inline-block" : "none"%>; height: 50px;"><fmt:message key="moveClients"/><img height="20" src="images/icons/transfer.png"> </button>
+                <button class="button" type="button" onclick="JavaScript: showClientsDialog();" style="color: #27272A; font-size: 15px; margin-top: 20px; font-weight: bold; display: <%=privilegesList.contains("ADD_CLIENTS") ? "inline-block" : "none"%>; height: 50px;"><fmt:message key="addClients"/><img height="15" src="images/icons/add_item.png"> </button>
+                <button class="button" type="button" onclick="JavaScript: deleteSelected();" style="color: #27272A; font-size: 15px; margin-top: 20px; font-weight: bold; display: <%=privilegesList.contains("DELETE_CLIENTS") ? "inline-block" : "none"%>; height: 50px;"><fmt:message key="deleteClients"/><img height="15" src="images/delete.png"> </button>
+                <button class="button" type="button" onclick="JavaScript: submitForm();"   STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; height: 50px; "><fmt:message key="print"/><IMG HEIGHT="15" SRC="images/search.gif"> </button>
                 <br><br>
 
 

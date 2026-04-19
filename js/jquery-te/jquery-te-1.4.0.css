@@ -10,7 +10,7 @@
 /* editor's general field */
 .jqte {
 	margin:30px 0;
-	border:#000 1px solid;
+	border:#27272A 1px solid;
 	border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;
 	box-shadow:0 0 3px #999; -webkit-box-shadow:0 0 3px #999; -moz-box-shadow:0 0 3px #999;
 	overflow:hidden;
@@ -221,7 +221,7 @@
 }
 .jqte_linkinput:focus, .jqte_linkinput:hover {
 	background:#FFF;
-	border-color:#000;
+	border-color:#27272A;
 }
 .jqte_linkbutton {
 	float:left;
@@ -326,7 +326,7 @@
 	border:#FFF 1px solid;
 }
 .jqte_color:hover {
-	border-color:#000
+	border-color:#27272A
 }
 .jqte_colorSeperator {
     float:none;
@@ -434,7 +434,7 @@
 	min-width:5px;
 	min-height:1px;
 	max-width:400px;
-	background:#000;
+	background:#27272A;
 	border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px;
 	word-wrap:break-word; -ms-word-wrap:break-word
 }

@@ -692,9 +692,9 @@
                                 <% if (wbo.getAttribute("numOfOrders").equals("empty")) {
                                 %>
 
-                                <LABEL style="color: #000">0</LABEL>
+                                <LABEL style="color: #27272A">0</LABEL>
                                     <%} else {%>
-                                <LABEL style="color: #000"><%=wbo.getAttribute("numOfOrders")%></LABEL>
+                                <LABEL style="color: #27272A"><%=wbo.getAttribute("numOfOrders")%></LABEL>
                                     <%}%>
 
                             </TD>

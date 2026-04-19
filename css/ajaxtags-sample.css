@@ -105,7 +105,7 @@
 .tabPanel a:link.ajaxCurrentTab, .tabPanel a:visited.ajaxCurrentTab {
   background: #fff;
   border-bottom: 1px solid #fff;
-  color: #000;
+  color: #27272A;
 }
 
 .tabPanel a:hover {
@@ -199,9 +199,9 @@ div.star-rating-message {
 
 .olbg {background-color:#999;
 }
-.olcg {background-color:#000;}
+.olcg {background-color:#27272A;}
 .olfg {background-color:#ddd;}
 .olcap {font-family:Arial; font-size:12px; font-weight:bold; color:#fff;}
 a.olclo {font-family:Arial; font-size:10px; font-weight:bold; color:#ddd;}
 a.olclo:hover {color:#fff;}
-.oltxt {font-family:Arial; font-size:12px; color:#000;}
+.oltxt {font-family:Arial; font-size:12px; color:#27272A;}

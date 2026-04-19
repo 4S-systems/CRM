@@ -224,15 +224,15 @@
             <thead >  
                 <tr >
 
-                    <th style="color: #000;font-weight: bold">#</th>
-                    <th style="color: #000;font-weight: bold">رقم العميل</th>
-                    <th style="color: #000;font-weight: bold">إسم العميل</th>
-                    <th style="color: #000;font-weight: bold">الموبايل</th>
-                    <th style="color: #000;font-weight: bold">العنوان</th>
-                    <th style="color: #000;font-weight: bold">المنتج</th>
-                    <th style="color: #000;font-weight: bold">الخدمة</th>
-                    <th style="color: #000;font-weight: bold">تاريخ الخدمة</th>
-                    <th  style="color: #000;font-weight: bold" >حذف</th>
+                    <th style="color: #27272A;font-weight: bold">#</th>
+                    <th style="color: #27272A;font-weight: bold">رقم العميل</th>
+                    <th style="color: #27272A;font-weight: bold">إسم العميل</th>
+                    <th style="color: #27272A;font-weight: bold">الموبايل</th>
+                    <th style="color: #27272A;font-weight: bold">العنوان</th>
+                    <th style="color: #27272A;font-weight: bold">المنتج</th>
+                    <th style="color: #27272A;font-weight: bold">الخدمة</th>
+                    <th style="color: #27272A;font-weight: bold">تاريخ الخدمة</th>
+                    <th  style="color: #27272A;font-weight: bold" >حذف</th>
 
 
                 </tr>

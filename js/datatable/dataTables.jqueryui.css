@@ -218,6 +218,7 @@ table.dataTable td {
   clear: both;
   *zoom: 1;
   zoom: 1;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.15) !important;
 }
 .dataTables_wrapper .dataTables_length {
   float: left;

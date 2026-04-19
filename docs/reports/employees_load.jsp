@@ -255,7 +255,7 @@
                         </TD>
 
                         <td  bgcolor="#dedede"  style="text-align:right" valign="middle">
-                            <button  onclick="JavaScript: submitForm();"   STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; "><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                            <button  onclick="JavaScript: submitForm();"   STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
                             <br><br>
                         </td>
 

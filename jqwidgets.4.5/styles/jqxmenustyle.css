@@ -14,7 +14,7 @@
 .jqx-menu-dropdown-web
 {
     background-color: #343434;
-    border-color: #000;
+    border-color: #27272A;
     -moz-border-radius-bottomleft: 5px;
     -webkit-border-bottom-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -56,25 +56,25 @@
 .jqx-menu-item-hover-web
 {
     background: #686868;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
     color: #fff;
 }
 .jqx-menu-item-top-hover-web
 {
     background: #343434;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
     color: inherit;
 }
 .jqx-menu-item-selected-web
 {
     background: #343434;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
     color: #fff;
 }
 .jqx-menu-item-top-selected-web
 {
     background: #343434;
-    border: 1px solid #000;
+    border: 1px solid #27272A;
     border-bottom: 1px solid transparent;
     color: #fff;
      -moz-border-radius-bottomleft: 0px;

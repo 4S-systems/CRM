@@ -81,7 +81,7 @@ input[type=text].jqx-input-mobile, input[type=password].jqx-input-mobile, .jqx-i
     font-size: 100%;
     font-family: HelveticaNeue,sans-serif;
     border-color: #b2b2b2;
-    color: #000;
+    color: #27272A;
     background-color: #f8f8f8;
 }
 
@@ -96,7 +96,7 @@ input[type=text].jqx-input-mobile, input[type=password].jqx-input-mobile, .jqx-i
 .jqx-widget-header-mobile {
     font-size: 100%;
     font-family: HelveticaNeue,sans-serif;
-    color: #000;
+    color: #27272A;
     border-color: #b2b2b2;
     background: #f8f8f8;
 }
@@ -161,7 +161,7 @@ input[type=text].jqx-input-mobile, input[type=password].jqx-input-mobile, .jqx-i
     text-decoration: none;
     color: inherit;
     font-size: 100%;
-    color: #000;
+    color: #27272A;
     width: 100%;
     height: 100%;
     padding: 15px;
@@ -210,14 +210,14 @@ input[type=text].jqx-input-mobile, input[type=password].jqx-input-mobile, .jqx-i
 
 .jqx-fill-state-pressed-mobile {
     border-color: #c0c3c7;
-    color: #000;
+    color: #27272A;
     background-color: #c0c3c7;
 }
 
 .jqx-combobox-multi-item-mobile {
     background: #fff;
     border-color: #cccccc;
-    color: #000;
+    color: #27272A;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

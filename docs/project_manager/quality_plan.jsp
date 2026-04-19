@@ -200,7 +200,7 @@
                     </tr>
                     <tr>
                         <td style="text-align:center" bgcolor="#dedede" colspan="2">  
-                            <button type="button" onclick="JavaScript: submitForm();" style="color: #000;font-size:15px;margin: 5px;font-weight:bold; width: 100px;"><%=savePlan%></button>
+                            <button type="button" onclick="JavaScript: submitForm();" style="color: #27272A;font-size:15px;margin: 5px;font-weight:bold; width: 100px;"><%=savePlan%></button>
                         </td>
                     </tr>
                 </table>

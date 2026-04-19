@@ -485,7 +485,7 @@
                 <table  border="0px"  style="width:40%;">
 
                     <tr >
-                        <td width="20%" style="color: #000;border: none;" class="excelentCell formInputTag">من تاريخ</td>
+                        <td width="20%" style="color: #27272A;border: none;" class="excelentCell formInputTag">من تاريخ</td>
                         <td  style="text-align:right;background: #f1f1f1">
                             <input id="beginDate" name="beginDate" type="text" ><img src="images/showcalendar.gif" > 
                         </td>
@@ -495,7 +495,7 @@
                     </td>
                     </tr>
                     <tr >
-                        <td width="20%" style="color: #000;border: none;" class="excelentCell formInputTag">الفئة العمرية</td>
+                        <td width="20%" style="color: #27272A;border: none;" class="excelentCell formInputTag">الفئة العمرية</td>
                         <td style="text-align:right; font-weight: bold; font-size: 12px; color: black;" class="excelentCell formInputTag" >
                             <div style="display: block;clear: both;">
                                 <input type="radio" name="age" value="20-30" id="age" checked="true"/>  <font size="2" color="#005599"><b>20-30</b></font>

@@ -346,7 +346,7 @@
                                 </tr>
                                 <tr>
                                     <td class="excelentCell" STYLE="text-align:center" colspan="2"> 
-                                        <button type="button" onclick="JavaScript: getComplaints();" style="color: #000; font-size:15px; font-weight:bold; width: 150px">بحث&ensp;<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                        <button type="button" onclick="JavaScript: getComplaints();" style="color: #27272A; font-size:15px; font-weight:bold; width: 150px">بحث&ensp;<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                                     </td>
                                 </tr>
                                 <% if (data != null && !data.isEmpty()) {%>
@@ -362,7 +362,7 @@
                                         </select>
                                     </td>
                                     <td class="excelentCell" STYLE="text-align:center">
-                                        <button type="button" onclick="assignClientComplaintToProject()" value="Save into Folder" style="color: #000; font-size:15px; font-weight:bold; width: 150px">Save into <IMG HEIGHT="15" SRC="images/icons/folder_closed.png" /></button>
+                                        <button type="button" onclick="assignClientComplaintToProject()" value="Save into Folder" style="color: #27272A; font-size:15px; font-weight:bold; width: 150px">Save into <IMG HEIGHT="15" SRC="images/icons/folder_closed.png" /></button>
                                         <label id="saveToFileMsg"></label>
                                     </td>
                                 </tr>

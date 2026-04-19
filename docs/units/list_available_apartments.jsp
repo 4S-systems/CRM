@@ -222,7 +222,7 @@
                 width: 100%;
                 height: 23px;
                 padding: 0 9px;
-                color: #000;
+                color: #27272A;
                 font-size: 13px;
                 cursor: auto;
                 text-shadow: 0 1px black;
@@ -466,7 +466,7 @@
 		    
                     <tr>
                         <TD STYLE="text-align:center" CLASS="td" colspan="2">  
-                            <button type="submit" STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; ">
+                            <button type="submit" STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; ">
                                 <fmt:message key="search"/><IMG HEIGHT="15" SRC="images/search.gif" ></button>
                         </td>
                     </tr>

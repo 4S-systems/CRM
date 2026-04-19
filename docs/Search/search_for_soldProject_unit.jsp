@@ -1482,8 +1482,8 @@
                             <br/>
                             <TABLE>
                                 <tr >
-                                    <td style="padding:0px 30px 0px 30px;border: 0px;"><input class="button" type="button" onclick="exportToExcel();" style="width:100px;display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;color: #000; font-size:15; font-weight:bold;" value="Excel"></td>
-                                    <td style="padding:0px 30px 0px 30px;border: 0px;"><input type="button" class="button" value="<%=search%>" style="width:100px;display: inline;color: #000; font-size:15; font-weight:bold;"  onclick="getClientInfo2(this)"/></td>
+                                    <td style="padding:0px 30px 0px 30px;border: 0px;"><input class="button" type="button" onclick="exportToExcel();" style="width:100px;display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;color: #27272A; font-size:15; font-weight:bold;" value="Excel"></td>
+                                    <td style="padding:0px 30px 0px 30px;border: 0px;"><input type="button" class="button" value="<%=search%>" style="width:100px;display: inline;color: #27272A; font-size:15; font-weight:bold;"  onclick="getClientInfo2(this)"/></td>
                                     
                                 </tr>
                                 <tr>

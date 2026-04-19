@@ -485,7 +485,7 @@
 
                 <table  border="0px"  style="width:90%;margin-left: auto;margin-right: auto;" class="table" cellpadding="5" cellspacing="4">
                     <tr align="center" align="center">
-                        <td colspan="2"  style="color:#000; font-size: 18px;font-weight: bold;width: 100%;border: none;background-color: #f1f1f1;">رسائل قصيرة</td>
+                        <td colspan="2"  style="color:#27272A; font-size: 18px;font-weight: bold;width: 100%;border: none;background-color: #f1f1f1;">رسائل قصيرة</td>
                     </tr>
 
                     <tr id="first">

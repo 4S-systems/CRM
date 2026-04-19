@@ -1257,7 +1257,7 @@
 
 
                         <tr>
-                            <td width="30%"  style="color: #000;">نوع الإتصال </td>
+                            <td width="30%"  style="color: #27272A;">نوع الإتصال </td>
                             <td style="text-align:right;">
                                 <input name="note" type="radio" value="مكالمة" checked="" id="note">
                                 <label><img src="images/dialogs/phone.png" alt="phone" width="24px">مكالمة </label>
@@ -1268,7 +1268,7 @@
                         </tr>
 
                         <tr>
-                            <td width="30%"  style="color: #000;">إتجاة المكالمة/المقابة</td>
+                            <td width="30%"  style="color: #27272A;">إتجاة المكالمة/المقابة</td>
                             <td style="text-align:right;">
                                 <input  name="call_status" type="radio" value="incoming" checked id="call_status" />
                                 <label>واردة</label>
@@ -1278,7 +1278,7 @@
 
                         </tr>
                         <tr>
-                            <td  style="color: #000;">التاريخ</td>
+                            <td  style="color: #27272A;">التاريخ</td>
                             <td dir=<fmt:message key="direction"/> style="text-align:<fmt:message key="align"/>"> 
                                 <input name="entryDate" id="appDate1" type="text" size="40" maxlength="50" style="width:50%;float: right;font-size: 12px;" value="<%=nowTime%>"/>
                             </td>
@@ -1286,7 +1286,7 @@
                         <tr>
                             <td colspan="2">
 
-                                <div id="callerNumber" style="color: #000;width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;clear: both;">
+                                <div id="callerNumber" style="color: #27272A;width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;clear: both;">
 
                                 </div>
                                 <div id="callerBtn" style="margin-left: auto;margin-right: auto;text-align:center;">  

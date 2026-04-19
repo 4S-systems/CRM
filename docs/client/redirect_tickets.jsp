@@ -167,7 +167,7 @@
                                 <sw:WBOOptionList wboList='<%=users%>' displayAttribute="fullName" valueAttribute="userId" scrollToValue="<%=employeeId%>"/>
                             </select>
                             &ensp;
-                            <button type="button" onclick="redirect()" style="color: #000; font-size:16px; font-weight:bold; width: 150px">توزيـــــــــع&ensp;<img height="22" width="22" SRC="images/icons/distribute.png" /></button>
+                            <button type="button" onclick="redirect()" style="color: #27272A; font-size:16px; font-weight:bold; width: 150px">توزيـــــــــع&ensp;<img height="22" width="22" SRC="images/icons/distribute.png" /></button>
                         </td>
                     </tr>
                 </table>

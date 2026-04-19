@@ -1153,7 +1153,7 @@ function clientInformation(obj) {
                             <td style="width: 50%;">
                                 <table style="">
                                     <tr>
-                                        <td width="40%"style="color: #000;text-align: match-parent" >رقم العميل</td>
+                                        <td width="40%"style="color: #27272A;text-align: match-parent" >رقم العميل</td>
                                         <td style="text-align:right;border: none;">
                                             <label style="float: right;" id="clientNO"><%=clientWbo.getAttribute("clientNO").toString()%></label>
                                             <hr style="float: right;width: 70%;clear: both;" >
@@ -1161,7 +1161,7 @@ function clientInformation(obj) {
                                     </tr>
 
                                     <tr>
-                                        <td style="color: #000;" width="40%" >اسم العميل</td>
+                                        <td style="color: #27272A;" width="40%" >اسم العميل</td>
                                         <td style="text-align:right;"><label class="showx" id="clientName"><%=clientWbo.getAttribute("name")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="clientName" class="hidex" value="<%=clientWbo.getAttribute("name")%>"/>
@@ -1179,7 +1179,7 @@ function clientInformation(obj) {
                                     <%if (clientWbo.getAttribute("partner") != null && !clientWbo.getAttribute("partner").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >إسم الزوجة/الزوج</td>
+                                        <td style="color: #27272A;" width="40%" >إسم الزوجة/الزوج</td>
                                         <td style="text-align:right"><label id="partner"class="showx"><%=clientWbo.getAttribute("partner")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="partner" class="hidex" value="<%=clientWbo.getAttribute("partner")%>"/>
@@ -1187,7 +1187,7 @@ function clientInformation(obj) {
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >إسم الزوجة/الزوج</td>
+                                        <td style="color: #27272A;" width="40%" >إسم الزوجة/الزوج</td>
                                         <td style="text-align:right"><label id="partner"class="showx"><%=clientWbo.getAttribute("partner")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="partner" class="hidex" value=""/>
@@ -1196,7 +1196,7 @@ function clientInformation(obj) {
 
                                     <%}%>
                                     <TR>
-                                        <TD style="color: #000;width: 40%;"  width="40%">النوع</TD>
+                                        <TD style="color: #27272A;width: 40%;"  width="40%">النوع</TD>
 
                                         <td style="<%=style%>;float: right;text-align: right" class='td'>
                                             <span><input type="radio" name="gender" value="ذكر"  <% if (clientWbo.getAttribute("gender").equals("ذكر")) {%> checked="true" <%}%>/>  <font size="3" color="#005599"><b>ذكر</b></font></span>
@@ -1204,7 +1204,7 @@ function clientInformation(obj) {
                                         </td>
                                     </TR>
                                     <TR>
-                                        <TD style="color: #000;width: 40%;"  width="40%">
+                                        <TD style="color: #27272A;width: 40%;"  width="40%">
 
                                             الحالة الإجتماعية
                                         </TD>
@@ -1220,7 +1220,7 @@ function clientInformation(obj) {
                                     <%if (clientWbo.getAttribute("clientSsn") != null && !clientWbo.getAttribute("clientSsn").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >الرقم القومى</td>
+                                        <td style="color: #27272A;" width="40%" >الرقم القومى</td>
                                         <td style="text-align:right;"><label id="clientSsn" class="showx"><%=clientWbo.getAttribute("clientSsn")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1230,7 +1230,7 @@ function clientInformation(obj) {
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;" width="40%">الرقم القومى</td>
+                                        <td style="color: #27272A;" width="40%">الرقم القومى</td>
                                         <td style="text-align:right;"><label class="showx" id="clientSsn"></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="clientSsn" class="hidex" value="" onkeypress="javascript:return isNumber(event)"/>
@@ -1238,8 +1238,8 @@ function clientInformation(obj) {
                                     </tr>
                                     <%}%>
                                     <tr>
-                                        <td style="color: #000;width: 40%;"  width="40%">
-                                            <LABEL FOR="job" style="color: #000;">
+                                        <td style="color: #27272A;width: 40%;"  width="40%">
+                                            <LABEL FOR="job" style="color: #27272A;">
                                                 المهنة
                                             </LABEL>
                                         </td>
@@ -1275,7 +1275,7 @@ function clientInformation(obj) {
                                     %>
 
                                     <tr>
-                                        <td style="color: #000;" width="40%" >رقم التليفون</td>
+                                        <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                                         <td style="text-align:right;"><label class="showx" id="phone"><%=clientWbo.getAttribute("phone")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1284,7 +1284,7 @@ function clientInformation(obj) {
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >رقم التليفون</td>
+                                        <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                                         <td style="text-align:right;"><label class="showx" id="phone"></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text" name="phone" class="hidex" value="" onkeypress="javascript:return isNumber(event)"/>
@@ -1292,7 +1292,7 @@ function clientInformation(obj) {
                                     </tr>
                                     <%}%>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >رقم الموبايل</td>
+                                        <td style="color: #27272A;" width="40%" >رقم الموبايل</td>
                                         <td style="text-align:right;"><label  class="showx" id="client_mobile"><%=clientWbo.getAttribute("mobile")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1302,7 +1302,7 @@ function clientInformation(obj) {
                                     <%if (clientWbo.getAttribute("address") != null && !clientWbo.getAttribute("address").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;"  width="40%">العنوان</td>
+                                        <td style="color: #27272A;"  width="40%">العنوان</td>
                                         <td style="text-align:right;"><label class="showx" id="address"><%=clientWbo.getAttribute("address")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1311,7 +1311,7 @@ function clientInformation(obj) {
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;"  width="40%">العنوان</td>
+                                        <td style="color: #27272A;"  width="40%">العنوان</td>
                                         <td style="text-align:right;"><label class="showx"  id="address"></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="address" class="hidex" value=""/>
@@ -1322,7 +1322,7 @@ function clientInformation(obj) {
                                     <%if (clientWbo.getAttribute("email") != null && !clientWbo.getAttribute("email").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                                        <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                                         <td style="text-align:right;"><label  class="showx"  id="email"><%=clientWbo.getAttribute("email")%></label>
                                             <hr style="float: right;width: 90%;" class="showx">
 
@@ -1331,7 +1331,7 @@ function clientInformation(obj) {
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                                        <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                                         <td style="text-align:right;"><label  class="showx"  id="email"></label>
                                             <hr style="float: right;width: 90%;" class="showx">
                                             <input type="text"  name="email" class="hidex" value=""/>
@@ -1340,7 +1340,7 @@ function clientInformation(obj) {
                                     <%}%>
                                     <!--
                                     --><tr>
-                                        <td style="color: #000;"  width="40%" >يعمل بالخارج</td>
+                                        <td style="color: #27272A;"  width="40%" >يعمل بالخارج</td>
 
                                         <td style="text-align:right;">
                                             <span><input type="radio" name="workOut" value="1"  <% if (clientWbo.getAttribute("option1").equals("1")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">نعم</b></font></span>
@@ -1350,14 +1350,14 @@ function clientInformation(obj) {
                                     </tr>
 
                                     <tr>
-                                        <td style="color: #000;width: 40%;"  width="40%" >أقارب بالخارج</td>
+                                        <td style="color: #27272A;width: 40%;"  width="40%" >أقارب بالخارج</td>
                                         <td style="text-align:right;">
                                             <span><input type="radio" name="kindred" value="1"  <% if (clientWbo.getAttribute("option2").equals("1")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">نعم</b></font></span>
                                             <span><input type="radio" name="kindred" value="0"  <% if (clientWbo.getAttribute("option2").equals("0")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">لا</b></font></span>
                                         </td>
                                     </tr>
                                     <TR>
-                                        <TD style="color: #000;width: 40%;"  width="40%" >الفئة العمرية</TD>
+                                        <TD style="color: #27272A;width: 40%;"  width="40%" >الفئة العمرية</TD>
 
                                         <td style="<%=style%>" class='td'>
 

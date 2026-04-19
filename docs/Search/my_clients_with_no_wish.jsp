@@ -147,7 +147,7 @@
                             <%=visitorsOnly%>
                         </td>
                         <td bgcolor="#dedede" rowspan="2">
-                            <button onclick="JavaScript: submitForm();" style="color: #000; font-size: 15px; margin-top: 2px; font-weight: bold; width: 150px;"><%=search%><img height="15" src="images/search.gif" /></button>
+                            <button onclick="JavaScript: submitForm();" style="color: #27272A; font-size: 15px; margin-top: 2px; font-weight: bold; width: 150px;"><%=search%><img height="15" src="images/search.gif" /></button>
                         </td>
                     </tr>
                     <tr>

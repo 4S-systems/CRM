@@ -1150,7 +1150,7 @@ fieldset {
                         </td>
                         
                         <td bgcolor="#dedede" valign="middle" colspan="2" style="width: 50%; display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;">
-                            <button type="button" class="button" style="color: #000;font-size:15px;font-weight:bold; width: 50%; height: 30px; vertical-align: top;"
+                            <button type="button" class="button" style="color: #27272A;font-size:15px;font-weight:bold; width: 50%; height: 30px; vertical-align: top;"
                                 onclick="JavaScript: exportToExcel();" title="Export to Excel">Excel &nbsp; &nbsp;<img height="15" src="images/icons/excel.png" />
                             </button>
                         </TD>
@@ -1169,7 +1169,7 @@ fieldset {
         if(smry != null && smry.equals("0")){
             if (privilegesList.contains("DISTRIBUTE_CLIENT")) {
     %>
-            <button type="button" style="color: #000;font-size:15;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
+            <button type="button" style="color: #27272A;font-size:15;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
                     onclick="JavaScript: openRedirectPopup();" title="توزيع">توزيع &nbsp;&nbsp;<img src="images/icons/forward.png" width="15" height="15" />
             </button>
     <%

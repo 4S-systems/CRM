@@ -74,13 +74,13 @@
     font-family: 'Segoe WP', 'segoe ui', arial, sans-serif;
     color: inherit;
 }
-.jqx-widget-content-windowsphone{font-size: 16px; font-family: 'Segoe WP', 'segoe ui', arial, sans-serif; border-color: #2F2F2F; color: #ffffff; background-color: #000;}
+.jqx-widget-content-windowsphone{font-size: 16px; font-family: 'Segoe WP', 'segoe ui', arial, sans-serif; border-color: #2F2F2F; color: #ffffff; background-color: #27272A;}
 input[type=text].jqx-input-windowsphone, input[type=password].jqx-input-windowsphone, .jqx-input-group-addon-windowsphone{
    font-size: 16px; 
    font-family: 'Segoe WP', 'segoe ui', arial, sans-serif;
    background: #BEBEBE;
    border-color: #D2D2D2;
-   color: #000;
+   color: #27272A;
  }
 .jqx-widget-header-windowsphone{font-size: 16px;  font-family: 'Segoe WP', 'segoe ui', arial, sans-serif; color: #ffffff; border-color:#35353A; background-color:#3E3E42;}
 .jqx-fill-state-normal-windowsphone, .jqx-fill-state-hover-windowsphone{font-size: 16px; font-family: 'Segoe WP', 'segoe ui', arial, sans-serif; border-color: #35353A; color: #ffffff; background: #3E3E42;}
@@ -91,17 +91,17 @@ input[type=text].jqx-input-windowsphone, input[type=password].jqx-input-windowsp
 .jqx-dropdownlist-state-normal-windowsphone {
    background: #BEBEBE;
    border-color: #D2D2D2;
-   color: #000;
+   color: #27272A;
 }
 .jqx-listbox-windowsphone, .jqx-listmenu-windowsphone, .jqx-listmenu-item-windowsphone, .jqx-calendar-windowsphone .jqx-widget-content-windowsphone {
-    background: #000;
+    background: #27272A;
 }
 
 .jqx-fill-state-focus-windowsphone { border-color: #2F2F2F; }
 .jqx-button-windowsphone {
    padding: 10px 7px;
    border: 2px solid #fff; 
-   background-color: #000;
+   background-color: #27272A;
 }
 .jqx-buttongroup-windowsphone .jqx-button-windowsphone {
    border: 1px solid #fff; 
@@ -126,7 +126,7 @@ border-color:#008a00; color: #fff; background-color:#008a00;
    font-family: 'Segoe WP', 'segoe ui', arial, sans-serif;
    background: #BEBEBE;
    border-color: #D2D2D2;
-   color: #000;
+   color: #27272A;
 }
 .jqx-combobox-content-windowsphone {
     border-right-color: #BEBEBE;
@@ -160,10 +160,10 @@ border-color:#008a00; color: #fff; background-color:#008a00;
     margin-top: -2px;
 }
 .jqx-numberinput-windowsphone {
-    border-color: #000;
+    border-color: #27272A;
 }
 .jqx-scrollbar-state-normal-windowsphone, .jqx-grid-bottomright-windowsphone, .jqx-panel-bottomright-windowsphone, .jqx-listbox-bottomright-windowsphone{background-color:#3E3E42;}
-.jqx-widget-windowsphone .jqx-grid-column-header-windowsphone, .jqx-grid-cell-windowsphone, .jqx-widget-windowsphone .jqx-grid-cell-windowsphone, .jqx-widget-windowsphone .jqx-grid-group-cell-windowsphone, .jqx-grid-group-cell-windowsphone{font-size: 16px;  font-family: 'segoe ui', arial, sans-serif; border-color: #1C1C1E; background-color: #000; color: #fff;}
+.jqx-widget-windowsphone .jqx-grid-column-header-windowsphone, .jqx-grid-cell-windowsphone, .jqx-widget-windowsphone .jqx-grid-cell-windowsphone, .jqx-widget-windowsphone .jqx-grid-group-cell-windowsphone, .jqx-grid-group-cell-windowsphone{font-size: 16px;  font-family: 'segoe ui', arial, sans-serif; border-color: #1C1C1E; background-color: #27272A; color: #fff;}
 .jqx-tabs-title-selected-bottom-windowsphone, .jqx-tabs-selection-tracker-bottom-windowsphone, .jqx-tabs-title-selected-top-windowsphone, .jqx-tabs-selection-tracker-top-windowsphone{color: #ffffff; border-color:#35353A; border-bottom:1px solid #252526; background:#008a00}
 .jqx-widget-windowsphone .jqx-grid-cell-alt-windowsphone, .jqx-widget-windowsphone .jqx-grid-cell-sort-windowsphone, .jqx-widget-windowsphone .jqx-grid-cell-pinned-windowsphone, .jqx-widget-windowsphone .jqx-grid-cell-filter-windowsphone, .jqx-grid-cell-sort-alt-windowsphone, .jqx-grid-cell-filter-alt-windowsphone, .jqx-grid-cell-pinned-windowsphone, .jqx-grid-cell-alt-windowsphone, .jqx-grid-cell-sort-windowsphone{ background-color:#3E3E42; color: #fff;}
 .jqx-menu-vertical-windowsphone{}
@@ -193,11 +193,11 @@ border-color:#008a00; color: #fff; background-color:#008a00;
 .jqx-checkbox-check-checked-windowsphone{background:transparent url(images/wp_check_white.png) center center no-repeat}
 .jqx-checkbox-check-indeterminate-windowsphone{background:transparent url(images/wp_check_indeterminate_white.png) center center no-repeat}
 .jqx-checkbox-hover-windowsphone, .jqx-radiobutton-hover-windowsphone {
-    background-color: #000;
+    background-color: #27272A;
     border-color: #fff;
 }
 .jqx-radiobutton-default-windowsphone {
-    background: #000;
+    background: #27272A;
     border-color: #fff;
 }
 .jqx-radiobutton-check-checked-windowsphone {
@@ -302,7 +302,7 @@ border-color:#008a00; color: #fff; background-color:#008a00;
 .jqx-input-button-content-windowsphone
 {  
     font-size: 13px;
-    background: #000;
+    background: #27272A;
     border-color: #2F2F2F;
 }
 .jqx-input-button-header-windowsphone {
@@ -374,16 +374,16 @@ border-color:#008a00; color: #fff; background-color:#008a00;
 .jqx-switchbutton-thumb-windowsphone {
     width: 16px;
     background: #fff;
-    border: 2px solid #000;
+    border: 2px solid #27272A;
 }
 .jqx-switchbutton-label-on-windowsphone {
     background: #008a00;
     color: #008a00;
-    border-color: #000;
+    border-color: #27272A;
 }
 .jqx-switchbutton-label-off-windowsphone {
-    background: #000;
-    color: #000;
+    background: #27272A;
+    color: #27272A;
 }
 
 .jqx-switchbutton-wrapper-windowsphone {
@@ -453,7 +453,7 @@ border-color:#008a00; color: #fff; background-color:#008a00;
     margin-top: 3px;
 }
 .jqx-grid-table-windowsphone {
-    border-color: #000;
+    border-color: #27272A;
 }
 .jqx-icon-search-windowsphone
 {

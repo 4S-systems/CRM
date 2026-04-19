@@ -531,7 +531,7 @@
                     </tr>
                     <tr>
                         <td style="text-align:center" bgcolor="#dedede" valign="MIDDLE" colspan="2">
-                            <button type="submit" onclick="JavaScript: search();"  STYLE="color: #000;font-size:15px;margin: 10px;font-weight:bold; width: 120px; ">
+                            <button type="submit" onclick="JavaScript: search();"  STYLE="color: #27272A;font-size:15px;margin: 10px;font-weight:bold; width: 120px; ">
                                 <fmt:message key="search"/>
                                 <IMG HEIGHT="15" SRC="images/search.gif" ></button>
                             <a href="<%=context%>/CommentsServlet?op=getClientCommentsPDF&fromDate=<%=fromDate%>&toDate=<%=toDate%>&createdBy=<%=createdBy%>&campaignID=<%=campaignID%>&departmentID=<%=departmentID%>">
@@ -545,7 +545,7 @@
                     <tr>
                         <td colspan="<%=privilegesList.contains("EXCEL") ? "1" : "2"%>" style="text-align:center" bgcolor="#dedede" valign="middle">
                             <input type="hidden" name="reportType" value="<%=reportType%>"/>
-                            <button type="submit" style="color: #000;font-size:15px;margin: 10px;font-weight:bold; width: 120px; ">
+                            <button type="submit" style="color: #27272A;font-size:15px;margin: 10px;font-weight:bold; width: 120px; ">
                                 <fmt:message key="search"/>
                                 <IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                         </td>
@@ -553,7 +553,7 @@
                         <td colspan="" style="text-align: center; display: <%=privilegesList.contains("EXCEL") ? "" : "none"%>;" bgcolor="#dedede" valign="middle">
                             <%--<input type="button" name="excel" value="<%=excelStr%>" onclick="exportToExcel();"/>
                             <IMG HEIGHT="15" style="margin-right: 2px; margin-top: 1px;" SRC="images/icons/excel.png" />--%>
-                            <button type="button" STYLE="display: <%=privilegesList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15;font-weight:bold;"
+                            <button type="button" STYLE="display: <%=privilegesList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15;font-weight:bold;"
                                     onclick="exportToExcel()"><IMG HEIGHT="15" style="margin-right: 2px; margin-top: 1px;" SRC="images/icons/excel.png" />Excel
                             </button>
                         </td>

@@ -859,7 +859,7 @@
                         
                         
                         <td bgcolor="#F7F6F6" style="text-align:center; width: 26%; height: 100%; border: none;" valign="middle" rowspan="2">
-                            <button class="button" onclick="JavaScript: getComplaints();" style="width: 50%; color: #000; font-size:15; font-weight:bold;">
+                            <button class="button" onclick="JavaScript: getComplaints();" style="width: 50%; color: #27272A; font-size:15; font-weight:bold;">
                                  <%=search%> 
                                  <IMG HEIGHT="15" SRC="images/search.gif" >
                             </button>  
@@ -885,17 +885,17 @@
                         <table style="width: 50%; padding-top: 5%; border: none;" align="center">
                             <tr style="border: none;">
                                 <td style="border: none;">
-                                    <button class="button" onclick="popupFinish(this)" style="width: 20%; color: #000; font-size: 15; font-weight: bold; margin-left: 5%;">
+                                    <button class="button" onclick="popupFinish(this)" style="width: 20%; color: #27272A; font-size: 15; font-weight: bold; margin-left: 5%;">
                                          Finish 
                                          <IMG HEIGHT="25" widht="25" SRC="images/icon.png" >
                                     </button>
                                 
-                                    <button class="button" onclick="popupBookmark(this)" style="width: 20%; color: #000; font-size: 15; font-weight: bold; margin-left: 5%;">
+                                    <button class="button" onclick="popupBookmark(this)" style="width: 20%; color: #27272A; font-size: 15; font-weight: bold; margin-left: 5%;">
                                          Bookmark 
                                          <IMG HEIGHT="25" widht="25" SRC="images/bookmarks.png" >
                                     </button>
                                     
-                                    <button class="button" onclick="popupClose()" style="width: 20%; color: #000; font-size: 15; font-weight: bold; margin-left: 5%;">
+                                    <button class="button" onclick="popupClose()" style="width: 20%; color: #27272A; font-size: 15; font-weight: bold; margin-left: 5%;">
                                          Close 
                                          <IMG HEIGHT="25" widht="25" SRC="images/icons/quit.png" >
                                     </button>

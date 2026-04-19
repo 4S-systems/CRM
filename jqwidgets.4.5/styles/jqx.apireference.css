@@ -12,13 +12,13 @@
    font-family: Verdana,Arial,sans-serif;
    font-size: 13px; 
    cursor:text; 
-   color: #000;
+   color: #27272A;
 }
 
 .documentation-code {cursor:text; display:block; color:#555;
    font-family: Verdana,Arial,sans-serif;
    font-size: 13px; margin:0 0 1em; }
-.documentation-code strong { color:#000; }
+.documentation-code strong { color:#27272A; }
 
 
 .documentation-option-type-click {text-align:left; 

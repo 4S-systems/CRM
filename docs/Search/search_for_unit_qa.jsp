@@ -1266,7 +1266,7 @@
                             </td>
                             
                             <td bgcolor="#F7F6F6" style="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; text-align:center; width: 30%; border: none;" valign="middle" rowspan="2">
-                                <input class="button" class="button2" type="button" onclick="exportToExcel();" style="width: 50%; color: #000; font-size:15; font-weight:bold;" value="Excel">
+                                <input class="button" class="button2" type="button" onclick="exportToExcel();" style="width: 50%; color: #27272A; font-size:15; font-weight:bold;" value="Excel">
                                  
                             </td>
                         </tr>

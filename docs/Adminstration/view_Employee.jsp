@@ -853,7 +853,7 @@
                                 </td>
 
                                 <td class="td dataTD" rowspan="8">
-                                    <img src="<%=context%>/EmployeeServlet?op=viewPersonalPhoto&employeeID=<%=employeeWbo.getAttribute("empId")%>" width="180" height="220" style="border: #000 double thick; float: center;"/>
+                                    <img src="<%=context%>/EmployeeServlet?op=viewPersonalPhoto&employeeID=<%=employeeWbo.getAttribute("empId")%>" width="180" height="220" style="border: #27272A double thick; float: center;"/>
                                 </td>
                             </tr>
 

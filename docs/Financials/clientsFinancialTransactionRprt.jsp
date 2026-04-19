@@ -386,7 +386,7 @@
                     
                     <tr>
                         <td style="text-align: center; font-size: 14px; border-width: 1px; border-color: white;" bgcolor="#EEEEEE" valign="middle" colspan="2">
-                            <button type="submit" style="width: 30%; height: 90%;color: #000; font-size:15; font-weight:bold; margin: 5px;" onclick="JavaScript: submitForm();" class="button"><%=search%><img height="15" src="images/search.gif"/></button>
+                            <button type="submit" style="width: 30%; height: 90%;color: #27272A; font-size:15; font-weight:bold; margin: 5px;" onclick="JavaScript: submitForm();" class="button"><%=search%><img height="15" src="images/search.gif"/></button>
                            
                         </td>
                       

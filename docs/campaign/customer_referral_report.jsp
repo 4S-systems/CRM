@@ -212,7 +212,7 @@
                     </tr>
                 </table>
                 <br/>
-                <button class="button" type="button" onclick="JavaScript: submitForm();" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; height: 50px; "><fmt:message key="print"/><img height="15" src="images/search.gif"> </button>
+                <button class="button" type="button" onclick="JavaScript: submitForm();" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; height: 50px; "><fmt:message key="print"/><img height="15" src="images/search.gif"> </button>
                 <br/><br/>
                 <% if (clients != null && clients.size() > 0) {%>
                 <div style="width: 85%;margin-right: auto;margin-left: auto;" id="showClients">

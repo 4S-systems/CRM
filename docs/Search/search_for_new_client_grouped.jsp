@@ -459,9 +459,9 @@
                                 <tr>
                                     <td style="text-align:center" class="td" colspan="3">
                                         <br/><br/>
-                                        <button  onclick="JavaScript: getComplaints();" style="color: #000;font-size:15;margin-top: 20px;font-weight:bold; "><%=searchButton%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                        <button  onclick="JavaScript: getComplaints();" style="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "><%=searchButton%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                                         &nbsp;&nbsp;
-                                        <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15;margin-top: 20px;font-weight:bold;"
+                                        <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15;margin-top: 20px;font-weight:bold;"
                                                 onclick="exportToExcel()">Excel<IMG HEIGHT="15" SRC="images/search.gif" />
                                         </button>
                                     </td>

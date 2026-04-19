@@ -41,8 +41,8 @@ h1.testTitle {
 	width:200px;
 	visibility:hidden;
 	background-color:#fff !important;
-	color:#000 !important; 
-	border:1px solid #000;
+	color:#27272A !important; 
+	border:1px solid #27272A;
 	padding:5px; 
 }
 .dijitTestNodeDialog table {

@@ -25,7 +25,7 @@ label.error {
     position:absolute; 
     z-index:2; 
     background-color:#999; 
-    border:solid 1px #000; 
+    border:solid 1px #27272A; 
     padding:4px;
     cursor:pointer; 
 }

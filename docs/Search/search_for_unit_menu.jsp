@@ -661,20 +661,20 @@
                         <td colspan="2"  class="blueBorder blueHeaderTD" style="font-size:18px;">حجز وحدة</td>
                     </tr>
                     <tr>
-                        <td width="30%" style="color: #000;border: none;" class="excelentCell formInputTag">مسئول المبيعات</td>
+                        <td width="30%" style="color: #27272A;border: none;" class="excelentCell formInputTag">مسئول المبيعات</td>
                         <td width="70%" style="text-align:right;background: #f1f1f1">
                             <%=(String) loggedUser.getAttribute("userName")%>
                         </td>
                     </tr>
                     <tr>
-                        <td width="30%" style="color: #000;" class="excelentCell formInputTag">كود الوحدة</td>
+                        <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">كود الوحدة</td>
                         <td width="70%"style="text-align:right;background: #f1f1f1"><b id="reservedPlace"></b>
                             <input type="hidden" id="unitId" name="unitId"/>
                             <input type="hidden" id="issueId" name="issueId"/>
                         </td>
                     </tr>
                     <tr>
-                        <td width="30%" style="color: #000;" class="excelentCell formInputTag">رقم العميل</td>
+                        <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">رقم العميل</td>
                         <td width="70%"style="text-align:right;background: #f1f1f1;">
                             <div style="width: 100%;">
 
@@ -688,7 +688,7 @@
 
                     </tr>
                     <tr>
-                        <td width="30%" style="color: #000;" class="excelentCell formInputTag">إسم العميل</td>
+                        <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">إسم العميل</td>
                         <td width="70%"style="text-align:right;background: #f1f1f1">
                             <!--<input type="text" readonly="true" id="clientName" style="float: right;"/>-->
                             <b id="clientName" style="float: right;"></b>
@@ -698,19 +698,19 @@
 
 
                     <tr>
-                        <td width="30%" style="color: #000;" class="excelentCell formInputTag">مدة الحجز (بالساعة)</td>
+                        <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">مدة الحجز (بالساعة)</td>
                         <td width="70%"style="text-align:right;background: #f1f1f1">
                             <input type="number" size="7" maxlength="7" id="period" name="period"/>
                         </td>
                     </tr>
                     <tr>
-                        <td width="30%" style="color: #000;" class="excelentCell formInputTag">مقدم الحجز</td>
+                        <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">مقدم الحجز</td>
                         <td width="70%"style="text-align:right;background: #f1f1f1">
                             <input type="number" size="7" maxlength="7" id="budget" name="budget"/>
                         </td>
                     </tr>
                     <tr>
-                        <td width="30%" style="color: #000;" class="excelentCell formInputTag">نظام الدفع</td>
+                        <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">نظام الدفع</td>
                         <td width="70%"style="text-align:right;background: #f1f1f1">
                             <select name="paymentSystem" id="paymentSystem">
                                 <option value="فورى">فورى</option>
@@ -719,7 +719,7 @@
                         </td>
                     </tr> 
                     <tr>
-                        <td width="30%" style="color: #000;" class="excelentCell formInputTag">مكان الدفع</td>
+                        <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">مكان الدفع</td>
                         <td width="70%"style="text-align:right;background: #f1f1f1">
                             <!--                            <input type="text" size="30" id="paymentPlace" name="paymentPlace" maxlength="30" width="200"/>-->
                             <SELECT name='paymentPlace' id='paymentPlace' style='width:170px;font-size:16px;'>
@@ -742,7 +742,7 @@
 
 
                     <tr>
-                        <td colspan="2" style="color: #000;" class="excelentCell formInputTag"> 
+                        <td colspan="2" style="color: #27272A;" class="excelentCell formInputTag"> 
                             <input type="text" id="clientId" name="clientId"/>
                             <input type="submit" value="حجز الأن" onclick="javascript: reservedUnit(this)"/>
                         </td>

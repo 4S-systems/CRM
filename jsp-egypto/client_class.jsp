@@ -303,7 +303,7 @@
                 width: 100%;
                 height: 23px;
                 padding: 0 9px;
-                color: #000;
+                color: #27272A;
                 font-size: 13px;
                 cursor: auto;
                 text-shadow: 0 1px black;
@@ -514,7 +514,7 @@
                             </td>
                             
                             <TD style="border: none; padding-left: 40px;">
-                                <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15;margin-top: 20px;font-weight:bold;"
+                                <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15;margin-top: 20px;font-weight:bold;"
                                     onclick="exportToExcel()" title="Export to Excel">Excel<IMG HEIGHT="15" SRC="images/search.gif" />
                                 </button>
                             </TD>

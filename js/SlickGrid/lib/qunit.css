@@ -49,7 +49,7 @@ ol#qunit-tests li.pass{
 }
 ol#qunit-tests li.fail{
 	background-color:#EE5757;
-	color:#000;
+	color:#27272A;
 }
 ol#qunit-tests li strong {
 	cursor:pointer;

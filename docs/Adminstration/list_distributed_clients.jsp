@@ -178,7 +178,7 @@
                 width: 100%;
                 height: 23px;
                 padding: 0 9px;
-                color: #000;
+                color: #27272A;
                 font-size: 13px;
                 cursor: auto;
                 text-shadow: 0 1px black;
@@ -281,7 +281,7 @@
                     
                     <tr>
                         <td STYLE="text-align:center" bgcolor="#dedede" colspan="2">  
-                            <button type="submit" STYLE="color: #000;font-size:15px;margin: 5px;font-weight:bold; width: 100px; ">
+                            <button type="submit" STYLE="color: #27272A;font-size:15px;margin: 5px;font-weight:bold; width: 100px; ">
                                  Search 
                                  <IMG HEIGHT="15" SRC="images/search.gif" >
                             </button>

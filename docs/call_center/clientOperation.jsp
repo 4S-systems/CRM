@@ -808,42 +808,42 @@
                             <td colspan="2"  class="blueBorder blueHeaderTD" style="font-size:18px;">بيانات العميل</td>
                         </tr>
                         <tr>
-                            <td style="color: #000;" class="excelentCell formInputTag" width="30%" >اسم العميل</td>
+                            <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >اسم العميل</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("name").toString()%></label></td>
                         </tr>
 
                         <tr>
-                            <td style="color: #000;"class="excelentCell formInputTag" >النوع</td>
+                            <td style="color: #27272A;"class="excelentCell formInputTag" >النوع</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("gender").toString()%></label></td>
                         </tr>
                         <tr>
-                            <td style="color: #000;"class="excelentCell formInputTag" >الحالة الإجتماعية</td>
+                            <td style="color: #27272A;"class="excelentCell formInputTag" >الحالة الإجتماعية</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("matiralStatus").toString()%></label></td>
                         </tr>
                         <tr>
-                            <td style="color: #000;" class="excelentCell formInputTag"width="30%" >الرقم القومى</td>
+                            <td style="color: #27272A;" class="excelentCell formInputTag"width="30%" >الرقم القومى</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("clientSsn").toString()%></label></td>
                         </tr>
                         <tr>
-                            <td style="color: #000;" class="excelentCell formInputTag">رقم التليفون</td>
+                            <td style="color: #27272A;" class="excelentCell formInputTag">رقم التليفون</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("phone").toString()%></label></td>
                         </tr>
 
                         <tr>
-                            <td style="color: #000;" class="excelentCell formInputTag" width="30%" >رقم الموبايل</td>
+                            <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >رقم الموبايل</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("mobile").toString()%></label></td>
                         </tr>
                         <tr>
-                            <td style="color: #000;" class="excelentCell formInputTag" width="30%" >العنوان</td>
+                            <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >العنوان</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("address").toString()%></label></td>
                         </tr>
                         <tr>
-                            <td style="color: #000;" class="excelentCell formInputTag" width="30%" >الدخل الإجمالى</td>
+                            <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >الدخل الإجمالى</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("salary").toString()%></label></td>
                         </tr>
 
                         <tr>
-                            <td style="color: #000;" class="excelentCell formInputTag" width="30%" >البريد الإلكترونى</td>
+                            <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >البريد الإلكترونى</td>
                             <td style="text-align:right;background: #f1f1f1;"><label><%=client.getAttribute("email").toString()%></label></td>
                         </tr>
 
@@ -982,23 +982,23 @@
                     <td colspan="2"  class="blueBorder blueHeaderTD" style="font-size:18px;">رسالة جديدة</td>
                 </tr>
                 <tr>
-                    <td width="30%" style="color: #000;border: none;" class="excelentCell formInputTag">إلى</td>
+                    <td width="30%" style="color: #27272A;border: none;" class="excelentCell formInputTag">إلى</td>
                     <td width="70%" style="text-align:right;background: #f1f1f1"><input type="text" width="100%;" value="<%=client.getAttribute("email").toString()%>" /></td>
                 </tr>
                 <tr>
-                    <td width="30%" style="color: #000;" class="excelentCell formInputTag">الموضوع</td>
+                    <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">الموضوع</td>
                     <td width="70%"style="text-align:right;background: #f1f1f1"><input type="text" width="100%" /></td>
                 </tr>
                 <tr>
 
-                    <td width="100%" colspan="2"style="color: #000;" class="excelentCell formInputTag"> 
+                    <td width="100%" colspan="2"style="color: #27272A;" class="excelentCell formInputTag"> 
                         <textarea cols="40" rows="10" style="overflow: hidden;"></textarea>
                     </td>
 
                 </tr>
                 <tr>
                     <td><lable>إرفاق ملف</lable></td>
-                <td  style="color: #000;" class="excelentCell formInputTag"> 
+                <td  style="color: #27272A;" class="excelentCell formInputTag"> 
                     <input type="file" value="إرفاق ملف" style="float: right;font-size: 12px;" id="file"/>
 
 
@@ -1007,7 +1007,7 @@
 
                 </tr>
                 <tr>
-                    <td colspan="2" style="color: #000;" class="excelentCell formInputTag"> 
+                    <td colspan="2" style="color: #27272A;" class="excelentCell formInputTag"> 
 
                         <input type="submit" value="إرسال" />
 
@@ -1028,22 +1028,22 @@
                     <td colspan="2"  class="blueBorder blueHeaderTD" style="font-size:18px;">رسالة قصيرة</td>
                 </tr>
                 <tr>
-                    <td width="30%" style="color: #000;border: none;" class="excelentCell formInputTag">إلى</td>
+                    <td width="30%" style="color: #27272A;border: none;" class="excelentCell formInputTag">إلى</td>
                     <td width="70%" style="text-align:right;background: #f1f1f1"><input type="text" width="100%;" value="<%=client.getAttribute("name").toString()%>" /></td>
                 </tr>
                 <tr>
-                    <td width="30%" style="color: #000;" class="excelentCell formInputTag">رقم الموبايل</td>
+                    <td width="30%" style="color: #27272A;" class="excelentCell formInputTag">رقم الموبايل</td>
                     <td width="70%"style="text-align:right;background: #f1f1f1"><input type="text" width="100%" value="<%=client.getAttribute("mobile").toString()%>" /></td>
                 </tr>
                 <tr>
 
-                    <td width="100%" colspan="2"style="color: #000;" class="excelentCell formInputTag"> 
+                    <td width="100%" colspan="2"style="color: #27272A;" class="excelentCell formInputTag"> 
                         <textarea cols="40" rows="10" style="overflow: hidden;"></textarea>
                     </td>
 
                 </tr>
                 <tr>
-                    <td colspan="2" style="color: #000;" class="excelentCell formInputTag"> 
+                    <td colspan="2" style="color: #27272A;" class="excelentCell formInputTag"> 
                         <input type="button" value="إرسال" onclick="javascript: submitForm(this)"/>
                     </td>
 

@@ -1646,7 +1646,7 @@
 
                         <table width="100%"   dir="rtl" style="border-left:0px;" class="table">
                             <tr>
-                                <td   style="color: #000;" class="excelentCell formInputTag"  >الحالة</td>
+                                <td   style="color: #27272A;" class="excelentCell formInputTag"  >الحالة</td>
 
                                 <td style="<%=style%>">
                                     <%
@@ -1673,7 +1673,7 @@
                                     <%=statusName%>
                                     <input type="hidden" value="<%=statusName%>" id="statusCode" />
                                 </td>
-                                <td   style="color: #000;" class="excelentCell formInputTag"  >المدير</td>
+                                <td   style="color: #27272A;" class="excelentCell formInputTag"  >المدير</td>
                                 <td style="<%=style%>">
                                     <%
                                         String managerName = "";
@@ -1682,7 +1682,7 @@
                                     %>
                                     <%=managerName%>
                                 </td>
-                                <td   style="color: #000;" class="excelentCell formInputTag"  >الموظف المسئول</td>
+                                <td   style="color: #27272A;" class="excelentCell formInputTag"  >الموظف المسئول</td>
                                 <td style="<%=style%>" id="responsibleEmp">
                                     <%
                                         String receipName = "";
@@ -1721,7 +1721,7 @@
 
                             <table width="100%"   dir="rtl" style="border-left:0px;" class="table">
                                 <tr>
-                                    <td  width="30%" style="color: #000;" class="excelentCell formInputTag"  >رقم المتابعة</td>
+                                    <td  width="30%" style="color: #27272A;" class="excelentCell formInputTag"  >رقم المتابعة</td>
 
                                     <td style="<%=style%>">
 
@@ -1737,7 +1737,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td width="30%"  style="color: #000;" class="excelentCell formInputTag">إتجاه المكالمة/المقابلة</td>
+                                    <td width="30%"  style="color: #27272A;" class="excelentCell formInputTag">إتجاه المكالمة/المقابلة</td>
 
                                     <td style="text-align:right;">
                                         <%if (issueWbo.getAttribute(
@@ -1756,7 +1756,7 @@
 
                                 </tr>
                                 <tr>
-                                    <td  style="color: #000;" class="excelentCell formInputTag" >نوع الإتصال</td>
+                                    <td  style="color: #27272A;" class="excelentCell formInputTag" >نوع الإتصال</td>
                                     <td style="text-align:right;"><%=issueWbo.getAttribute("issueDesc")%></td>
                                 </tr>
 
@@ -1796,7 +1796,7 @@
                                 <table border="1px" width="100%" class="table" align="right" style="float: right;margin: 0px !important;">
 
                                     <tr>
-                                        <td  style="color: #000;" class="excelentCell formInputTag" >كود <%=compType%></td>
+                                        <td  style="color: #27272A;" class="excelentCell formInputTag" >كود <%=compType%></td>
                                         <td style="text-align:right;">
 
                                             <b>
@@ -1805,7 +1805,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td  style="color: #000;" class="excelentCell formInputTag" >عنوان <%=compType%></td>
+                                        <td  style="color: #27272A;" class="excelentCell formInputTag" >عنوان <%=compType%></td>
                                         <td style="text-align:right;">
 
                                             <b style="">
@@ -1816,7 +1816,7 @@
                                     <tr>
 
 
-                                        <TD style="color: #000;" class="excelentCell formInputTag"><b><%=compType%></b></TD>
+                                        <TD style="color: #27272A;" class="excelentCell formInputTag"><b><%=compType%></b></TD>
 
 
                                         <% String sCompl = " ";

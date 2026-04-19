@@ -215,7 +215,7 @@
                     </td>
                 </tr>-->
                                     <tr>
-                                        <td style="color: #000;" class="excelentCell formInputTag" width="30%" >اسم العميل</td>
+                                        <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >اسم العميل</td>
                                         <%if ((String) clientWbo.getAttribute("name") != null && (String) clientWbo.getAttribute("name") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("name").toString()%></label></td>
                                         <%} else {%>
@@ -223,7 +223,7 @@
                                         <%}%>
                                     </tr>
                                     <tr>
-                                        <td style="color: #000;"class="excelentCell formInputTag" >النوع</td>
+                                        <td style="color: #27272A;"class="excelentCell formInputTag" >النوع</td>
                                         <%if ((String) clientWbo.getAttribute("gender") != null && (String) clientWbo.getAttribute("gender") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("gender").toString()%></label></td>
                                         <%} else {%>
@@ -231,7 +231,7 @@
                                         <%}%>
                                     </tr>
                                     <tr>
-                                        <td style="color: #000;"class="excelentCell formInputTag" >الحالة الإجتماعية</td>
+                                        <td style="color: #27272A;"class="excelentCell formInputTag" >الحالة الإجتماعية</td>
                                         <%if ((String) clientWbo.getAttribute("matiralStatus") != null && (String) clientWbo.getAttribute("matiralStatus") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("matiralStatus").toString()%></label></td>
                                         <%} else {%>
@@ -240,7 +240,7 @@
                                     </tr>
                                     <tr>
 
-                                        <td style="color: #000;" class="excelentCell formInputTag"width="30%" >الرقم القومى</td>
+                                        <td style="color: #27272A;" class="excelentCell formInputTag"width="30%" >الرقم القومى</td>
                                         <%if ((String) clientWbo.getAttribute("clientSsn") != null && (String) clientWbo.getAttribute("clientSsn") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("clientSsn").toString()%></label></td>
                                         <%} else {%>
@@ -248,7 +248,7 @@
                                         <%}%>
                                     </tr>
                                     <tr>
-                                        <td style="color: #000;" class="excelentCell formInputTag">رقم التليفون</td>
+                                        <td style="color: #27272A;" class="excelentCell formInputTag">رقم التليفون</td>
                                         <%if ((String) clientWbo.getAttribute("phone") != null && (String) clientWbo.getAttribute("phone") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("phone").toString()%></label></td>
                                         <%} else {%>
@@ -262,7 +262,7 @@
 
 
                                     <tr>
-                                        <td style="color: #000;" class="excelentCell formInputTag" width="30%" >رقم الموبايل</td>
+                                        <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >رقم الموبايل</td>
                                         <%if ((String) clientWbo.getAttribute("mobile") != null && (String) clientWbo.getAttribute("mobile") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("mobile").toString()%></label></td>
                                         <%} else {%>
@@ -270,7 +270,7 @@
                                         <%}%>
                                     </tr>
                                     <tr>
-                                        <td style="color: #000;" class="excelentCell formInputTag" width="30%" >العنوان</td>
+                                        <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >العنوان</td>
                                         <%if ((String) clientWbo.getAttribute("address") != null && (String) clientWbo.getAttribute("address") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("address").toString()%></label></td>
                                         <%} else {%>
@@ -278,7 +278,7 @@
                                         <%}%>
                                     </tr>
                                     <tr>
-                                        <td style="color: #000;" class="excelentCell formInputTag" width="30%" >الدخل الإجمالى</td>
+                                        <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >الدخل الإجمالى</td>
                                         <%if ((String) clientWbo.getAttribute("salary") != null && (String) clientWbo.getAttribute("salary") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("salary").toString()%></label></td>
                                         <%} else {%>
@@ -287,7 +287,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td style="color: #000;" class="excelentCell formInputTag" width="30%" >البريد الإلكترونى</td>
+                                        <td style="color: #27272A;" class="excelentCell formInputTag" width="30%" >البريد الإلكترونى</td>
                                         <%if ((String) clientWbo.getAttribute("email") != null && (String) clientWbo.getAttribute("email") != "") {%>
                                         <td style="text-align:right;border: none;"><label><%=clientWbo.getAttribute("email").toString()%></label></td>
                                         <%} else {%>

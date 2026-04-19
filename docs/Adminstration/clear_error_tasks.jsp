@@ -217,7 +217,7 @@
                                 <tr>
                                 <br><br>
                                 <td STYLE="text-align:center" CLASS="td" colspan="3">  
-                                    <button  onclick="JavaScript: getComplaints();"   STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                    <button  onclick="JavaScript: getComplaints();"   STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                                 </td>
                                 </tr>
                             </table>

@@ -119,7 +119,7 @@
                                         <b> <font size=3 color="white">منذ</b>
                                     </td>
                                     <td STYLE="text-align:center" bgcolor="#dedede" rowspan="4" WIDTH="20%">  
-                                        <button onclick="JavaScript: submitForm();" style="color: #000; font-size:15px; font-weight:bold; height: 35px;"><%=view%> <img height="15" src="images/search.gif"/></button>
+                                        <button onclick="JavaScript: submitForm();" style="color: #27272A; font-size:15px; font-weight:bold; height: 35px;"><%=view%> <img height="15" src="images/search.gif"/></button>
                                     </td>
                                 </tr>
                                 <tr>

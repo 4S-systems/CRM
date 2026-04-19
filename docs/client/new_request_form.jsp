@@ -1379,7 +1379,7 @@
                             <table dir="<%=dir%>" style="width: 60%;padding: 5px" class="table">
                                             <tr>
                                    
-                                                <td width="40%" style="color: #000;" class="excelentCell formInputTag">Name | Mobile</td>
+                                                <td width="40%" style="color: #27272A;" class="excelentCell formInputTag">Name | Mobile</td>
                                                 <td class="cell" bgcolor="#f6f6f6" style="text-align:center;font-size:18px;border-width:1px;border-color:white;" id="data" colspan="3" nowrap>
                                                     <%
                                                         if (clientWbo != null) {
@@ -1395,7 +1395,7 @@
                                                 </td>
                                             </tr>
                                             <tr bgcolor="#f6f6f6">
-                                                <td style="color: #000;" class="excelentCell formInputTag">Request Number
+                                                <td style="color: #27272A;" class="excelentCell formInputTag">Request Number
                                                     <input name="note" type="hidden" value="call" id="note"/>
                                                     <input name="call_status" id="call_status" type="hidden" value="incoming" />
                                                 </td>
@@ -1415,7 +1415,7 @@
                                             </tr>
                                             
                                             <tr>
-                                                <td style="color: #000;" class="excelentCell formInputTag">Date</td>
+                                                <td style="color: #27272A;" class="excelentCell formInputTag">Date</td>
                                                 <td dir="ltr" bgcolor="#f6f6f6"  colspan="3">
                                                     <img alt=""  style="margin-right: 5px;" src="images/showcalendar.gif" onMouseOver="Tip('<%=calenderTip%>', CENTERMOUSE, true, OFFSETX, 0, BGCOLOR, '#FFFF99', FONTCOLOR, 'BLACK', FONTSIZE, '10pt', FONTWEIGHT, 'BOLD', SHADOW, true, SHADOWWIDTH, 7, TITLE, 'Display Calender Help', TITLEALIGN, 'center', TITLEFONTCOLOR, 'black', TITLEBGCOLOR, '#6699FF')" onMouseOut="UnTip()"  /><input name="entryDate" id="entryDate" type="text" size="50" maxlength="50" style="width: 180px;" value="<%=(entryDate == null) ? nowTime : entryDate%>"/>
                                                 </td>
@@ -1428,7 +1428,7 @@
                                                      <span style="margin-left: 25px;display: none" id="fileName" ></span>  
                                                      <input type="hidden" id="documentID" name="documentID" value="0" />
                                                 </span>
-                                                <td style="color: #000;vertical-align: middle;" class="excelentCell formInputTag">اسم الملف </td> 
+                                                <td style="color: #27272A;vertical-align: middle;" class="excelentCell formInputTag">اسم الملف </td> 
                                                 
                                                 <td  style="border:0px solid grey;" colspan="3">
                                                      <div style="overflow-y:scroll;height:75px">     

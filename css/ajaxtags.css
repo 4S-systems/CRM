@@ -38,7 +38,7 @@ a, a:visited {
 
 #subheader a:hover {
   text-decoration: underline;
-  color: #000;
+  color: #27272A;
 }
 
 #buildVersion {
@@ -86,7 +86,7 @@ input [type="button"] {
   border: 1px solid #999;
   background-color: #eee;
   cursor: pointer;
-  color: #000;
+  color: #27272A;
 }
 
 
@@ -175,7 +175,7 @@ input.throbbing {
   opacity: 0.9;
 }
 .calloutTitle {
-  background-color: #000;
+  background-color: #27272A;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -186,7 +186,7 @@ input.throbbing {
 }
 .calloutContent {
   padding: 4px;
-  color: #000;
+  color: #27272A;
   font: 10pt Arial;
 }
 .calloutClose {
@@ -281,7 +281,7 @@ input.throbbing {
 #tabPanel a:link#ajaxCurrentTab, #tabPanel a:visited#ajaxCurrentTab {
   background: #fff;
   border-bottom: 1px solid #fff;
-  color: #000;
+  color: #27272A;
 }
 
 #tabPanel a:hover {

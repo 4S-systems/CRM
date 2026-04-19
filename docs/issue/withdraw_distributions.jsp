@@ -356,7 +356,7 @@
                     </tr>
                     <tr>
                         <td STYLE="text-align:center" bgcolor="#dedede" colspan="4" WIDTH="20%">  
-                            <button type="submit" name="searchType" value="search" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; width: 10%;">Search<IMG HEIGHT="15" SRC="images/search.gif" ></button>
+                            <button type="submit" name="searchType" value="search" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; width: 10%;">Search<IMG HEIGHT="15" SRC="images/search.gif" ></button>
                             <button style="width: 100px; margin-top: 20px;" type="button" onclick="javascript: exportToExcel();"><b style="font-weight: bold; font-size: 14px; vertical-align: middle">Excel</b>&ensp;<img src="images/icons/excel.png" width="20" height="20" style="vertical-align: middle"/></button>
                         </td>
 
@@ -366,8 +366,8 @@
                 <%
                     if (data != null) {
                 %>
-                <button type="button" class="button" onclick="JavaScript: checkSelection();" name="searchType" value="delete" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; width: 100px;">Withdrawal</button>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="button" name="searchType" value="withdraw" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; width: 220px;" onclick="checkNum();">withdrawal and distribution</button>
+                <button type="button" class="button" onclick="JavaScript: checkSelection();" name="searchType" value="delete" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; width: 100px;">Withdrawal</button>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="button" name="searchType" value="withdraw" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; width: 220px;" onclick="checkNum();">withdrawal and distribution</button>
                 <br/>
                 <br/>
                 <table id="issueList" dir="ltr" align="center" width="100%" cellpadding="0" cellspaceing="0">

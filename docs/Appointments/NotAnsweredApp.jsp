@@ -285,7 +285,7 @@
                                 <tr>
                                     <td style="text-align:center" class="td" colspan="3">
                                         <br/><br/>
-                                        <button  onclick="JavaScript: getNotAnsweredApp();" style="color: #000;font-size:15;margin-top: 20px;font-weight:bold; "><%=searchButton%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                        <button  onclick="JavaScript: getNotAnsweredApp();" style="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "><%=searchButton%><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                                     </td>
                                 </tr>
                             </table>

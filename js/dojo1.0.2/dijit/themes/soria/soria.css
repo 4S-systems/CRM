@@ -214,7 +214,7 @@
 	border-bottom:0;
 } 
 .soria .dijitToolbar .dijitToggleButtonCheckedHover .dijitButtonContents { 
-	border-color: #000; 
+	border-color: #27272A; 
 	background-color:transparent; 
 } 
 .dj_ie6 .soria .dijitToolbar .dijitButtonNode {
@@ -330,7 +330,7 @@ HTML.dj_ie6 .soria .dijitInputFieldValidationError,
 }
 
 .soria .dijitInputFieldFocused { 
-	border:1px solid #000; 
+	border:1px solid #27272A; 
 }
 
 .soria .dijitInputFieldValidationError:hover,

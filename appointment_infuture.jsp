@@ -197,12 +197,12 @@
                     <TABLE ALIGN=<fmt:message key="align"/> dir=<fmt:message key="direction"/> WIDTH="100%" id="appointmentInFuture" style="">
                         <thead>
                             <tr>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="clientname"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="address"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="notes"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="appointmentdate"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="remaintime"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;">Call</th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="clientname"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="address"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="notes"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="appointmentdate"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="remaintime"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;">Call</th>
                             </tr>
                         <thead>
                         <tbody >  
@@ -272,12 +272,12 @@
                     <table ALIGN=<fmt:message key="align"/> dir=<fmt:message key="direction"/> WIDTH="100%" id="appointmentInFuture" style="">
                         <thead>
                             <tr>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="clientname"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="address"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="notes"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"><fmt:message key="appointmentdate"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;"> <fmt:message key="remaintime"/></th>
-                                <th style="color: #005599 !important;font: 14px; font-weight: bold;">Call</th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="clientname"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="address"/></th>
+                                <th style="color:#27272A !important;font: 14px; font-weight: bold;"><fmt:message key="notes"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"><fmt:message key="appointmentdate"/></th>
+                                <th style="color: #27272A !important;font: 14px; font-weight: bold;"> <fmt:message key="remaintime"/></th>
+                                <th style="color:#27272A !important;font: 14px; font-weight: bold;">Call</th>
                             </tr>
                         <thead>
                     </table>

@@ -109,7 +109,7 @@ em code {
 
 #gtoc > ul > li {
   display: inline;
-  border-right: 1px #000 solid;
+  border-right: 1px #27272A solid;
   margin-right: .4rem;
   padding-right: .4rem;
 }
@@ -366,7 +366,7 @@ h1 span a,
 h2 span a,
 h3 span a,
 h4 span a {
-  color: #000;
+  color: #27272A;
   text-decoration: none;
   font-weight: 700;
 }

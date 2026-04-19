@@ -706,7 +706,7 @@
             </a>
                 
             <a href="<%=context%>/CalendarServlet?op=getFutureAppToEmpExcel&type=user&selectedYear=<%=selectedYear%>&selectedMonth=<%=selectedMonth%>&future=<%=future%>" title="Future Appointment">
-                <button type="button" style="color: #000;font-size:15px;font-weight:bold; width: 90px; height: 30px; vertical-align: top;"
+                <button type="button" style="color: #27272A;font-size:15px;font-weight:bold; width: 90px; height: 30px; vertical-align: top;"
                         title="Export Future Appointments to Excel">Excel &nbsp;<img height="15" src="images/icons/excel.png" />
                 </button>
             </a>

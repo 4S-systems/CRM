@@ -718,7 +718,7 @@
                                     <td style="border-left: none;width: 50%;">
                                         <table width="100%"   dir="rtl" height="100%" style="border-left:0px;">
                                             <tr>
-                                                <td width="20%" style="color: #000;" class="excelentCell formInputTag">رقم المتابعة
+                                                <td width="20%" style="color: #27272A;" class="excelentCell formInputTag">رقم المتابعة
                                                     <input name="note" type="hidden" value="call" id="note"/>
                                                     <input name="call_status" id="call_status" type="hidden" value="incoming" />
                                                 </td>
@@ -726,7 +726,7 @@
                                                     <div id="pursuanceNO"></div>
                                                     <input type="hidden" id="issueId" />
                                                 </td>
-                                                <td width="20%" style="color: #000;" class="excelentCell formInputTag">التاريخ</td>
+                                                <td width="20%" style="color: #27272A;" class="excelentCell formInputTag">التاريخ</td>
                                                 <td width="40%" dir="ltr" style="<%=style%>">
                                                     <input name="entryDate" id="entryDate" type="text" size="50" maxlength="50" style="width: 180px;" value="<%=(entryDate == null) ? nowTime : entryDate%>"/><img alt=""  style="margin-right: 5px;" src="images/showcalendar.gif" onMouseOver="Tip('<%=calenderTip%>', CENTERMOUSE, true, OFFSETX, 0, BGCOLOR, '#FFFF99', FONTCOLOR, 'BLACK', FONTSIZE, '10pt', FONTWEIGHT, 'BOLD', SHADOW, true, SHADOWWIDTH, 7, TITLE, 'Display Calender Help', TITLEALIGN, 'center', TITLEFONTCOLOR, 'black', TITLEBGCOLOR, '#6699FF')" onMouseOut="UnTip()"  />
                                                 </td>
@@ -735,7 +735,7 @@
                                     </td>
                                 </tr>
                                 <tr style="border: 1px solid red;">
-                                    <td  colspan="2" style="color: #000;">
+                                    <td  colspan="2" style="color: #27272A;">
                                         <table width="100%"   dir="rtl" height="100%" style="border-left:0px;">
                                             <tr>
                                                 <td style="width: 70%;">

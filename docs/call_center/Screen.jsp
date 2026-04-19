@@ -1536,13 +1536,13 @@
                                     <td style="border-left: none;width: 50%;">
                                         <table width="100%"   dir="rtl" height="100%" style="border-left:0px;">
                                             <tr>
-                                                <td  width="30%" style="color: #000;" class="excelentCell formInputTag"  >رقم المتابعة</td>
+                                                <td  width="30%" style="color: #27272A;" class="excelentCell formInputTag"  >رقم المتابعة</td>
                                                 <td style="<%=style%>">
                                                     <div id="pursuanceNO"></div>  
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td  style="color: #000;" class="excelentCell formInputTag" >نوع الإتصال  </td>
+                                                <td  style="color: #27272A;" class="excelentCell formInputTag" >نوع الإتصال  </td>
                                                 <td style="text-align:right;" nowrap>
                                                     <% if (status != null && status.equalsIgnoreCase("success") && issueWbo.getAttribute("issueDesc") != null) {%>
                                                     <%} else {%>
@@ -1559,7 +1559,7 @@
                                     <td  style="border-right: none;width: 50%;">
                                         <table border="1px" width="100%" class="table">
                                             <tr>
-                                                <td width="30%"  style="color: #000;" class="excelentCell ">إتجاة المكالمة/المقابلة</td>
+                                                <td width="30%"  style="color: #27272A;" class="excelentCell ">إتجاة المكالمة/المقابلة</td>
                                                 <%if (status != null && status.equalsIgnoreCase("success")) {%>
                                                 <td style="text-align:right;">
                                                     <input  name="call_status" id="call_status"type="radio" value="incoming" <%if (call_status.equals("incoming")) {%> checked <%}%> />
@@ -1577,14 +1577,14 @@
                                                 <% }%>
                                             </tr>
                                             <tr>
-                                                <td  style="color: #000;" class="excelentCell formInputTag">التاريخ</td>
+                                                <td  style="color: #27272A;" class="excelentCell formInputTag">التاريخ</td>
                                                 <td dir="ltr" style="<%=style%>"> <input name="entryDate" id="entryDate" type="text" size="50" maxlength="50" style="width: 50%;" value="<%=(entryDate == null) ? nowTime : entryDate%>"/><img alt=""  style="margin-right: 5px;" src="images/showcalendar.gif" onMouseOver="Tip('<%=calenderTip%>', CENTERMOUSE, true, OFFSETX, 0, BGCOLOR, '#FFFF99', FONTCOLOR, 'BLACK', FONTSIZE, '10pt', FONTWEIGHT, 'BOLD', SHADOW, true, SHADOWWIDTH, 7, TITLE, 'Display Calender Help', TITLEALIGN, 'center', TITLEFONTCOLOR, 'black', TITLEBGCOLOR, '#6699FF')" onMouseOut="UnTip()"  /></td>
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                                 <tr style="border: 0px solid red;">
-                                    <td  colspan="2" style="color: #000;">
+                                    <td  colspan="2" style="color: #27272A;">
                                         <% if (status != null && status.equalsIgnoreCase("success")) {%>
                                         <% } else { %>
                                         <div style="text-align:center;width:20%;margin-left: auto;margin-right: auto" id="saveCall">  

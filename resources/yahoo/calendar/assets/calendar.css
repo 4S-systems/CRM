@@ -13,7 +13,7 @@
 
 .calbordered .title {
 	font:73% Arial,Helvetica,sans-serif;
-	color:#000;
+	color:#27272A;
 	font-weight:bold;
 	margin-bottom:5px;
 	height:auto;
@@ -79,7 +79,7 @@ td.calcell a {
 }
 
 td.calcell.today {
-	border:1px solid #000;
+	border:1px solid #27272A;
 }
 
 td.calcell.oom {

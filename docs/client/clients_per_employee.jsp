@@ -184,7 +184,7 @@
                     </tr>
                     <tr>
                         <td style="text-align:center" bgcolor="#dedede"  valign="middle">
-                            <button type="submit" STYLE="color: #000;font-size:15px; margin: 2px;font-weight:bold; ">Search<img height="15" src="images/search.gif" /></button>  
+                            <button type="submit" STYLE="color: #27272A;font-size:15px; margin: 2px;font-weight:bold; ">Search<img height="15" src="images/search.gif" /></button>  
                         </td>
                         <td style="text-align:center" bgcolor="#dedede"  valign="middle">
                             <a id="pdf" onclick="javaScript: getPDF()">

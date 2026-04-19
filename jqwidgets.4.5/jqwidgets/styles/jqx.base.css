@@ -2253,7 +2253,7 @@ of the horizontal scrollbar.*/
 .jqx-listbox-feedback
 {
     height: 1px;
-    border-top: 1px dashed #000;
+    border-top: 1px dashed #27272A;
 }
 .jqx-listitem-element
 {
@@ -3088,7 +3088,7 @@ of the horizontal scrollbar.*/
 }
 .jqx-scrollview
 {
-    background-color: #000;
+    background-color: #27272A;
     -ms-touch-action: auto !important;
 }
 .jqx-icon-calendar, .jqx-icon-calendar-hover, .jqx-icon-calendar-pressed
@@ -3181,10 +3181,10 @@ of the horizontal scrollbar.*/
     position: relative;
 }
 .jqx-editor-color-picker td:hover {
-    border: 1px solid #000;
+    border: 1px solid #27272A;
 }
 .jqx-editor-color-picker-selected-cell {
-    outline: 1px solid #000;
+    outline: 1px solid #27272A;
 }
 .jqx-editor-color-picker td div{
     width: 16px;
@@ -3349,7 +3349,7 @@ of the horizontal scrollbar.*/
 .jqx-fill-state-hover {-moz-box-sizing: content-box; box-sizing: content-box; border-color:#999;  background: #e8e8e8;}
 .jqx-fill-state-pressed{-moz-box-sizing: content-box; box-sizing: content-box; border-color:#999; background: #d1d1d1;}
 .jqx-fill-state-focus {border-color: #555; }
-.jqx-fill-state-disabled {cursor: default; color: #000; opacity: .55; filter:Alpha(Opacity=45);}
+.jqx-fill-state-disabled {cursor: default; color: #27272A; opacity: .55; filter:Alpha(Opacity=45);}
 .jqx-fill-state-normal td, .jqx-fill-state-hover td, .jqx-fill-state-pressed td, .jqx-fill-state-disabled td, .jqx-fill-state-focus td, .jqx-widget td, .jqx-widget-content td, .jqx-widget-header td {
     box-sizing: border-box; -moz-box-sizing: border-box; 
 }

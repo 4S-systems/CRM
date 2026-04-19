@@ -370,7 +370,7 @@
                         </td>
                         
                         <td STYLE="text-align:center" bgcolor="#dedede" rowspan="2">  
-                            <button type="submit" onclick="JavaScript: search();" class="button" STYLE="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; width: 100%; ">بحث
+                            <button type="submit" onclick="JavaScript: search();" class="button" STYLE="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; width: 100%; ">بحث
                                 <IMG HEIGHT="15" SRC="images/search.gif" >
                             </button>
                         </td>

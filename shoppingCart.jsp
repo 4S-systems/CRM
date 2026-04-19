@@ -3370,7 +3370,7 @@
         width: 100%;
         height: 23px;
         padding: 0 9px;
-        color: #000;
+        color: #27272A;
         font-size: 13px;
         cursor: auto;
         text-shadow: 0 1px black;
@@ -3394,7 +3394,7 @@
         width: 80%;
         height: 20px;
         padding: 0 9px;
-        color: #000;
+        color: #27272A;
         font-size: 12px;
         cursor: auto;
         text-shadow: 0 1px black;

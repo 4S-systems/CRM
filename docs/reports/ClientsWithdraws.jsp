@@ -128,7 +128,7 @@
                     </TR>
                 </TABLE>
                             
-                <button class="button" type="button" onclick="JavaScript: submitForm();"   STYLE="color: #000;font-size:15;margin-top: 10px;font-weight:bold; height: 20px; width: 90px; "><%=submit%><IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                <button class="button" type="button" onclick="JavaScript: submitForm();"   STYLE="color: #27272A;font-size:15;margin-top: 10px;font-weight:bold; height: 20px; width: 90px; "><%=submit%><IMG HEIGHT="15" SRC="images/search.gif"> </button>
                 <br><br>
                 
                 <% if (clients != null && clients.size() > 0) {%>

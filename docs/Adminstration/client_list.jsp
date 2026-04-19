@@ -765,9 +765,9 @@
                     </TR>
                     <tr>
                         <TD STYLE="text-align:center" CLASS="td" colspan="2">  
-                            <button type="submit" STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                            <button type="submit" STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                             &nbsp;&nbsp;
-                            <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15;margin-top: 20px;font-weight:bold; "
+                            <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "
                                     onclick="exportToExcel()">Excel<IMG HEIGHT="15" SRC="images/search.gif" >
                             </button>  
  
@@ -842,7 +842,7 @@
 
                         <TD>
                             <%--  --%>
-                            <A  HREF="<%=context%>/IssueServlet?op=newComplaint&type=call&clientId=<%=wboClient.getAttribute("id").toString()%>&clientType=<%=age%>" style="color: #000" >
+                            <A  HREF="<%=context%>/IssueServlet?op=newComplaint&type=call&clientId=<%=wboClient.getAttribute("id").toString()%>&clientType=<%=age%>" style="color: #27272A" >
                                 <%=clientNo%>
 
                             </A>
@@ -851,7 +851,7 @@
 
                         <TD >
                             <%-- HREF="<%=context%>/IssueServlet?op=newComplaint&type=call&clientId=<%=wboClient.getAttribute("id").toString()%>&clientType=<%=wboClient.getAttribute("age").toString()%>"--%>
-                            <A  HREF="<%=context%>/IssueServlet?op=newComplaint&type=call&clientId=<%=wboClient.getAttribute("id").toString()%>&clientType=<%=age%>" style="color: #000" >
+                            <A  HREF="<%=context%>/IssueServlet?op=newComplaint&type=call&clientId=<%=wboClient.getAttribute("id").toString()%>&clientType=<%=age%>" style="color: #27272A" >
                                 <%=wboClient.getAttribute("name").toString()%>
                             </A>
 

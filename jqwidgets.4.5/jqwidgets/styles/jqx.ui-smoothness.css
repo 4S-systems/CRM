@@ -23,7 +23,7 @@
 .jqx-tabs-header-bottom-ui-smoothness{margin-top:-2px !important; padding-bottom: 3px; padding-top:1px}
 
 /*Radio Button*/
-.jqx-radiobutton-ui-smoothness .jqx-fill-state-pressed-ui-smoothness{background:#222; border:1px solid #000}
+.jqx-radiobutton-ui-smoothness .jqx-fill-state-pressed-ui-smoothness{background:#222; border:1px solid #27272A}
 /*Calendar*/
 .jqx-calendar-cell-ui-smoothness{font-size: 11px; background: #e6e6e6 url(images/smoothness/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; border-color:#d3d3d3; padding:.2em; text-align:right; text-decoration:none; moz-border-radius:0px !important; webkit-border-radius:0px !important; border-radius:0px !important}
 .jqx-calendar-cell-today-ui-smoothness{background:#ffe45c; border:1px solid #fed22f; color:#363636}

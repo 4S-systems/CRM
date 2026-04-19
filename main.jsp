@@ -391,7 +391,7 @@
                 height:80%;
                 width:100%;
                 display:block;
-                color:#035899;
+                color: #27272a !important ;
                 cursor:pointer;
             }
 
@@ -486,7 +486,7 @@
 }
 
 /* Sidebar menu */
-.sidebar-menu { position: fixed; top: 0px; bottom: 0; width: 240px; border: 1px solid #4f6582; background-color:#27272A;  z-index: 1030; padding: 8px; }
+.sidebar-menu { position: fixed; top: 0px; bottom: 0; width: 240px; background-color:#27272A;  z-index: 1030; padding: 8px; }
 .sidebar-inner { overflow-y: auto; max-height: 100%;  }
 .sidebar-inner a { display: block; padding: 6px 10px;   font-family: "Google Sans", sans-serif !important;  }
 .sidebar-inner a:hover { background-color: #94DBFF; }
@@ -501,7 +501,7 @@
 .sidebar-inner ul.SM { list-style: none; margin: 4px 0 8px 12px !important; border:none;  background-color:#27272A; padding: 0 !important; display: none !important; visibility: hidden !important; position: static !important; width: auto !important; }
 /*.sidebar-inner li:hover > ul.SM { display: block !important; visibility: visible !important;  border:none; }*/
 /* Offset page content to avoid overlap with fixed sidebar (current align=LEFT) */
-body { padding-left: 260px; }
+body { padding-left: 240px; }
 
 /* Sidebar menu background resets for items */
 .sidebar-inner ul.MM > li,
@@ -699,6 +699,8 @@ body { padding-left: 260px; }
 .sidebar-inner::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Edge */
 }
+
+
         </style>
    <link REL="stylesheet" TYPE="text/css" HREF="css/crmStyle.css" />
         <script type="text/javascript" >
@@ -1171,13 +1173,7 @@ function changeLang(nextmode,context) {
             <div style="border: 1px solid #4f6582;/*width: 1000px;*/ min-height:96%; position: relative; margin: auto;padding-right: 0px; padding-left: 0px ;height: auto;">
                  <nav class="modern-topbar navbar fixed-top p-3 " style="background: #27272A;">
                         <div class="container-fluid g-1 align-items-center">
-                            <div class="row">
-                                 <div class="col-auto legacy-td " background="images/gradient.gif" STYLE="border-top-WIDTH:0; font-size:12px;">
-                                <a href="<%=context%>/SessionsServlet?op=logout">
-                                    <img src="images/icons/logout.png" width="24px" height="20px" align="middle" alt="<%=sLogOut%>" title=<fmt:message key="logout"/> />
-                                </a>
-                            </div>
-                                      </div>
+                           
                                 
                                 <div class="row">
                                         <div class="col-auto  "  background="images/gradient.gif" STYLE="border-top-WIDTH:0;" nowrap>

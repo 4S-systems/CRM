@@ -210,7 +210,7 @@
         <input type="hidden" value="<%=beginDate%>" id="beginDate">
         <input type="hidden" value="<%=endDate%>" id="endDate">
         <input type="hidden" value="<%=type%>" id="type">
-        <button type="button" STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;"
+        <button type="button" STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;"
                 onclick="exportToExcel()" title="Export to Excel">Excel<IMG HEIGHT="15" SRC="images/search.gif" />
         </button>
         <br/><br/>

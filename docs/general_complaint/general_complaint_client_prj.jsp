@@ -390,7 +390,7 @@
                                         <input type="hidden" id="issueId" />
                                     </td>
                                         
-                                    <td style="display:none;" width="20%" style="color: #000;" class="excelentCell formInputTag">
+                                    <td style="display:none;" width="20%" style="color: #27272A;" class="excelentCell formInputTag">
                                          <%=date%>
                                     </td>
                                     

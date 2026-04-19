@@ -8,7 +8,7 @@ TABLE.displaytag {
 TABLE.displaytag TH {
 	background: #fcf1be;
 	font: bold 0.7em Verdana, Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #27272A;
 	text-align: center;
 	padding: 3px;
 	border-bottom: 2px solid #ccc;
@@ -16,7 +16,7 @@ TABLE.displaytag TH {
 
 TABLE.displaytag TD {
 	font: normal 0.7em Verdana, Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #27272A;
 	padding: 2px 3px 2px 3px;
 	margin: 1px;
 }
@@ -49,7 +49,7 @@ TABLE.displaytag TH.sorted a,
 TABLE.displaytag TH.sortable a {
 	display: block;
 	background: url(../img/displaytag/arrow_off.png) no-repeat right;
-	color: #000;
+	color: #27272A;
 	text-decoration: none;
 }
 
@@ -68,7 +68,7 @@ TABLE.displaytag TH.order2 a {
 
 span.pagebanner {
 	font: normal 0.7em Verdana, Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #27272A;
 	background-color: #eee;
 	border: 1px dotted #999;
 	padding: 2px 4px 2px 4px;
@@ -81,7 +81,7 @@ span.pagebanner {
 
 span.pagelinks {
 	font: normal 0.7em Verdana, Arial, Helvetica, sans-serif;
-	color: #000;
+	color: #27272A;
 	background-color: #eee;
 	border: 1px dotted #999;
 	padding: 2px 4px 2px 4px;

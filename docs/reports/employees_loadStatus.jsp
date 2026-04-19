@@ -311,7 +311,7 @@
                                 <option value="6" <%=(request.getParameter("statusId")!= null && request.getParameter("statusId").equals("6")) ? "selected" : ""%>>تم الانهاء</option>
                                 <option value="7" <%=(request.getParameter("statusId")!= null && request.getParameter("statusId").equals("7")) ? "selected" : ""%>>تم الاغلاق</option>
                             </select>
-                            <button  onclick="JavaScript: submitForm();"   STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; "><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                            <button  onclick="JavaScript: submitForm();"   STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
                             <br><br>
                         </td>
 

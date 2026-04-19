@@ -115,7 +115,7 @@
         #lg-form button{
             font-family: 'Oleo Script', cursive;
             font-size: 18px;
-            border:1px solid #000;
+            border:1px solid #27272A;
             padding:5px 10px;
             border:1px solid rgba(51,51,51,.5);
             -webkit-border-radius:10px;

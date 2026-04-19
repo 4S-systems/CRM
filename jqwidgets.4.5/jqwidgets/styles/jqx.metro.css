@@ -77,7 +77,7 @@
 .jqx-widget-header-metro{font-size: 12px; font-family: 'segoe ui', arial, sans-serif; color: #767676; border-color:#e5e5e5; background-color:#f4f4f4;}
 .jqx-fill-state-normal-metro{font-size: 12px; font-family: 'segoe ui', arial, sans-serif; border-color: #e5e5e5; color: #767676; background: #ffffff;}
 .jqx-button-metro {border-color: #e5e5e5;}
-.jqx-fill-state-hover-metro{border-color:#dedede; color: #000; background-color:#dedede;
+.jqx-fill-state-hover-metro{border-color:#dedede; color: #27272A; background-color:#dedede;
 
 }
 .jqx-fill-state-focus-metro { border-color: #cdcdcd; }
@@ -90,9 +90,9 @@
 .jqx-scrollbar-state-normal-metro, .jqx-grid-bottomright-metro, .jqx-panel-bottomright-metro, .jqx-listbox-bottomright-metro{background-color:#f0f0f0;}
 .jqx-widget-metro .jqx-grid-column-header-metro, .jqx-grid-cell-metro, .jqx-widget-metro .jqx-grid-cell-metro, .jqx-widget-metro .jqx-grid-group-cell-metro, .jqx-grid-group-cell-metro{font-size: 12px; font-family: 'segoe ui', arial, sans-serif; border-color:#f0f0f0;}
 .jqx-tabs-title-selected-bottom-metro, .jqx-tabs-selection-tracker-bottom-metro, .jqx-tabs-title-selected-top-metro, .jqx-tabs-selection-tracker-top-metro{color: #767676; border-color:#e5e5e5; border-bottom:1px solid #fff; background:#fff}
-.jqx-grid-cell-sort-alt-metro, .jqx-grid-cell-filter-alt-metro, .jqx-grid-cell-pinned-metro, .jqx-grid-cell-alt-metro, .jqx-grid-cell-sort-metro{ background-color:#ededed; color: #000;}
+.jqx-grid-cell-sort-alt-metro, .jqx-grid-cell-filter-alt-metro, .jqx-grid-cell-pinned-metro, .jqx-grid-cell-alt-metro, .jqx-grid-cell-sort-metro{ background-color:#ededed; color: #27272A;}
 .jqx-menu-vertical-metro{background: #fff; border-color: #e5e5e5;}
-.jqx-widget-metro .jqx-grid-cell-metro, .jqx-widget-metro .jqx-grid-column-header-metro, .jqx-widget-metro .jqx-grid-group-cell-metro {color: #000; border-color: #e5e5e5;}
+.jqx-widget-metro .jqx-grid-cell-metro, .jqx-widget-metro .jqx-grid-column-header-metro, .jqx-widget-metro .jqx-grid-group-cell-metro {color: #27272A; border-color: #e5e5e5;}
 .jqx-widget-metro .jqx-grid-column-menubutton-metro, .jqx-widget-metro .jqx-grid-column-sortascbutton-metro, .jqx-widget-metro .jqx-grid-column-sortdescbutton-metro, .jqx-widget-metro .jqx-grid-column-filterbutton-metro {
     background-color: transparent;
     border-color: #e5e5e5;
@@ -222,8 +222,8 @@
 }
 .jqx-switchbutton-thumb-metro {
     width: 12px;
-    background: #000;
-    border: 1px solid #000;
+    background: #27272A;
+    border: 1px solid #27272A;
 }
 .jqx-switchbutton-label-on-metro {
     background: #1faeff;

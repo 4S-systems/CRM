@@ -211,8 +211,8 @@
                                 </TR>
                                 <tr>
                                     <TD STYLE="text-align:center" CLASS="td" colspan="3">  
-                                        <button  onclick="JavaScript: getClients();"   STYLE="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
-                                        <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15;margin-top: 20px;font-weight:bold; "
+                                        <button  onclick="JavaScript: getClients();"   STYLE="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                        <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "
                                                 onclick="exportToExcel()">Excel
                                         </button>
                                     </TD>

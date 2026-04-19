@@ -469,9 +469,9 @@
                     </tr>
                 </table>
             </form>
-            <button type="button" style="color: #000;font-size:15px;margin: 9px;font-weight:bold; display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;" onclick="exportToExcel()">Excel<img height="15" src="images/search.gif">
+            <button type="button" style="color: #27272A;font-size:15px;margin: 9px;font-weight:bold; display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;" onclick="exportToExcel()">Excel<img height="15" src="images/search.gif">
             </button>
-            <button onclick="JavaScript: getExternal();" style="color: #000;font-size:15px;margin: 9px;font-weight:bold; display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;" name="reportType" value="PDF"> 
+            <button onclick="JavaScript: getExternal();" style="color: #27272A;font-size:15px;margin: 9px;font-weight:bold; display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>;" name="reportType" value="PDF"> 
                 <img style="height:25px;" src="images/icons/printer.png" title="PDF"/>
             </button>
             <input type="hidden" name="reportName" value="report1"/> <!--PATH FOLDER NAME/REPORT NAME-->

@@ -205,7 +205,7 @@
             <input type="button"  value="عودة"  onclick="history.go(-1);" class="button"/>
         </div>
         <br/><br/>
-        <button type="button" style="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15;margin-top: 20px;font-weight:bold;"
+        <button type="button" style="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15;margin-top: 20px;font-weight:bold;"
                             onclick="JavaScript: exportToExcel();" title="Export to Excel">Excel &nbsp; &nbsp;<img height="15" src="images/icons/excel.png" />
         </button>
         <input type="hidden"  value="<%=endDate%>" id="endDate"/>

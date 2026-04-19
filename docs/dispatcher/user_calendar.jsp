@@ -644,18 +644,18 @@
                                         && connectByRealEstate.equals("0")) {
                             %>
                             <tr>
-                                <td style="color: #000;"" >رقم العميل</td>
+                                <td style="color: #27272A;"" >رقم العميل</td>
                                 <td style="text-align:right;border: none;"><label id="num"><%=client.getAttribute("clientNO")%></label></td>
                             </tr>
                             <%} else {%>
                             <tr>
-                                <td style="color: #000;"" >رقم العميل</td>
+                                <td style="color: #27272A;"" >رقم العميل</td>
                                 <!-- code in real estate-->
                                 <td style="text-align:right;border: none;"><label id="num"><%=client.getAttribute("clientNO")%></label></td>
                             </tr>
                             <%}%>
                             <tr>
-                                <td style="color: #000;"  width="36%" >اسم العميل</td>
+                                <td style="color: #27272A;"  width="36%" >اسم العميل</td>
                                 <td style="text-align:right;"><label id="clientName"><%=client.getAttribute("name")%></label></td>
                             <input type="hidden" id="clientId" name="clientId" value="<%=client.getAttribute("id")%>"/>
                             </tr>
@@ -1273,7 +1273,7 @@
                             <td style="width: 50%;">
                                 <table style="">
                                     <tr>
-                                        <td width="40%"style="color: #000;text-align: match-parent" >رقم العميل</td>
+                                        <td width="40%"style="color: #27272A;text-align: match-parent" >رقم العميل</td>
                                         <td style="text-align:right;border: none;">
                                             <label style="float: right;" id="clientNO"><%=client.getAttribute("clientNO").toString()%></label>
                                             <hr style="float: right;width: 70%;clear: both;" >
@@ -1288,7 +1288,7 @@
                                                                     </tr>-->
 
                                     <tr>
-                                        <td style="color: #000;" width="40%" >اسم العميل</td>
+                                        <td style="color: #27272A;" width="40%" >اسم العميل</td>
                                         <td style="text-align:right;"><label class="showx" id="clientName"><%=client.getAttribute("name")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="clientName" class="hidex" value="<%=client.getAttribute("name")%>"/>
@@ -1306,7 +1306,7 @@
                                     <%if (client.getAttribute("partner") != null && !client.getAttribute("partner").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >إسم الزوجة/الزوج</td>
+                                        <td style="color: #27272A;" width="40%" >إسم الزوجة/الزوج</td>
                                         <td style="text-align:right"><label id="partner"class="showx"><%=client.getAttribute("partner")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="partner" class="hidex" value="<%=client.getAttribute("partner")%>"/>
@@ -1314,7 +1314,7 @@
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >إسم الزوجة/الزوج</td>
+                                        <td style="color: #27272A;" width="40%" >إسم الزوجة/الزوج</td>
                                         <td style="text-align:right"><label id="partner"class="showx"><%=client.getAttribute("partner")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="partner" class="hidex" value=""/>
@@ -1323,7 +1323,7 @@
 
                                     <%}%>
                                     <TR>
-                                        <TD style="color: #000;width: 40%;"  width="40%">النوع</TD>
+                                        <TD style="color: #27272A;width: 40%;"  width="40%">النوع</TD>
 
                                         <td style="<%=style%>;float: right;text-align: right" class='td'>
                                             <span><input type="radio" name="gender" value="ذكر"  <% if (client.getAttribute("gender").equals("ذكر")) {%> checked="true" <%}%>/>  <font size="3" color="#005599"><b>ذكر</b></font></span>
@@ -1331,7 +1331,7 @@
                                         </td>
                                     </TR>
                                     <TR>
-                                        <TD style="color: #000;width: 40%;"  width="40%">
+                                        <TD style="color: #27272A;width: 40%;"  width="40%">
 
                                             الحالة الإجتماعية
                                         </TD>
@@ -1347,7 +1347,7 @@
                                     <%if (client.getAttribute("clientSsn") != null && !client.getAttribute("clientSsn").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >الرقم القومى</td>
+                                        <td style="color: #27272A;" width="40%" >الرقم القومى</td>
                                         <td style="text-align:right;"><label id="clientSsn" class="showx"><%=client.getAttribute("clientSsn")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1357,7 +1357,7 @@
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;" width="40%">الرقم القومى</td>
+                                        <td style="color: #27272A;" width="40%">الرقم القومى</td>
                                         <td style="text-align:right;"><label class="showx" id="clientSsn"></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="clientSsn" class="hidex" value="" onkeypress="javascript:return isNumber(event)"/>
@@ -1365,8 +1365,8 @@
                                     </tr>
                                     <%}%>
                                     <tr>
-                                        <td style="color: #000;width: 40%;"  width="40%">
-                                            <LABEL FOR="job" style="color: #000;">
+                                        <td style="color: #27272A;width: 40%;"  width="40%">
+                                            <LABEL FOR="job" style="color: #27272A;">
                                                 المهنة
                                             </LABEL>
                                         </td>
@@ -1402,7 +1402,7 @@
                                     %>
 
                                     <tr>
-                                        <td style="color: #000;" width="40%" >رقم التليفون</td>
+                                        <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                                         <td style="text-align:right;"><label class="showx" id="phone"><%=client.getAttribute("phone")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1411,7 +1411,7 @@
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >رقم التليفون</td>
+                                        <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                                         <td style="text-align:right;"><label class="showx" id="phone"></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text" name="phone" class="hidex" value="" onkeypress="javascript:return isNumber(event)"/>
@@ -1419,7 +1419,7 @@
                                     </tr>
                                     <%}%>
                                     <tr>
-                                        <td style="color: #000;" width="40%" >رقم الموبايل</td>
+                                        <td style="color: #27272A;" width="40%" >رقم الموبايل</td>
                                         <td style="text-align:right;"><label  class="showx" id="client_mobile"><%=client.getAttribute("mobile")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1429,7 +1429,7 @@
                                     <%if (client.getAttribute("address") != null && !client.getAttribute("address").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;"  width="40%">العنوان</td>
+                                        <td style="color: #27272A;"  width="40%">العنوان</td>
                                         <td style="text-align:right;"><label class="showx" id="address"><%=client.getAttribute("address")%></label>
                                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -1438,7 +1438,7 @@
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;"  width="40%">العنوان</td>
+                                        <td style="color: #27272A;"  width="40%">العنوان</td>
                                         <td style="text-align:right;"><label class="showx"  id="address"></label>
                                             <hr style="float: right;width: 70%;" class="showx">
                                             <input type="text"  name="address" class="hidex" value=""/>
@@ -1449,7 +1449,7 @@
                                     <%if (client.getAttribute("email") != null && !client.getAttribute("email").equals("")) {
                                     %>
                                     <tr>
-                                        <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                                        <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                                         <td style="text-align:right;"><label  class="showx"  id="email"><%=client.getAttribute("email")%></label>
                                             <hr style="float: right;width: 90%;" class="showx">
 
@@ -1458,7 +1458,7 @@
                                     </tr>
                                     <%} else {%>
                                     <tr>
-                                        <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                                        <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                                         <td style="text-align:right;"><label  class="showx"  id="email"></label>
                                             <hr style="float: right;width: 90%;" class="showx">
                                             <input type="text"  name="email" class="hidex" value=""/>
@@ -1467,7 +1467,7 @@
                                     <%}%>
                                     <!--
                                     --><tr>
-                                        <td style="color: #000;"  width="40%" >يعمل بالخارج</td>
+                                        <td style="color: #27272A;"  width="40%" >يعمل بالخارج</td>
 
                                         <td style="text-align:right;">
                                             <span><input type="radio" name="workOut" value="1"  <% if (client.getAttribute("option1").equals("1")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">نعم</b></font></span>
@@ -1477,14 +1477,14 @@
                                     </tr>
 
                                     <tr>
-                                        <td style="color: #000;width: 40%;"  width="40%" >أقارب بالخارج</td>
+                                        <td style="color: #27272A;width: 40%;"  width="40%" >أقارب بالخارج</td>
                                         <td style="text-align:right;">
                                             <span><input type="radio" name="kindred" value="1"  <% if (client.getAttribute("option2").equals("1")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">نعم</b></font></span>
                                             <span><input type="radio" name="kindred" value="0"  <% if (client.getAttribute("option2").equals("0")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">لا</b></font></span>
                                         </td>
                                     </tr>
                                     <TR>
-                                        <TD style="color: #000;width: 40%;"  width="40%" >الفئة العمرية</TD>
+                                        <TD style="color: #27272A;width: 40%;"  width="40%" >الفئة العمرية</TD>
 
                                         <td style="<%=style%>" class='td'>
 

@@ -373,7 +373,7 @@
                     </TR>
                     <TR>
                         <td colspan="4" bgcolor="#dedede"  style="text-align:center; padding-bottom: 5px; padding-top: 5px" valign="middle">
-                            <button  onclick="JavaScript: submitForm();" STYLE="color: #000;font-size:15px;font-weight:bold;height: 35px"><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                            <button  onclick="JavaScript: submitForm();" STYLE="color: #27272A;font-size:15px;font-weight:bold;height: 35px"><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
                         </td>
                     </TR>
                 </TABLE>

@@ -2402,7 +2402,7 @@ function openattachmentmenu()
                                              <td id="num"> <%=client.getAttribute("name")%> </td>
                                         </TR>
                                          <tr>
-                                             <td style="color: #000;"  ><fmt:message bundle="${getcompl3}"  key="clientrating" />  </td>
+                                             <td style="color: #27272A;"  ><fmt:message bundle="${getcompl3}"  key="clientrating" />  </td>
                                            
                                             <td style="text-align: center;">
                                                 <%
@@ -2480,7 +2480,7 @@ function openattachmentmenu()
                                         </tr>
                             <%if (CompetentEmp != null && CompetentEmp.size() > 0) {%>               
                             <tr >
-                                <td  style="color: #000; ">الموظف المختص</td>
+                                <td  style="color: #27272A; ">الموظف المختص</td>
                                 <td class='td' style="display: <%=clientStatus.equals("11") && privilegesList.contains("client_status_reverse") ? "block" : "none"%>;">
                                     &nbsp;
                                 </td>
@@ -3002,7 +3002,7 @@ function openattachmentmenu()
                     <td style="width: 50%;">
                         <table>
                             <tr>
-                                <td width="40%"style="color: #000;text-align: match-parent" >رقم العميل</td>
+                                <td width="40%"style="color: #27272A;text-align: match-parent" >رقم العميل</td>
                                 <td style="text-align:right;border: none;">
                                     <label style="float: right;" id="clientNO"><%=client.getAttribute("clientNO").toString()%></label>
                                     <hr style="float: right;width: 70%;clear: both;" >
@@ -3017,7 +3017,7 @@ function openattachmentmenu()
                                                             </tr>-->
 
                             <tr>
-                                <td style="color: #000;" width="40%" >اسم العميل</td>
+                                <td style="color: #27272A;" width="40%" >اسم العميل</td>
                                 <td style="text-align:right;"><label class="showx" id="clientName"><%=client.getAttribute("name")%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
                                     <input type="text"  name="clientName" class="hidex" <%=!isCanMoreEdit ? "readonly" : ""%> value="<%=client.getAttribute("name")%>"/>
@@ -3035,7 +3035,7 @@ function openattachmentmenu()
                             <%if (client.getAttribute("partner") != null && !client.getAttribute("partner").equals("")) {
                             %>
                             <tr>
-                                <td style="color: #000;" width="40%" >إسم الزوجة/الزوج</td>
+                                <td style="color: #27272A;" width="40%" >إسم الزوجة/الزوج</td>
                                 <td style="text-align:right"><label id="partner"class="showx"><%=client.getAttribute("partner")%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
                                     <input type="text"  name="partner" class="hidex" value="<%=client.getAttribute("partner")%>"/>
@@ -3043,7 +3043,7 @@ function openattachmentmenu()
                             </tr>
                             <%} else {%>
                             <tr>
-                                <td style="color: #000;" width="40%" >إسم الزوجة/الزوج</td>
+                                <td style="color: #27272A;" width="40%" >إسم الزوجة/الزوج</td>
                                 <td style="text-align:right"><label id="partner"class="showx"><%=client.getAttribute("partner")%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
                                     <input type="text"  name="partner" class="hidex" value=""/>
@@ -3086,7 +3086,7 @@ function openattachmentmenu()
                             <%if (client.getAttribute("clientSsn") != null && !client.getAttribute("clientSsn").equals("")) {
                             %>
                             <tr>
-                                <td style="color: #000;" width="40%" >ر.قومى / ج. سفر</td>
+                                <td style="color: #27272A;" width="40%" >ر.قومى / ج. سفر</td>
                                 <td style="text-align:right;">
                                     <label id="clientSsn" class="showx"><%=client.getAttribute("clientSsn")%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
@@ -3097,7 +3097,7 @@ function openattachmentmenu()
                             </tr>
                             <%} else {%>
                             <tr>
-                                <td style="color: #000;" width="40%">ر.قومى / ج. سفر</td>
+                                <td style="color: #27272A;" width="40%">ر.قومى / ج. سفر</td>
                                 <td style="text-align:right;"><label class="showx" id="clientSsn"></label>
                                     <hr style="float: right;width: 70%;" class="showx">
                                     <input type="text"  name="clientSsn" class="hidex" value="" />
@@ -3105,8 +3105,8 @@ function openattachmentmenu()
                             </tr>
                             <%}%>
                             <tr>
-                                <td style="color: #000;" width="40%">
-                                    <LABEL FOR="job" style="color: #000;">
+                                <td style="color: #27272A;" width="40%">
+                                    <LABEL FOR="job" style="color: #27272A;">
                                         <p><b>المهنة<font color="#FF0000"></font></b>&nbsp;
                                     </LABEL>
                                 </td>
@@ -3149,8 +3149,8 @@ function openattachmentmenu()
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #000;" width="40%">
-                                    <LABEL FOR="job" style="color: #000;">
+                                <td style="color: #27272A;" width="40%">
+                                    <LABEL FOR="job" style="color: #27272A;">
                                         <p><b>المنطقة<font color="#FF0000"></font></b>&nbsp;
                                     </LABEL>
                                 </td>
@@ -3188,7 +3188,7 @@ function openattachmentmenu()
                             %>
 
                             <tr>
-                                <td style="color: #000;" width="40%" >رقم التليفون</td>
+                                <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                                 <td style="text-align:right;"><label class="showx" id="phone"><%=client.getAttribute("phone")%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
 
@@ -3197,7 +3197,7 @@ function openattachmentmenu()
                             </tr>
                             <%} else {%>
                             <tr>
-                                <td style="color: #000;" width="40%" >رقم التليفون</td>
+                                <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                                 <td style="text-align:right;"><label class="showx" id="phone"></label>
                                     <hr style="float: right;width: 70%;" class="showx">
                                     <input type="text" name="phone" class="hidex" value="" onkeypress="javascript:return isNumber(event)"
@@ -3206,7 +3206,7 @@ function openattachmentmenu()
                             </tr>
                             <%}%>
                             <tr>
-                                <td style="color: #000;" width="40%" >رقم الموبايل</td>
+                                <td style="color: #27272A;" width="40%" >رقم الموبايل</td>
                                 <td style="text-align:right;"><label  class="showx" id="client_mobile"><%=client.getAttribute("mobile")%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
 
@@ -3215,7 +3215,7 @@ function openattachmentmenu()
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #000;" width="40%" >رقم الطالب</td>
+                                <td style="color: #27272A;" width="40%" >رقم الطالب</td>
                                 <td style="text-align:right;"><label  class="showx" id="dialedNumber"><%=client.getAttribute("option3") != null ? client.getAttribute("option3") : ""%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
 
@@ -3224,7 +3224,7 @@ function openattachmentmenu()
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #000;" width="40%" >الرقم الدولى</td>
+                                <td style="color: #27272A;" width="40%" >الرقم الدولى</td>
                                 <td style="text-align:right;"><label  class="showx" id="interPhone"><%=client.getAttribute("interPhone") != null ? client.getAttribute("interPhone") : ""%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
 
@@ -3253,7 +3253,7 @@ function openattachmentmenu()
                             <%if (client.getAttribute("address") != null && !client.getAttribute("address").equals("")) {
                             %>
                             <tr>
-                                <td style="color: #000;"  width="40%">العنوان</td>
+                                <td style="color: #27272A;"  width="40%">العنوان</td>
                                 <td style="text-align:right;"><label class="showx" id="address"><%=client.getAttribute("address")%></label>
                                     <hr style="float: right;width: 70%;" class="showx">
 
@@ -3262,7 +3262,7 @@ function openattachmentmenu()
                             </tr>
                             <%} else {%>
                             <tr>
-                                <td style="color: #000;"  width="40%">العنوان</td>
+                                <td style="color: #27272A;"  width="40%">العنوان</td>
                                 <td style="text-align:right;"><label class="showx"  id="address"></label>
                                     <hr style="float: right;width: 70%;" class="showx">
                                     <input type="text"  name="address" class="hidex" value=""/>
@@ -3273,7 +3273,7 @@ function openattachmentmenu()
                             <%if (client.getAttribute("email") != null && !client.getAttribute("email").equals("")) {
                             %>
                             <tr>
-                                <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                                <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                                 <td style="text-align:right;"><label  class="showx"  id="email"><%=client.getAttribute("email")%></label>
                                     <hr style="float: right;width: 90%;" class="showx">
 
@@ -3282,7 +3282,7 @@ function openattachmentmenu()
                             </tr>
                             <%} else {%>
                             <tr>
-                                <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                                <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                                 <td style="text-align:right;"><label  class="showx"  id="email"></label>
                                     <hr style="float: right;width: 90%;" class="showx">
                                     <input type="text"  name="email" class="hidex" value=""/>
@@ -3291,7 +3291,7 @@ function openattachmentmenu()
                             <%}%>
                             <!--
                             --><tr>
-                                <td style="color: #000;"  width="40%" >يعمل بالخارج</td>
+                                <td style="color: #27272A;"  width="40%" >يعمل بالخارج</td>
 
                                 <td style="text-align:right;">
                                     <span><input type="radio" name="workOut" value="1"  <% if (client.getAttribute("option1") != null && client.getAttribute("option1").equals("1")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">نعم</b></font></span>
@@ -3301,14 +3301,14 @@ function openattachmentmenu()
                             </tr>
 
                             <tr>
-                                <td style="color: #000;width: 40%;"  width="40%" >أقارب بالخارج</td>
+                                <td style="color: #27272A;width: 40%;"  width="40%" >أقارب بالخارج</td>
                                 <td style="text-align:right;">
                                     <span><input type="radio" name="kindred" value="1"  <% if (client.getAttribute("option2") != null && client.getAttribute("option2").equals("1")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">نعم</b></font></span>
                                     <span><input type="radio" name="kindred" value="0"  <% if (client.getAttribute("option2") != null && client.getAttribute("option2").equals("0")) {%> checked="true" <%}%>/> <b style="font-size: 11px;">لا</b></font></span>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="color: #000;width: 40%;"  width="40%" >ملاحظات</td>
+                                <td style="color: #27272A;width: 40%;"  width="40%" >ملاحظات</td>
                                 <td style="text-align:right;">
                                     <label  class="showx" id="description"><%=client.getAttribute("description") != null && !((String) client.getAttribute("description")).equals("UL") ? client.getAttribute("description") : ""%></label>
                                     <hr style="float: right;width: 90%;" class="showx">

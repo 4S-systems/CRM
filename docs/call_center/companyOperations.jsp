@@ -2556,7 +2556,7 @@
         width: 100%;
         height: 23px;
         padding: 0 9px;
-        color: #000;
+        color: #27272A;
         font-size: 13px;
         cursor: auto;
         text-shadow: 0 1px black;
@@ -2580,7 +2580,7 @@
         width: 80%;
         height: 20px;
         padding: 0 9px;
-        color: #000;
+        color: #27272A;
         font-size: 12px;
         cursor: auto;
         text-shadow: 0 1px black;
@@ -2819,7 +2819,7 @@
                                     <td class='td' style="display: <%=clientStatus.equals("11") && privilegesList.contains("client_status_reverse") ? "block" : "none"%>;">
                                         <img src="images/arrow-left.ico" width="30px"  onclick="JavaScript:popupReverseStatus();" id="changeStatusReverse" />
                                     </td>
-                                    <td style="color: #000; text-align: left;" colspan="2">
+                                    <td style="color: #27272A; text-align: left;" colspan="2">
                                         <label style="font-size: smaller;">COMPANY STATUS</label>
                                         <table align="right" width="100%" class="table" cellpadding="0" cellspacing="0" style="border: 0px black solid;">
                                             <tr>
@@ -2856,7 +2856,7 @@
                                             && connectByRealEstate.equals("0")) {
                                 %>
                                 <tr>
-                                    <td style="color: #000;" nowrap >كود الشركة</td>
+                                    <td style="color: #27272A;" nowrap >كود الشركة</td>
                                     <td class='td' style="display: <%=clientStatus.equals("11") && privilegesList.contains("client_status_reverse") ? "block" : "none"%>;">
                                         &nbsp;
                                     </td>
@@ -2866,7 +2866,7 @@
                                     } else {
                                 %>
                                 <tr>
-                                    <td style="color: #000;" nowrap >كود الشركة</td>
+                                    <td style="color: #27272A;" nowrap >كود الشركة</td>
                                     <td class='td' style="display: <%=clientStatus.equals("11") && privilegesList.contains("client_status_reverse") ? "block" : "none"%>;">
                                         &nbsp;
                                     </td>
@@ -2877,7 +2877,7 @@
                                     }
                                 %>
                                 <tr>
-                                    <td style="color: #000;" nowrap width="36%" >اسم الشركة</td>
+                                    <td style="color: #27272A;" nowrap width="36%" >اسم الشركة</td>
                                     <td class='td' style="display: <%=clientStatus.equals("11") && privilegesList.contains("client_status_reverse") ? "block" : "none"%>;">
                                         &nbsp;
                                     </td>
@@ -2888,7 +2888,7 @@
                                 if (CompetentEmp != null & CompetentEmp.size() > 0) {
                                 %>               
                                 <tr >
-                                    <td  style="color: #000;" width="36%" nowrap >الموظف المختص</td>
+                                    <td  style="color: #27272A;" width="36%" nowrap >الموظف المختص</td>
                                     <td class='td' style="display: <%=clientStatus.equals("11") && privilegesList.contains("client_status_reverse") ? "block" : "none"%>;">
                                         &nbsp;
                                     </td>
@@ -3455,7 +3455,7 @@
 
 
                     <tr>
-                        <td width="40%"style="color: #000;text-align: match-parent" >كود الشركة</td>
+                        <td width="40%"style="color: #27272A;text-align: match-parent" >كود الشركة</td>
                         <td style="text-align:right;border: none;">
                             <label style="float: right;" id="clientNO"><%=client.getAttribute("clientNO").toString()%></label>
                             <hr style="float: right;width: 70%;clear: both;" >
@@ -3470,7 +3470,7 @@
                                                     </tr>-->
 
                     <tr>
-                        <td style="color: #000;" width="40%" >اسم الشركة</td>
+                        <td style="color: #27272A;" width="40%" >اسم الشركة</td>
                         <td style="text-align:right;"><label class="showx" id="clientName"><%=client.getAttribute("name")%></label>
                             <hr style="float: right;width: 70%;" class="showx">
                             <input type="text"  name="clientName" class="hidex" value="<%=client.getAttribute("name")%>"/>
@@ -3491,7 +3491,7 @@
                     %>
 
                     <tr>
-                        <td style="color: #000;" width="40%" >رقم التليفون</td>
+                        <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                         <td style="text-align:right;"><label class="showx" id="phone"><%=client.getAttribute("phone")%></label>
                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -3500,7 +3500,7 @@
                     </tr>
                     <%} else {%>
                     <tr>
-                        <td style="color: #000;" width="40%" >رقم التليفون</td>
+                        <td style="color: #27272A;" width="40%" >رقم التليفون</td>
                         <td style="text-align:right;"><label class="showx" id="phone"></label>
                             <hr style="float: right;width: 70%;" class="showx">
                             <input type="text" name="phone" class="hidex" value="" onkeypress="javascript:return isNumber(event)"/>
@@ -3508,7 +3508,7 @@
                     </tr>
                     <%}%>
                     <tr>
-                        <td style="color: #000;" width="40%" >رقم الموبايل</td>
+                        <td style="color: #27272A;" width="40%" >رقم الموبايل</td>
                         <td style="text-align:right;"><label  class="showx" id="client_mobile"><%=client.getAttribute("mobile")%></label>
                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -3518,7 +3518,7 @@
                     <%if (client.getAttribute("address") != null && !client.getAttribute("address").equals("")) {
                     %>
                     <tr>
-                        <td style="color: #000;"  width="40%">العنوان</td>
+                        <td style="color: #27272A;"  width="40%">العنوان</td>
                         <td style="text-align:right;"><label class="showx" id="address"><%=client.getAttribute("address")%></label>
                             <hr style="float: right;width: 70%;" class="showx">
 
@@ -3527,7 +3527,7 @@
                     </tr>
                     <%} else {%>
                     <tr>
-                        <td style="color: #000;"  width="40%">العنوان</td>
+                        <td style="color: #27272A;"  width="40%">العنوان</td>
                         <td style="text-align:right;"><label class="showx"  id="address"></label>
                             <hr style="float: right;width: 70%;" class="showx">
                             <input type="text"  name="address" class="hidex" value=""/>
@@ -3538,7 +3538,7 @@
                     <%if (client.getAttribute("email") != null && !client.getAttribute("email").equals("")) {
                     %>
                     <tr>
-                        <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                        <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                         <td style="text-align:right;"><label  class="showx"  id="email"><%=client.getAttribute("email")%></label>
                             <hr style="float: right;width: 90%;" class="showx">
 
@@ -3547,7 +3547,7 @@
                     </tr>
                     <%} else {%>
                     <tr>
-                        <td style="color: #000;"  width="30%" >البريد الإلكترونى</td>
+                        <td style="color: #27272A;"  width="30%" >البريد الإلكترونى</td>
                         <td style="text-align:right;"><label  class="showx"  id="email"></label>
                             <hr style="float: right;width: 90%;" class="showx">
                             <input type="text"  name="email" class="hidex" value=""/>

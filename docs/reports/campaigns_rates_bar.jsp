@@ -481,7 +481,7 @@
                         </TD>
                         
                         <td  bgcolor="#dedede"  style="text-align:center; padding-bottom: 5px; padding-top: 5px" valign="middle" colspan="2" >
-                            <button type="submit"  onclick="showChart()"  STYLE="display: none; color: #000;font-size:15px;font-weight:bold;height: 35px"> <%=print%><IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                            <button type="submit"  onclick="showChart()"  STYLE="display: none; color: #27272A;font-size:15px;font-weight:bold;height: 35px"> <%=print%><IMG HEIGHT="15" SRC="images/search.gif"> </button>
                         </td>
                         
                         <td  bgcolor="#dedede"  style="text-align:center; padding-bottom: 5px; padding-top: 5px; display: none;" valign="middle" colspan="2">
@@ -492,7 +492,7 @@
                         </td>
                         
                         <td  bgcolor="#dedede"  style="text-align:center; padding-bottom: 5px; padding-top: 5px; display: none;" valign="middle" colspan="2">
-                            <input type="button"  onclick="shwSync()"  STYLE="color: #000;font-size:15px;font-weight:bold;height: 35px" value="<%=shwSync%>">
+                            <input type="button"  onclick="shwSync()"  STYLE="color: #27272A;font-size:15px;font-weight:bold;height: 35px" value="<%=shwSync%>">
                         </td>
                     </TR>
                 </TABLE>
@@ -510,7 +510,7 @@
                 if (clientsList != null) {
             %>
                 <div style="width: 95%;margin-left: auto;margin-right: auto;margin-bottom: 7px;margin-top: 15px;">
-                    <button type="button" style="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15px;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
+                    <button type="button" style="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15px;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
                             onclick="JavaScript: exportToExcel();" title="Export to Excel">Excel &nbsp; &nbsp;<img height="15" src="images/icons/excel.png" />
                     </button>
                             <br/>

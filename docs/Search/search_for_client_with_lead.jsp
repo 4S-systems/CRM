@@ -585,7 +585,7 @@
             <br/><br/>
             <center> <b> <font size="3" color="red"> <%=PN%> : <%=data.size()%> </font></b></center> 
             <br>
-            <button type="button" style="color: #000;font-size:15;margin-bottom: 5px;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
+            <button type="button" style="color: #27272A;font-size:15;margin-bottom: 5px;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
                     onclick="JavaScript: openRedirectPopup();" title="توزيع">Distribute &nbsp;&nbsp;<img src="images/icons/forward.png" width="15" height="15" />
             </button>
             <table class="display" id="indextable" align="center" dir="<%=dir%>" width="100%" cellpadding="0" cellspacing="0">

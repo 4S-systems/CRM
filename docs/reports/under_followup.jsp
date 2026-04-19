@@ -318,7 +318,7 @@
                                 <input type="hidden" id="issueId" value="<%=wbo.getAttribute("id")%>" />
                             </td>
                             <td style="width: 10%;">
-                                <label style="color: #000">
+                                <label style="color: #27272A">
                                     <%=wbo.getAttribute("complaintsNo")%>
                                 </label>
                             </td>

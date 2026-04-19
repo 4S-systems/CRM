@@ -2114,10 +2114,10 @@ input[type="text"] {
     width: 230px;
     margin-right: 5px;
     background-color:whitesmoke;
-    border: 2px solid #000;
+    border: 2px solid #27272A;
     border-radius: 5px;
     font-size: 16px;
-    color: #000;
+    color: #27272A;
     outline: none;
     transition: border-color 0.3s, background-color 0.3s;
 }
@@ -2147,7 +2147,7 @@ input[type="text"]::placeholder {
                 <div class="login" style="width: 100%;height:250px;float: left;">
                     <table  border="0px" class="table" style="width:100%;text-align: right;margin-bottom: 10px !important;" >
                         <tr style="height:50px;">
-                            <td width="30%" style="color: #000;text-align: right">نوع الإتصال </td>
+                            <td width="30%" style="color: #27272A;text-align: right">نوع الإتصال </td>
                             <td style="text-align:right;">
                                 <input name="note" type="radio" value="call" checked="" id="note">
                                 <label><img src="images/dialogs/phone.png" alt="phone" width="24px">مكالمة </label>
@@ -2159,7 +2159,7 @@ input[type="text"]::placeholder {
                         </tr>
                         <br>
                         <tr style="height:50px;">
-                            <td width="30%"  style="color: #000;text-align: right">إتجاة المكالمة/المقابة</td>
+                            <td width="30%"  style="color: #27272A;text-align: right">إتجاة المكالمة/المقابة</td>
                             <td style="text-align:right;">
                                 <input  name="call_status" type="radio" value="incoming" <%=campaignDirection.equalsIgnoreCase("2") || campaignDirection.isEmpty() ? "checked" : ""%> id="call_status" />
                                 <label><img src="images/dialogs/call-incoming.png" width="24px"/>واردة</label>
@@ -2169,7 +2169,7 @@ input[type="text"]::placeholder {
                         </tr>
 
                         <tr style="height:50px;">
-                            <td  style="color: #000;text-align: right">التاريخ</td>
+                            <td  style="color: #27272A;text-align: right">التاريخ</td>
                             <td dir="ltr" style="<%=style%>"> 
                                 <input name="entryDate" id="appDate1" type="text" size="40" maxlength="50" style="width:50%;float: right;font-size: 12px;" value="<%=nowTime%>"/>
                             </td>
@@ -2177,7 +2177,7 @@ input[type="text"]::placeholder {
 
                         <tr style="height:50px;">
                             <td colspan="2">
-                                <div id="callerNumber" style="color: #000;width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;clear: both;">
+                                <div id="callerNumber" style="color: #27272A;width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;clear: both;">
                                 </div>
                                 <div id="callerBtn" style="margin-left: auto;margin-right: auto;text-align:center;">  
                                     <input  name="save_info" type="button" onclick="recordCall2(this);" id ="save_info"class="button_record"/>

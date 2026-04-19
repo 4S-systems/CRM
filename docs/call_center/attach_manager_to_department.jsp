@@ -478,7 +478,7 @@
                     <tr>
                         <td colspan="2" style="color:#f1f1f1; font-size: 16px;font-weight: bold;"> 
                             <input type="hidden" id="departmentID" name="departmentID"/>
-                            <input class="button" type="button" onclick="update();" style="width: 120px; color: #000; font-size:15px; font-weight:bold;" value="<%=save%>">
+                            <input class="button" type="button" onclick="update();" style="width: 120px; color: #27272A; font-size:15px; font-weight:bold;" value="<%=save%>">
                         </td>
                     </tr>
                 </table>

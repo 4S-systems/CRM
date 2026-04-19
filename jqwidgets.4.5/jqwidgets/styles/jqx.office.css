@@ -76,12 +76,12 @@
 .jqx-widget-header-office{font-family: Calibri; color: #444444; border-color:#d4d4d4; background-color:#ffffff;}
 
 .jqx-fill-state-normal-office{font-family: Calibri; border-color: #d4d4d4; color: #444444; background: #fdfdfd;}
-.jqx-grid-cell-sort-alt-office, .jqx-grid-cell-filter-alt-office, .jqx-grid-cell-pinned-office, .jqx-grid-cell-alt-office, .jqx-grid-cell-sort-office{ background:#ededed; color: #000;}
+.jqx-grid-cell-sort-alt-office, .jqx-grid-cell-filter-alt-office, .jqx-grid-cell-pinned-office, .jqx-grid-cell-alt-office, .jqx-grid-cell-sort-office{ background:#ededed; color: #27272A;}
 .jqx-button-office {border-color: #d4d4d4;}
-.jqx-fill-state-hover-office{border-color:#86bfa0; color: #000; background:#d3f0e0;}
+.jqx-fill-state-hover-office{border-color:#86bfa0; color: #27272A; background:#d3f0e0;}
 .jqx-input-office, .jqx-input-button-content-office {border-color: #d4d4d4;}
 .jqx-fill-state-focus-office, .jqx-combobox-content-focus-office, .jqx-numberinput-focus, .jqx-datetimeinput-office .jqx-fill-state-hover-office, .jqx-datetimeinput-office .jqx-fill-state-pressed-office{ border-color: #86bfa0; }
-.jqx-fill-state-pressed-office{border-color:#429366; color: #000; background:#86bfa0;}
+.jqx-fill-state-pressed-office{border-color:#429366; color: #27272A; background:#86bfa0;}
 
 .jqx-scrollbar-state-normal-office, .jqx-grid-bottomright-office, .jqx-panel-bottomright-office, .jqx-listbox-bottomright-office{background:#f3f3f3;}
 .jqx-widget-office .jqx-grid-column-header-office, .jqx-grid-cell-office, .jqx-widget-office .jqx-grid-cell-office, .jqx-widget-office .jqx-grid-group-cell-office, .jqx-grid-group-cell-office{font-family: Calibri; border-color:#f3f3f3;}
@@ -89,7 +89,7 @@
 .jqx-tabs-title-hover-bottom-office, .jqx-tabs-title-hover-top-office{color: #217346; background: transparent; border-color: transparent;}
 .jqx-tabs-title-selected-bottom-office, .jqx-tabs-selection-tracker-bottom-office, .jqx-tabs-title-selected-top-office, .jqx-tabs-selection-tracker-top-office{font-weight: bold; color: #217346; border-color:#d4d4d4; border-bottom:1px solid #fff; background:#fff}
 .jqx-menu-vertical-office{background: #fff; border-color: #d4d4d4;}
-.jqx-widget-office .jqx-grid-cell-office, .jqx-widget-office .jqx-grid-column-header-office, .jqx-widget-office .jqx-grid-group-cell-office {color: #000; border-color: #d4d4d4;}
+.jqx-widget-office .jqx-grid-cell-office, .jqx-widget-office .jqx-grid-column-header-office, .jqx-widget-office .jqx-grid-group-cell-office {color: #27272A; border-color: #d4d4d4;}
 .jqx-widget-office .jqx-grid-column-menubutton-office, .jqx-widget-office .jqx-grid-column-sortascbutton-office, .jqx-widget-office .jqx-grid-column-sortdescbutton-office, .jqx-widget-office .jqx-grid-column-filterbutton-office {
     background-color: transparent;
     border-color: #d4d4d4;
@@ -230,8 +230,8 @@
 }
 .jqx-switchbutton-thumb-office {
     width: 12px;
-    background: #000;
-    border: 1px solid #000;
+    background: #27272A;
+    border: 1px solid #27272A;
 }
 .jqx-switchbutton-label-on-office {
     background: #429366;

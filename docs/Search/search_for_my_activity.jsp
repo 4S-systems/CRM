@@ -351,8 +351,8 @@
 
                                 <tr>
                                     <td style="text-align:center" class="td" colspan="2">
-                                        <button onclick="JavaScript: getComplaintsExcel();" id="excel" value="excel" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; "><%=excel%><IMG HEIGHT="15" SRC="images/excelIcon.png" ></button>  
-                                        <button onclick="JavaScript: getComplaints();" style="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; "><fmt:message key="search" /><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                        <button onclick="JavaScript: getComplaintsExcel();" id="excel" value="excel" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; "><%=excel%><IMG HEIGHT="15" SRC="images/excelIcon.png" ></button>  
+                                        <button onclick="JavaScript: getComplaints();" style="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; "><fmt:message key="search" /><IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                                     </td>
                                 </tr>
                             </table>

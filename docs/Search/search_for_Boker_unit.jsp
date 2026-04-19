@@ -647,7 +647,7 @@
                     </tr>
                     <tr>
                         <TD STYLE="text-align:center" CLASS="td" colspan="2">  
-                            <button type="submit" STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; width: 20%;">
+                            <button type="submit" STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; width: 20%;">
                                 <fmt:message key="search"/>
                                 <IMG HEIGHT="15" SRC="images/search.gif" >
                             </button>

@@ -383,7 +383,7 @@
                                         <b> <font size=3 color="white"> <%=endDate%> </b>
                                     </td>
                                     <td style="text-align:center; margin-bottom: 5px; margin-top: 5px" bgcolor="#dedede" rowspan="2">
-                                        <button type="button" onclick="JavaScript: getComplaints();" style="color: #000;font-size:15px;margin-top: 8px;margin-bottom: 8px;font-weight:bold; width: 150px">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                        <button type="button" onclick="JavaScript: getComplaints();" style="color: #27272A;font-size:15px;margin-top: 8px;margin-bottom: 8px;font-weight:bold; width: 150px">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                                     </td>
                                 </tr>
                                 <tr>

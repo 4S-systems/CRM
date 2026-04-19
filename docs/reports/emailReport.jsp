@@ -262,7 +262,7 @@
 		    
 		    <tr>
                         <td STYLE="text-align:center" bgcolor="#dedede" colspan="2" WIDTH="50%">  
-                            <button onclick="JavaScript: submitForm();" class="button2" STYLE="color: #000;font-size:15px;font-weight:bold;height: 35px">
+                            <button onclick="JavaScript: submitForm();" class="button2" STYLE="color: #27272A;font-size:15px;font-weight:bold;height: 35px">
 				 <%=srch%> 
 				 <IMG HEIGHT="15" SRC="images/search.gif"/> 
 			    </button>

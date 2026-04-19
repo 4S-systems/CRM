@@ -2945,7 +2945,7 @@
                         <td class="td">
                             <table style="width: 100%;">
                                 <tr >
-                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color: #000;font-size: 20px;font-weight: bold">
+                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color: #27272A;font-size: 20px;font-weight: bold">
                                         Information Client 
                                     </td>
                                 </tr>
@@ -3242,7 +3242,7 @@
                                 </tr>        
                                         
                                 <tr>
-                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #000;font-size: 20px;font-weight: bold">
+                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #27272A;font-size: 20px;font-weight: bold">
                                         Related Client
                                     </td>
                                 </tr>
@@ -3289,7 +3289,7 @@
                                 </tr>        
                                         
                                 <tr>
-                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color: #000;font-size: 20px;font-weight: bold">
+                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color: #27272A;font-size: 20px;font-weight: bold">
                                         Information Know Us / Broker / Personal /Social Media / Campaign
                                     </td>
                                 </tr>
@@ -3365,7 +3365,7 @@
                                 </tr>        
                                         
                                 <tr>
-                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #000;font-size: 20px;font-weight: bold">
+                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #27272A;font-size: 20px;font-weight: bold">
                                         Comments
                                     </td>
                                 </tr>
@@ -3438,7 +3438,7 @@
                                 </tr>        
                                         
                                 <tr>
-                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #000;font-size: 20px;font-weight: bold">
+                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #27272A;font-size: 20px;font-weight: bold">
                                         Customer Dynamics
                                     </td>
                                 </tr>
@@ -3564,7 +3564,7 @@
                                 </tr>        
                                         
                                 <tr>
-                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #000;font-size: 20px;font-weight: bold">
+                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #27272A;font-size: 20px;font-weight: bold">
                                         Reserved
                                     </td>
                                 </tr>
@@ -3624,7 +3624,7 @@
                                 </tr>        
                                         
                                 <tr>
-                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #000;font-size: 20px;font-weight: bold">
+                                    <td class="td titleTD" colspan="4" style="padding: 10px 0px 10px 10px ;border-radius: 5px;background-color: #dfdfdf;text-align: left;color:  #27272A;font-size: 20px;font-weight: bold">
                                         Sold
                                     </td>
                                 </tr>

@@ -165,16 +165,16 @@
                                                 <td colspan="8"  class="blueBorder blueHeaderTD" style="font-size:18px;">بيانات الاتصال</td>
 
                                             <tr>
-                                                <td width="30%" style="color: #000;" class="excelentCell formInputTag"><%=callDate%> </td>
+                                                <td width="30%" style="color: #27272A;" class="excelentCell formInputTag"><%=callDate%> </td>
                                                 <td style="text-align:right;background: #f1f1f1;"><%=clientWbo.getAttribute("creationTime")%></td>
 
 
-                                                <td style="color: #000;" class="excelentCell formInputTag"> <%=comment%> </td>
+                                                <td style="color: #27272A;" class="excelentCell formInputTag"> <%=comment%> </td>
                                                 <td style="text-align:right;background: #f1f1f1;"><%=clientWbo.getAttribute("issueDesc")%></td>
 
-                                                <td style="color: #000;" class="excelentCell formInputTag"><%=reciever%></td>
+                                                <td style="color: #27272A;" class="excelentCell formInputTag"><%=reciever%></td>
                                                 <td style="text-align:right;background: #f1f1f1;"><%=userName%></td>
-                                                <td style="color: #000;" class="excelentCell formInputTag"><%=code%></td>
+                                                <td style="color: #27272A;" class="excelentCell formInputTag"><%=code%></td>
                                                 <td style="text-align:right;background: #f1f1f1;"><%=clientWbo.getAttribute("businessID")%>/</font><font color="blue" size="3" ><%=clientWbo.getAttribute("businessIDbyDate")%></font></b></td>
                                             </tr>
                                 </tr>
@@ -194,9 +194,9 @@
 
                                 %>
                                 <tr>
-                                    <td width="30%" style="color: #000;" class="excelentCell formInputTag"><%=clientcmp.getAttribute("typeName")%></td>
+                                    <td width="30%" style="color: #27272A;" class="excelentCell formInputTag"><%=clientcmp.getAttribute("typeName")%></td>
                                     <td style="text-align:right;background: #f1f1f1;"><%=clientcmp.getAttribute("compSubject")%></td>
-                                     <td width="30%" style="color: #000;" class="excelentCell formInputTag"><%=department%></td>
+                                     <td width="30%" style="color: #27272A;" class="excelentCell formInputTag"><%=department%></td>
                                     <td style="color: red;text-align:right;background: #f1f1f1;"><%=clientcmp.getAttribute("departmentName")%></td>
                                     
                                 </tr>

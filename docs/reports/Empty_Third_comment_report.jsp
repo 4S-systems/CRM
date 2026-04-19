@@ -170,7 +170,7 @@
                             <b> <font size=3 color="white">إلي تاريخ</b>
                         </td>
                         <td STYLE="text-align:center" bgcolor="#dedede" rowspan="3" WIDTH="20%">  
-                            <button type="submit" onclick="JavaScript: search();"  STYLE="color: #000;font-size:15px;margin-top: 20px;font-weight:bold; width: 70%; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>
+                            <button type="submit" onclick="JavaScript: search();"  STYLE="color: #27272A;font-size:15px;margin-top: 20px;font-weight:bold; width: 70%; ">بحث<IMG HEIGHT="15" SRC="images/search.gif" ></button>
                         </td>
                     </tr>
                     <tr>

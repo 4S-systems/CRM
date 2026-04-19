@@ -303,7 +303,7 @@
                     <tr>
                         <td  style="color:#000080; font-size: 14px;font-weight: bold;width: 10%;border: none">محتوى الرسالة</td>
                         <td style="border: none; text-align:right;">
-                            <textarea placeholder="محتوى الرسالة" rows="3" cols="50" name="message" id="message" style="color: #000;border: none"> Happy Birth Day</textarea>
+                            <textarea placeholder="محتوى الرسالة" rows="3" cols="50" name="message" id="message" style="color: #27272A;border: none"> Happy Birth Day</textarea>
                         </td>
                     </tr>
 

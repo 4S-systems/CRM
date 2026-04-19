@@ -174,7 +174,7 @@
 
                     <tr>
                         <td STYLE="text-align:center" bgcolor="#dedede" rowspan="2" WIDTH="20%" colspan="2">
-                            <button onclick="JavaScript: submitForm();" STYLE="color: #000;font-size:15px;font-weight:bold;height: 35px"><%=search%> <IMG HEIGHT="15" SRC="images/search.gif"/> </button>
+                            <button onclick="JavaScript: submitForm();" STYLE="color: #27272A;font-size:15px;font-weight:bold;height: 35px"><%=search%> <IMG HEIGHT="15" SRC="images/search.gif"/> </button>
                         </td>
                     </tr>
                 </table>

@@ -889,9 +889,9 @@
 		    </tr-->
                     <tr>
                         <TD STYLE="text-align:center" CLASS="td" colspan="2">  
-                            <button type="submit" STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; "><%=Search%><IMG HEIGHT="15" SRC="images/search.gif" ></button>
+                            <button type="submit" STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "><%=Search%><IMG HEIGHT="15" SRC="images/search.gif" ></button>
                             &nbsp;&nbsp;
-                            <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #000;font-size:15;margin-top: 20px;font-weight:bold; display: <%=forPopup != null && forPopup.equals("true") ? "none" : ""%>;"
+                            <button type="button" STYLE="display: <%=userPrevList.contains("EXCEL") ? "" : "none"%>; color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; display: <%=forPopup != null && forPopup.equals("true") ? "none" : ""%>;"
                                     onclick="exportToExcel()">Excel<IMG HEIGHT="15" style="margin-right: 2px; margin-top: 1px;" SRC="images/icons/excel.png" />
                             </button>  
                         </td>

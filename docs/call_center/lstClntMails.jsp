@@ -761,7 +761,7 @@
 
 			<tr>
 			    <TD STYLE="text-align: center;" CLASS="td" colspan="2">  
-				<button type="submit" class="button2" STYLE="color: #000; font-size:15; margin-top: 20px; font-weight: bold; width: 25%; text-align: center;">
+				<button type="submit" class="button2" STYLE="color: #27272A; font-size:15; margin-top: 20px; font-weight: bold; width: 25%; text-align: center;">
 				     <%=srch%> 
 				     <IMG HEIGHT="15" SRC="images/search.gif"> 
 				</button> 

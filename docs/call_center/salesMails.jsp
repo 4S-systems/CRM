@@ -254,7 +254,7 @@
 			    </td>
 			    
 			    <td style="border: none;  width: 75%; text-align: <%=direction%>;" colspan="2">
-				<textarea class="set" placeholder=" <%=txtBd%> " rows="5" cols="40" name="message" id="message" style="color: #000;"> 
+				<textarea class="set" placeholder=" <%=txtBd%> " rows="5" cols="40" name="message" id="message" style="color: #27272A;"> 
 				</textarea>
 			    </td>
 			</tr>

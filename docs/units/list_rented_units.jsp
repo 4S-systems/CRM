@@ -273,7 +273,7 @@ return Math.floor(floatNum+0.0000001);
                 width: 100%;
                 height: 23px;
                 padding: 0 9px;
-                color: #000;
+                color: #27272A;
                 font-size: 13px;
                 cursor: auto;
                 text-shadow: 0 1px black;

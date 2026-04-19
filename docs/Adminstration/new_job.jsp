@@ -220,7 +220,7 @@
                         <td colspan="2"  style="font-size:18px;"><b style="color: green;font-size: 18px;"id="msg"></b></td>
                     </tr>
                     <tr >
-                        <td width="35%" style="color: #000;" class="excelentCell formInputTag">
+                        <td width="35%" style="color: #27272A;" class="excelentCell formInputTag">
                             <%=sTradeType%>
                         </td>
                         <td  style="text-align:right;background: #f1f1f1;">
@@ -252,7 +252,7 @@
                     </tr>
                     --%>
                     <tr >
-                        <td width="35%" style="color: #000;" class="excelentCell formInputTag">
+                        <td width="35%" style="color: #27272A;" class="excelentCell formInputTag">
                             <%=arName%>
                         </td>
                         <td style="text-align:right;background: #f1f1f1;">

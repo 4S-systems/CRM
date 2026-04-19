@@ -80,7 +80,7 @@
 .jqx-fill-state-hover-metrodark{font-size: 12px; line-height: 17px; font-family: 'segoe ui', arial, sans-serif; border-color:#1C97EA; color: #fff; background-color:#1C97EA;
 
 }
-.jqx-fill-state-focus-metrodark { border-color: #000; }
+.jqx-fill-state-focus-metrodark { border-color: #27272A; }
 .jqx-fill-state-pressed-metrodark{border-color:#007ACC; color: #fff; background-color:#007ACC;
 
 }
@@ -232,8 +232,8 @@
 }
 .jqx-switchbutton-thumb-metrodark {
     width: 12px;
-    background: #000;
-    border: 1px solid #000;
+    background: #27272A;
+    border: 1px solid #27272A;
 }
 .jqx-switchbutton-label-on-metrodark {
     background: #007ACC;

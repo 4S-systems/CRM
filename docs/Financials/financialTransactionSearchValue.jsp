@@ -219,7 +219,7 @@
                      
                     <tr>
                         <td bgcolor="#F7F6F6" style="text-align:center; width: 20%; height: 100%; border: none;" valign="middle" rowspan="2" colspan="4">
-                            <button type="submit" style="width: 30%; height: 90%;color: #000; font-size:15; font-weight:bold; margin: 5px;" onclick="JavaScript: submitForm();" class="button"><%=search%><img height="15" src="images/search.gif"/></button>
+                            <button type="submit" style="width: 30%; height: 90%;color: #27272A; font-size:15; font-weight:bold; margin: 5px;" onclick="JavaScript: submitForm();" class="button"><%=search%><img height="15" src="images/search.gif"/></button>
                            
                         </td>
                          

@@ -303,7 +303,7 @@
                             <br/>
                         </td>
                         <td style="text-align:center" bgcolor="#dedede"  valign="MIDDLE">
-                            <button  onclick="JavaScript: submitForm();" STYLE="color: #000;font-size:15px;font-weight:bold;"><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                            <button  onclick="JavaScript: submitForm();" STYLE="color: #27272A;font-size:15px;font-weight:bold;"><%=print%> <IMG HEIGHT="15" SRC="images/search.gif"> </button>
                             <br/>
                             <br/>
                         </td>

@@ -398,7 +398,7 @@
                     
                                                 <table width="100%"   dir="rtl" height="100%" style="border-left:0px;">-->
                     <tr>
-                        <td  width="30%" style="color: #000;" class="excelentCell formInputTag"  >رقم المتابعة</td>
+                        <td  width="30%" style="color: #27272A;" class="excelentCell formInputTag"  >رقم المتابعة</td>
 
                         <td style="<%=style%>">
 
@@ -413,7 +413,7 @@
                     </tr>
 
                     <tr>
-                        <td  style="color: #000;" class="excelentCell formInputTag" >تعليق عام </td>
+                        <td  style="color: #27272A;" class="excelentCell formInputTag" >تعليق عام </td>
                         <td style="text-align:right;">
                             <% if (status != null && status.equalsIgnoreCase("success") && issueWbo.getAttribute("issueDesc") != null) {%>
                             <textarea name="note" id="note" rows="5" cols="10" style="width:100%;" resize="false" ><%=issueWbo.getAttribute("issueDesc")%></textarea></td>
@@ -427,7 +427,7 @@
                     
                                         <table border="1px" width="100%" class="table">-->
                     <tr>
-                        <td width="30%"  style="color: #000;" class="excelentCell formInputTag"> نوع المكالمة</td>
+                        <td width="30%"  style="color: #27272A;" class="excelentCell formInputTag"> نوع المكالمة</td>
                         <%if (status != null && status.equalsIgnoreCase("success")) {%>
                         <td style="text-align:right;">
                             <input  name="call_status" type="radio" value="incoming" <%if (call_status.equals("incoming")) {%> checked <%}%> />
@@ -445,7 +445,7 @@
                         <% }%>
                     </tr>
                     <tr>
-                        <td  style="color: #000;" class="excelentCell formInputTag">التاريخ</td>
+                        <td  style="color: #27272A;" class="excelentCell formInputTag">التاريخ</td>
                         <td dir="ltr" style="<%=style%>"> <input name="entryDate" id="entryDate" type="text" size="50" maxlength="50" style="width: 45%;" value="<%=(entryDate == null) ? nowTime : entryDate%>"/><img alt=""  style="margin-right: 5px;" src="images/showcalendar.gif" onMouseOver="Tip('<%=calenderTip%>', CENTERMOUSE, true, OFFSETX, 0, BGCOLOR, '#FFFF99', FONTCOLOR, 'BLACK', FONTSIZE, '10pt', FONTWEIGHT, 'BOLD', SHADOW, true, SHADOWWIDTH, 7, TITLE, 'Display Calender Help', TITLEALIGN, 'center', TITLEFONTCOLOR, 'black', TITLEBGCOLOR, '#6699FF')" onMouseOut="UnTip()"  /></td>
                     </tr>
                     <tr>

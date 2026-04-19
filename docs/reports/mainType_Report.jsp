@@ -89,7 +89,7 @@ if(stat.equals("En")){
         <META HTTP-EQUIV="Expires" CONTENT="0">
         <script src="js/sorttable.js"></script>
         <style>
-            .th{text-align:Center;padding:.2em;border:1px solid #000;background:#328aa4 url(tr_back.gif) repeat-x;color:#fff;}
+            .th{text-align:Center;padding:.2em;border:1px solid #27272A;background:#328aa4 url(tr_back.gif) repeat-x;color:#fff;}
             .even{background:#e5f1f4;}
             .odd{background:#f8fbfc;}
             td{border:0px;padding:.3em;}

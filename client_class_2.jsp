@@ -813,13 +813,14 @@
         }
         .appointment_data {
             background-color: white;
-            padding: 5px;
+            padding: 5px; 
+            color: black;
         }
         .login-input {
             width: 100%;
             height: 23px;
             padding: 0 9px;
-            color: #000;
+            color: #27272A;
             font-size: 13px;
             cursor: auto;
             text-shadow: 0 1px black;
@@ -968,7 +969,7 @@
 .td-table{
 
     font-size: 13px;
-    color: #666666;
+    color: black;
     text-align: center;
     font-weight: bold;
    padding: 8px; 
@@ -994,6 +995,7 @@ table.dataTable thead td,
 table.dataTable tfoot th,
 table.dataTable tfoot td {
   padding: 4px 5px !important;
+  color: black !important; 
 }
     </style>
     <BODY>

@@ -351,7 +351,7 @@
     <body onload="window.scrollTo(<%=xAxis%>,<%=yAxis%>)">
         <div style="width: 100%"></div>
         <div style="width: 100%; text-align: center;">
-        <button type="button" style="color: #000;font-size:15px;font-weight:bold; width: 90px; height: 30px; vertical-align: top; margin-bottom: 3px;"
+        <button type="button" style="color: #27272A;font-size:15px;font-weight:bold; width: 90px; height: 30px; vertical-align: top; margin-bottom: 3px;"
                 title="Export Future Appointments to Excel" onclick="exportToExcel();">Excel &nbsp;<img height="15" src="images/icons/excel.png" />
         </button>
         </div>

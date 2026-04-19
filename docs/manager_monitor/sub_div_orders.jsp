@@ -181,7 +181,7 @@
                                 </select>
                             </td>
                             <td style="text-align:center" bgcolor="#dedede"  valign="MIDDLE">
-                                <button type="submit" STYLE="color: #000;font-size:15px; margin: 2px;font-weight:bold; ">Search<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
+                                <button type="submit" STYLE="color: #27272A;font-size:15px; margin: 2px;font-weight:bold; ">Search<IMG HEIGHT="15" SRC="images/search.gif" ></button>  
                             </td>
                         </tr>
                     </table>

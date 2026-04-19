@@ -209,7 +209,7 @@
                     </tr>
                 </table>
                 <br/>
-                <button class="button" type="button" onclick="JavaScript: submitForm();"   STYLE="color: #000;font-size:15;margin-top: 20px;font-weight:bold; "><fmt:message key="print"/><IMG HEIGHT="15" SRC="images/search.gif"> </button>
+                <button class="button" type="button" onclick="JavaScript: submitForm();"   STYLE="color: #27272A;font-size:15;margin-top: 20px;font-weight:bold; "><fmt:message key="print"/><IMG HEIGHT="15" SRC="images/search.gif"> </button>
                 <br><br>
 
 

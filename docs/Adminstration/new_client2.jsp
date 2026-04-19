@@ -1217,7 +1217,7 @@
 
 
                         <tr>
-                            <td width="30%"  style="color: #000;">نوع الإتصال </td>
+                            <td width="30%"  style="color: #27272A;">نوع الإتصال </td>
                             <td style="text-align:right;">
                                 <input name="note" type="radio" value="مكالمة" checked="" id="note">
                                 <label><img src="images/dialogs/phone.png" alt="phone" width="24px">مكالمة </label>
@@ -1230,7 +1230,7 @@
                         </tr>
 
                         <tr>
-                            <td width="30%"  style="color: #000;">إتجاة المكالمة/المقابلة</td>
+                            <td width="30%"  style="color: #27272A;">إتجاة المكالمة/المقابلة</td>
                             <td style="text-align:right;">
                                 <input  name="call_status" type="radio" value="incoming" checked id="call_status" />
                                 <label>واردة</label>
@@ -1240,13 +1240,13 @@
 
                         </tr>
                         <tr>
-                            <td  style="color: #000;">التاريخ</td>
+                            <td  style="color: #27272A;">التاريخ</td>
                             <td dir="ltr" style="<%=style%>"> <input name="entryDate" id="appDate1" type="text" size="50" maxlength="50" style="width: 45%;" value="<%=(entryDate == null) ? nowTime : entryDate%>"/><img alt=""  style="margin-right: 5px;" src="images/showcalendar.gif" onMouseOver="Tip('date', CENTERMOUSE, true, OFFSETX, 0, BGCOLOR, '#FFFF99', FONTCOLOR, 'BLACK', FONTSIZE, '10pt', FONTWEIGHT, 'BOLD', SHADOW, true, SHADOWWIDTH, 7, TITLE, 'Display Calender Help', TITLEALIGN, 'center', TITLEFONTCOLOR, 'black', TITLEBGCOLOR, '#6699FF')" onMouseOut="UnTip()"  /></td>
                         </tr>
                         <tr>
                             <td colspan="2">
 
-                                <div id="callerNumber" style="color: #000;width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;clear: both;">
+                                <div id="callerNumber" style="color: #27272A;width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;clear: both;">
 
                                 </div>
                                 <div id="callerBtn" style="margin-left: auto;margin-right: auto;text-align:center;">  

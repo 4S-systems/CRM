@@ -862,7 +862,7 @@
                             <br/>
                             <br/>
                             <center>
-                                <img width="180px" height="220px" name='itemImage' id='itemImage' alt='document image' src='images/unknown-person.jpg' style="border: #000 double thick; float: <%=align%>;">
+                                <img width="180px" height="220px" name='itemImage' id='itemImage' alt='document image' src='images/unknown-person.jpg' style="border: #27272A double thick; float: <%=align%>;">
                             </center>
                             <!-- hidden field -->
                             <input type="hidden" name="docType" id="docType" value="<%=CRMConstants.DOCUMENT_TYPE_PERSONAL_PHOTO_ID%>">

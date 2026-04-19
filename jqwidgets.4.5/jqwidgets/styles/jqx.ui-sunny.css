@@ -22,7 +22,7 @@
 .jqx-tabs-header-ui-sunny{border-width: 1px; margin:2px; border-radius:8px; moz-border-radius:8px; webkit-border-radius:8px}
 .jqx-tabs-header-bottom-ui-sunny{margin-top:-2px !important; padding-bottom: 3px; padding-top:1px}
 /*Radio Button*/
-.jqx-radiobutton-ui-sunny .jqx-fill-state-pressed-ui-sunny{background:#222; border:1px solid #000}
+.jqx-radiobutton-ui-sunny .jqx-fill-state-pressed-ui-sunny{background:#222; border:1px solid #27272A}
 /*Calendar*/
 .jqx-calendar-cell-ui-sunny{font-size: 11px; border-color: #d19405; background: #fece2f url(images/sunny/ui-bg_gloss-wave_60_fece2f_500x100.png) 50% 50% repeat-x; color: #4c3000; padding:.2em; text-align:right; text-decoration:none; moz-border-radius:0px !important; webkit-border-radius:0px !important; border-radius:0px !important}
 .jqx-calendar-cell-today-ui-sunny{background:#ffe45c; border:1px solid #fed22f; color:#363636}
@@ -71,7 +71,7 @@
 .jqx-fill-state-focus-ui-sunny {border-color: #494437;}
 .jqx-fill-state-pressed-ui-sunny{ border-color:#655e4e; background: #ffffff url(images/sunny/ui-bg_inset-soft_30_ffffff_1x100.png) 50% 50% repeat-x; color: #0074c7;}
 .jqx-fill-state-pressed-ui-sunny a, .jqx-fill-state-pressed-ui-sunny a:link, .jqx-fill-state-pressed-ui-sunny a:visited{color:#0074c7; text-decoration:none}
-.jqx-fill-state-disabled-ui-sunny {cursor: default; color: #000; opacity: .55; filter:Alpha(Opacity=45);}
+.jqx-fill-state-disabled-ui-sunny {cursor: default; color: #27272A; opacity: .55; filter:Alpha(Opacity=45);}
 
 .jqx-input-button-content-ui-sunny{font-size:10px}
 .jqx-input-icon-ui-sunny{margin-left:2px; margin-top:-1px}
