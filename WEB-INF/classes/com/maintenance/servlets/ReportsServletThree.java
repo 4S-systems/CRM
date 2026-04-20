@@ -4530,10 +4530,6 @@ public class ReportsServletThree extends TrackerBaseServlet {
                 fromDate = null;
                 toDate = null;
                 sdf = new SimpleDateFormat("yyyy-MM-dd");
-                c = Calendar.getInstance();
-                toDateStr = request.getAttribute("toDate") != null ? request.getParameter("toDate") : sdf.format(c.getTime());
-                c.add(Calendar.MONTH, -3);
-                fromDateStr = request.getParameter("fromDate") != null ? request.getParameter("fromDate") : sdf.format(c.getTime());
                 try {
                     if (request.getParameter("fromDate") != null) {
                         fromDate = new java.sql.Date(sdf.parse(request.getParameter("fromDate")).getTime());
@@ -4546,9 +4542,7 @@ public class ReportsServletThree extends TrackerBaseServlet {
                 }
                 sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                 if (fromDate != null && toDate != null) {
-                    String[] seasonTypeFIDs = request.getParameterValues("seasonTypeF");
-                    String[] campaignIDs = request.getParameterValues("campaignIDF");
-                    String[] sourceListIDs = request.getParameterValues("sourceList");
+                    String[] channelID = request.getParameterValues("channelID");
                     String projectIDs = request.getParameter("projectID");
                     String[] rateIDs = request.getParameterValues("rateID");
                     employeeID = request.getParameter("employeeID");
@@ -4558,8 +4552,8 @@ public class ReportsServletThree extends TrackerBaseServlet {
                     ArrayList<WebBusinessObject> clientsList = new ArrayList<WebBusinessObject>();
 
                     if (clntTyp != null && clntTyp.equals("cls")) {
-                        clientsList = clientRatingMgr.getClientRateInterval(fromDate, toDate,
-                                campaignIDs != null ? "'" + Tools.arrayToString(campaignIDs, "','") + "'" : null,
+                        clientsList = clientRatingMgr.getClientRateIntervalForCommChannels(fromDate, toDate,
+                                channelID != null ? "'" + Tools.arrayToString(channelID, "','") + "'" : null,
                                 projectIDs,
                                 rateIDs != null ? "'" + Tools.arrayToString(rateIDs, "','") + "'" : null, employeeID,
                                 request.getParameter("type"), request.getParameter("dateType"), departmentID);
@@ -4581,8 +4575,8 @@ public class ReportsServletThree extends TrackerBaseServlet {
                             }
                         }
 
-                        clientsCounts = clientRatingMgr.getClientRateCountInterval(fromDate, toDate,
-                                campaignIDs != null ? "'" + Tools.arrayToString(campaignIDs, "','") + "'" : null,
+                        clientsCounts = clientRatingMgr.getClientRateCountIntervalForComChannels(fromDate, toDate,
+                                channelID != null ? "'" + Tools.arrayToString(channelID, "','") + "'" : null,
                                 projectIDs,
                                 rateIDs != null ? "'" + Tools.arrayToString(rateIDs, "','") + "'" : null, employeeID,
                                 request.getParameter("type"), request.getParameter("dateType"), departmentID);
@@ -4593,7 +4587,7 @@ public class ReportsServletThree extends TrackerBaseServlet {
                             if (clientCountWbo.getAttribute("clientCount") != null) {
                                 dataEntryMap = new HashMap();
                                 totalClientsCount += Integer.parseInt((String) clientCountWbo.getAttribute("clientCount"));
-                                dataEntryMap.put("name", clientCountWbo.getAttribute("rateName"));
+                                dataEntryMap.put("name", clientCountWbo.getAttribute("channelName"));
                                 dataEntryMap.put("y", Integer.parseInt((String) clientCountWbo.getAttribute("clientCount")));
                                 dataList.add(dataEntryMap);
                             }
@@ -4603,84 +4597,22 @@ public class ReportsServletThree extends TrackerBaseServlet {
                         request.setAttribute("jsonText", jsonText);
                         request.setAttribute("dataList", clientsCounts);
 
-                        request.setAttribute("campaignID", campaignIDs != null ? Tools.arrayToString(campaignIDs, ",") : null);
+                        request.setAttribute("channelID", channelID != null ? Tools.arrayToString(channelID, ",") : null);
                         request.setAttribute("projectID", projectIDs);
                         request.setAttribute("rateID", rateIDs != null ? Tools.arrayToString(rateIDs, ",") : null);
 
                     } else if (clntTyp != null && clntTyp.equals("uncls")) {
                         departmentID = request.getParameter("departmentID");
                         clientMgr = ClientMgr.getInstance();
-                        clientsList = clientMgr.selectUnratedCl(fromDate, toDate,
-                                campaignIDs != null ? "'" + Tools.arrayToString(campaignIDs, "','") + "'" : null, employeeID,
+                        clientsList = clientMgr.selectUnratedClForComChannels(fromDate, toDate,
+                                channelID != null ? "'" + Tools.arrayToString(channelID, "','") + "'" : null, employeeID,
                                 projectIDs,
                                 request.getParameter("type"), departmentID);
 
-                        wbo = clientMgr.selectUnratedRatedCountCl(fromDate, toDate,
-                                campaignIDs != null ? "'" + Tools.arrayToString(campaignIDs, "','") + "'" : null, employeeID,
+                        clientsCounts = clientMgr.selectUnratedRatedCountClForComChan(fromDate, toDate,
+                                channelID != null ? "'" + Tools.arrayToString(channelID, "','") + "'" : null, employeeID,
                                 projectIDs,
                                 request.getParameter("type"), departmentID);
-                        dataList = new ArrayList();
-                        totalClientsCount = 0;
-                        // populate series data map
-                        if (wbo != null) {
-                            if (wbo.getAttribute("totalRated") != null) {
-                                dataEntryMap = new HashMap();
-                                totalClientsCount += Integer.parseInt((String) wbo.getAttribute("totalRated"));
-                                dataEntryMap.put("name", " Rated Clients ");
-                                dataEntryMap.put("y", Integer.parseInt((String) wbo.getAttribute("totalRated")));
-                                dataList.add(dataEntryMap);
-                            }
-                            if (wbo.getAttribute("totalUnrated") != null) {
-                                dataEntryMap = new HashMap();
-                                totalClientsCount += Integer.parseInt((String) wbo.getAttribute("totalUnrated"));
-                                dataEntryMap.put("name", " Unrated Clients ");
-                                dataEntryMap.put("y", Integer.parseInt((String) wbo.getAttribute("totalUnrated")));
-                                dataList.add(dataEntryMap);
-                            }
-                        }
-                        // convert map to JSON string
-                        jsonText = JSONValue.toJSONString(dataList);
-                        request.setAttribute("res", jsonText);
-                        request.setAttribute("seasonTypeFIDs", seasonTypeFIDs);
-                        request.setAttribute("campaignID", campaignIDs != null ? Tools.arrayToString(campaignIDs, ",") : null);
-                        request.setAttribute("sourceListIDs", sourceListIDs);
-                        request.setAttribute("projectID", projectIDs);
-                        request.setAttribute("rateID", rateIDs != null ? Tools.arrayToString(rateIDs, ",") : null);
-                    } else if (clntTyp != null && clntTyp.equals("all")) {
-                        clientsList = clientRatingMgr.getClientRateIntervalAllMar(fromDate, toDate,
-                                seasonTypeFIDs != null ? "'" + Tools.arrayToString(seasonTypeFIDs ,"','") + "'" : null,
-                                campaignIDs != null ? "'" + Tools.arrayToString(campaignIDs, "','") + "'" : null,
-                                sourceListIDs != null ? "'" + Tools.arrayToString(sourceListIDs, "','") + "'" : null,
-                                projectIDs,
-                                rateIDs != null ? "'" + Tools.arrayToString(rateIDs, "','") + "'" : null, employeeID,
-                                request.getParameter("type"), request.getParameter("dateType"), departmentID);
-                        String clientCreationTime, ratingTime;
-                        for (WebBusinessObject clientTempWbo : clientsList) {
-                            clientCreationTime = (String) clientTempWbo.getAttribute("clientCreationTime");
-                            clientCreationTime = clientCreationTime.length() > 16 ? clientCreationTime.substring(0, 16) : clientCreationTime;
-                            clientTempWbo.setAttribute("clientCreationTime", clientCreationTime);
-                            String fAppTime = (String) clientTempWbo.getAttribute("mct");
-                            if(clientTempWbo.getAttribute("creationTime").equals("---")){
-                            ratingTime = "";
-                            } else {
-                            ratingTime = (String) clientTempWbo.getAttribute("creationTime");
-                            ratingTime = ratingTime.substring(0, 16);
-                            }
-                            fAppTime = fAppTime.substring(0, 16);
-                            clientTempWbo.setAttribute("creationTime", ratingTime);
-                            clientTempWbo.setAttribute("mct", fAppTime);
-                            try {
-                                clientTempWbo.setAttribute("diffDays", ((sdf.parse(fAppTime).getTime() - sdf.parse(clientCreationTime).getTime()) / (1000 * 60 * 60 * 24)) + "");
-                            } catch (ParseException ex) {
-                                clientTempWbo.setAttribute("diffDays", "---");
-                            }
-                        }
-
-                        clientsCounts = clientRatingMgr.getClientRateCountInterval(fromDate, toDate,
-                                campaignIDs != null ? "'" + Tools.arrayToString(campaignIDs, "','") + "'" : null,
-                                projectIDs,
-                                rateIDs != null ? "'" + Tools.arrayToString(rateIDs, "','") + "'" : null, employeeID,
-                                request.getParameter("type"), request.getParameter("dateType"), departmentID);
                         dataList = new ArrayList();
                         totalClientsCount = 0;
                         // populate series data map
@@ -4688,20 +4620,17 @@ public class ReportsServletThree extends TrackerBaseServlet {
                             if (clientCountWbo.getAttribute("clientCount") != null) {
                                 dataEntryMap = new HashMap();
                                 totalClientsCount += Integer.parseInt((String) clientCountWbo.getAttribute("clientCount"));
-                                dataEntryMap.put("name", clientCountWbo.getAttribute("rateName"));
+                                dataEntryMap.put("name", clientCountWbo.getAttribute("channelName"));
                                 dataEntryMap.put("y", Integer.parseInt((String) clientCountWbo.getAttribute("clientCount")));
                                 dataList.add(dataEntryMap);
                             }
                         }
                         // convert map to JSON string
                         jsonText = JSONValue.toJSONString(dataList);
-                        request.setAttribute("jsonText", jsonText);
-                        request.setAttribute("dataList", clientsCounts);
-
-                        request.setAttribute("campaignID", campaignIDs != null ? Tools.arrayToString(campaignIDs, ",") : null);
+                        request.setAttribute("res", jsonText);
+                        request.setAttribute("channelID", channelID != null ? Tools.arrayToString(channelID, ",") : null);
                         request.setAttribute("projectID", projectIDs);
                         request.setAttribute("rateID", rateIDs != null ? Tools.arrayToString(rateIDs, ",") : null);
-
                     }
                     request.setAttribute("clientsList", clientsList);
                     request.setAttribute("fromDate", request.getParameter("fromDate"));
@@ -4716,10 +4645,13 @@ public class ReportsServletThree extends TrackerBaseServlet {
                     c.add(Calendar.MONTH, -1);
                     request.setAttribute("fromDate", sdf.format(c.getTime()));
                 }
+                //SeasonMgr.getInstance().getCashedTableAsArrayList()
+                SeasonMgr seasonMgr = SeasonMgr.getInstance();
+                ArrayList<WebBusinessObject> channelsList = new ArrayList<WebBusinessObject>(seasonMgr.getCashedTable());
+                request.setAttribute("channelsList", channelsList);
+
                 campaignMgr = CampaignMgr.getInstance();
-                //   ArrayList<WebBusinessObject> campaignsList = new ArrayList<>(campaignMgr.getCashedTable());
-                campaignsList = new ArrayList<>(campaignMgr.getAllCampaign(null, null, request.getParameter("statusID"),
-                        (String) persistentUser.getAttribute("userId"), null, false));
+                campaignsList = new ArrayList<>(campaignMgr.getCashedTable());
                 request.setAttribute("campaignsList", campaignsList);
                 ratesList = new ArrayList<>();
                 try {
@@ -4784,18 +4716,11 @@ public class ReportsServletThree extends TrackerBaseServlet {
                     employeeList = userMgr.getEmployeeByDepartmentId(selectedDepartment, null, null);
                 }
 
-                try {
-                    request.setAttribute("campaignsList", new ArrayList<>(campaignMgr.getOnArbitraryKeyOracle("0", "key3")));
-                } catch (Exception ex) {
-                    request.setAttribute("campaignsList", new ArrayList<>());
-                }
-                ArrayList<WebBusinessObject> seasonType = null;
-                    try {
-                        seasonType = SeasonMgr.getInstance().getOnArbitraryKey2("1", "key2");
-                    } catch (Exception ex) {
-                        Logger.getLogger(ReportsServletThree.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                request.setAttribute("seasonType", seasonType);
+//                try {
+//                    request.setAttribute("campaignsList", new ArrayList<>(campaignMgr.getOnArbitraryKeyOracle("0", "key3")));
+//                } catch (Exception ex) {
+//                    request.setAttribute("campaignsList", new ArrayList<>());
+//                }
                 request.setAttribute("dateType", request.getParameter("dateType"));
                 request.setAttribute("departmentID", selectedDepartment);
                 request.setAttribute("employeeList", employeeList);
@@ -4804,6 +4729,7 @@ public class ReportsServletThree extends TrackerBaseServlet {
                 request.setAttribute("page", servedPage);
                 this.forwardToServedPage(request, response);
                 break;
+
             case 102:
                 fromDate = null;
                 toDate = null;
@@ -4836,7 +4762,7 @@ public class ReportsServletThree extends TrackerBaseServlet {
 
                     /*campaignMgr = CampaignMgr.getInstance();
                     WebBusinessObject campaignWbo = campaignMgr.getOnSingleKey(campaignIDs);*/
-                    SeasonMgr seasonMgr = SeasonMgr.getInstance();
+                    seasonMgr = SeasonMgr.getInstance();
                     WebBusinessObject channelWbo = seasonMgr.getOnSingleKey(channelID);
 
                     projectMgr = ProjectMgr.getInstance();

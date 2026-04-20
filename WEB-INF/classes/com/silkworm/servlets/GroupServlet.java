@@ -382,8 +382,6 @@ public class GroupServlet extends swBaseServlet {
                         defaultPage = "dep_contracts_agenda.jsp";
                     }  else if (type.equalsIgnoreCase("clientClassifications")) {
                         defaultPage = "client_class_2.jsp";
-                    }  else if (type.equalsIgnoreCase("teamLeader")) {
-                        defaultPage = "emp_statistic_page.jsp";
                     }
                     wbo.setAttribute("defaultPage", defaultPage);
                     String url = request.getParameter("url");

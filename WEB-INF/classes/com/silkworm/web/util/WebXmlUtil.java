@@ -29,6 +29,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -251,7 +252,7 @@ public class WebXmlUtil {
 
             FileInputStream file = new FileInputStream(fileExcel);
             XSSFWorkbook workbook = new XSSFWorkbook(file);
-
+            DataFormatter formatter = new DataFormatter();
             //Get first sheet from the workbook
             XSSFSheet sheet = workbook.getSheetAt(0);
             Iterator<Row> rowIterator = sheet.iterator();
@@ -292,11 +293,8 @@ public class WebXmlUtil {
 
                 cell = row.getCell(2);
                 node = doc.createElement("mobile");
-                try {
-                    node.appendChild(doc.createTextNode(cell != null ? convertArabicNoToEnglish(cell.getStringCellValue().trim()) : ""));
-                } catch (java.lang.IllegalStateException ex) {
-                    node.appendChild(doc.createTextNode(cell != null ? convertArabicNoToEnglish(cell.getNumericCellValue() + "") : ""));
-                }
+                String mobile = cell != null ? convertArabicNoToEnglish(formatter.formatCellValue(cell).trim()) : "";
+                node.appendChild(doc.createTextNode(mobile));
                 rootElement.appendChild(node);
 
                 cell = row.getCell(4);

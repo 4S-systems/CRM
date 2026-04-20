@@ -634,6 +634,7 @@ public class ClientProductMgr extends RDBGateWay {
         params.addElement(new StringValue(UserCode));
         params.addElement(new StringValue(getMaxClientName));
         params.addElement(new StringValue(MaxClientIdStore));
+        params.addElement(new StringValue(UserCode));
         params.addElement(new StringValue(getBudget));
         params.addElement(new StringValue(getInstProg));
         

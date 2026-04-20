@@ -3101,7 +3101,9 @@ public class AppointmentServlet extends TrackerBaseServlet {
                     case 79:
                     servedPage = "/docs/Search/search_for_client_with_lead.jsp";
                     try {
-                        request.setAttribute("data", IssueByComplaintUniqueMgr.getInstance().getClientsWithLead());
+                        loggegUserId = (String) loggedUser.getAttribute("userId");
+                        String userType = (String) userMgr.getByKeyColumnValue("key",(String) loggedUser.getAttribute("userId"),"key2");
+                        request.setAttribute("data", IssueByComplaintUniqueMgr.getInstance().getClientsWithLead(loggegUserId,userType));
                     } catch (Exception ex) {
                         logger.error(ex);
                     }

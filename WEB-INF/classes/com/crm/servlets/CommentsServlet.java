@@ -24,7 +24,6 @@ import com.maintenance.common.WboCollectionDataSource;
 import com.maintenance.db_access.DistributionListMgr;
 import com.maintenance.db_access.IssueByComplaintMgr;
 import com.maintenance.db_access.IssueByComplaintUniqueMgr;
-import com.planning.db_access.SeasonMgr;
 import com.silkworm.common.MetaDataMgr;
 import com.silkworm.common.SecurityUser;
 import com.silkworm.common.UserMgr;
@@ -1388,22 +1387,7 @@ public class CommentsServlet extends TrackerBaseServlet {
                 out = response.getWriter();
                 out.write(Tools.getJSONObjectAsString(wbo));
                 break;
-                case 42:
-                out = response.getWriter();
-                campaignMgr = CampaignMgr.getInstance();
-                String[] seasonTypes = request.getParameterValues("seasonTypeF"); // array من القيم المختارة
 
-                if (seasonTypes != null) {
-                    for (String s : seasonTypes) {
-                        System.out.println("Selected seasonTypeF: " + s);
-                    }
-                }
-                String[] departmentIds = request.getParameterValues("seasonTypeF"); // array من القيم المختارة
-                List<WebBusinessObject> campaignFList = campaignMgr.getCampaignsF(departmentIds);
-                out.write(Tools.getJSONArrayAsString(campaignFList));
-
-                break;
-            
             default:
                 System.out.println("No operation was matched");
         }
@@ -1511,8 +1495,6 @@ public class CommentsServlet extends TrackerBaseServlet {
             return 40;
         } else if (opName.equals("saveMultiCommentsAjax")) {
             return 41;
-        } else if (opName.equals("getCampaignsF")) {
-            return 42;
         } 
         return 0;
     }

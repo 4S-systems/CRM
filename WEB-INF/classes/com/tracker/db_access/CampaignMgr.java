@@ -1966,48 +1966,4 @@ public class CampaignMgr extends RDBGateWay {
 
         return wbo;
     }
-    
-    public ArrayList<WebBusinessObject> getCampaignsF(String[] departmentIds) {
-    SQLCommandBean forQuery = new SQLCommandBean();
-    Connection connection = null;
-    Vector parameters = new Vector();
-    Vector<Row> result = new Vector();
-    ArrayList<WebBusinessObject> list = new ArrayList<>();
-    
-    if (departmentIds == null || departmentIds.length == 0) return list;
-
-    // بناء SQL ديناميكي للـ IN
-    StringBuilder placeholders = new StringBuilder();
-    for (int i = 0; i < departmentIds.length; i++) {
-        placeholders.append("?");
-        if (i < departmentIds.length - 1) placeholders.append(",");
-        parameters.addElement(new StringValue(departmentIds[i]));
-    }
-
-    String getScript = "select id, campaign_title from campaign where direction IN (" + placeholders.toString() + ")";
-
-    try {
-        connection = dataSource.getConnection();
-        forQuery.setConnection(connection);
-        forQuery.setparams(parameters);
-        forQuery.setSQLQuery(getScript.trim());
-        result = forQuery.executeQuery();
-    } catch (SQLException ex) {
-        logger.error("SQL Exception  " + ex.getMessage());
-    } catch (UnsupportedTypeException uste) {
-        logger.error("***** " + uste.getMessage());
-    } finally {
-        try {
-            connection.close();
-        } catch (SQLException ex) {
-            logger.error("***** " + ex.getMessage());
-        }
-    }
-
-    for (Row row : result) {
-        list.add(fabricateBusObj(row));
-    }
-    return list;
-}
-
 }

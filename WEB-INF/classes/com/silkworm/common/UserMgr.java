@@ -2392,12 +2392,7 @@ public class UserMgr extends RDBGateWay {
         Vector<Row> result = new Vector();
         ArrayList<WebBusinessObject> list = new ArrayList();
         StringBuilder dateCon = new StringBuilder();
-        String getScript = null;
-        if(departmentId.equals("all")){
-        getScript = "getEmployeeByEmpId";
-        } else {
-        getScript = "getEmployeeByDepartmentId";
-        }
+        
 //        parameters.add(new StringValue(departmentId));
 //        parameters.add(new StringValue(departmentId));
         
@@ -2419,7 +2414,7 @@ public class UserMgr extends RDBGateWay {
             connection = dataSource.getConnection();
             command.setConnection(connection);
             command.setparams(parameters);
-            command.setSQLQuery(getQuery(getScript).replaceAll("departmentID", departmentId).trim()
+            command.setSQLQuery(getQuery("getEmployeeByDepartmentId").replaceAll("departmentID", departmentId).trim()
                     + dateCon.toString());
             result = command.executeQuery();
         } catch (SQLException ex) {

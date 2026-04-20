@@ -787,15 +787,23 @@ public class IssueByComplaintUniqueMgr extends RDBGateWay {
         return data;
     }
     
-       public ArrayList<WebBusinessObject> getClientsWithLead() {
+       public ArrayList<WebBusinessObject> getClientsWithLead(String loggegUserId, String userType) {
         Connection connection = null;
         Vector queryResult = null;
+        Vector param = new Vector();
+        param.addElement(new StringValue(loggegUserId));
         SQLCommandBean forQuery = new SQLCommandBean();
-        String theQuery = getQuery("getClientsWithNoCommentsLead").trim();
+        String theQuery = null;
+        if(userType.equals("1")){
+        theQuery = getQuery("getClientsWithNoCommentsMan").trim();
+        } else {
+        theQuery = getQuery("getClientsWithNoCommentsLead").trim();
+        }
         try {
             connection = dataSource.getConnection();
             forQuery.setConnection(connection);
             forQuery.setSQLQuery(theQuery);
+            forQuery.setparams(param);
             queryResult = forQuery.executeQuery();
         } catch (SQLException ex) {
             logger.error("SQL Exception  " + ex.getMessage());
