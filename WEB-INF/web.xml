@@ -20,11 +20,11 @@
     </context-param>
     <context-param>
         <param-name>UserName</param-name>
-        <param-value>ENGY_TEST</param-value>
+        <param-value>engy_test</param-value>
     </context-param>
     <context-param>
         <param-name>PassWord</param-name>
-        <param-value>ENGY_TEST</param-value>
+        <param-value>engy_test</param-value>
     </context-param>
     <context-param>
         <param-name>SmsProviderKey</param-name>
@@ -123,19 +123,19 @@
     </context-param>
     <context-param>
         <param-name>assetErpName</param-name>
-        <param-value>ENG_CON</param-value>
+        <param-value>bright_city</param-value>
     </context-param>
     <context-param>
         <param-name>assetErpPassword</param-name>
-        <param-value>ENG_CON</param-value>
+        <param-value>bright_city</param-value>
     </context-param>
     <context-param>
         <param-name>storeErpName</param-name>
-        <param-value>ENG_CON</param-value>
+        <param-value>bright_city</param-value>
     </context-param>
     <context-param>
         <param-name>storeErpPassword</param-name>
-        <param-value>ENG_CON</param-value>
+        <param-value>bright_city</param-value>
     </context-param>
     <context-param>
         <param-name>realEstateName</param-name>
@@ -216,7 +216,7 @@
     <context-param>
         <description>Path to save web clients XML files</description>
         <param-name>webDirectoryPath</param-name>
-        <param-value>E:\javaWeb\</param-value>
+        <param-value>D:\javaWeb\</param-value>
     </context-param>
    
     <!--context-param>  for windows

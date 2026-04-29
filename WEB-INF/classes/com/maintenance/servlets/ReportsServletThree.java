@@ -3072,11 +3072,44 @@ public class ReportsServletThree extends TrackerBaseServlet {
                             ArrayList<WebBusinessObject> clientsList = clientMgr.selectUnratedCl(fromDate, toDate,
                                     campaignIDs != null ? "'" + campaignIDs + "'" : null, employeeID, projectID, request.getParameter("type"), departmentID);
 
-                            String headers[] = {"#", "Client Name", "Mobile", "Creation Time"};
-                            String attributes[] = {"Number", "clientName", "mobile", "clientCreationTime"};
-                            String dataTypes[] = {"", "String", "String", "String"};
+                            String headers[] = {"#", "Client Name", "Mobile", "Creation Time", "Sender Name", "Sales Name"};
+                            String attributes[] = {"Number", "clientName", "mobile", "clientCreationTime","sender_name","full_name"};
+                            String dataTypes[] = {"", "String", "String", "String", "String", "String"};
                             workBook = Tools.createExcelReport("Unclassified Clients", headerStr, headerValuesStr, headers, attributes, dataTypes, clientsList);
                             filename = "UnclassifiedClients" + reportDate;
+                        } else if (clntTyp != null && clntTyp.equals("all") || clntTyp.equals("")) {
+                            ArrayList<WebBusinessObject> clientsList = clientRatingMgr.getClientRateIntervalAll(fromDate, toDate,
+                                    campaignIDs != null ? "'" + campaignIDs + "'" : null, projectID,
+                                    rateIDs != null ? "'" + rateIDs + "'" : null, employeeID,
+                                    request.getParameter("type"), dateType, departmentID);
+                            String clientCreationTime, ratingTime;
+
+                            for (WebBusinessObject clientTempWbo : clientsList) {
+                                clientCreationTime = (String) clientTempWbo.getAttribute("clientCreationTime");
+                                clientCreationTime = clientCreationTime.length() > 16 ? clientCreationTime.substring(0, 16) : clientCreationTime;
+                                clientTempWbo.setAttribute("clientCreationTime", clientCreationTime);
+                                String fAppTime = (String) clientTempWbo.getAttribute("mct");
+                                ratingTime = (String) clientTempWbo.getAttribute("creationTime");
+                                if(ratingTime.equals("---")){
+                                    ratingTime = "---";
+                                } else {
+                                    ratingTime = ratingTime.substring(0, 16);
+                                }
+                                
+                                fAppTime = fAppTime.substring(0, 16);
+                                clientTempWbo.setAttribute("creationTime", ratingTime);
+                                try {
+                                    clientTempWbo.setAttribute("diffDays", ((sdf.parse(fAppTime).getTime() - sdf.parse(clientCreationTime).getTime()) / (1000 * 60 * 60 * 24)) + "");
+                                } catch (ParseException ex) {
+                                    clientTempWbo.setAttribute("diffDays", "---");
+                                }
+                            }
+                            String headers[] = {"#", "Client Name", "Mobile", "Creation Time", "Classification Time", "Difference Day(s)", "Classified By", "Classification", "Source", "Know Us" ,"Comment" };
+                            String attributes[] = {"Number", "clientName", "mobile", "clientCreationTime", "creationTime", "diffDays", "ratedBy", "rateName", "englishname", "campaign_title", "COMMENT"};
+                            String dataTypes[] = {"", "String", "String", "String", "String", "String", "String", "String", "String", "String", "String"};
+
+                            workBook = Tools.createExcelReport(" Classified Clients ", headerStr, headerValuesStr, headers, attributes, dataTypes, clientsList);
+                            filename = "ClassifiedClients" + reportDate;
                         }
                     } else if (rprtType != null && rprtType.equals("1")) {
                         clientsCounts = clientRatingMgr.getClientRateCountInterval(fromDate, toDate,
@@ -3089,7 +3122,7 @@ public class ReportsServletThree extends TrackerBaseServlet {
                         String dataTypes[] = {"", "String", "String"};
                         workBook = Tools.createExcelReport("Classified Clients Summary", headerStr, headerValuesStr, headers, attributes, dataTypes, clientsCounts);
                         filename = "ClassifiedClientsSummary" + reportDate;
-                    }
+                    } 
 
                     try (ServletOutputStream servletOutputStream = response.getOutputStream()) {
                         ByteArrayOutputStream bos = new ByteArrayOutputStream();

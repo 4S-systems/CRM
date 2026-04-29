@@ -5636,7 +5636,7 @@
     CURRENCYID, DEPOSITVALUE, RESERVEBYDEPOSIT, REG_ID_FROMCRM, CAMPCODE, 
     REP2, REP, CAMPRESOURCE, DIRECTOR, INSTPROGID ) select ?,null,sysdate,?,(select aa.STORE_ALLCODES_ID  
  from datebase.STORE_ALLCODES aa 
- where UPPER(aa.aname) LIKE '%' || UPPER(?) || '%' and aa.code = ?),null,'1',42,sysdate + 7,1,?,0,null,null,null,null,null,null,? from dual      
+ where UPPER(aa.aname) LIKE '%' || UPPER(?) || '%' and aa.code = ?),null,'1',(select STAFF.USERID from datebase.staff inner join datebase.store_allcodes on STORE_ALLCODES.STORE_ALLCODES_ID = STAFF.PERSONID where staff.personid = ?),sysdate + 7,1,?,0,null,null,null,null,null,null,? from dual      
         </insertClientRealEstateWeb>
         <saveDataRealEstateWebAllCode>
             Insert into datebase.STORE_ALLCODES
@@ -5793,7 +5793,7 @@
     
     <BusinessOpSecurityMgr>
         <getOpSecurityList>
-            SELECT * FROM business_op_security
+           SELECT * FROM business_op_security
         </getOpSecurityList> 
         <getOpSecurityById>
             SELECT * FROM business_op_security where id = ?
