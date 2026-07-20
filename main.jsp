@@ -485,11 +485,114 @@
     filter: brightness(0) saturate(100%);
 }
 
+/* Sidebar layout */
+:root {
+    --sidebar-width: 240px;
+    --sidebar-transition: 0.25s ease;
+    --topbar-height: 56px;
+}
+
 /* Sidebar menu */
-.sidebar-menu { position: fixed; top: 0px; bottom: 0; width: 240px; background-color:#27272A;  z-index: 1030; padding: 8px; }
-.sidebar-inner { overflow-y: auto; max-height: 100%;  }
-.sidebar-inner a { display: block; padding: 6px 10px;   font-family: "Google Sans", sans-serif !important;  }
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    background-color: #27272A;
+    z-index: 1030;
+    padding: 8px;
+    padding-top: calc(var(--topbar-height) + 4px);
+    box-sizing: border-box;
+    transition: transform var(--sidebar-transition);
+    will-change: transform;
+}
+.sidebar-menu.sidebar-side-left { left: 0; right: auto; }
+.sidebar-menu.sidebar-side-right { right: 0; left: auto; }
+body.sidebar-side-left.sidebar-collapsed .sidebar-menu { transform: translateX(-100%); }
+body.sidebar-side-right.sidebar-collapsed .sidebar-menu { transform: translateX(100%); }
+
+.sidebar-inner { overflow-y: auto; max-height: 100%;     min-height: 30%;}
+.sidebar-inner a { display: block; padding: 6px 10px; font-family: "Google Sans", sans-serif !important; }
 .sidebar-inner a:hover { background-color: #94DBFF; }
+
+/* Page offset when sidebar open */
+body.sidebar-side-left.sidebar-open {
+    padding-left: var(--sidebar-width);
+    padding-right: 0;
+    transition: padding-left var(--sidebar-transition);
+}
+body.sidebar-side-right.sidebar-open {
+    padding-right: var(--sidebar-width);
+    padding-left: 0;
+    transition: padding-right var(--sidebar-transition);
+}
+body.sidebar-collapsed {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Main content + topbar follow sidebar */
+.main-content-area {
+    width: 100%;
+    box-sizing: border-box;
+}
+body.sidebar-side-left.sidebar-open nav.modern-topbar {
+    padding-left: var(--sidebar-width) !important;
+    transition: padding-left var(--sidebar-transition);
+}
+body.sidebar-side-right.sidebar-open nav.modern-topbar {
+    padding-right: var(--sidebar-width) !important;
+    transition: padding-right var(--sidebar-transition);
+}
+body.sidebar-collapsed nav.modern-topbar {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+/* Toggle button */
+.sidebar-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin: 0 8px 0 0;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.sidebar-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+.sidebar-toggle-icon {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    border-radius: 1px;
+}
+.sidebar-toggle-icon::before,
+.sidebar-toggle-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+    border-radius: 1px;
+    transition: all 1s;
+}
+.sidebar-toggle-icon::before { top: -6px; }
+.sidebar-toggle-icon::after { top: 6px; }
+body.sidebar-collapsed .sidebar-toggle-icon { background: transparent; }
+body.sidebar-collapsed .sidebar-toggle-icon::before { top: 0; transform: rotate(45deg); }
+body.sidebar-collapsed .sidebar-toggle-icon::after { top: 0; transform: rotate(-45deg); }
+
 /* Sidebar menu layout fixes */
 .sidebar-inner ul.MM { list-style: none; margin-top: 10px !important; padding: 0 !important; display: flex; flex-direction: column; gap: 4px; }
 .sidebar-inner ul.MM > li { display: block; }
@@ -500,8 +603,6 @@
 /* Submenus: default hidden, show on hover; override inline styles */
 .sidebar-inner ul.SM { list-style: none; margin: 4px 0 8px 12px !important; border:none;  background-color:#27272A; padding: 0 !important; display: none !important; visibility: hidden !important; position: static !important; width: auto !important; }
 /*.sidebar-inner li:hover > ul.SM { display: block !important; visibility: visible !important;  border:none; }*/
-/* Offset page content to avoid overlap with fixed sidebar (current align=LEFT) */
-body { padding-left: 240px; }
 
 /* Sidebar menu background resets for items */
 .sidebar-inner ul.MM > li,
@@ -1168,15 +1269,21 @@ function changeLang(nextmode,context) {
 
     </HEAD>
 
-    <BODY onbeforeunload="ConfirmClose()" onunload="HandleOnClose();" style="margin-top: 0px;min-width: 950px;">
+    <%
+        String sidebarSide = "LEFT".equalsIgnoreCase(align) ? "left" : "right";
+    %>
+    <BODY class="sidebar-open sidebar-side-<%=sidebarSide%>" onbeforeunload="ConfirmClose()" onunload="HandleOnClose();" style="margin-top: 0px;min-width: 950px;">
         <center id="site-body-container"  style="min-height:93%;height: auto;">
             <div style="border: 1px solid #4f6582;/*width: 1000px;*/ min-height:96%; position: relative; margin: auto;padding-right: 0px; padding-left: 0px ;height: auto;">
                  <nav class="modern-topbar navbar fixed-top p-3 " style="background: #27272A;">
-                        <div class="container-fluid g-1 align-items-center">
+                        <div class="container-fluid g-1 align-items-center d-flex flex-wrap">
+                            <button type="button" id="sidebarToggle" class="sidebar-toggle-btn" aria-label="Toggle sidebar" aria-expanded="true" title="Menu">
+                                <span class="sidebar-toggle-icon"></span>
+                            </button>
                            
                                 
-                                <div class="row">
-                                        <div class="col-auto  "  background="images/gradient.gif" STYLE="border-top-WIDTH:0;" nowrap>
+                            <div class="row" style="align-items: baseline;">
+                                        <div class="col-auto "  background="images/gradient.gif" STYLE="border-top-WIDTH:0; " nowrap>
                                 <b>
                                     <% if (securityUser.isCanChangeHeadBar())
                                         {%>
@@ -1190,7 +1297,7 @@ function changeLang(nextmode,context) {
                                     <% }
                                     else
                                     {%>
-                                    <font color="blue"><%=securityUser.getUserGroupName()%></font>
+                                    <font color="white" class="mt-2"><%=securityUser.getUserGroupName()%></font>
                                         <%} %>
 <!--                                    <img src="images/icons/magic_stick.png" width="24px" height="24px" align="middle" title='<fmt:message key="changeview"/>' >-->
                                 </b>
@@ -1458,10 +1565,10 @@ function changeLang(nextmode,context) {
                     </TR> 
                     
                                     
-                    <div style="height: 28px;"></div>>
+                    <div style="height: 28px;"></div>
                 </TABLE>
                             <!--//////////////////////////////////////////-->
-                       <aside id="sidebarMenu" class="sidebar-menu" style="<%=("LEFT".equalsIgnoreCase(align))?"left:0;":"right:0;"%>">
+                       <aside id="sidebarMenu" class="sidebar-menu sidebar-side-<%=sidebarSide%>">
                     <div class="sidebar-inner">
                        <div class="sidebar-summary">
     <div class="user-info">
@@ -1513,6 +1620,7 @@ function changeLang(nextmode,context) {
                     </div>
                 </aside>
 
+                <div id="main-content" class="main-content-area">
                 <div style="background-color: transparent;width: 20%;text-align: left;;float: left;display: block;clear: both;margin-top: 5px;">
 
 
@@ -1544,6 +1652,7 @@ function changeLang(nextmode,context) {
                         out.println(ex.getMessage());
                     }%>
                 <div style="margin: 0px; clear: both;height: 10px;display: block;"></div>
+                </div>
             </div>
             <div id="site-bottom-bar" style="width: 100%">
                 <center>
@@ -1556,7 +1665,7 @@ function changeLang(nextmode,context) {
                     </div>
                 </center>
             </div>
-            <iframe name="print_frame" width="0" height="0" frameborder="0" src="<%=context%>/PDFReportServlet?op=getPrintForm"></iframe>
+                       <iframe name="print_frame" width="0" height="0" frameborder="0" src="<%=context%>/PDFReportServlet?op=getPrintForm"></iframe> 
         </center>
                 
                 <div>
@@ -1584,7 +1693,31 @@ document
 
 });
 
+(function () {
+    var STORAGE_KEY = 'mainSidebarCollapsed';
+    var body = document.body;
+    var btn = document.getElementById('sidebarToggle');
+    if (!btn) return;
 
+    function setCollapsed(collapsed) {
+        body.classList.toggle('sidebar-collapsed', collapsed);
+        body.classList.toggle('sidebar-open', !collapsed);
+        btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+        try {
+            localStorage.setItem(STORAGE_KEY, collapsed ? '1' : '0');
+        } catch (e) {}
+    }
+
+    try {
+        if (localStorage.getItem(STORAGE_KEY) === '1') {
+            setCollapsed(true);
+        }
+    } catch (e) {}
+
+    btn.addEventListener('click', function () {
+        setCollapsed(!body.classList.contains('sidebar-collapsed'));
+    });
+})();
 
 </script>
 

@@ -188,62 +188,69 @@
                 </tr>
             </table>
             <br/>
-            <FORM NAME="stat_form" METHOD="POST">
-                <TABLE ALIGN="<%=align%>" dir="<%=dir%>" WIDTH="50%" CELLPADDING="0" CELLSPACING="0" STYLE="border: 2px solid #d3d5d4">
-                    <TR>
-                        <TD width="8%" STYLE="text-align: center; color: blue; font-size: 16px; padding-left: 5px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            <DIV> 
-                                عرض خلال 
-                            </DIV>
-                        </TD>
-                        <TD width="3%" STYLE="text-align: right; color: black; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            من تاريخ :
-                        </TD>
-                        <TD width="9%" STYLE="text-align: right; color: blue; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            <input id="beginDate" name="beginDate" type="text" value="<%=beginDate%>" style="margin: 5px; width: 100px;" readonly />
-                        </TD>
-                        <TD width="3%" STYLE="text-align: right; color: black; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            الى تاريخ :
-                        </TD>
-                        <TD width="15%" STYLE="text-align: right; color: blue; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            <input id="endDate" name="endDate" type="text" value="<%=endDate%>" style="margin: 5px; width: 100px;" readonly />
-                        </TD>
-                        <TD width="3%" STYLE="text-align: right; color: black; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            التصنيف :
-                        </TD>
-                        <TD width="15%" STYLE="text-align: right; color: blue; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            <select name="rateID" id="rateID" style="width: 150px;" class="chosen-select-rate">
-                                <option value="">الكل</option>
-                                <sw:WBOOptionList wboList="<%=ratesList%>" valueAttribute="projectID" displayAttribute="projectName" scrollToValue="<%=rateID%>"/>
-                            </select>
-                        </TD>
-                        <td width="3%" style="text-align: right; color: black; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap class="silver_even_main" >
-                            المجموعة
-                        </td>
-                        <td style="text-align: right; color: black; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap class="silver_even_main" >
-                            <select id="groupID" name="groupID" style="font-size: 14px; width: 150px;"
-                                    onchange="JavaScript: getGroupUsers(false);">
-                                <%if (!groups.isEmpty()){%>
-                                    <sw:WBOOptionList wboList="<%=groups%>" displayAttribute="groupName" valueAttribute="group_id" scrollToValue="<%=groupID%>" />
-                                <%} else {%>
-                                    <option>لا يوجد مجموعات</option>
-                                <%}%>
-                            </select>
-                        </td>
-                        <td width="3%" style="text-align: right; color: black; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap class="silver_even_main" >
-                            الموظف
-                        </td>
-                        <td style="text-align: right; color: black; font-size: 14px; padding-left: 5px; border-left-width: 0px" nowrap class="silver_even_main" >
-                            <select id="userID" name="userID" style="font-size: 14px; width: 150px;">
-                            </select>
-                        </td>
+        <FORM NAME="stat_form" METHOD="POST">
+    <div class="table-responsive" style="margin-top: 12px;">
+    <TABLE ALIGN="<%=align%>" dir="<%=dir%>" WIDTH="100%" CELLPADDING="0" CELLSPACING="0"
+           class="table table-borderless mb-0"
+           STYLE="border: 1px solid #e6e9ef; border-radius: 14px; overflow: hidden; background: #ffffff; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);">
+        <TR>
+            <TD width="8%" STYLE="text-align: center; color: #0d6efd; font-size: 16px; padding: 12px 10px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                <DIV> 
+                    عرض خلال 
+                </DIV>
+            </TD>
+            <TD width="3%" STYLE="text-align: right; color: #1f2937; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                من تاريخ :
+            </TD>
+            <TD width="9%" STYLE="text-align: right; color: #0d6efd; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                <input id="beginDate" name="beginDate" type="text" value="<%=beginDate%>" class="form-control form-control-sm"
+                       style="margin: 0; width: 130px; border-radius: 10px;" readonly />
+            </TD>
+            <TD width="3%" STYLE="text-align: right; color: #1f2937; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                الى تاريخ :
+            </TD>
+            <TD width="15%" STYLE="text-align: right; color: #0d6efd; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                <input id="endDate" name="endDate" type="text" value="<%=endDate%>" class="form-control form-control-sm"
+                       style="margin: 0; width: 130px; border-radius: 10px;" readonly />
+            </TD>
+            <TD width="3%" STYLE="text-align: right; color: #1f2937; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                التصنيف :
+            </TD>
+            <TD width="15%" STYLE="text-align: right; color: #0d6efd; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                <select name="rateID" id="rateID" style="width: 170px; border-radius: 10px;" class="chosen-select-rate form-select form-select-sm">
+                    <option value="">الكل</option>
+                    <sw:WBOOptionList wboList="<%=ratesList%>" valueAttribute="projectID" displayAttribute="projectName" scrollToValue="<%=rateID%>"/>
+                </select>
+            </TD>
+            <td width="3%" style="text-align: right; color: #1f2937; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap class="silver_even_main" >
+                المجموعة
+            </td>
+            <td style="text-align: right; color: #1f2937; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap class="silver_even_main" >
+                <select id="groupID" name="groupID" style="font-size: 14px; width: 170px; border-radius: 10px;"
+                        class="form-select form-select-sm"
+                        onchange="JavaScript: getGroupUsers(false);">
+                    <%if (!groups.isEmpty()){%>
+                        <sw:WBOOptionList wboList="<%=groups%>" displayAttribute="groupName" valueAttribute="group_id" scrollToValue="<%=groupID%>" />
+                    <%} else {%>
+                        <option>لا يوجد مجموعات</option>
+                    <%}%>
+                </select>
+            </td>
+            <td width="3%" style="text-align: right; color: #1f2937; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap class="silver_even_main" >
+                الموظف
+            </td>
+            <td style="text-align: right; color: #1f2937; font-size: 14px; padding: 12px 8px; border-left-width: 0px;" nowrap class="silver_even_main" >
+                <select id="userID" name="userID" style="font-size: 14px; width: 170px; border-radius: 10px;" class="form-select form-select-sm">
+                </select>
+            </td>
 
-                        <TD width="9%" STYLE="text-align: right; color: blue; font-size: 14px; padding-left: 10px; border-left-width: 0px" nowrap CLASS="silver_even_main" >
-                            <button style="width: 100px" type="button" onclick="javascript:getResults();"><b style="font-weight: bold; font-size: 14px; vertical-align: middle">عرض</b>&ensp;<img src="images/icons/refresh.png" width="20" height="20" style="vertical-align: middle"/></button>
-                        </TD>
-                    </tr>
-                </table>
-            </form>
+            <TD width="9%" STYLE="text-align: right; color: #0d6efd; font-size: 14px; padding: 12px 10px; border-left-width: 0px;" nowrap CLASS="silver_even_main" >
+                <button class="btn btn-primary btn-sm" style="width: 110px; border-radius: 10px;" type="button" onclick="javascript:getResults();"><b style="font-weight: bold; font-size: 14px; vertical-align: middle">عرض</b>&ensp;<img src="images/icons/refresh.png" width="18" height="18" style="vertical-align: middle"/></button>
+            </TD>
+        </tr>
+    </table>
+    </div>
+</form>
 
             <br/>
 

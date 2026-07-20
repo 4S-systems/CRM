@@ -120,6 +120,9 @@
                 if (future != null && future.equalsIgnoreCase("ok")) {
             %>
                 var table = $('#clients').DataTable({
+                    autoWidth: false,
+                    scrollX: false,
+
                     "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                     iDisplayLength: 11,
                     columns: [
@@ -185,20 +188,33 @@
                     ],
                     "columnDefs": [
                         {"width": "10%", "targets": 0},
-                        {"width": "10%", "targets": 0},
-                        {"width": "10%", "targets": 0},
-//                    { "width": "10%", "targets": 0 },
-                        {"width": "8%", "targets": 0},
-                        {"width": "25%", "targets": 0},
+                        {"width": "7%", "targets": 1},
+                        {"width": "7%", "targets": 2},
+                        {"width": "7%", "targets": 3},
+                        {"width": "7%", "targets": 4},
+                        {"width": "8%", "targets": 5},
+                        {"width": "8%", "targets": 6},
+                        {"width": "7%", "targets": 7},
+                        {"width": "8%", "targets": 8},
+                        {"width": "7%", "targets": 9},
+                        {"width": "9%", "targets": 10},
                         {
-                            "width": "5%",
+                            "width": "90px",
                             "targets": -1,
+                            "orderable": false,
+                            "className": "col-actions",
                             "data": null,
-                            "defaultContent": "<img id='star' style='width: 30px; hight: 30px;'/> <a target='_blanck' id='goTo'><img src='images/client_details.jpg'/></a>"
-                                    + "<a href='#' id='pdf'><img src='images/pdf_icon.gif' style='height: 20px;' title='Datasheet'/></a>"
+                            "defaultContent": "<img id='star' style='width:30px;height:30px;vertical-align:middle;'/> <a target='_blanck' id='goTo'><img src='images/client_details.jpg' style='vertical-align:middle;'/></a>"
+                                    + "<a href='#' id='pdf'><img src='images/pdf_icon.gif' style='height:20px;vertical-align:middle;' title='Datasheet'/></a>"
                         }
                     ],
                     pageLength: '25',
+                    initComplete: function () {
+                        this.api().columns.adjust();
+                    },
+                    fnDrawCallback: function () {
+                        this.api().columns.adjust();
+                    },
                     "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
                         var date2 = new Date(aData[4]);
                         var timeDiff = today.getTime() - date2.getTime();
@@ -221,6 +237,9 @@
                 });
             <%} else {%>
                 var table = $('#clients').DataTable({
+                    autoWidth: false,
+                    scrollX: false,
+
                     "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
                     iDisplayLength: 11,
                     columns: [
@@ -275,25 +294,33 @@
                         'clientName:name'
                     ],
                     "columnDefs": [
-                        {"width": "10%", "targets": 0},
-                        {"width": "10%", "targets": 0},
-                        {"width": "10%", "targets": 0},
-                        {"width": "10%", "targets": 0},
-                        {"width": "10%", "targets": 0},
-//                    { "width": "10%", "targets": 0 },
-                        {"width": "8%", "targets": 0},
-                        {"width": "25%", "targets": 0},
+                        {"width": "11%", "targets": 0},
+                        {"width": "8%", "targets": 1},
+                        {"width": "8%", "targets": 2},
+                        {"width": "8%", "targets": 3},
+                        {"width": "8%", "targets": 4},
+                        {"width": "9%", "targets": 5},
+                        {"width": "8%", "targets": 6},
+                        {"width": "8%", "targets": 7},
+                        {"width": "9%", "targets": 8},
+                        {"width": "9%", "targets": 9},
                         {
-
-                            "width": "5%",
+                            "width": "90px",
                             "targets": -1,
+                            "orderable": false,
+                            "className": "col-actions",
                             "data": null,
-                            "defaultContent": "<img id='star' style='width: 30px; hight: 30px;'/> <a target='_blanck' id='goTo'><img src='images/client_details.jpg'/></a>"
-                                    + "<a href='#' id='goToWith'><img src='images/refresh.png' style='height: 20px; margin-right: 5px;' title='Withdrawal and Distribution'/></a>"
-
+                            "defaultContent": "<img id='star' style='width:30px;height:30px;vertical-align:middle;'/> <a target='_blanck' id='goTo'><img src='images/client_details.jpg' style='vertical-align:middle;'/></a>"
+                                    + "<a href='#' id='goToWith'><img src='images/refresh.png' style='height:20px;margin-right:5px;vertical-align:middle;' title='Withdrawal and Distribution'/></a>"
                         }
                     ],
                     pageLength: '25',
+                    initComplete: function () {
+                        this.api().columns.adjust();
+                    },
+                    fnDrawCallback: function () {
+                        this.api().columns.adjust();
+                    },
                     "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
                         var date2 = new Date(aData[5]);
                         var timeDiff = today.getTime() - date2.getTime();
@@ -316,6 +343,11 @@
                     }
                 });
             <%}%>
+                $(window).on('resize', function () {
+                    if (typeof table !== 'undefined') {
+                        table.columns.adjust();
+                    }
+                });
             });
             function printClientInformation(clientID) {
                 var url = "<%=context%>/PDFReportServlet?op=clientDataSheet&clientId=" + clientID + "&objectType=client";
@@ -340,14 +372,61 @@
             }
         </script>
         <style type="text/css">
-            .table td{
-                padding:5px;
-                text-align:center;
-                font-family:Georgia, "Times New Roman", Times, serif;
-                font-size:14px;
+            #clients {
+                width: 100% !important;
+                border-collapse: collapse;
+                border: 1px solid #333;
+                table-layout: fixed;
+            }
+            #clients thead th,
+            #clients tbody td {
+                box-sizing: border-box;
+                padding: 2px 3px;
+                text-align: center;
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-size: 11px;
                 font-weight: bold;
-                border: none;
-                margin-bottom: 30px;
+                border: 1px solid #333;
+                vertical-align: middle;
+                white-space: normal;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                line-height: 1.2;
+            }
+            #clients thead th.sorting,
+            #clients thead th.sorting_asc,
+            #clients thead th.sorting_desc {
+                padding-right: 18px !important;
+                background-position: center right 2px;
+            }
+            #clients th.col-actions,
+            #clients td.col-actions {
+                width: 90px !important;
+                min-width: 90px;
+                max-width: 90px;
+                white-space: nowrap;
+                padding: 2px 4px !important;
+                overflow: visible;
+            }
+            #clients td.col-actions img {
+                vertical-align: middle;
+            }
+            #clients td.col-actions a {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 0;
+            }
+            .dataTables_wrapper {
+                width: 100%;
+                overflow-x: hidden;
+            }
+            .table td {
+                padding: 2px 3px;
+                text-align: center;
+                font-family: Georgia, "Times New Roman", Times, serif;
+                font-size: 11px;
+                font-weight: bold;
+                border: 1px solid #333;
             }
         </style>
     </HEAD>

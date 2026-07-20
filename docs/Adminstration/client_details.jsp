@@ -1507,6 +1507,107 @@
             .ui-dialog-titlebar-close {
                 visibility: hidden;
             }
+   #follow_up_content,
+    #user_appointment {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        max-width: none !important;
+        z-index: 99999 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding: 20px 12px !important;
+        background: rgba(2, 6, 23, 0.32) !important;
+    }
+    #follow_up_content .popup-shell {
+        width: 60%;
+        margin: 10px auto;
+        border-radius: 16px;
+        border: 1px solid #dbe2ea;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.24) !important;
+        background: #f8fafc !important;
+        overflow: hidden;
+        max-height: calc(100vh - 40px);
+    }
+    #follow_up_content .popup-header {
+        background: linear-gradient(90deg, #0b2239 0%, #1d3557 100%) !important;
+        color: #fff !important;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    #follow_up_content .popup-body {
+        padding: 10px 14px 14px;
+        background: #f8fafc !important;
+        overflow-y: auto;
+        max-height: calc(100vh - 120px);
+    }
+    #follow_up_content .popup-label {
+        color: #1e293b !important;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    #follow_up_content #timer {
+        color: #0f172a !important;
+        font-weight: 800;
+    }
+    #follow_up_content .popup-btn {
+        background: green!important;
+        color: #fff !important;
+        border: none;
+        border-radius: 8px;
+    }
+    #follow_up_content .popup-btn:hover {
+        filter: brightness(1.05);
+    }
+    #follow_up_content .popup-input {
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+    }
+    #follow_up_content .table,
+    #follow_up_content .table tr,
+    #follow_up_content .table td {
+        background: transparent !important;
+        color: #0f172a !important;
+    }
+    #follow_up_content #comment {
+        background: #ffffff !important;
+        border: 1px solid #94a3b8 !important;
+        color: #0f172a !important;
+    }
+     #progress {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 2147483647 !important;
+        background: rgba(15, 23, 42, 0.45) !important;
+        display: none;
+    }
+    #progress img {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 72px !important;
+        height: 72px !important;
+        border-radius: 50%;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        background: #ffffff;
+        padding: 8px;
+    }
+    @media (max-width: 992px) {
+        #follow_up_content .popup-shell {
+            width: 85%;
+        }
+    }
+    @media (max-width: 576px) {
+        #follow_up_content .popup-shell {
+            width: 96%;
+        }
+    }
         </style>
     </head>
 
@@ -1873,10 +1974,10 @@
             }
 
             var appType = '<%=CRMConstants.CALL_RESULT_FOLLOWUP%>';
-                    /*if (note == "Not Interested" || note == "No Answer")
-                     {*/
+                    if (note == "Not Interested" || note == "No Answer")
+                     {
                     appType = callResult;
-                    //}
+                    }
 
                     var appointmentPlace = $(obj).parent().parent().parent().find("#appointmentPlace").val();
                     var comment = $("#comment").val();
@@ -3991,64 +4092,61 @@
                                     </div>  
                                     </div>
                                     <% }%>
-                                    <div id="follow_up_content" style="width: 70% !important;display: none;position: fixed">
-                                        <div style="clear: both;margin-left: 80%;margin-top: 0px;margin-bottom: -38px;z-index: -10000000;">
-                                            <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;   -webkit-box-shadow: 0px 0px 17px rgba(255, 255, 255, 1.0);
-                                                 -moz-box-shadow:    0px 0px 17px rgba(255, 255, 255, 1.0);
-                                                 box-shadow:         0px 0px 17px rgba(255, 255, 255, 1.0);
-                                                 -webkit-border-radius: 100px;
-                                                 -moz-border-radius: 100px;
-                                                 border-radius: 100px;" onclick="closePopup(this)"/>
-                                        </div>
-                                        <div class="login" style="width: 60%;margin-bottom: 10px;margin-left: auto;margin-right: auto;">
-                                            <h1 align="center" style="vertical-align: middle"><fmt:message key="followcl" /><b id="appClientName" style="font-weight: bold; font-size: 20px"></b> &nbsp;&nbsp;&nbsp;<img src="images/dialogs/phone.png" alt="phone" width="24px"/></h1>
-                                            <div style="text-align: left;margin-left: 2%;margin-right: auto;" > 
-                                                <span id="timer" style="font-size: 30px; font-weight: bolder; color: black; padding-left: 20px;"></span>
-                                                <button type="button" onclick="javascript: saveFollowUp(this);" style="font-size: 14px; font-weight: bold; width: 150px">Save<img style="height:20px; width: 20px" src="images/icons/follow_up.png" title="Follow up"/></button>
-                                            </div>
-                                            <br />
-                                            <input type="hidden" id="appTitle" name="appTitle" value="FOLLOW UP" />
-                                            <table class="table" dir="<%=dir%>">
-                                                <tr>
-                                                    <td style="color: #f1f1f1; font-size: 16px; font-weight: bold; text-align: <%=xAlign%>;"><fmt:message key="followa1" /> :</td>
-                                                    <td td style="text-align:<%=sAlign%>">
-                                                        <select id="callResult" name="callResult" STYLE="width: 225px;font-size: medium; font-weight: bold;" onchange="JavaScript: callResultsChng()">
-                                                            <option value="<%=CRMConstants.CALL_RESULT_MEETING%>">Meeting</option>
-                                                            <option value="<%=CRMConstants.CALL_RESULT_INBOUNDCALL%>">In-Bound Call</option>
-                                                            <option value="<%=CRMConstants.CALL_RESULT_OUTBOUNDCALL%>" selected>Out-Bound Call</option>
-                                                            <option value="<%=CRMConstants.CALL_RESULT_CALL%>">Internet</option>
-                                                            <option value="<%=CRMConstants.CALL_RESULT_DIRECT_VISIT%>">Direct Visit</option>
-                                                        </select>
-                                                    </td>
-                                                </tr>
+                                   <div id="follow_up_content" class="position-fixed w-100 position-relative" style="display: none;">
+    <div class="position-absolute   translate-middle z-3" style=" top: 63px; right: 280px;  z-index: -10000000;">
+        <img src="images/close_popup.png" width="32" height="32" class="rounded-circle shadow" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
+    </div>
+    <div class="popup-shell ">
+    
+        <h1 align="center" class="popup-header py-2 px-3 mb-0 d-flex align-items-center justify-content-center gap-2"><fmt:message key="followcl" /><b id="appClientName" class="fw-bold fs-5 text-info-emphasis"></b><img src="images/dialogs/phone.png" alt="phone" width="24px"/></h1>
+        <div class="popup-body">
+        <div class="d-flex align-items-center justify-content-between py-1"> 
+            <span id="timer" class="fs-2 fw-bolder text-primary ps-2"></span>
+            <button type="button" onclick="javascript: saveFollowUp(this);" class="btn popup-btn fw-bold px-3 py-1 d-inline-flex align-items-center gap-1 shadow-sm">Save<img class="h-auto" style="height:20px; width: 20px" src="images/icons/follow_up.png" title="Follow up"/></button>
+        </div>
+        <br />
+        <input type="hidden" id="appTitle" name="appTitle" value="FOLLOW UP" />
+        <table class="table table-borderless align-middle mb-2" dir="<%=dir%>">
+            <tr>
+                <td class="popup-label" style="text-align: <%=xAlign%>;"><fmt:message key="followa1" /> :</td>
+                <td td style="text-align:<%=sAlign%>">
+                    <select id="callResult" name="callResult" class="form-select form-select-sm fw-bold popup-input" style="width: 225px;" onchange="JavaScript: callResultsChng()">
+                        <option value="<%=CRMConstants.CALL_RESULT_MEETING%>">Meeting</option>
+                        <option value="<%=CRMConstants.CALL_RESULT_INBOUNDCALL%>">In-Bound Call</option>
+                        <option value="<%=CRMConstants.CALL_RESULT_OUTBOUNDCALL%>" selected>Out-Bound Call</option>
+                        <option value="<%=CRMConstants.CALL_RESULT_CALL%>">Internet</option>
+                        <option value="<%=CRMConstants.CALL_RESULT_DIRECT_VISIT%>">Direct Visit</option>
+                    </select>
+                </td>
+            </tr>
 
-                                                <tr>
-                                                    <!--td id="callStatusTd" style="color: #f1f1f1; font-size: 16px; font-weight: bold; text-align: <1%=xAlign%>;"><1fmt:message key="followb1" /> :</td>
-                                                    <td id="callStatusTd" style="text-align:<1%=sAlign%>" >
-                                                        <select id="callStatus" name="callStatus" STYLE="width: 225px;font-size: medium; font-weight: bold;" onchange="Javascript: callStatusChange();">
-                                                            <option value="not answered">not answered</option>
-                                                            <option value="answered" selected>answered</option>
-                                                        </select>
-                                                    </td-->
-                                                    <input type="hidden" name="callStatus" id="callStatus" value="answered"
-                                                           style="width: 80px;"/> <!--fmt:message key="followg1" /-->
+            <tr>
+                <!--td id="callStatusTd" style="color: #f1f1f1; font-size: 16px; font-weight: bold; text-align: <1%=xAlign%>;"><1fmt:message key="followb1" /> :</td>
+                <td id="callStatusTd" style="text-align:<1%=sAlign%>" >
+                    <select id="callStatus" name="callStatus" STYLE="width: 225px;font-size: medium; font-weight: bold;" onchange="Javascript: callStatusChange();">
+                        <option value="not answered">not answered</option>
+                        <option value="answered" selected>answered</option>
+                    </select>
+                </td-->
+                <input type="hidden" name="callStatus" id="callStatus" value="answered"
+                       style="width: 80px;"/> <!--fmt:message key="followg1" /-->
 
-                                                </tr>
+            </tr>
 
-                                                <tr>
-                                                    <!--td style="color: #f1f1f1; font-size: 16px; font-weight: bold; text-align: <1%=xAlign%>;"><1fmt:message key="followd1" /> :</td-->
-                                                    <td style="text-align:<%=sAlign%>">
-                                                        <input type="hidden" name="callDuration" id="callDuration" value="1" min="1"
-                                                               style="width: 80px;"/> <!--fmt:message key="followg1" /-->
-                                                    </td>
-                                                </tr>
+            <tr>
+                <!--td style="color: #f1f1f1; font-size: 16px; font-weight: bold; text-align: <1%=xAlign%>;"><1fmt:message key="followd1" /> :</td-->
+                <td style="text-align:<%=sAlign%>">
+                    <input type="hidden" name="callDuration" id="callDuration" value="1" min="1"
+                           style="width: 80px;"/> <!--fmt:message key="followg1" /-->
+                </td>
+            </tr>
 
-                                                <tr>
-                                                    <td id="callResultTD" style="color: #f1f1f1; font-size: 16px; font-weight: bold; text-align: <%=xAlign%>;"><fmt:message key="followe1" /> :</td>
-                                                    <td td style="text-align:<%=sAlign%>" id="callResultTD">
-                                                        <select id="nextAction" name="nextAction" STYLE="width: 225px;font-size: medium; font-weight: bold;" onchange="JavaScript: callResultsChange()">
-                                                            <option value="">choose</option>
-<% if (userPrevList.contains("CLOSED")) { %><option value="Closed">Closed</option><% } %>
+            <tr>
+                <td id="callResultTD" class="popup-label" style="text-align: <%=xAlign%>;"><fmt:message key="followe1" /> :</td>
+                <td td style="text-align:<%=sAlign%>" id="callResultTD">
+                    <select id="nextAction" name="nextAction" class="form-select form-select-sm fw-bold popup-input" style="width: 225px;" onchange="JavaScript: callResultsChange()">
+                        <option value="">choose</option>
+<% if (userPrevList.contains("CLOSED")) { %><option value="Closed">Closedfahd</option><% } %>
 <% if (userPrevList.contains("Done deal")) { %><option value="Done deal">Done deal</option><% } %>
 <% if (userPrevList.contains("EXISTING_OWNER")) { %><option value="Existing Owner">Existing Owner</option><% } %>
 <% if (userPrevList.contains("First call")) { %><option value="First call">First call</option><% } %>
@@ -4057,7 +4155,7 @@
 <% if (userPrevList.contains("Fresh leads")) { %><option value="Fresh leads">Fresh leads</option><% } %>
 <% if (userPrevList.contains("HOLD")) { %><option value="Hold">Hold</option><% } %>
 <% if (userPrevList.contains("NEEDS_READY_UNIT")) { %><option value="Needs Ready Unit">Needs Ready Unit</option><% } %>
-<% if (userPrevList.contains("No Answer")) { %><option value="No Answer">No Answer</option><% } %>
+<% if (userPrevList.contains("NOT_ANSWERED")) { %><option value="No Answer">No Answer</option><% } %>
 <% if (userPrevList.contains("NOT_INTERESTED")) { %><option value="Not Interested">Not Interested</option><% } %>
 <% if (userPrevList.contains("Not clear")) { %><option value="Not clear">Not clear</option><% } %>
 <% if (userPrevList.contains("OUT_OF_BUDGET")) { %><option value="Out of Budget">Out of Budget</option><% } %>
@@ -4068,67 +4166,63 @@
 <% if (userPrevList.contains("Send SMS")) { %><option value="Send SMS">Send SMS</option><% } %>
 <% if (userPrevList.contains("VISIT")) { %><option value="Visit">Visit</option><% } %>
 <% if (userPrevList.contains("WRONG_NUMBER")) { %><option value="Wrong Number">Wrong Number</option><% } %>
-                                                            <%-- <sw:WBOOptionList wboList='<%=callResLst%>' displayAttribute = "projectName" valueAttribute="projectName" />--%>
-                                                        </select>
-                                                    </td>
-                                                </tr>
+                        <%-- <sw:WBOOptionList wboList='<%=callResLst%>' displayAttribute = "projectName" valueAttribute="projectName" />--%>
+                    </select>
+                </td>
+            </tr>
 
-                                                <tr>
-                                                    <td id="meetresaultlbl" style="color:#f1f1f1; font-size: 16px; font-weight: bold; text-align: <%=xAlign%>; display:none">Follow Date: </td>
-                                                    <td>
-                                                        <table>
-                                                            <tr>
+            <tr>
+                <td id="meetresaultlbl" class="popup-label" style="text-align: <%=xAlign%>; display:none">Follow Date: </td>
+                <td>
+                    <table>
+                        <tr>
 
-                                                                <td style="text-align:right; display: none" id="meetingDateTD"><input name="meetingDate" id="meetingDate" type="text"   maxlength="50" value="<%=nowTime%>"/></td>
-                                                                <input type="hidden" name="timeflag" id="timeflag"/>
+                            <td style="text-align:right; display: none" id="meetingDateTD"><input name="meetingDate" id="meetingDate" type="text" class="form-control form-control-sm popup-input" maxlength="50" value="<%=nowTime%>"/></td>
+                            <input type="hidden" name="timeflag" id="timeflag"/>
 
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-                                                <tr>
-                                                    <td id="appointmentPlacelbl" style="color:#f1f1f1; font-size: 16px; font-weight: bold; text-align: <%=xAlign%>; display:none">Branch : </td>
-                                                    <td>
-                                                        <table>
-                                                            <tr>
-                                                                <td id ="appointmentPlaceDDL" style="text-align:right; display:none">
-                                                                    <select id="appointmentPlace" name="appointmentPlace" style="margin-top: 7px;width:200px;font-size: medium;">
-                                                                        <sw:WBOOptionList wboList='<%=userProjects%>' displayAttribute = "projectName" valueAttribute="projectName" />
-                                                                    </select>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
+            <tr>
+                <td id="appointmentPlacelbl" class="popup-label" style="text-align: <%=xAlign%>; display:none">Branch : </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td id ="appointmentPlaceDDL" style="text-align:right; display:none">
+                                <select id="appointmentPlace" name="appointmentPlace" class="form-select form-select-sm mt-2 popup-input" style="width:200px;">
+                                    <sw:WBOOptionList wboList='<%=userProjects%>' displayAttribute = "projectName" valueAttribute="projectName" />
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-                                                <tr>
-                                                    <td style="color:#f1f1f1; font-size: 16px;font-weight: bold; text-align: <%=xAlign%>;"><fmt:message key="followf1" /> : <br/></td>
-                                                    <td colspan="2" style="text-align:right">
-                                                        <textarea cols="26" rows="10" id="comment" style="width: 99%; background-color: #FFF7D6;"></textarea>
-                                                    </td>
-                                                </tr>
-                                            </table>
+            <tr>
+                <td class="popup-label" style="text-align: <%=xAlign%>;"><fmt:message key="followf1" /> : <br/></td>
+                <td colspan="2" style="text-align:right">
+                    <textarea cols="26" rows="10" id="comment" class="form-control popup-input" style="width: 99%;"></textarea>
+                </td>
+            </tr>
+        </table>
 
-                                            <!--div style="text-align: left;margin-left: 2%;margin-right: auto;" > 
-                                                <button type="button" onclick="javascript: saveFollowUp(this);" style="font-size: 14px; font-weight: bold; width: 150px">Save<img style="height:20px; width: 20px" src="images/icons/follow_up.png" title="Follow up"/></button>
-                                            </div-->
-                                            <div id="progress" style="display: none;">
-                                                <img src="images/Loading2.gif" width="32px" height="32px;" style="background-repeat: no-repeat;margin-left: auto;margin-right: auto"/>
-                                            </div>
-                                            <div style="margin: 0 auto;display: none; width: 90%;text-align: center;color: white;font-size: 16px;font-weight: bold" id="appMsg">Visit Added</div>
-                                        </div>  
-                                    </div>
-                                    <div id="user_appointment" style="width: 70% !important;display: none;position: fixed">
-                                        <div style="clear: both;margin-left: 80%;margin-top: 0px;margin-bottom: -38px;z-index: -10000000;">
-                                            <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;   -webkit-box-shadow: 0px 0px 17px rgba(255, 255, 255, 1.0);
-                                                 -moz-box-shadow:    0px 0px 17px rgba(255, 255, 255, 1.0);
-                                                 box-shadow:         0px 0px 17px rgba(255, 255, 255, 1.0);
-                                                 -webkit-border-radius: 100px;
-                                                 -moz-border-radius: 100px;
-                                                 border-radius: 100px;" onclick="closePopup(this)"/>
-                                        </div>
-                                        <div class="login" style="width: 60%;margin-bottom: 10px;margin-left: auto;margin-right: auto;">
+        <!--div style="text-align: left;margin-left: 2%;margin-right: auto;" > 
+            <button type="button" onclick="javascript: saveFollowUp(this);" style="font-size: 14px; font-weight: bold; width: 150px">Save<img style="height:20px; width: 20px" src="images/icons/follow_up.png" title="Follow up"/></button>
+        </div-->
+        <div id="progress" class="text-center">
+            <img src="images/Loading2.gif" width="32px" height="32px;" class="mx-auto d-block" style="background-repeat: no-repeat;"/>
+        </div>
+        <div class="alert alert-success text-center fw-bold py-2 mx-auto" style="display: none; width: 90%;" id="appMsg">Visit Added</div>
+        </div>
+    </div>  
+</div>
+<div id="user_appointment" class="position-fixed w-100" style="max-width: 980px; display: none;">
+    <div class="clearfix text-end mb-n4" style="z-index: -10000000;">
+        <img src="images/close_popup.png" width="32" height="32" class="rounded-circle shadow" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
+    </div>
+                                        <div class="login" style=" width: 60%;margin-bottom: 10px;margin-left: auto;margin-right: auto;">
                                             <h1 align="center" style="background-color: #ff9a98; vertical-align: middle"><fmt:message key="userAppointment" /> &nbsp;&nbsp;&nbsp;<img src="images/icons/meeting.png" alt="phone" width="24px"/></h1>
                                             <div style="text-align: left;margin-left: 2%;margin-right: auto;" > 
                                                 <span style="font-size: 20px; font-weight: bolder; color: black; padding-left: 10px;">عدد المقابلات :</span>

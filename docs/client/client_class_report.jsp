@@ -242,15 +242,16 @@
                     sPaginationType: "full_numbers",
                     "aLengthMenu": [[20, 50, 100, -1], [20, 50, 100, "All"]],
                     iDisplayStart: 0,
-                     iDisplayLength: 20,
+                    iDisplayLength: 20,
                     "bPaginate": true,
                     "bProcessing": true,
+                    autoWidth: false,
+                    scrollX: false,
                     "aaSorting": [[1, "asc"]],
-                    "columnDefs": [ {
-                        "targets": 0,
-                        "orderable": false
-                    } ],
-
+                    "columnDefs": [
+                        { "targets": 0, "orderable": false, "width": "32px" },
+                        { "targets": 1, "orderable": false, "width": "36px" }
+                    ]
                 }).fadeIn(2000);
                 
                 $("#fromDate,#toDate").datepicker({
@@ -708,7 +709,7 @@
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-8 */
             }
             
-            .table td{
+            .table:not(#clients) td{
                 padding:5px;
                 text-align:center;
                 font-family:Georgia, "Times New Roman", Times, serif;
@@ -716,6 +717,67 @@
                 font-weight: bold;
                 border: none;
                 margin-bottom: 30px;
+            }
+            .tb-clients-wrap {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+            #clients {
+                width: 100% !important;
+                max-width: 100%;
+                table-layout: fixed;
+                border-collapse: collapse;
+                font-size: 11px;
+            }
+            #clients th,
+            #clients td {
+                box-sizing: border-box;
+                padding: 3px 4px !important;
+                text-align: center;
+                vertical-align: middle;
+                white-space: normal !important;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                line-height: 1.25;
+                font-size: 11px;
+                font-weight: bold;
+            }
+            #clients thead th {
+                background-color: #669900;
+                color: #fff;
+            }
+            #clients .tb-check-col { width: 32px !important; }
+            #clients .tb-icon-col { width: 36px !important; }
+            #clients .tb-name-col { width: 9%; }
+            #clients .tb-phone-col { width: 7%; }
+            #clients .tb-date-col { width: 7%; }
+            #clients .tb-comment-col {
+                width: 10%;
+                max-width: 110px;
+            }
+            #clients td b {
+                font-size: 11px;
+                font-weight: bold;
+                display: block;
+                word-break: break-word;
+            }
+            #clients .tb-cell-inner {
+                display: block;
+            }
+            #clients .tb-cell-inner img {
+                width: 16px !important;
+                height: 16px !important;
+                max-width: 16px;
+                vertical-align: middle;
+            }
+            #clients img.img-fluid {
+                max-width: 22px !important;
+                width: 22px !important;
+            }
+            .dataTables_wrapper {
+                width: 100%;
+                overflow-x: hidden;
             }
             .bookmark_button{
                 width:135px;
@@ -731,6 +793,11 @@
                 /*display: inline-block;*/
                 background-color: transparent;
                 background-image:url(images/buttons/bookmarked.png);
+            }
+            .form-check-input{
+             width: 16px !important;
+             height: 16px !important;
+                   
             }
         </style>
     </HEAD>
@@ -820,11 +887,11 @@
 		    </tr>
 		    
 		    <tr>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
-                            <b><font size=3 color="white"> <%=fromDate%></b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
+                            <b><font size=3 color="black"> <%=fromDate%></b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
-                            <b><font size=3 color="white"> <%=toDate%></b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
+                            <b><font size=3 color="black"> <%=toDate%></b>
                         </td>
                     </tr>
                     <tr>
@@ -838,11 +905,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2">
-                            <b><font size=1.5 color="white">Source</b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" colspan="2">
+                            <b><font size=3 color="black">Source</b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2">
-                            <b><font size=1.5 color="white"><%=proj%></b>
+                        <td class="  blueHeaderTD" style="font-size:18px;" colspan="2">
+                            <b><font size=3 color="black"><%=proj%></b>
                         </td>
                     </tr>
                     <tr>
@@ -864,11 +931,11 @@
                         </td>
                     </tr>
                     <tr id="">
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2" id="clssTrStr">
-                            <b><font size=3 color="white"><%=clientsListTitles[7]%></b>
+                        <td class="  blueHeaderTD" style="font-size:18px;" colspan="2" id="clssTrStr">
+                            <b><font size=3 color="black"><%=clientsListTitles[7]%></b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
-                            <b><font size=3 color="white"><%=clientsListTitles[8]%></b>
+                        <td class="  blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
+                            <b><font size=3 color="black"><%=clientsListTitles[8]%></b>
                         </td>
                     </tr>
                     <tr id="">
@@ -897,11 +964,11 @@
                     </tr>
                     <tr>
                         
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2">
-                            <b><font size=3 color="white"><%=typeOfRequest%></b>
+                        <td class="  blueHeaderTD" style="font-size:18px;" colspan="2">
+                            <b><font size=3 color="black"><%=typeOfRequest%></b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2">
-                            <b><font size=3 color="white"><%=employeeName%></b>
+                        <td class="  blueHeaderTD" style="font-size:18px;" colspan="2">
+                            <b><font size=3 color="black"><%=employeeName%></b>
                         </td>
                     </tr>
                     <tr>
@@ -944,146 +1011,167 @@
                         if(smry != null && smry.equals("0")){
                             if (privilegesList.contains("DISTRIBUTE_CLIENT")) {
                     %>
-                            <button type="button" style="color: #27272A;font-size:15;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
+                            <button type="button" class="btn btn-light border shadow-sm fw-bold d-inline-flex align-items-center justify-content-center gap-2 mx-1"
+    style="width:150px; height:34px; color:#27272A; font-size:15px;"
                                     onclick="JavaScript: openRedirectPopup();" title="توزيع">توزيع &nbsp;&nbsp;<img src="images/icons/forward.png" width="15" height="15" />
                             </button>
                     <%
                             }
                     %>
-                            <button type="button" style="color: #27272A;font-size:15;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
-                                    onclick="JavaScript: popupBookmark();" title="علامة">علامة &nbsp;&nbsp;<img src="images/bookmarks.png" width="15" height="15" />
-                            </button>
-                            <button type="button" style="color: #27272A;font-size:15;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
-                                    onclick="JavaScript: popupAddComment();" title="تعليق">تعليق &nbsp;&nbsp;<img src="css/images/comment.png" width="20" height="20" />
-                            </button>
+                         <button
+    type="button"
+    class="btn btn-light border shadow-sm fw-bold d-inline-flex align-items-center justify-content-center gap-2 mx-1"
+    style="width:150px; height:34px; color:#27272A; font-size:15px;"
+    onclick="popupBookmark();"
+    title="علامة"
+>
+    <span>علامة</span>
+    <img src="images/bookmarks.png" width="15" height="15" alt="bookmark" />
+</button>
+
+<button
+    type="button"
+    class="btn btn-light border shadow-sm fw-bold d-inline-flex align-items-center justify-content-center gap-2 mx-1"
+    style="width:150px; height:34px; color:#27272A; font-size:15px;"
+    onclick="popupAddComment();"
+    title="تعليق"
+>
+    <span>تعليق</span>
+    <img src="css/images/comment.png" width="20" height="20" alt="comment" />
+</button>
                             <br/>
                             <br/>
-                            <table align="<%=align%>" dir="<%=dir%>" id="clients" style="width:100%;">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            <input type="checkbox" id="selectAll" onclick="JavaScript: selectAllChecks(this);" />
-                                        </th>
+                            <div class="tb-clients-wrap">
+<table align="<%=align%>" dir="<%=dir%>" id="clients" class="table table-striped table-hover table-bordered align-middle w-100 mb-0">
+    <thead>
+        <tr>
+            <th class="text-center tb-check-col">
+                <input type="checkbox" id="selectAll" class="form-check-input" onclick="JavaScript: selectAllChecks(this);" />
+            </th>
 
-                                        <th>
-                                        </th>
-                                        <%
-                                            if(clsUncls != null && (clsUncls.equals("cls") || clsUncls.equals("all"))){
-                                                for (int i = 0; i < t; i++) {
-                                        %>                
-                                                    <th>
+            <th class="tb-icon-col"></th>
+            <%
+                if(clsUncls != null && (clsUncls.equals("cls") || clsUncls.equals("all"))){
+                    for (int i = 0; i < t; i++) {
+                        String thClass = "tb-col";
+                        if ("clientName".equals(clientsAttributes[i])) thClass += " tb-name-col";
+                        else if ("mobile".equals(clientsAttributes[i]) || "interPhone".equals(clientsAttributes[i])) thClass += " tb-phone-col";
+                        else if ("clientCreationTime".equals(clientsAttributes[i]) || "mct".equals(clientsAttributes[i])) thClass += " tb-date-col";
+                        else if ("COMMENT".equals(clientsAttributes[i])) thClass += " tb-comment-col";
+            %>                
+                        <th class="<%=thClass%>">
+                            <b><%=clientsListTitles[i]%></b>
+                        </th>
+            <%
+                    }
+                } else if(clsUncls != null && clsUncls.equals("uncls")){
+                    for (int i = 0; i < t; i++) {
+                        String thClass = "tb-col";
+                        if ("clientName".equals(unRClientsAttributes[i])) thClass += " tb-name-col";
+                        else if ("mobile".equals(unRClientsAttributes[i]) || "interPhone".equals(unRClientsAttributes[i])) thClass += " tb-phone-col";
+                        else if ("clientCreationTime".equals(unRClientsAttributes[i])) thClass += " tb-date-col";
+            %>                
+                        <th class="<%=thClass%>">
+                            <b><%=unRClientsListTitles[i]%></b>
+                        </th>
+            <%
+                    }
+                } 
+            %>
+        </tr>
+    </thead>
+    <tbody>
+        <%
+            String callFunction;
+            for (WebBusinessObject clientWbo : clientsList) {
+        %>
+        <tr title="<%=lstRtTm%>:  <%=clientWbo.getAttribute("creationTime")%>           
+                  <%=fAppTm%>:  <%=clientWbo.getAttribute("fna")%>">
+            <td class="text-center tb-check-col">
+                <input type="checkbox" class="form-check-input" name="clientID" value="<%=clientWbo.getAttribute("clientID")%>"/>
+                <input type="hidden" id="complaintType<%=clientWbo.getAttribute("clientID")%>" name="complaintType"
+                       value="<%=clientWbo.getAttribute("distributionType")%>"/>
+            </td>
 
-                                                        <b><%=clientsListTitles[i]%></b>
-                                                    </th>
-                                                    
-                                        <%
-                                                }
-                                            } else if(clsUncls != null && clsUncls.equals("uncls")){
-                                                for (int i = 0; i < t; i++) {
-                                        %>                
-                                                    <th>
+            <td class="text-center tb-icon-col">
+                <a target="_blank" href="<%=context%>/ClientServlet?op=clientDetails&issueID=<%=clientWbo.getAttribute("issueID")%>&clientId=<%=clientWbo.getAttribute("clientID")%>">
+                    <img src="images/client_details.jpg" width="22" class="img-fluid" alt="">
+                </a>
+            </td>
 
-                                                        <b><%=unRClientsListTitles[i]%></b>
-                                                    </th>
-                                        <%
-                                                }
-                                            } 
-                                        %>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <%
-                                        String callFunction;
-                                        for (WebBusinessObject clientWbo : clientsList) {
-                                    %>
-                                    <tr title="<%=lstRtTm%>:  <%=clientWbo.getAttribute("creationTime")%>           
-                                              <%=fAppTm%>:  <%=clientWbo.getAttribute("fna")%>">
-                                        <td>
-                                            <input type="checkbox" name="clientID" value="<%=clientWbo.getAttribute("clientID")%>"/>
-                                            <input type="hidden" id="complaintType<%=clientWbo.getAttribute("clientID")%>" name="complaintType"
-                                                   value="<%=clientWbo.getAttribute("distributionType")%>"/>
-                                        </td>
-
-                                        <td>
-                                            <a target="blanck" href="<%=context%>/ClientServlet?op=clientDetails&issueID=<%=clientWbo.getAttribute("issueID")%>&clientId=<%=clientWbo.getAttribute("clientID")%>">
-                                                <img src="images/client_details.jpg" width="30" style="float: left;">
-                                            </a>
-                                        </td>
-
-                                        <%
-                                            if(clsUncls != null && (clsUncls.equals("cls") || clsUncls.equals("all"))){
-                                                for (int i = 0; i < s; i++) {
-                                                    attName = clientsAttributes[i];
-                                                    //clientCreationTime
-                                                    if(attName != null && attName.equals("clientCreationTime")){
-                                                        attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim().split(" ")[0] : "";
-                                                    } else if(attName != null && attName.equals("mct")){
-                                                        attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim().split(" ")[0] : "";
-                                                    } else {
-                                                        attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim() : "";
-                                                    }
-                                                    
-                                                    if (i == s - 1) {
-                                                        callFunction = " onmouseover=\"JavaScript: getFutureAppointment('" + clientWbo.getAttribute("clientID") + "', this);\"";
-                                                    } else {
-                                                        callFunction = "";
-                                                    }
-                                        %>
-                                        <td>
-                                            <div>
-                                                <b<%=callFunction%>><%=attValue%></b>
-                                                <%
-                                                    if (i == 6 && clientWbo.getAttribute("color") != null) {
-                                                %>
-                                                <% if(!clientWbo.getAttribute("color").equals("")){ %>
-                                                <img src="images/msdropdown/<%=clientWbo.getAttribute("color")%>.png" style="float: <%=xAlign%>; width: 20px; height: 20px;"/>
-                                                <% } else { %>
-                                                <P>----</p>
-                                                <% } %>
-                                                <%
-                                                    }
-                                                %>
-                                            </div>
-                                        </td>
-                                        <%
-                                                }
-                                            } else if(clsUncls != null && clsUncls.equals("uncls")){
-                                                for (int i = 0; i < s; i++) {
-                                                    attName = unRClientsAttributes[i];
-                                                    if(attName != null && attName.equals("clientCreationTime")){
-                                                        attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim().split(" ")[0] : "";
-                                                    } else {
-                                                        attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim() : "";
-                                                    }
-                                                    
-                                                    if (i == s - 1) {
-                                                        callFunction = " onmouseover=\"JavaScript: getFutureAppointment('" + clientWbo.getAttribute("clientID") + "', this);\"";
-                                                    } else {
-                                                        callFunction = "";
-                                                    }
-                                        %>
-                                        <td>
-                                            <div>
-                                                <b<%=callFunction%>><%=attValue%></b>
-                                                <%
-                                                    if (i == 6 && clientWbo.getAttribute("color") != null) {
-                                                %>
-                                                <img src="images/msdropdown/<%=clientWbo.getAttribute("color")%>.png" style="float: <%=xAlign%>;"/>
-                                                <%
-                                                    }
-                                                %>
-                                            </div>
-                                        </td>
-                                        <%
-                                                }
-                                            }
-                                        %>
-                                    </tr>
-                                    <%
-                                        }
-                                    %>
-                                </tbody>
-                            </table>
+            <%
+                if(clsUncls != null && (clsUncls.equals("cls") || clsUncls.equals("all"))){
+                    for (int i = 0; i < s; i++) {
+                        attName = clientsAttributes[i];
+                        //clientCreationTime
+                        if(attName != null && attName.equals("clientCreationTime")){
+                            attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim().split(" ")[0] : "";
+                        } else if(attName != null && attName.equals("mct")){
+                            attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim().split(" ")[0] : "";
+                        } else {
+                            attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim() : "";
+                        }
+                        
+                        if (i == s - 1) {
+                            callFunction = " onmouseover=\"JavaScript: getFutureAppointment('" + clientWbo.getAttribute("clientID") + "', this);\"";
+                        } else {
+                            callFunction = "";
+                        }
+            %>
+            <td class="<%= "COMMENT".equals(attName) ? "tb-comment-col" : "" %>">
+                <span class="tb-cell-inner">
+                    <b<%=callFunction%>><%=attValue%></b>
+                    <%
+                        if (i == 6 && clientWbo.getAttribute("color") != null) {
+                    %>
+                    <% if(!clientWbo.getAttribute("color").equals("")){ %>
+                    <img src="images/msdropdown/<%=clientWbo.getAttribute("color")%>.png" alt=""/>
+                    <% } %>
+                    <%
+                        }
+                    %>
+                </span>
+            </td>
+            <%
+                    }
+                } else if(clsUncls != null && clsUncls.equals("uncls")){
+                    for (int i = 0; i < s; i++) {
+                        attName = unRClientsAttributes[i];
+                        if(attName != null && attName.equals("clientCreationTime")){
+                            attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim().split(" ")[0] : "";
+                        } else {
+                            attValue = clientWbo.getAttribute(attName) != null ? ((String) clientWbo.getAttribute(attName)).trim() : "";
+                        }
+                        
+                        if (i == s - 1) {
+                            callFunction = " onmouseover=\"JavaScript: getFutureAppointment('" + clientWbo.getAttribute("clientID") + "', this);\"";
+                        } else {
+                            callFunction = "";
+                        }
+            %>
+            <td>
+                <span class="tb-cell-inner">
+                    <b<%=callFunction%>><%=attValue%></b>
+                    <%
+                        if (i == 6 && clientWbo.getAttribute("color") != null) {
+                    %>
+                    <img src="images/msdropdown/<%=clientWbo.getAttribute("color")%>.png" alt=""/>
+                    <%
+                        }
+                    %>
+                </span>
+            </td>
+            <%
+                    }
+                }
+            %>
+        </tr>
+        <%
+            }
+        %>
+    </tbody>
+</table>
+</div>
                 <%
                     } else if(smry != null && smry.equals("1") && dataList != null){
                 %>

@@ -16,15 +16,15 @@
         <!-- <param-value>jdbc:oracle:thin:@196.202.95.37:1521:rmsrvr</param-value>-->
         <!--<param-value>jdbc:oracle:thin:@10.8.2.203:1521:cmmi</param-value>-->
         <!--<param-value>jdbc:oracle:thin:@196.221.144.211:1521:rmsrvr</param-value>-->
-        <param-value>jdbc:oracle:thin:@10.8.2.214:1521:fours</param-value>
+        <param-value>jdbc:oracle:thin:@196.219.86.38:1521:orcl</param-value>
     </context-param>
     <context-param>
         <param-name>UserName</param-name>
-        <param-value>engy_test</param-value>
+        <param-value>bright</param-value>
     </context-param>
     <context-param>
         <param-name>PassWord</param-name>
-        <param-value>engy_test</param-value>
+        <param-value>bright</param-value>
     </context-param>
     <context-param>
         <param-name>SmsProviderKey</param-name>

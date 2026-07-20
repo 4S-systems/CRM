@@ -1761,7 +1761,7 @@ function getCountryName() {
 }
     </SCRIPT>
 
-    <STYLE>
+<!--    <STYLE>
         .ahmed-gamal {
             width:40px;
             height: 40px;
@@ -2129,8 +2129,302 @@ input[type="text"]:focus {
 
 input[type="text"]::placeholder {
     color: #666;
-}s
-    </style>
+}
+   .modern-form-shell {
+        width: 92%;
+        margin: 12px auto 0;
+        border: 1px solid #dbe3ef;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        padding: 10px 12px 16px;
+    }
+
+    .modern-form-shell .titlebar {
+        background: linear-gradient(90deg, #f8fbff 0%, #eef5ff 100%);
+        border: 1px solid #dbe7ff;
+        border-radius: 12px;
+        padding: 10px 12px;
+    }
+
+    .modern-form-shell input[type="text"],
+    .modern-form-shell input[type="TEXT"],
+    .modern-form-shell input[type="email"],
+    .modern-form-shell input[type="number"],
+    .modern-form-shell select,
+    .modern-form-shell textarea {
+        border: 1px solid #d1d9e6 !important;
+        border-radius: 10px !important;
+        background: #fff !important;
+        padding: 8px 10px !important;
+        transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .modern-form-shell input[type="text"]:focus,
+    .modern-form-shell input[type="TEXT"]:focus,
+    .modern-form-shell input[type="email"]:focus,
+    .modern-form-shell input[type="number"]:focus,
+    .modern-form-shell select:focus,
+    .modern-form-shell textarea:focus {
+        border-color: #86b7fe !important;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15) !important;
+        outline: 0;
+    }
+
+    .modern-form-shell input[type="button"],
+    .modern-form-shell button,
+    .modern-form-shell .button2,
+    .modern-form-shell .btn-gemy {
+        border: 1px solid #0d6efd !important;
+        background: #0d6efd !important;
+        color: #fff !important;
+        border-radius: 10px !important;
+        padding: 7px 14px !important;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 6px 16px rgba(13, 110, 253, 0.25);
+    }
+
+    .modern-form-shell input[type="button"]:hover,
+    .modern-form-shell button:hover,
+    .modern-form-shell .button2:hover,
+    .modern-form-shell .btn-gemy:hover {
+        background: #0b5ed7 !important;
+        border-color: #0b5ed7 !important;
+    }
+
+    .modern-form-shell #saveClient {
+        border: 1px solid #e6ecf5;
+        border-radius: 14px;
+        padding: 12px;
+        background: #f8fafc;
+    }
+
+    .modern-form-shell .projectsTbl {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #dde6f2;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .modern-form-shell .projectsTbl th {
+        background: #eef4ff;
+        color: #1f2937;
+        padding: 8px;
+    }
+
+    .modern-form-shell .projectsTbl td {
+        padding: 8px;
+        border-top: 1px solid #edf2f7;
+    }
+    
+    .modern-form-shell #effect {
+        border: 1px solid #dbe3ef !important;
+        border-radius: 14px !important;
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+    </style>-->
+    <style>
+    .modern-form-shell {
+        width: 92%;
+        margin: 12px auto 0;
+        border: 1px solid #dbe3ef;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        padding: 10px 12px 16px;
+    }
+
+    .modern-form-shell .titlebar {
+        background: linear-gradient(90deg, #f8fbff 0%, #eef5ff 100%);
+        border: 1px solid #dbe7ff;
+        border-radius: 12px;
+        padding: 10px 12px;
+    }
+
+    .modern-form-shell input[type="text"],
+    .modern-form-shell input[type="TEXT"],
+    .modern-form-shell input[type="email"],
+    .modern-form-shell input[type="number"],
+    .modern-form-shell select,
+    .modern-form-shell textarea {
+        border: 1px solid #d1d9e6 !important;
+        border-radius: 10px !important;
+        background: #fff !important;
+        padding: 8px 10px !important;
+        transition: border-color .2s ease, box-shadow .2s ease;
+    }
+
+    .modern-form-shell input[type="text"]:focus,
+    .modern-form-shell input[type="TEXT"]:focus,
+    .modern-form-shell input[type="email"]:focus,
+    .modern-form-shell input[type="number"]:focus,
+    .modern-form-shell select:focus,
+    .modern-form-shell textarea:focus {
+        border-color: #86b7fe !important;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15) !important;
+        outline: 0;
+    }
+
+    .modern-form-shell input[type="button"],
+    .modern-form-shell button,
+    .modern-form-shell .button2,
+    .modern-form-shell .btn-gemy {
+        border: 1px solid #0d6efd !important;
+        background: #0d6efd !important;
+        color: #fff !important;
+        border-radius: 10px !important;
+        padding: 7px 14px !important;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 6px 16px rgba(13, 110, 253, 0.25);
+    }
+
+    .modern-form-shell input[type="button"]:hover,
+    .modern-form-shell button:hover,
+    .modern-form-shell .button2:hover,
+    .modern-form-shell .btn-gemy:hover {
+        background: #0b5ed7 !important;
+        border-color: #0b5ed7 !important;
+    }
+
+    .modern-form-shell #saveClient {
+        border: 1px solid #e6ecf5;
+        border-radius: 14px;
+        padding: 12px;
+        background: #f8fafc;
+        display: table !important;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .modern-form-shell #saveClient > tbody > tr > td {
+        vertical-align: top;
+    }
+
+    .modern-form-shell #saveClient table {
+        width: 100%;
+    }
+
+    .modern-form-shell .excelentCell.formInputTag {
+        background: #f3f6fb !important;
+        color: #334155 !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 10px 0 0 10px;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        padding: 8px 10px !important;
+        line-height: 1.3;
+    }
+
+    .modern-form-shell .td,
+    .modern-form-shell .TD {
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-left: none !important;
+        border-radius: 0 10px 10px 0;
+        padding: 7px 9px !important;
+    }
+
+    .modern-form-shell .td a.linkbtn,
+    .modern-form-shell .TD a.linkbtn {
+        font-size: 12px;
+        color: #0d6efd;
+        font-weight: 600;
+    }
+
+    .modern-form-shell #saveClient tr {
+        margin-bottom: 6px;
+    }
+
+    .modern-form-shell #saveClient p {
+        margin: 0;
+    }
+
+    .modern-form-shell #saveClient input[type="radio"],
+    .modern-form-shell #saveClient input[type="checkbox"] {
+        accent-color: #0d6efd;
+        transform: translateY(1px);
+    }
+
+    .modern-form-shell .projectsTbl {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #dde6f2;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .modern-form-shell .projectsTbl th {
+        background: #eef4ff;
+        color: #1f2937;
+        padding: 8px;
+    }
+
+    .modern-form-shell .projectsTbl td {
+        padding: 8px;
+        border-top: 1px solid #edf2f7;
+    }
+    
+    .modern-form-shell #effect {
+        border: 1px solid #dbe3ef !important;
+        border-radius: 14px !important;
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .modern-form-shell > table[style*="width: 100%"] {
+        border: 1px solid #e6ecf5;
+        border-radius: 12px;
+        padding: 8px;
+        background: #f8fafc;
+        margin-top: 10px;
+    }
+
+    .modern-form-shell > table[style*="width: 100%"] td {
+        border-radius: 8px;
+    }
+    .crm-icon-box {
+        width: 64px;
+        height: 50px;
+        border: 1px solid #dee2e6;
+        border-radius: 10px;
+        background: #fff;
+        padding: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .crm-icon-box:hover {
+        background: #f8f9fa;
+        border-color: #adb5bd;
+        transform: translateY(-1px);
+    }
+
+    .crm-icon-box img {
+        max-height: 35px;
+        max-width: 42px;
+        object-fit: contain;
+        border: none;
+    }
+
+    .crm-pilot-box {
+        width: 76px;
+        height: 54px;
+    }
+
+    .crm-pilot-box img {
+        max-width: 65px;
+        max-height: 45px;
+    }
+</style>
     <script src='ChangeLang.js' type='text/javascript'></script>
     <BODY >
         <div id="clientDetailsForm"></div>
@@ -2214,958 +2508,995 @@ input[type="text"]::placeholder {
                             <img width="70px"  height="70px"  src="images/icons/inpound-call.png" id="inboundMeeting" style="border: none;display: <%=!callCenterMode.isEmpty() && callCenterMode.equals("4") ? "" : "none"%>" title="<%if (!callCenterMode.isEmpty() && callCenterMode.equals("4")) {%>Call Center Mode<%}%>"/>
                             <img width="70px"  height="70px"  src="images/icons/outpound-call.png" id="outboundMeeting" style="border: none;display: <%=!callCenterMode.isEmpty() && callCenterMode.equals("5") ? "" : "none"%>" title="<%if (!callCenterMode.isEmpty() && callCenterMode.equals("5")) {%>Call Center Mode<%}%>"/>
                             <img width="70px"  height="70px"  src="images/icons/outpound-call.png" id="outboundInternet" style="border: none;display: <%=!callCenterMode.isEmpty() && callCenterMode.equals("6") ? "" : "none"%>" title="<%if (!callCenterMode.isEmpty() && callCenterMode.equals("6")) {%>Call Center Mode<%}%>"/>-->
-                            <div class="ahmed-gamal" style="width:60px; border:1px solid black; height:50px; float:right; padding: 2px;">
-                                <a href="#" onclick="">
-                                    <image id="inbound" style="height:35px;display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("4")) ? "" : "none"%> ;" src="images/icons/inBound.png" title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("4"))) {%>Call Center Mode<%}%>" />
-                                    <image id="outbound" style="height:35px;display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("3") || callCenterMode.equals("5") || callCenterMode.equals("6")) ? "" : "none"%> ;" src="images/icons/outBound.png" title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("3") || callCenterMode.equals("5") || callCenterMode.equals("6"))) {%>Call Center Mode<%}%>" />
-                                </a>
-                            </div>
-                            <div class="ahmed-gamal" style="width:60px; border:1px solid black; height:50px; padding: 2px 2px 2px 0px; " id="update">
-                                <a href="#" onclick="">
-                                    <image id="callDir" style="height:35px;display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("3")) ? "" : "none"%> ;" src="images/dialogs/phone.png" title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("3"))) {%>Call Center Direction<%}%>" />
-                                    <image id="meetDir" style="height:35px;display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("4") || callCenterMode.equals("5")) ? "" : "none"%> ;" src="images/dialogs/handshake.png" title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("4") || callCenterMode.equals("5"))) {%>Call Center Direction<%}%>" />   
-                                    <image id="interDir" style="height:35px;display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("6")) ? "" : "none"%> ;" src="images/dialogs/internet-icon.png" title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("6"))) {%>Call Center Direction<%}%>" />   
-                                </a>
+                           <div class="ahmed-gamal crm-icon-box float-end ms-2" id="callModeBox">
+    <a href="#" class="d-inline-flex align-items-center justify-content-center text-decoration-none">
+        <img
+            id="inbound"
+            src="images/icons/inBound.png"
+            title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("4"))) {%>Call Center Mode<%}%>"
+            style="display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("4")) ? "" : "none"%>;"
+        />
 
-                            </div>
-                            <div class="ahmed-gamal" style="width:70px; border:1px solid black; height:50px; float:right; padding: 2px;" id="update">
-                                <%if (securityUser.isCanRunAutoPilotMode()) {%>
-                                <img width="70px"  height="50px"  src="images/icons/plane_icon.png" id="autoPilotIcon" style="border: none;display: <%=!autoPilotModeValue.equals("-1") ? "" : "none"%>" title="<%if (!autoPilotModeValue.equals("-1")) {%>Auto-Pilot Mode<%}%>"/>
-                                <% } else {%>
-                                <img width="70px"  height="50px"  src="images/icons/manual_pilot.png" id="autoPilotIcon" style="border: none;" title="Manual-Pilot Mode"/>
-                                <%}%>
-                                <br>
-                            </div>
+        <img
+            id="outbound"
+            src="images/icons/outBound.png"
+            title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("3") || callCenterMode.equals("5") || callCenterMode.equals("6"))) {%>Call Center Mode<%}%>"
+            style="display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("3") || callCenterMode.equals("5") || callCenterMode.equals("6")) ? "" : "none"%>;"
+        />
+    </a>
+</div>
+                           <div class="ahmed-gamal crm-icon-box" id="directionBox">
+    <a href="#" class="d-inline-flex align-items-center justify-content-center text-decoration-none">
+        <img
+            id="callDir"
+            src="images/dialogs/phone.png"
+            title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("3"))) {%>Call Center Direction<%}%>"
+            style="display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("2") || callCenterMode.equals("3")) ? "" : "none"%>;"
+        />
+
+        <img
+            id="meetDir"
+            src="images/dialogs/handshake.png"
+            title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("4") || callCenterMode.equals("5"))) {%>Call Center Direction<%}%>"
+            style="display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("4") || callCenterMode.equals("5")) ? "" : "none"%>;"
+        />
+
+        <img
+            id="interDir"
+            src="images/dialogs/internet-icon.png"
+            title="<%if (!callCenterMode.isEmpty() && (callCenterMode.equals("6"))) {%>Call Center Direction<%}%>"
+            style="display: <%=!callCenterMode.isEmpty() && (callCenterMode.equals("6")) ? "" : "none"%>;"
+        />
+    </a>
+</div>
+
+<div class="ahmed-gamal crm-icon-box crm-pilot-box float-end ms-2" id="pilotBox">
+    <%if (securityUser.isCanRunAutoPilotMode()) {%>
+        <img
+            src="images/icons/plane_icon.png"
+            id="autoPilotIcon"
+            title="<%if (!autoPilotModeValue.equals("-1")) {%>Auto-Pilot Mode<%}%>"
+            style="display: <%=!autoPilotModeValue.equals("-1") ? "" : "none"%>;"
+        />
+    <% } else {%>
+        <img
+            src="images/icons/manual_pilot.png"
+            id="autoPilotIcon"
+            title="Manual-Pilot Mode"
+        />
+    <%}%>
+</div>
                         </td>
                     </tr>
                 </table>
             </DIV> 
 
-            <fieldset class="set" style="border-color: #006699; width: 90%;margin-top: 10px;border-radius: 5px;">
-                <table align="center" width="100%" cellpadding="0" cellspacing="0" style="">
-                    <tr>
-                        <td width="100%" class="titlebar">
-                            <font color="#005599" size="4">New Customer Registration</font>
+         <fieldset class="set modern-form-shell" style="border-color: #dbe3ef; width: 92%; margin-top: 10px; border-radius: 16px;">
+    <table align="center" width="100%" cellpadding="0" cellspacing="0" style="">
+        <tr>
+            <td width="100%" class="titlebar">
+                <font color="#005599" size="4">New Customer Registration</font>
+            </td>
+        </tr>
+    </table>
+    <% if (autoPilotMessage != null && autoPilotMessage.equalsIgnoreCase("ok")) {%>
+    <br>
+    <table align="<%=align%>" dir=<fmt:message key="direction"/> WIDTH="70%">
+        <tr>
+            <td class="backgroundHeader">
+                <font size="3" color="blue">Save Client Complete</font>
+            </td>
+        </tr>
+    </table>
+    <% } %>         
+    <% if (errorExtConn != null && !errorExtConn.equals("") && errorExtConn.equals("1")) {%>
+    <table dir=<fmt:message key="direction"/> align="<%=align%>">
+        <tr><td class="td">
+                <font size="4" color="red"> <%=msgErrorExtConn%> </font>
+            </td>
+        </tr> 
+    </table>
+    <% } %> 
+    <%
+        if (null != status) {
+            if (status.equalsIgnoreCase("ok")) {
+                if (clientWbo != null) {
+    %>  
+    <STYLE>
+        .productsBtn{
+            display: block;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#saveClient").css("display", "none");
+            $("#clientInfo").css("display", "block");
+            $("#submitBtn").css("display", "none");
+            $("#recordCall").css("display", "<%=issueId == null ? "inline-block" : "none"%>");
+            $("#seasonBtn").css("display", "<%=issueId != null ? "inline-block" : "none"%>");
+            $("#productsBtn").css("display", "<%=issueId != null ? "inline-block" : "none"%>");
+            $("#degreeBtn").css("display", "none");
+        });
+    </script>
+    <div id="caller_number" style="width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;"></div>
+    <br>
+    <table id="clientInf"  align="<%=align%>" dir=<fmt:message key="direction"/> STYLE="border-right-WIDTH:1px;" CELLPADDING="0" CELLSPACING="0">
+        <tr>
+            <TD nowrap colspan="3" CLASS="silver_header" STYLE="text-align: center; border-width: 0px; white-space: nowrap;">
+                <font size=3 color="black"><%=sStatus%></font> 
+            </td>                    
+        </tr>
+        <tr id="callNumber" style="display: none;">
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>;" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >
+                <b><font size="2" color="black"><%=call_number%></font></b>
+            </td>
+            <td width="200" style="border-right-width:0px;text-align: center;">
+                <b id="callNo"></b>
+            </td>
+        </tr>
+        <tr>
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even" >
+                <b><font size="2" color="black"><fmt:message key="name"/></font></b>
+            </td>
+            <td width="200" style="border-right-width:0px;text-align: center;">
+                <b><font color="red" size="3"><%=clientWbo.getAttribute("code")%><!--/</font><font color="blue" size="3" ><%=clientWbo.getAttribute("clientNoByDate")%></font>--></b>
+            </td>
+        </tr>
+        <tr>
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >اسم العميل</td>
+            <td width="200" style="border-right-width:0px;text-align: center;background-color: #FFFF66;"><label class="show"><%=clientWbo.getAttribute("name")%></label>
+            </td>
+        <input type="hidden" id="clientId" name="clientId"  value="<%=clientWbo.getAttribute("id")%>"/>
+        </tr>
+        <%if (clientWbo.getAttribute("partner") == null) {
+            } else {%>
+        <tr>
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even" >اسم العميل/الزوج</td>
+            <td width="200" style="border-right-width:0px;text-align: center;"><label><%=clientWbo.getAttribute("partner")%></label></td>
+        </tr>
+        <%}%>
+        <tr>
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >المهنة</td>
+            <td width="200" style="border-right-width:0px;text-align: center;background-color: #FFFF66;"><label><%=request.getAttribute("jobTitle")%></label></td>
+
+        </tr>
+        <%if (clientWbo.getAttribute("clientSsn") == null) {
+            } else {%>
+        <tr>
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even" >الرقم القومى</td>
+            <td width="200" style="border-right-width:0px;text-align: center;"><label><%=clientWbo.getAttribute("clientSsn")%></label></td>
+        </tr>
+        <%}%>
+        <%if (clientWbo.getAttribute("phone").equals(" ")) {
+            } else {%>
+        <tr>
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >رقم التليفون</td>
+            <td width="200" style="border-right-width:0px;text-align: center;"><label><%=clientWbo.getAttribute("phone")%></label></td>
+        </tr>
+        <%}%>
+        <tr>
+            <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </TD>
+            <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even">رقم الموبايل</td>
+            <td width="200" style="border-right-width:0px;text-align: center;background-color: #FFFF66;"><label><%=clientWbo.getAttribute("mobile")%></label></td>
+        </tr>
+        <tr style="display: <%=issueId != null ? "" : "none"%>">
+            <td nowrap="" class="silver_header" style="border-width: 0px; white-space: nowrap;">
+                &nbsp;
+            </td>
+            <td width="100" style="text-align:Right;" bgcolor="#DDDD00" nowrap="" class="silver_odd">
+                <b><font size="2" color="black"><%=call_number%></font></b>
+            </td>
+            <td width="200" style="border-right-width:0px;text-align: center;">
+                <b id="callNo"><font size="3" color="blue"><%=request.getAttribute("businessId")%></font></b>
+                <input type="hidden" id="businessId" value="<%=request.getAttribute("businessId")%>">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <%}
+    } else if (status.equalsIgnoreCase("error")) {%>
+    <table align="<%=align%>" dir=<fmt:message key="direction"/>>
+        <tr>                    
+            <td class="td">
+                <font size=4 color="red" >رقم العميل مسجل مسبقا</font> 
+            </td>                    
+        </tr> </table>
+    </tr>
+    <% } else {%>
+    <table align="<%=align%>" dir=<fmt:message key="direction"/>>
+        <tr>                    
+            <td class="td">
+                <font size=2 color="red" ><%=fStatus%></font> 
+            </td>                    
+        </tr> </table>
+
+    <%}
+        }
+    %>
+
+    <div id="salesUsers">
+    </DIV>
+
+    <table style="margin-bottom: 20px;background: #f9f9f9;display: block;" ALIGN="center"  dir=<fmt:message key="direction"/> border="0" width="100%" id="saveClient">
+        <tr>
+            <td style="width: 62.5%;border: 0px;margin-top: 0px;padding: 0px;">
+                <table style=" margin: 0px;">
+                    <%
+                        if (connectByRealEstate != null && !connectByRealEstate.equals("")
+                                && connectByRealEstate.equals("0")) {
+
+                    %>
+                    <tr id="numberRow" class="numberRow">
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+
+                            <LABEL FOR="supplierNO2">
+                                <p>
+                                    <b style="color: #0000FF;">
+                                        <fmt:message key="number"/>
+                                    </b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td  style="<%=style%>"  class='TD' >
+                            <!--onmouseover="this.className = 'rowHilight'" onmouseout="this.className = ''"-->
+                            <input  type="TEXT" style="width:40%;" name="clientNO" ID="clientNO" size="33"  maxlength="10" class="clientNumber" onkeyup="checkNumber(this)"autocomplete="off"  onkeypress="javascript:return isNumber(event)" disabled="true" hidden="true" > 
+                            <input  type="checkbox" name="" id="" onclick="javascript: disableClientNO(this);" checked="checked" disabled="true">
+                            <input  type="checkbox" name="automatedClientNo" id="automatedClientNo"  checked="checked" hidden="true" />
+                            <input type="hidden" name="saveInRealState" id="saveInRealState" value="false" />
+                            <font size="3" color="#005599"><b><%=automated%></b></font>
+                            <div id="warning"style="margin-right: 25px;display: none;width: 16px;height: 16px; background-image: url(images/warning.png);background-repeat: no-repeat;"></DIV>
+                            <div id="ok"style="margin-right: 25px;display: none;width: 16px;height: 16px; background-image: url(images/ok2.png);background-repeat: no-repeat;"></DIV>
+                            <LABEL id="MSG" ></LABEL>
+                            <p id="numberMsg"></p>
                         </td>
                     </tr>
-                </table>
-                <% if (autoPilotMessage != null && autoPilotMessage.equalsIgnoreCase("ok")) {%>
-                <br>
-                <table align="<%=align%>" dir=<fmt:message key="direction"/> WIDTH="70%">
-                    <tr>
-                        <td class="backgroundHeader">
-                            <font size="3" color="blue">Save Client Complete</font>
+                    <%} else {%>
+                    <tr id="numberRow" class="">
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+
+                            <LABEL FOR="supplierNO2">
+                                <p><b style="color: #0000FF;"><fmt:message key="number"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td  style="<%=style%>"  class='TD' >
+                            <%if (clientWbo != null) {
+
+                            %>
+                            <input  type="TEXT" style="width:40%;" name="clientNO" value="<%=clientWbo.getAttribute("clientNO")%>" ID="clientNO" size="33"  maxlength="10" class="clientNumber" autocomplete="off"  onkeypress="javascript:return isNumber(event)" > 
+                            <input  type="checkbox" name="automatedClientNo" id="automatedClientNo" onclick="javascript: disableClientNO(this);" onkeyup="checkClientNo(this)" onmousedown="checkClientNo(this)" >
+                            <%} else {%>
+                            <input  type="TEXT" style="width:40%;" name="clientNO" ID="clientNO" size="33"  maxlength="10" class="clientNumber" autocomplete="off"  onkeypress="javascript:return isNumber(event)" disabled="true"> 
+                            <input  type="checkbox" name="automatedClientNo" id="automatedClientNo" onclick="javascript: disableClientNO(this);" onkeyup="checkClientNo(this)" onmousedown="checkClientNo(this)" checked="true">
+                            <%}%>
+                            <input type="hidden" name="saveInRealState" id="saveInRealState" value="true" />
+                            <font size="3" color="#005599"><b><%=automated%></b></font>
+
+                            <LABEL id="MSG" ></LABEL>
+                            <p id="numberMsg"></p>
                         </td>
                     </tr>
-                </table>
-                <% } %>         
-                <% if (errorExtConn != null && !errorExtConn.equals("") && errorExtConn.equals("1")) {%>
-                <table dir=<fmt:message key="direction"/> align="<%=align%>">
-                    <tr><td class="td">
-                            <font size="4" color="red"> <%=msgErrorExtConn%> </font>
+
+                    <%
+                        }%>
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="clientName" >
+                                <p><b style=""><fmt:message key="name"/> <font style="color: red;">*</font></b>&nbsp;
+                            </LABEL>
                         </td>
-                    </tr> 
-                </table>
-                <% } %> 
-                <%
-                    if (null != status) {
-                        if (status.equalsIgnoreCase("ok")) {
-                            if (clientWbo != null) {
-                %>  
-                <STYLE>
-                    .productsBtn{
-                        display: block;
-                    }
-                </style>
-                <script type="text/javascript">
-                    $(function () {
-                        $("#saveClient").css("display", "none");
-                        $("#clientInfo").css("display", "block");
-                        $("#submitBtn").css("display", "none");
-                        $("#recordCall").css("display", "<%=issueId == null ? "inline-block" : "none"%>");
-                        $("#seasonBtn").css("display", "<%=issueId != null ? "inline-block" : "none"%>");
-                        $("#productsBtn").css("display", "<%=issueId != null ? "inline-block" : "none"%>");
-                        $("#degreeBtn").css("display", "none");
-                    });
-                </script>
-                <div id="caller_number" style="width: 50%;margin-left: auto;margin-right: auto;text-align: center;display: none;"></div>
-                <br>
-                <table id="clientInf"  align="<%=align%>" dir=<fmt:message key="direction"/> STYLE="border-right-WIDTH:1px;" CELLPADDING="0" CELLSPACING="0">
-                    <tr>
-                        <TD nowrap colspan="3" CLASS="silver_header" STYLE="text-align: center; border-width: 0px; white-space: nowrap;">
-                            <font size=3 color="black"><%=sStatus%></font> 
-                        </td>                    
-                    </tr>
-                    <tr id="callNumber" style="display: none;">
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>;" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >
-                            <b><font size="2" color="black"><%=call_number%></font></b>
-                        </td>
-                        <td width="200" style="border-right-width:0px;text-align: center;">
-                            <b id="callNo"></b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even" >
-                            <b><font size="2" color="black"><fmt:message key="name"/></font></b>
-                        </td>
-                        <td width="200" style="border-right-width:0px;text-align: center;">
-                            <b><font color="red" size="3"><%=clientWbo.getAttribute("code")%><!--/</font><font color="blue" size="3" ><%=clientWbo.getAttribute("clientNoByDate")%></font>--></b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >اسم العميل</td>
-                        <td width="200" style="border-right-width:0px;text-align: center;background-color: #FFFF66;"><label class="show"><%=clientWbo.getAttribute("name")%></label>
-                        </td>
-                    <input type="hidden" id="clientId" name="clientId"  value="<%=clientWbo.getAttribute("id")%>"/>
-                    </tr>
-                    <%if (clientWbo.getAttribute("partner") == null) {
-                        } else {%>
-                    <tr>
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even" >اسم العميل/الزوج</td>
-                        <td width="200" style="border-right-width:0px;text-align: center;"><label><%=clientWbo.getAttribute("partner")%></label></td>
-                    </tr>
-                    <%}%>
-                    <tr>
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >المهنة</td>
-                        <td width="200" style="border-right-width:0px;text-align: center;background-color: #FFFF66;"><label><%=request.getAttribute("jobTitle")%></label></td>
 
-                    </tr>
-                    <%if (clientWbo.getAttribute("clientSsn") == null) {
-                        } else {%>
-                    <tr>
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even" >الرقم القومى</td>
-                        <td width="200" style="border-right-width:0px;text-align: center;"><label><%=clientWbo.getAttribute("clientSsn")%></label></td>
-                    </tr>
-                    <%}%>
-                    <%if (clientWbo.getAttribute("phone").equals(" ")) {
-                        } else {%>
-                    <tr>
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_odd" >رقم التليفون</td>
-                        <td width="200" style="border-right-width:0px;text-align: center;"><label><%=clientWbo.getAttribute("phone")%></label></td>
-                    </tr>
-                    <%}%>
-                    <tr>
-                        <TD nowrap CLASS="silver_header" STYLE="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </TD>
-                        <TD width="100" STYLE="<%=style%>; font-size: 12px; font-weight: bold font-size: 12px; font-weight: bold" BGCOLOR="#DDDD00" nowrap  CLASS="silver_even">رقم الموبايل</td>
-                        <td width="200" style="border-right-width:0px;text-align: center;background-color: #FFFF66;"><label><%=clientWbo.getAttribute("mobile")%></label></td>
-                    </tr>
-                    <tr style="display: <%=issueId != null ? "" : "none"%>">
-                        <td nowrap="" class="silver_header" style="border-width: 0px; white-space: nowrap;">
-                            &nbsp;
-                        </td>
-                        <td width="100" style="text-align:Right;" bgcolor="#DDDD00" nowrap="" class="silver_odd">
-                            <b><font size="2" color="black"><%=call_number%></font></b>
-                        </td>
-                        <td width="200" style="border-right-width:0px;text-align: center;">
-                            <b id="callNo"><font size="3" color="blue"><%=request.getAttribute("businessId")%></font></b>
-                            <input type="hidden" id="businessId" value="<%=request.getAttribute("businessId")%>">
-                        </td>
-                    </tr>
-                </table>
-                <br>
-                <%}
-                } else if (status.equalsIgnoreCase("error")) {%>
-                <table align="<%=align%>" dir=<fmt:message key="direction"/>>
-                    <tr>                    
-                        <td class="td">
-                            <font size=4 color="red" >رقم العميل مسجل مسبقا</font> 
-                        </td>                    
-                    </tr> </table>
-                </tr>
-                <% } else {%>
-                <table align="<%=align%>" dir=<fmt:message key="direction"/>>
-                    <tr>                    
-                        <td class="td">
-                            <font size=2 color="red" ><%=fStatus%></font> 
-                        </td>                    
-                    </tr> </table>
+                        <td style="<%=style%>"class='td'>
 
-                <%}
-                    }
-                %>
+                            <input  type="text" id="clientName" name="clientName" placeholder=<fmt:message key="name"/>
 
-                <div id="salesUsers">
-                </DIV>
+                                   <LABEL id="nameMSG" style="display: inline"></LABEL>
 
-                <table style="margin-bottom: 20px;background: #f9f9f9;display: block;" ALIGN="center"  dir=<fmt:message key="direction"/> border="0" width="100%" id="saveClient">
-                    <tr>
-                        <td style="width: 62.5%;border: 0px;margin-top: 0px;padding: 0px;">
-                            <table style=" margin: 0px;">
-                                <%
-                                    if (connectByRealEstate != null && !connectByRealEstate.equals("")
-                                            && connectByRealEstate.equals("0")) {
+                            <LABEL id="naMsg" style="display: inline"></LABEL>
+                            <a id="existnameClient" class="linkbtn" style="display: none" href="#">exist</a>
+                            
+                            <input type="text"  id="job" name="job" placeholder="Job" />
 
-                                %>
-                                <tr id="numberRow" class="numberRow">
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <%-- <SELECT name="job" id="job" style="text-align:center;font-size: 13px;font-weight: bold; display: inline;">
 
-                                        <LABEL FOR="supplierNO2">
-                                            <p>
-                                                <b style="color: #0000FF;">
-                                                    <fmt:message key="number"/>
-                                                </b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td  style="<%=style%>"  class='TD' >
-                                        <!--onmouseover="this.className = 'rowHilight'" onmouseout="this.className = ''"-->
-                                        <input  type="TEXT" style="width:40%;" name="clientNO" ID="clientNO" size="33"  maxlength="10" class="clientNumber" onkeyup="checkNumber(this)"autocomplete="off"  onkeypress="javascript:return isNumber(event)" disabled="true" hidden="true" > 
-                                        <input  type="checkbox" name="" id="" onclick="javascript: disableClientNO(this);" checked="checked" disabled="true">
-                                        <input  type="checkbox" name="automatedClientNo" id="automatedClientNo"  checked="checked" hidden="true" />
-                                        <input type="hidden" name="saveInRealState" id="saveInRealState" value="false" />
-                                        <font size="3" color="#005599"><b><%=automated%></b></font>
-                                        <div id="warning"style="margin-right: 25px;display: none;width: 16px;height: 16px; background-image: url(images/warning.png);background-repeat: no-repeat;"></DIV>
-                                        <div id="ok"style="margin-right: 25px;display: none;width: 16px;height: 16px; background-image: url(images/ok2.png);background-repeat: no-repeat;"></DIV>
-                                        <LABEL id="MSG" ></LABEL>
-                                        <p id="numberMsg"></p>
-                                    </td>
-                                </tr>
-                                <%} else {%>
-                                <tr id="numberRow" class="">
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                                <%  if (jobs != null && !jobs.isEmpty()) {%>
 
-                                        <LABEL FOR="supplierNO2">
-                                            <p><b style="color: #0000FF;"><fmt:message key="number"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td  style="<%=style%>"  class='TD' >
-                                        <%if (clientWbo != null) {
-
-                                        %>
-                                        <input  type="TEXT" style="width:40%;" name="clientNO" value="<%=clientWbo.getAttribute("clientNO")%>" ID="clientNO" size="33"  maxlength="10" class="clientNumber" autocomplete="off"  onkeypress="javascript:return isNumber(event)" > 
-                                        <input  type="checkbox" name="automatedClientNo" id="automatedClientNo" onclick="javascript: disableClientNO(this);" onkeyup="checkClientNo(this)" onmousedown="checkClientNo(this)" >
-                                        <%} else {%>
-                                        <input  type="TEXT" style="width:40%;" name="clientNO" ID="clientNO" size="33"  maxlength="10" class="clientNumber" autocomplete="off"  onkeypress="javascript:return isNumber(event)" disabled="true"> 
-                                        <input  type="checkbox" name="automatedClientNo" id="automatedClientNo" onclick="javascript: disableClientNO(this);" onkeyup="checkClientNo(this)" onmousedown="checkClientNo(this)" checked="true">
-                                        <%}%>
-                                        <input type="hidden" name="saveInRealState" id="saveInRealState" value="true" />
-                                        <font size="3" color="#005599"><b><%=automated%></b></font>
-
-                                        <LABEL id="MSG" ></LABEL>
-                                        <p id="numberMsg"></p>
-                                    </td>
-                                </tr>
-
-                                <%
-                                    }%>
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="clientName" >
-                                            <p><b style=""><fmt:message key="name"/> <font style="color: red;">*</font></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-
-                                    <td style="<%=style%>"class='td'>
-
-                                        <input  type="text" id="clientName" name="clientName" placeholder=<fmt:message key="name"/>
-
-                                               <LABEL id="nameMSG" style="display: inline"></LABEL>
-
-                                        <LABEL id="naMsg" style="display: inline"></LABEL>
-                                        <a id="existnameClient" class="linkbtn" style="display: none" href="#">exist</a>
-                                        
-                                        <input type="text"  id="job" name="job" placeholder="Job" />
-
-                                        <%-- <SELECT name="job" id="job" style="text-align:center;font-size: 13px;font-weight: bold; display: inline;">
-
-                                            <%  if (jobs != null && !jobs.isEmpty()) {%>
-
-                                            <OPTION value="000"> ---<fmt:message key="career"/>--</OPTION>
-                                                <%
-
-                                                    for (WebBusinessObject wbo2 : jobs) {%>
-                                             <!--<input type="hidden" name="jod" id="jobCode" value="<%=wbo2.getAttribute("tradeId")%>" />-->
-                                            <OPTION value="<%=wbo2.getAttribute("tradeId")%>"><%=wbo2.getAttribute("tradeName")%></OPTION>
-
-                                            <%
-                                                    }
-
-                                                }
-                                            %>
-                                        </SELECT>--%> 
-                                        <input type="button" class="btn-gemy" value="<fmt:message key="addjob"/>" id="insertJob" onclick="popup(this)" style="display: inline; display: <%=userPrevList.contains("ADD_CAREER") ? "" : "none"%>;"/>
-
-                                    </td>
-                                </tr>
-                                
-                                <tr>
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="gender" >
-                                            <p><b><fmt:message key="gender"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                        <span><input type="radio" name="gender" value="ذكر" id="gender"  checked="true"
-                                                     />  <font size="3" color="#005599"><b><fmt:message key="male"/></b></font></span>
-                                        <span><input type="radio" name="gender" value="أنثى" id="gender" 
-                                                     />  <font size="3" color="#005599"><b><fmt:message key="female"/></b></font></span>
-                                    </td>
-
-                                </tr>
-                                
-                                <tr>
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="nationality">
-                                            <p><b><fmt:message key="nationality"/><font color="#FF0000"></font></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>"class='td'>
-                                        <SELECT name="nationality" id="nationality" style="width: 100px;text-align:center;font-size: 13px;font-weight: bold;">
-                                            <OPTION value="000"> ---<fmt:message key="choose"/>---</OPTION>
-                                            <OPTION value="مصري"><fmt:message key="egy"/></OPTION>
-                                            <OPTION value="سعودي"><fmt:message key="saudi"/></OPTION>
-                                            <OPTION value="أمريكي"><fmt:message key="american"/></OPTION>
-                                            <OPTION value="بولندي"><fmt:message key="polish"/></OPTION>
-                                        </SELECT>
-                                    </td>
-                                </tr>
-                                
-                                <tr>
-                                    <td  style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-
-                                        <LABEL>
-                                            <p><b style=""><fmt:message key="Mobile"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td  style="<%=style%>" class='td'>
-                                        <input onchange="javascript:mobileChange(this.value)" id="mobileNation0" name="mobileNation" title="Mobile" value="0" checked type="radio"/><font size="3"  color="#005599"> <b><fmt:message key='localMobile' /></b></font>
-                                        <input onchange="javascript:mobileChange(this.value)" id="mobileNation1" name="mobileNation" title="Inter-Mobile" value="1" type="radio"/><font size="3"  color="#005599"> <b><fmt:message key='interMobile' /></b></font>
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <!--    client mobile number Instead of fax -->
-                                        <LABEL FOR="clientMobile">
-                                            <p><b style=""><fmt:message key="mobile"/> <font style="color: red;">*</font></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                            <input type="TEXT" name="clientMobile" ID="clientMobile" size="11" maxlength="11"  onkeyup="checkMobile(this)" onmouseout="javascript:return checkClientMobile(this)" onkeypress="JavaScript: return isNumber(event, this)"
-                                               <%
-                                                   if (clientWbo != null) {
-                                                       if (clientWbo.getAttribute("clientMobile") != null) {%>  value="<%=clientWbo.getAttribute("clientMobile")%>" <%} else {%>
-                                               value=""
-                                               <%}
-                                                   }
-                                               %>
-
-                                               maxlength="11" >  
-                                        <div id="mobWarning"style="display: none;width: 20px;height: 20px; border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
-                                        </DIV>
-                                        <div id="mobOk"style="display: none;width: 20px;height: 20px;border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
-                                        </DIV>
-
-
-                                        <LABEL id="mobMSG" ></LABEL>
-                                        <a id="existmobClient" class="linkbtn" style="display: none" href="#">exist</a>
-                                        <input type="hidden" maxlength="3" style="width:50px; background-color: #FFFF66;" name="internationalM" ID="internationalM" size="5" onkeypress="JavaScript: return isNumber(event, this)" onkeyup="checkClientMobile(this)">
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL for="interPhone">
-                                            <p><b style=""><%=interPhone%></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-
-                                        <input type="text"  name="interPhone" ID="interPhone" size="16" maxlength="16" onkeyup="javascript:return checkClientInterPhone(this)" onmouseout="checkClientInterPhone(this)" onkeypress="JavaScript: return isNumber(event, this)" 
-                                               value="<%=clientWbo != null && clientWbo.getAttribute("interPhone") != null ? clientWbo.getAttribute("interPhone") : ""%>" />
-
-                                        <div id="interWarning"style="display: none;width: 20px;height: 20px; border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
-                                        </DIV>
-                                        <div id="interOk"style="display: none;width: 20px;height: 20px;border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
-                                        </DIV>
-                                        <LABEL id="interMSG" style="display :inline" ></LABEL>
-                                        <a id="existinterClient" class="linkbtn" style="display: none" href="#">exist</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag"  width="35%">
-                                        <LABEL FOR="phone">
-                                            <p><b>Whatsapp Phone</b>&nbsp;
-                                        </LABEL>                                    </td>
-                                    <td  style="<%=style%>" class='td'>
-                                        <input type="TEXT" name="phone" ID="phone" size="11" maxlength="11" onkeyup="checkTel(this)" onmouseout="checkClientPhone(this)" onkeypress="JavaScript: return isNumber(event, this)"
-                                               <%
-                                                   if (clientWbo != null) {
-                                                       if (clientWbo.getAttribute("phone") != null) {%>  value="<%=clientWbo.getAttribute("phone")%>" <%} else {%>
-                                               value=""
-                                               <%}
-                                                   }
-                                               %>
-                                               maxlength="10" onkeyup="checkClientPhone(this)">  
-                                        <input type="hidden"  name="localP" ID="localP" maxlength="3" size="5" onkeypress="JavaScript: return isNumber(event, this)" onkeyup="checkClientPhone(this)">
-                                        <input type="hidden"  name="internationalP" ID="internationalP" maxlength="3" size="5" onkeypress="JavaScript: return isNumber(event, this)"onkeyup="checkClientPhone(this)" >  
-                                        <div id="telWarning"style="display: none;width: 20px;height: 20px; border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
-                                        </DIV>
-                                        <div id="telOk"style="display: none;width: 20px;height: 20px;border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
-                                        </DIV>
-                                        <LABEL id="telMSG" ></LABEL>
-                                          <a id="existphoneClient" class="linkbtn" style="display: none" href="#">exist</a>
-
-                                      
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL>
-                                            <p><b style=""><fmt:message key="knowus"/> <font style="color: red;">*</font></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>;" class='td'>
-                                         <select name="dialedNumber" id="dialedNumber" onchange="showHideRows(this.value);" style="font-weight: bold; font-size: 16px; width: 170px; direction: rtl;">
-                                            <option value=""><fmt:message key="select" /></option>
-                                            <%
-                                                for (WebBusinessObject seasonWbo : seasonsList) {
-                                            %>
-                                            <option value="<%=seasonWbo.getAttribute("id")%>"><%=seasonWbo.getAttribute("arabicName")%></option>
-                                            <%
-                                                }
-                                            %>
-
-                                        </select>
-                                        <input type="button" class="btn-gemy" style="display: <%=userPrevList.contains("ADD_METHOD") ? "" : "none"%>;" onclick="JavaScript: popupSeason();" value="<fmt:message key="add" />">
-                                    </td>
-                                </tr>
-                                
-
-                                <tr style="">
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="clientName" >
-                                            <p><b style=""><%=birthDate%></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td class="td" dir="ltr" style="<%=style%>">
-                                        <input style=" width: 80px;" type="text" dir="LTR" name="birthDate" ID="birthDate" size="32" value="<%=nowDate%>" readonly />
-                                    </td>
-                                </tr>
-                                <tr class="conditionalRow">
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="clientName" id="message">
-                                            <p><b><fmt:message key="wifehusband"/><font color="#FF0000"></font></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>"class='td'>
-                                        <input type="TEXT" style="width:230px;" name="partner" ID="partner" size="33"  
-                                               <%
-                                                   if (clientWbo != null) {
-                                                       if (clientWbo.getAttribute("partner") != null) {%>  value="<%=clientWbo.getAttribute("partner")%>" <%} else {%>
-                                               value=""
-                                               <%}
-                                                   }
-                                               %>
-                                               maxlength="255">
-                                    </td>
-                                </tr>
-                                <tr class="conditionalRow">
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="matiralStatus" >
-                                            <p><b><fmt:message key="phone"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                        <input type="TEXT" name="matiralStatus" ID="matiralStatus" size="10" maxlength="11" onkeyup="checkTel(this)" onmouseout="checkClientPhone(this)" onkeypress="JavaScript: return isNumber(event, this)"
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <!--                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                                                            <LABEL FOR="job">
-                                                                                <p><b>المهنة<font color="#FF0000"></font></b>&nbsp;
-                                                                            </LABEL>
-                                                                        </td>
-                                                                        <td style="<%=style%>"class='td'>
-                                                                            <SELECT name="job" id="job" style="width: 100px;text-align:center;font-size: 13px;font-weight: bold;">
-                                    <%  if (jobs != null && !jobs.isEmpty()) {%>
-
-                                    <OPTION value="000"> ---إختر---</OPTION>
+                                <OPTION value="000"> ---<fmt:message key="career"/>--</OPTION>
                                     <%
 
                                         for (WebBusinessObject wbo2 : jobs) {%>
-                                 <input type="hidden" name="jod" id="jobCode" value="<%=wbo2.getAttribute("tradeId")%>" />
+                                 <!--<input type="hidden" name="jod" id="jobCode" value="<%=wbo2.getAttribute("tradeId")%>" />-->
                                 <OPTION value="<%=wbo2.getAttribute("tradeId")%>"><%=wbo2.getAttribute("tradeName")%></OPTION>
 
-                                    <%
-                                            }
-
+                                <%
                                         }
-                                    %>
-                                </SELECT>
-                                <input type="button" value="إضافة مهنة" id="insertJob" onclick="popup(this)"/>
 
-                            </td>-->
-                                </tr>
+                                    }
+                                %>
+                            </SELECT>--%> 
+                            <input type="button" class="btn-gemy" value="<fmt:message key="addjob"/>" id="insertJob" onclick="popup(this)" style="display: inline; display: <%=userPrevList.contains("ADD_CAREER") ? "" : "none"%>;"/>
 
-                                
-
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="matiralStatus" >
-                                            <p><b><fmt:message key="branch"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                        <%
-                                            for (int i = 0; i < userProjects.size(); i++) {
-
-                                                WebBusinessObject obj = (WebBusinessObject) userProjects.get(i);
-                                        %>
-
-                                        <div><span><input type="radio" name="clientBranch" value="<%=obj.getAttribute("projectID")%>" id="clientBranch" checked="true" />
-                                                <font size="4" color="#005599"><b><%=obj.getAttribute("projectName")%></b></font></span></div> 
-                                                    <%}%>
-                                        <div><span><input type="radio" name="clientBranch" value="UL" id="clientBranch"  />
-                                                <font size="4" color="#005599"><b><fmt:message key="unspecified"/> </b></font></span></div> 
-                                    </td>
-                                </tr>
-
-                                <tr style="display: none;">
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="clientSsn" >
-                                            <p><b><%=client_ssn%></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-
-                                        <input type="hidden" style="width:120px" name="clientSsn" id="clientSsn" size="14" 
-                                               <%
-                                                   if (clientWbo != null) {
-                                                       if (clientWbo.getAttribute("clientSsn") != null) {%>  value="<%=clientWbo.getAttribute("clientSsn")%>" <%} else {%>
-                                               value=""
-                                               <%}
-                                                   }
-                                               %>
-                                               maxlength="14" onkeyup="checkSsn(this)" onmousedown="checkSsn(this)" onkeypress="javascript:return isNumber(event)">
-                                        <p id="ssnMsg"></P>
-                                    </td>
-                                </tr>
-                                <%--
-                                    <tr>
-                                            <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                              <LABEL FOR="clientSsn" >
-                                            <p><b>المنتجات</b>&nbsp;
-                                        </LABEL>      
-                                        </td>
-                                                <td style="border-width: 0px;text-align: right">
-                                                    <select id="productSelect" name="productSelect" size="5" multiple style="width:230px; font-weight: bold; font-size: 13px" onchange="addTasks(this)">
-                                        
-                                                        <%
-                                                for (int x = 0; x < mainProducts.size(); x++) {
-                                                    mainProjectWbo = (WebBusinessObject) mainProducts.get(x);
-                                                    mainProductId = (String) mainProjectWbo.getAttribute("projectID");
-                                                    mainProductName = (String) mainProjectWbo.getAttribute("projectName");
-
-                                            %>
-                                            <option id="projectName<%=x%>" value=<%=mainProductId%> <%if(mainProductId.equals(session.getAttribute("product"))){%> selected="true" <%}%> ><%=mainProductName%></option> 
-                                            
-                                            <%}%>
-                                        <input type="hidden" id="productName" name="productName" value="">
-                                        <input type="hidden" id="mainProject" name="mainProject" value="<%=mainProductId%>">
-                                        <input type="hidden" id="parentProductName" name="parentProductName" value="<%=mainProductName%>">
-                                        <input type="hidden" id="parentProductId" name="parentProductId" value="<%=mainProductId%>">
-                                        </select>       
-                                        </td>
-                                </tr>
-                                --%>
-                            </table>
-                        </td>
-                        <td style="border: 0px;">
-                            <TABLE id="clientexistmsg" style="display: none">
-
-                                <TR>  <TD style="border: none">
-                                        <a id="existClient" class="linkbtn" style="display: block" href="#">View Client</a>
-                                    </TD>
-                                    <TD style="border: none; padding-left: 10px">
-                                        <LABEL id="erromsg" style="color: red; font-size: 15px; text-decoration: bold"><B>هذا العميل موجود</B></LABEL>
-                                    </TD> 
-                                </TR>
-
-                            </TABLE>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <table style="margin-top: 0px;">
-                                <%--
-                                <tr>
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL>
-                                            <p><b>المنتجات</b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="border-width: 0px">
-                                        <select id="productSelect" name="productSelect" size="5" multiple style="width:230px; font-weight: bold; font-size: 13px">
-                                            <%
-                                                for (int x = 0; x < mainProducts.size(); x++) {
-                                                    mainProjectWbo = (WebBusinessObject) mainProducts.get(x);
-                                                    mainProductId = (String) mainProjectWbo.getAttribute("projectID");
-                                                    mainProductName = (String) mainProjectWbo.getAttribute("projectName");
-
-                                            %>
-                                            <option id="projectName<%=x%>" value=<%=mainProductId%> <%if(mainProductId.equals(session.getAttribute("product"))){%> selected="true" <%}%> ><%=mainProductName%></option> 
-                                            <%}%>
-                                        </select>       
-                                    </td>         
-                                </tr>
-                                --%>
-                                <tr >
-                                    <!--                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                                                            <LABEL FOR="clientSalary" >
-                                                                                <p><b><%=client_total_salary%></b>&nbsp;
-                                                                            </LABEL>
-                                                                        </td>
-                                                                        <td style="<%=style%>" class='td'>
-                                                                            <input type="TEXT" style="width:70px" name="clientSalary" ID="total_salary" size="7" 
-                                    <%
-                                        if (clientWbo != null) {
-                                            if (clientWbo.getAttribute("clientSalary") != null) {%>  value="<%=clientWbo.getAttribute("clientSalary")%>" <%} else {%>
-                                    value=""
-                                    <%}
-                                        }
-                                    %>
-                                    maxlength="7" onkeyup="checkSalary(this)" onmousedown="checkSalary(this)" onkeypress="javascript:return isNumber(event)">
-                             <p id="salaryMsg"></p>
-                         </td>-->
-                                </tr>
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="address">
-                                            <p><b><fmt:message key="address"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                        <!--<textarea style="width:230px;" rows="3" ID="address" name="address"-->
-                                        <%
-                                            if (clientWbo != null) {
-                                                if (clientWbo.getAttribute("address") != null) {%> 
-                                        <textarea style="width:230px;" rows="3" ID="address" name="address">
-                                            <%=clientWbo.getAttribute("address")%></TEXTAREA><%} else {%>
-                                                
-                                        <%}
-                                        } else {
-                                        %><textarea style="width:230px;" rows="3" ID="address" name="address"></TEXTAREA><%}%>
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="email">
-                                            <p><b><fmt:message key="mail"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                        <input type="TEXT" style="width:230px" name="email" ID="email" size="33" 
-                                               <%
-                                                   if (clientWbo != null) {
-                                                       if (clientWbo.getAttribute("email") != null) {%>  value="<%=clientWbo.getAttribute("email")%>" <%} else {%>
-                                               value=""
-                                               <%}
-                                                   }
-                                               %>
-                                               maxlength="255" onkeyup="checkMail(this.value)" onmouseout="javascript:return checkClientEmail(this)"><br/>
-                                          <div id="mailWarning"style="display: none;width: 20px;height: 20px; border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
-                                        </DIV>
-                                        <div id="mailOk"style="display: none;width: 20px;height: 20px;border: none;">
-                                            <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
-                                        </DIV>
-                                        <p id="mailMsg" ></p>
-                                        <input type="hidden" name="age" value="30-40" id="age" />
-                                    </td>
-                                </tr>
-                                <tr >
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="email">
-                                            <p><b>National ID</b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                        <input type="TEXT" style="width:230px" name="passport" ID="passport" size="33" value="" /><br/>
-                                    </td>
-                                </tr>
-                                <!--tr>
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="workOut" >
-                                            <p><b><1fmt:message key="workabroad"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="1<%=style%>" class='td'>
-                                        <span><input type="radio" name="workOut" value="1" id="workOut" />  <font size="3" color="#005599"><b><fmt:message key="yes"/></b></font></span>
-                                        <span><input type="radio" name="workOut" value="0" id="workOut" checked="true"/>  <font size="3" color="#005599"><b><fmt:message key="no"/></b></font></span>
-                                    </td>
-                                </tr-->
-                                <!--tr>
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <LABEL FOR="kindred" >
-                                            <p><b><1fmt:message key="isrelativabroad"/></b>&nbsp;
-                                        </LABEL>
-                                    </td>
-                                    <td style="1<%=style%>" class='td'>
-                                        <span><input type="radio" name="kindred" value="1" id="kindred"/>  <font size="3" color="#005599"><b><fmt:message key="yes"/></b></font></span>
-                                        <span><input type="radio" name="kindred" value="0" id="kindred"  checked="true"/>  <font size="3" color="#005599"><b><fmt:message key="no"/></b></font></span>
-                                    </td>
-                                </tr-->
-                                <tr>
-                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                                        <label for="description" >
-                                            <p><b><fmt:message key="notes"/></b>&nbsp;
-                                        </label>
-                                    </td>
-                                    <td style="<%=style%>" class='td'>
-                                        <textarea id="description" name="description" cols="26" rows="10"></textarea>
-                                    </td>
-                                </tr>
-                            </table>
                         </td>
                     </tr>
-
-
-
-
-                </table>
-                <TABLE style="width: 100%">
-
-                    <tr class="campaignRow">
-                        <td   style="width: 20%; text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                            <LABEL FOR="matiralStatus" >
-                                <p><b><fmt:message key="campgin"/></b>&nbsp;
+                    
+                    <tr>
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="gender" >
+                                <p><b><fmt:message key="gender"/></b>&nbsp;
                             </LABEL>
-                            <br/>
-                        </td>     
-                        <td  style="width: 70%; padding: 5px" >
-                            <select name="campaignsselect" id="campaignsselect" style="width: 100%;" multiple="multiple" class="chosen-select-campaign"  data-rel="chosen">
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                            <span><input type="radio" name="gender" value="ذكر" id="gender"  checked="true"
+                                         />  <font size="3" color="#005599"><b><fmt:message key="male"/></b></font></span>
+                            <span><input type="radio" name="gender" value="أنثى" id="gender" 
+                                         />  <font size="3" color="#005599"><b><fmt:message key="female"/></b></font></span>
+                        </td>
+
+                    </tr>
+                    
+                    <tr>
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="nationality">
+                                <p><b><fmt:message key="nationality"/><font color="#FF0000"></font></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>"class='td'>
+                            <SELECT name="nationality" id="nationality" style="text-align:center;font-size: 13px;font-weight: bold;">
+                                <OPTION value="000"> ---<fmt:message key="choose"/>---</OPTION>
+                                <OPTION value="مصري"><fmt:message key="egy"/></OPTION>
+                                <OPTION value="سعودي"><fmt:message key="saudi"/></OPTION>
+                                <OPTION value="أمريكي"><fmt:message key="american"/></OPTION>
+                                <OPTION value="بولندي"><fmt:message key="polish"/></OPTION>
+                            </SELECT>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td  style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+
+                            <LABEL>
+                                <p><b style=""><fmt:message key="Mobile"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td  style="<%=style%>" class='td'>
+                            <input onchange="javascript:mobileChange(this.value)" id="mobileNation0" name="mobileNation" title="Mobile" value="0" checked type="radio"/><font size="3"  color="#005599"> <b><fmt:message key='localMobile' /></b></font>
+                            <input onchange="javascript:mobileChange(this.value)" id="mobileNation1" name="mobileNation" title="Inter-Mobile" value="1" type="radio"/><font size="3"  color="#005599"> <b><fmt:message key='interMobile' /></b></font>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <!--    client mobile number Instead of fax -->
+                            <LABEL FOR="clientMobile">
+                                <p><b style=""><fmt:message key="mobile"/> <font style="color: red;">*</font></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                                <input type="TEXT" name="clientMobile" ID="clientMobile" size="11" maxlength="11"  onkeyup="checkMobile(this)" onmouseout="javascript:return checkClientMobile(this)" onkeypress="JavaScript: return isNumber(event, this)"
+                                   <%
+                                       if (clientWbo != null) {
+                                           if (clientWbo.getAttribute("clientMobile") != null) {%>  value="<%=clientWbo.getAttribute("clientMobile")%>" <%} else {%>
+                                   value=""
+                                   <%}
+                                       }
+                                   %>
+
+                                   maxlength="11" >  
+                            <div id="mobWarning"style="display: none;width: 20px;height: 20px; border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
+                            </DIV>
+                            <div id="mobOk"style="display: none;width: 20px;height: 20px;border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
+                            </DIV>
+
+
+                            <LABEL id="mobMSG" ></LABEL>
+                            <a id="existmobClient" class="linkbtn" style="display: none" href="#">exist</a>
+                            <input type="hidden" maxlength="3" style="width:50px; background-color: #FFFF66;" name="internationalM" ID="internationalM" size="5" onkeypress="JavaScript: return isNumber(event, this)" onkeyup="checkClientMobile(this)">
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL for="interPhone">
+                                <p><b style=""><%=interPhone%></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+
+                            <input type="text"  name="interPhone" ID="interPhone" size="16" maxlength="16" onkeyup="javascript:return checkClientInterPhone(this)" onmouseout="checkClientInterPhone(this)" onkeypress="JavaScript: return isNumber(event, this)" 
+                                   value="<%=clientWbo != null && clientWbo.getAttribute("interPhone") != null ? clientWbo.getAttribute("interPhone") : ""%>" />
+
+                            <div id="interWarning"style="display: none;width: 20px;height: 20px; border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
+                            </DIV>
+                            <div id="interOk"style="display: none;width: 20px;height: 20px;border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
+                            </DIV>
+                            <LABEL id="interMSG" style="display :inline" ></LABEL>
+                            <a id="existinterClient" class="linkbtn" style="display: none" href="#">exist</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag"  width="35%">
+                            <LABEL FOR="phone">
+                                <p><b>Whatsapp Phone</b>&nbsp;
+                            </LABEL>                                    </td>
+                        <td  style="<%=style%>" class='td'>
+                            <input type="TEXT" name="phone" ID="phone" size="11" maxlength="11" onkeyup="checkTel(this)" onmouseout="checkClientPhone(this)" onkeypress="JavaScript: return isNumber(event, this)"
+                                   <%
+                                       if (clientWbo != null) {
+                                           if (clientWbo.getAttribute("phone") != null) {%>  value="<%=clientWbo.getAttribute("phone")%>" <%} else {%>
+                                   value=""
+                                   <%}
+                                       }
+                                   %>
+                                   maxlength="10" onkeyup="checkClientPhone(this)">  
+                            <input type="hidden"  name="localP" ID="localP" maxlength="3" size="5" onkeypress="JavaScript: return isNumber(event, this)" onkeyup="checkClientPhone(this)">
+                            <input type="hidden"  name="internationalP" ID="internationalP" maxlength="3" size="5" onkeypress="JavaScript: return isNumber(event, this)"onkeyup="checkClientPhone(this)" >  
+                            <div id="telWarning"style="display: none;width: 20px;height: 20px; border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
+                            </DIV>
+                            <div id="telOk"style="display: none;width: 20px;height: 20px;border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
+                            </DIV>
+                            <LABEL id="telMSG" ></LABEL>
+                              <a id="existphoneClient" class="linkbtn" style="display: none" href="#">exist</a>
+
+                          
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL>
+                                <p><b style=""><fmt:message key="knowus"/> <font style="color: red;">*</font></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>;" class='td'>
+                             <select name="dialedNumber" id="dialedNumber" onchange="showHideRows(this.value);" style="font-weight: bold; font-size: 16px; width: 170px;">
+                                <option value=""><fmt:message key="select" /></option>
                                 <%
-                                    for (WebBusinessObject campaignWbo : campaignsList) {
+                                    for (WebBusinessObject seasonWbo : seasonsList) {
                                 %>
-                                <option value="<%=campaignWbo.getAttribute("id")%>"><%=campaignWbo.getAttribute("campaignTitle")%></option>
+                                <option value="<%=seasonWbo.getAttribute("id")%>"><%=seasonWbo.getAttribute("arabicName")%></option>
                                 <%
                                     }
                                 %>
+
                             </select>
-                        </Td>
+                            <input type="button" class="btn-gemy" style="display: <%=userPrevList.contains("ADD_METHOD") ? "" : "none"%>;" onclick="JavaScript: popupSeason();" value="<fmt:message key="add" />">
+                        </td>
+                    </tr>
+                    
+
+                    <tr style="">
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="clientName" >
+                                <p><b style=""><%=birthDate%></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td class="td" dir="ltr" style="<%=style%>">
+                            <input style=" width: 80px;" type="text" dir="LTR" name="birthDate" ID="birthDate" size="32" value="<%=nowDate%>" readonly />
+                        </td>
                     </tr>
                     <tr class="conditionalRow">
-                        <td   style="width: 20%; text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                            <LABEL FOR="matiralStatus" >
-                                <p><b>Broker</b>&nbsp;
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="clientName" id="message">
+                                <p><b><fmt:message key="wifehusband"/><font color="#FF0000"></font></b>&nbsp;
                             </LABEL>
-                            <br/>
-                        </td>     
-                        <td  style="width: 70%; padding: 5px" >
-                            <select name="campaignsselect" id="campaignsselect" style="width: 100%;" multiple="multiple" class="chosen-select-campaign"  data-rel="chosen">
-                                <%
-                                    for (WebBusinessObject brokerWbo : brokerList) {
-                                %>
-                                <option value="<%=brokerWbo.getAttribute("id")%>"><%=brokerWbo.getAttribute("campaignTitle")%></option>
-                                <%
-                                    }
-                                %>
-                            </select>
-                        </Td>
+                        </td>
+                        <td style="<%=style%>"class='td'>
+                            <input type="TEXT" style="width:230px;" name="partner" ID="partner" size="33"  
+                                   <%
+                                       if (clientWbo != null) {
+                                           if (clientWbo.getAttribute("partner") != null) {%>  value="<%=clientWbo.getAttribute("partner")%>" <%} else {%>
+                                   value=""
+                                   <%}
+                                       }
+                                   %>
+                                   maxlength="255">
+                        </td>
                     </tr>
-                </TABLE>
-                <TABLE style="width: 100%">
+                    <tr class="conditionalRow">
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="matiralStatus" >
+                                <p><b><fmt:message key="phone"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                            <input type="TEXT" name="matiralStatus" ID="matiralStatus" size="10" maxlength="11" onkeyup="checkTel(this)" onmouseout="checkClientPhone(this)" onkeypress="JavaScript: return isNumber(event, this)"
 
+
+                        </td>
+                    </tr>
                     <tr>
-                        <td   style="width: 20%; text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
-                            <LABEL FOR="matiralStatus" >
-                                <p><b>Source</b>&nbsp;
-                            </LABEL>
-                            <br/>
-                        </td>     
-                        <td  style="width: 70%; padding: 5px" >
-                            <select name="sourceClient" id="sourceClient" style="width: 100%;" multiple="multiple" class="chosen-select-campaign"  data-rel="chosen">
-                                <%
-                                    for (WebBusinessObject sourceWbo : sourceList) {
-                                %>
-                                <option value="<%=sourceWbo.getAttribute("sourceID")%>"><%=sourceWbo.getAttribute("englishname")%></option>
-                                <%
-                                    }
-                                %>
-                            </select>
-                        </Td>
+                        <!--                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                                                                <LABEL FOR="job">
+                                                                    <p><b>المهنة<font color="#FF0000"></font></b>&nbsp;
+                                                                </LABEL>
+                                                            </td>
+                                                            <td style="<%=style%>"class='td'>
+                                                                <SELECT name="job" id="job" style="width: 100px;text-align:center;font-size: 13px;font-weight: bold;">
+                        <%  if (jobs != null && !jobs.isEmpty()) {%>
+
+                        <OPTION value="000"> ---إختر---</OPTION>
+                        <%
+
+                            for (WebBusinessObject wbo2 : jobs) {%>
+                     <input type="hidden" name="jod" id="jobCode" value="<%=wbo2.getAttribute("tradeId")%>" />
+                    <OPTION value="<%=wbo2.getAttribute("tradeId")%>"><%=wbo2.getAttribute("tradeName")%></OPTION>
+
+                        <%
+                                }
+
+                            }
+                        %>
+                    </SELECT>
+                    <input type="button" value="إضافة مهنة" id="insertJob" onclick="popup(this)"/>
+
+                </td>-->
                     </tr>
-                </TABLE>
-                            <button  onclick="JavaScript:cancelForm();" class="button2" style="margin-right: 2px;"><%=back%></button>
-                            <button  type="button" onclick="submitForm()" id='submitBtn' class="button2" value="" style="display: inline-block;"/><%=regist%></button>
+
+                    
+
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="matiralStatus" >
+                                <p><b><fmt:message key="branch"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                            <%
+                                for (int i = 0; i < userProjects.size(); i++) {
+
+                                    WebBusinessObject obj = (WebBusinessObject) userProjects.get(i);
+                            %>
+
+                            <div><span><input type="radio" name="clientBranch" value="<%=obj.getAttribute("projectID")%>" id="clientBranch" checked="true" />
+                                    <font size="4" color="#005599"><b><%=obj.getAttribute("projectName")%></b></font></span></div> 
+                                        <%}%>
+                            <div><span><input type="radio" name="clientBranch" value="UL" id="clientBranch"  />
+                                    <font size="4" color="#005599"><b><fmt:message key="unspecified"/> </b></font></span></div> 
+                        </td>
+                    </tr>
+
+                    <tr style="display: none;">
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="clientSsn" >
+                                <p><b><%=client_ssn%></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+
+                            <input type="hidden" style="width:120px" name="clientSsn" id="clientSsn" size="14" 
+                                   <%
+                                       if (clientWbo != null) {
+                                           if (clientWbo.getAttribute("clientSsn") != null) {%>  value="<%=clientWbo.getAttribute("clientSsn")%>" <%} else {%>
+                                   value=""
+                                   <%}
+                                       }
+                                   %>
+                                   maxlength="14" onkeyup="checkSsn(this)" onmousedown="checkSsn(this)" onkeypress="javascript:return isNumber(event)">
+                            <p id="ssnMsg"></P>
+                        </td>
+                    </tr>
+                    <%--
+                        <tr>
+                                <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                                  <LABEL FOR="clientSsn" >
+                                <p><b>المنتجات</b>&nbsp;
+                            </LABEL>      
+                            </td>
+                                    <td style="border-width: 0px;text-align: right">
+                                        <select id="productSelect" name="productSelect" size="5" multiple style="width:230px; font-weight: bold; font-size: 13px" onchange="addTasks(this)">
                             
-                            <div style="width: 95%;margin-left: auto;margin-right: auto;margin-bottom: 7px; padding-top: 50px;">
-                    <%if (privilegesList.contains("CLIENT_PROJ_TBLE")) {%>
-                    <TABLE class="projectsTbl">
-                        <THEAD>
-                            <tr>
-                                <th ><fmt:message key="projects"/></th>
-                                <th style="direction: <fmt:message key="direction"/>"><fmt:message key="within"/></th>
-                                <th><fmt:message key="payment"/></th>
-                                <th><fmt:message key="area"/></th>
-                            </tr>
-                        </THEAD>
-                        <tbody>
-                            <%for (int x = 0; x < mainProducts.size(); x++) {
-                                    mainProjectWbo = (WebBusinessObject) mainProducts.get(x);
-                                    mainProductId = (String) mainProjectWbo.getAttribute("projectID");
-                                    mainProductName = (String) mainProjectWbo.getAttribute("projectName");
-                            %>     
-                            <tr>
-                                <td>
-                                    <div style="text-align: center; direction: <fmt:message key="direction"/>">
-                                        <input type="checkbox" id="productChecked" name="productChecked<%=x%>" <%=mainProductId.equals(securityUser.getDefaultProduct()) ? "checked" : ""%>><%=mainProductName%> 
-                                        <input type="hidden" id="mainProductId<%=x%>" name="mainProductId<%=x%>" value=<%=mainProductId%> >
-                                    </div>    
-                                </td>
-                                <td>
-                                    <select name="roomsCount<%=x%>" id="roomsCount<%=x%>">
-                                        <% for (int i = 1; i < 6; i++) {%>
-                                        <OPTION value="<%=i%>"><%=i%></OPTION>
-                                            <%}%>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select name="paymentType<%=x%>" id="paymentType<%=x%>">
-                                        <option value="نقدى"><fmt:message key="cash"/></option>
-                                        <option value="تقسيط"><fmt:message key="installment"/></option> 
-                                    </select>
-                                </td>
-                                <td>
-                                    <select id="width<%=x%>" name="width<%=x%>" style="width:30%">
-                                        <% ArrayList<WebBusinessObject> areas = (ArrayList<WebBusinessObject>) request.getAttribute(mainProductId);
-                                            for (WebBusinessObject areaWbo : areas) {
-                                        %>
+                                            <%
+                                    for (int x = 0; x < mainProducts.size(); x++) {
+                                        mainProjectWbo = (WebBusinessObject) mainProducts.get(x);
+                                        mainProductId = (String) mainProjectWbo.getAttribute("projectID");
+                                        mainProductName = (String) mainProjectWbo.getAttribute("projectName");
 
-                                        <option value="<%=areaWbo.getAttribute("area")%>"><%=areaWbo.getAttribute("area")%></OPTION>
-                                            <%}%>
-                                    </select>
-                                </td>
-                            </tr>
-                            <%}%>
+                                %>
+                                <option id="projectName<%=x%>" value=<%=mainProductId%> <%if(mainProductId.equals(session.getAttribute("product"))){%> selected="true" <%}%> ><%=mainProductName%></option> 
+                                
+                                <%}%>
+                            <input type="hidden" id="productName" name="productName" value="">
+                            <input type="hidden" id="mainProject" name="mainProject" value="<%=mainProductId%>">
+                            <input type="hidden" id="parentProductName" name="parentProductName" value="<%=mainProductName%>">
+                            <input type="hidden" id="parentProductId" name="parentProductId" value="<%=mainProductId%>">
+                            </select>       
+                            </td>
+                    </tr>
+                    --%>
+                </table>
+            </td>
+            <td style="border: 0px;">
+                <TABLE id="clientexistmsg" style="display: none">
+
+                    <TR>  <TD style="border: none">
+                            <a id="existClient" class="linkbtn" style="display: block" href="#">View Client</a>
+                        </TD>
+                        <TD style="border: none; padding-left: 10px">
+                            <LABEL id="erromsg" style="color: red; font-size: 15px; text-decoration: bold"><B>هذا العميل موجود</B></LABEL>
+                        </TD> 
+                    </TR>
+
+                </TABLE>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <table style="margin-top: 0px;">
+                    <%--
+                    <tr>
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL>
+                                <p><b>المنتجات</b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="border-width: 0px">
+                            <select id="productSelect" name="productSelect" size="5" multiple style="width:230px; font-weight: bold; font-size: 13px">
+                                <%
+                                    for (int x = 0; x < mainProducts.size(); x++) {
+                                        mainProjectWbo = (WebBusinessObject) mainProducts.get(x);
+                                        mainProductId = (String) mainProjectWbo.getAttribute("projectID");
+                                        mainProductName = (String) mainProjectWbo.getAttribute("projectName");
+
+                                %>
+                                <option id="projectName<%=x%>" value=<%=mainProductId%> <%if(mainProductId.equals(session.getAttribute("product"))){%> selected="true" <%}%> ><%=mainProductName%></option> 
+                                <%}%>
+                            </select>       
+                        </td>         
+                    </tr>
+                    --%>
+                    <tr >
+                        <!--                                    <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                                                                <LABEL FOR="clientSalary" >
+                                                                    <p><b><%=client_total_salary%></b>&nbsp;
+                                                                </LABEL>
+                                                            </td>
+                                                            <td style="<%=style%>" class='td'>
+                                                                <input type="TEXT" style="width:70px" name="clientSalary" ID="total_salary" size="7" 
+                        <%
+                            if (clientWbo != null) {
+                                if (clientWbo.getAttribute("clientSalary") != null) {%>  value="<%=clientWbo.getAttribute("clientSalary")%>" <%} else {%>
+                        value=""
+                        <%}
+                            }
+                        %>
+                        maxlength="7" onkeyup="checkSalary(this)" onmousedown="checkSalary(this)" onkeypress="javascript:return isNumber(event)">
+                 <p id="salaryMsg"></p>
+             </td>-->
+                    </tr>
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="address">
+                                <p><b><fmt:message key="address"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                            <!--<textarea style="width:230px;" rows="3" ID="address" name="address"-->
+                            <%
+                                if (clientWbo != null) {
+                                    if (clientWbo.getAttribute("address") != null) {%> 
+                            <textarea style="width:230px;" rows="3" ID="address" name="address">
+                                <%=clientWbo.getAttribute("address")%></TEXTAREA><%} else {%>
+                                    
+                            <%}
+                            } else {
+                            %><textarea style="width:230px;" rows="3" ID="address" name="address"></TEXTAREA><%}%>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="email">
+                                <p><b><fmt:message key="mail"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                            <input type="TEXT" style="width:230px" name="email" ID="email" size="33" 
+                                   <%
+                                       if (clientWbo != null) {
+                                           if (clientWbo.getAttribute("email") != null) {%>  value="<%=clientWbo.getAttribute("email")%>" <%} else {%>
+                                   value=""
+                                   <%}
+                                       }
+                                   %>
+                                   maxlength="255" onkeyup="checkMail(this.value)" onmouseout="javascript:return checkClientEmail(this)"><br/>
+                              <div id="mailWarning"style="display: none;width: 20px;height: 20px; border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/warning.png);background-repeat: no-repeat;" />
+                            </DIV>
+                            <div id="mailOk"style="display: none;width: 20px;height: 20px;border: none;">
+                                <IMG src="" width="16px" height="16px;" style="background-color: transparent;border: none;background-image: url(images/ok2.png);background-repeat: no-repeat;" />
+                            </DIV>
+                            <p id="mailMsg" ></p>
+                            <input type="hidden" name="age" value="30-40" id="age" />
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="email">
+                                <p><b>National ID</b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                            <input type="TEXT" style="width:230px" name="passport" ID="passport" size="33" value="" /><br/>
+                        </td>
+                    </tr>
+                    <!--tr>
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="workOut" >
+                                <p><b><1fmt:message key="workabroad"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="1<%=style%>" class='td'>
+                            <span><input type="radio" name="workOut" value="1" id="workOut" />  <font size="3" color="#005599"><b><fmt:message key="yes"/></b></font></span>
+                            <span><input type="radio" name="workOut" value="0" id="workOut" checked="true"/>  <font size="3" color="#005599"><b><fmt:message key="no"/></b></font></span>
+                        </td>
+                    </tr-->
+                    <!--tr>
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <LABEL FOR="kindred" >
+                                <p><b><1fmt:message key="isrelativabroad"/></b>&nbsp;
+                            </LABEL>
+                        </td>
+                        <td style="1<%=style%>" class='td'>
+                            <span><input type="radio" name="kindred" value="1" id="kindred"/>  <font size="3" color="#005599"><b><fmt:message key="yes"/></b></font></span>
+                            <span><input type="radio" name="kindred" value="0" id="kindred"  checked="true"/>  <font size="3" color="#005599"><b><fmt:message key="no"/></b></font></span>
+                        </td>
+                    </tr-->
+                    <tr>
+                        <td style="text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                            <label for="description" >
+                                <p><b><fmt:message key="notes"/></b>&nbsp;
+                            </label>
+                        </td>
+                        <td style="<%=style%>" class='td'>
+                            <textarea id="description" name="description" cols="26" rows="10"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
 
 
-                        </tbody>
-                    </TABLE>
-                    <%}%>
 
+
+    </table>
+    <TABLE style="width: 100%">
+
+        <tr class="campaignRow">
+            <td   style="width: 20%; text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                <LABEL FOR="matiralStatus" >
+                    <p><b><fmt:message key="campgin"/></b>&nbsp;
+                </LABEL>
+                <br/>
+            </td>     
+            <td  style="width: 70%; padding: 5px" >
+                <select name="campaignsselect" id="campaignsselect" style="width: 100%;" multiple="multiple" class="chosen-select-campaign"  data-rel="chosen">
+                    <%
+                        for (WebBusinessObject campaignWbo : campaignsList) {
+                    %>
+                    <option value="<%=campaignWbo.getAttribute("id")%>"><%=campaignWbo.getAttribute("campaignTitle")%></option>
+                    <%
+                        }
+                    %>
+                </select>
+            </Td>
+        </tr>
+        <tr class="conditionalRow">
+            <td   style="width: 20%; text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                <LABEL FOR="matiralStatus" >
+                    <p><b>Broker</b>&nbsp;
+                </LABEL>
+                <br/>
+            </td>     
+            <td  style="width: 70%; padding: 5px" >
+                <select name="campaignsselect" id="campaignsselect" style="width: 100%;" multiple="multiple" class="chosen-select-campaign"  data-rel="chosen">
+                    <%
+                        for (WebBusinessObject brokerWbo : brokerList) {
+                    %>
+                    <option value="<%=brokerWbo.getAttribute("id")%>"><%=brokerWbo.getAttribute("campaignTitle")%></option>
+                    <%
+                        }
+                    %>
+                </select>
+            </Td>
+        </tr>
+    </TABLE>
+    <TABLE style="width: 100%">
+
+        <tr>
+            <td   style="width: 20%; text-align:center; font-weight: bold; font-size: 16px; color: black;" class="excelentCell formInputTag" width="35%">
+                <LABEL FOR="matiralStatus" >
+                    <p><b>Source</b>&nbsp;
+                </LABEL>
+                <br/>
+            </td>     
+            <td  style="width: 70%; padding: 5px" >
+                <select name="sourceClient" id="sourceClient" style="width: 100%;" multiple="multiple" class="chosen-select-campaign"  data-rel="chosen">
+                    <%
+                        for (WebBusinessObject sourceWbo : sourceList) {
+                    %>
+                    <option value="<%=sourceWbo.getAttribute("sourceID")%>"><%=sourceWbo.getAttribute("englishname")%></option>
+                    <%
+                        }
+                    %>
+                </select>
+            </Td>
+        </tr>
+    </TABLE>
+                <DIV class="mt-5">
+                <button  onclick="JavaScript:cancelForm();" class="button2" style="margin-right: 2px;"><%=back%></button>
+                <button  type="button" onclick="submitForm()" id='submitBtn' class="button2" value="" style="display: inline-block;"/><%=regist%></button>
                 </DIV>
-                <div id="jobForm"  style="width: 30%;height: 200px;display: block;position: fixed;">
-                    <div style="clear: both;margin-left: 89%;margin-top: 0px;margin-bottom: -35px;width: 32px;">
-                        <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
-                    </div>
-                    <div class="login" style="width: 86%;margin-bottom: 10px;margin-left: auto;margin-right: auto">
-                        <table class="" style="width:100%;text-align: right;border: none;" class="table" >
-                            <tr align="center" align="center">
-                                <td colspan="2" style="font-size:14px;border: none;">
-                                    <b style="color: #f9f9f9;font-size: 14px;"id="msg"></b></td>
-                            </tr>
+                <div style="width: 95%;margin-left: auto;margin-right: auto;margin-bottom: 7px; padding-top: 50px;">
+        <%if (privilegesList.contains("CLIENT_PROJ_TBLE")) {%>
+        <TABLE class="projectsTbl">
+            <THEAD>
+                <tr>
+                    <th ><fmt:message key="projects"/></th>
+                    <th style="direction: <fmt:message key="direction"/>"><fmt:message key="within"/></th>
+                    <th><fmt:message key="payment"/></th>
+                    <th><fmt:message key="area"/></th>
+                </tr>
+            </THEAD>
+            <tbody>
+                <%for (int x = 0; x < mainProducts.size(); x++) {
+                        mainProjectWbo = (WebBusinessObject) mainProducts.get(x);
+                        mainProductId = (String) mainProjectWbo.getAttribute("projectID");
+                        mainProductName = (String) mainProjectWbo.getAttribute("projectName");
+                %>     
+                <tr>
+                    <td>
+                        <div style="text-align: center; direction: <fmt:message key="direction"/>">
+                            <input type="checkbox" id="productChecked" name="productChecked<%=x%>" <%=mainProductId.equals(securityUser.getDefaultProduct()) ? "checked" : ""%>><%=mainProductName%> 
+                            <input type="hidden" id="mainProductId<%=x%>" name="mainProductId<%=x%>" value=<%=mainProductId%> >
+                        </div>    
+                    </td>
+                    <td>
+                        <select name="roomsCount<%=x%>" id="roomsCount<%=x%>">
+                            <% for (int i = 1; i < 6; i++) {%>
+                            <OPTION value="<%=i%>"><%=i%></OPTION>
+                                <%}%>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="paymentType<%=x%>" id="paymentType<%=x%>">
+                            <option value="نقدى"><fmt:message key="cash"/></option>
+                            <option value="تقسيط"><fmt:message key="installment"/></option> 
+                        </select>
+                    </td>
+                    <td>
+                        <select id="width<%=x%>" name="width<%=x%>" style="width:30%">
+                            <% ArrayList<WebBusinessObject> areas = (ArrayList<WebBusinessObject>) request.getAttribute(mainProductId);
+                                for (WebBusinessObject areaWbo : areas) {
+                            %>
 
-                            <tr >
-                                <td  ALIGN="<%=align%>" style="border: none;"><%=arName%></td>
-                                <td width="200" style="border:0px;text-align: right;">
-                                    <input type="TEXT" style="width:150px;float: right;" name="jobNameAr" ID="jobNameAr" size="50" value="" maxlength="50">
-                                </td>
-                            </tr>
+                            <option value="<%=areaWbo.getAttribute("area")%>"><%=areaWbo.getAttribute("area")%></OPTION>
+                                <%}%>
+                        </select>
+                    </td>
+                </tr>
+                <%}%>
 
-                            <tr >
-                                <td colspan="2" style="text-align:center;border: none;">
-                                    <input style="margin-top: 5px;"type="button"  value="إضافة" onclick="addJob(this)">
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
 
-                <div id="regionForm"  style="width: 30%;height: 200px;display: none;position:fixed;">          
-                    <div style="clear: both;margin-left: 89%;margin-top: 0px;margin-bottom: -35px;width: 32px;">
-                        <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
-                    </div>
-                    <div class="login" style="width: 86%;margin-bottom: 10px;margin-left: auto;margin-right: auto;">
-                        <table class="table" style="width:100%;text-align: right;border: none;" >
-                            <tr align="center" align="center">
-                                <td colspan="2"  style="font-size:14px;border: none"><b style="color: #f9f9f9;font-size: 14px;"id="msg"></b></td>
-                            </tr>
-                            <tr >
-                                <td ALIGN="<%=align%>" style="border: none"><fmt:message key="city"/></td>
-                                <td width="200" style="border:0px;text-align: right;">
-                                    <input type="TEXT" style="width:150px;" name="regionNameAr" ID="regionNameAr" size="50" value="" maxlength="50">
-                                </td>
-                            </tr>
+            </tbody>
+        </TABLE>
+        <%}%>
 
-                            <tr>
-                                <td colspan="2" style="text-align:center;border: none">
-                                    <input type="button"  value="إضافة" onclick="addRegion(this)" style="margin-top: 5px;">
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div id="seasonForm"  style="width: 30%;height: 200px;display: block;position: fixed;">
-                    <div style="clear: both;margin-left: 89%;margin-top: 0px;margin-bottom: -35px;width: 32px;">
-                        <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
-                    </div>
-                    <div class="login" style="width: 86%;margin-bottom: 10px;margin-left: auto;margin-right: auto">
-                        <table class="" style="width:100%;text-align: right;border: none;" class="table" >
-                            <tr align="center" align="center">
-                                <td colspan="2" style="font-size:14px; border: none;">
-                                    <b style="color: #f9f9f9;font-size: 14px;" id="seasonMsg"></b></td>
-                            </tr>
-                            <tr>
-                                <td  ALIGN="<%=align%>" style="border: none;"><fmt:message key="seasonCode" /></td>
-                                <td width="200" style="border:0px;text-align: right;">
-                                    <input type="text" style="width: 80px; float: right;" name="seasonCode" ID="seasonCode" size="50" value="" maxlength="50" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td  ALIGN="<%=align%>" style="border: none;"><fmt:message key="seasonName" /></td>
-                                <td width="200" style="border:0px;text-align: right;">
-                                    <input type="text" style="width:150px;float: right;" name="seasonName" ID="seasonName" size="50" value="" maxlength="50" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" style="text-align:center;border: none;">
-                                    <input style="margin-top: 5px;"type="button" value="<fmt:message key="add" />" onclick="addSeason()" />
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <br>
-                <div id="viewEmployeeLoads" style="width: auto; height: auto; margin: 0 auto; display: none">
-                    <input  name="view_employee_loads" type="button" onclick="javascript:runEffect();" id ="view_employee_loads"class="view_employee_loads"/>
-                </div>
-                <fieldset id="effect" class="set" style="border-color: #006699; width: 95%;margin-top: 20px;border-radius: 5px; display: block">
-                    <img src="images/stat.png" width="40"/>
-                    <div id="container" style="width: 100%; height: 50%; margin: 0 auto"></div>
-                    <br/>
-                </fieldset>
-                <br>
-            </fieldset>
+    </DIV>
+    <div id="jobForm"  style="width: 30%;height: 200px;display: block;position: fixed;">
+        <div style="clear: both;margin-left: 89%;margin-top: 0px;margin-bottom: -35px;width: 32px;">
+            <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
+        </div>
+        <div class="login" style="width: 86%;margin-bottom: 10px;margin-left: auto;margin-right: auto">
+            <table class="" style="width:100%;text-align: right;border: none;" class="table" >
+                <tr align="center" align="center">
+                    <td colspan="2" style="font-size:14px;border: none;">
+                        <b style="color: #f9f9f9;font-size: 14px;"id="msg"></b></td>
+                </tr>
+
+                <tr >
+                    <td  ALIGN="<%=align%>" style="border: none;"><%=arName%></td>
+                    <td width="200" style="border:0px;text-align: right;">
+                        <input type="TEXT" style="width:150px;float: right;" name="jobNameAr" ID="jobNameAr" size="50" value="" maxlength="50">
+                    </td>
+                </tr>
+
+                <tr >
+                    <td colspan="2" style="text-align:center;border: none;">
+                        <input style="margin-top: 5px;"type="button"  value="إضافة" onclick="addJob(this)">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="regionForm"  style="width: 30%;height: 200px;display: none;position:fixed;">          
+        <div style="clear: both;margin-left: 89%;margin-top: 0px;margin-bottom: -35px;width: 32px;">
+            <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
+        </div>
+        <div class="login" style="width: 86%;margin-bottom: 10px;margin-left: auto;margin-right: auto;">
+            <table class="table" style="width:100%;text-align: right;border: none;" >
+                <tr align="center" align="center">
+                    <td colspan="2"  style="font-size:14px;border: none"><b style="color: #f9f9f9;font-size: 14px;"id="msg"></b></td>
+                </tr>
+                <tr >
+                    <td ALIGN="<%=align%>" style="border: none"><fmt:message key="city"/></td>
+                    <td width="200" style="border:0px;text-align: right;">
+                        <input type="TEXT" style="width:150px;" name="regionNameAr" ID="regionNameAr" size="50" value="" maxlength="50">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align:center;border: none">
+                        <input type="button"  value="إضافة" onclick="addRegion(this)" style="margin-top: 5px;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="seasonForm"  style="width: 30%;height: 200px;display: block;position: fixed;">
+        <div style="clear: both;margin-left: 89%;margin-top: 0px;margin-bottom: -35px;width: 32px;">
+            <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;" onclick="closePopup(this)"/>
+        </div>
+        <div class="login" style="width: 86%;margin-bottom: 10px;margin-left: auto;margin-right: auto">
+            <table class="" style="width:100%;text-align: right;border: none;" class="table" >
+                <tr align="center" align="center">
+                    <td colspan="2" style="font-size:14px; border: none;">
+                        <b style="color: #f9f9f9;font-size: 14px;" id="seasonMsg"></b></td>
+                </tr>
+                <tr>
+                    <td  ALIGN="<%=align%>" style="border: none;"><fmt:message key="seasonCode" /></td>
+                    <td width="200" style="border:0px;text-align: right;">
+                        <input type="text" style="width: 80px; float: right;" name="seasonCode" ID="seasonCode" size="50" value="" maxlength="50" />
+                    </td>
+                </tr>
+                <tr>
+                    <td  ALIGN="<%=align%>" style="border: none;"><fmt:message key="seasonName" /></td>
+                    <td width="200" style="border:0px;text-align: right;">
+                        <input type="text" style="width:150px;float: right;" name="seasonName" ID="seasonName" size="50" value="" maxlength="50" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center;border: none;">
+                        <input style="margin-top: 5px;"type="button" value="<fmt:message key="add" />" onclick="addSeason()" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div id="viewEmployeeLoads" style="width: auto; height: auto; margin: 0 auto; display: none">
+        <input  name="view_employee_loads" type="button" onclick="javascript:runEffect();" id ="view_employee_loads"class="view_employee_loads"/>
+    </div>
+    <fieldset id="effect" class="set" style="border-color: #006699; width: 95%;margin-top: 20px;border-radius: 5px; display: block">
+        <img src="images/stat.png" width="40"/>
+        <div id="container" style="width: 100%; height: 50%; margin: 0 auto"></div>
+        <br/>
+    </fieldset>
+    <br>
+</fieldset>
         </FORM> 
 
         <script>

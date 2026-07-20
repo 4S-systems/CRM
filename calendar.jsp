@@ -11,6 +11,8 @@
 <html>
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta HTTP-EQUIV="Expires" CONTENT="0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <%
         TouristGuide tGuide = new TouristGuide("/com/tracker/international/BasicOps");
@@ -538,664 +540,753 @@
         }
                                        
     </script>
-    <style type="text/css">
-        .login {
-            /*display: none;*/
-            direction: rtl;
-            margin: 20px auto;
-            padding: 10px 5px;
-            /*        width:30%;*/
-            background: #3f65b7;
-            background-clip: padding-box;
-            border: 1px solid #ffffff;
-            border-bottom-color: #ffffff;
-            border-radius: 5px;
-            color: #ffffff;
-            background: #7abcff; /* Old browsers */
-            /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-            /*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdhYmNmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MDk2ZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);*/
-            background: -moz-linear-gradient(top, #7abcff 0%, #4096ee 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* IE10+ */
-            background: linear-gradient(to bottom, #7abcff 0%,#4096ee 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-8 */
+<style type="text/css">
+    body{
+        background: #eef4fb;
+        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        color: #1f2937;
+    }
+    fieldset.set{
+        border: 0;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #finish_Note,
+    #show_appointment,
+    #show_client_information{
+        z-index: 1055;
+    }
+    table{
+        border-collapse: separate;
+    }
+    textarea,
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select{
+        border: 1px solid #ced4da;
+        border-radius: .375rem;
+        padding: .375rem .75rem;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.075);
+    }
+    textarea:focus,
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    select:focus{
+        outline: 0;
+        border-color: #86b7fe;
+        box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+    }
+    label{
+        font-weight: 600;
+        margin-bottom: .25rem;
+    }
+    table.calendar-shell{
+        width: 100%;
+        max-width: 1040px;
+        margin: 1rem auto;
+        padding: 1rem;
+        border-radius: .75rem;
+        background: #ffffff;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.08);
+    }
+    table.calendar-shell td{
+        border: 1px solid rgba(0,0,0,.08);
+    }
+    table.calendar-shell tr:first-child td{
+        background: #dbeafe !important;
+        text-align: center;
+        font-weight: 700;
+    }
+    .login {
+        /*display: none;*/
+        direction: rtl;
+        margin: 20px auto;
+        padding: 10px 5px;
+        /*        width:30%;*/
+        background: #3f65b7;
+        background-clip: padding-box;
+        border: 1px solid #ffffff;
+        border-bottom-color: #ffffff;
+        border-radius: 5px;
+        color: #ffffff;
+        background: #7abcff; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        /*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzdhYmNmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0MDk2ZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);*/
+        background: -moz-linear-gradient(top, #7abcff 0%, #4096ee 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #7abcff 0%,#4096ee 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #7abcff 0%,#4096ee 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-8 */
 
-            -webkit-box-shadow: 0px 0px 17px rgba(255, 255, 255, 0.67);
-            -moz-box-shadow:    0px 0px 17px rgba(255, 255, 255, 0.67);
-            box-shadow:         0px 0px 17px rgba(255, 255, 255, 0.67);
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-        }
-        .login1{
-            direction: rtl;
-            margin: 20px auto;
-            padding: 10px 5px;
-            /*        width:30%;*/
-            background: #3f65b7;
-            background-clip: padding-box;
-            border: 1px solid #ffffff;
-            border-bottom-color: #ffffff;
-            border-radius: 5px;
-            color: #ffffff;
-            background: #7abcff; /* Old browsers */
-            background-image: -webkit-gradient(
-                linear,
-                left top,
-                left bottom,
-                color-stop(1, #CCCCCC),
-                color-stop(1, #EEF0ED),
-                color-stop(1, #FFFFFF)
-                );
-            background-image: -o-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
-            background-image: -moz-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
-            background-image: -webkit-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
-            background-image: -ms-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
-            background-image: linear-gradient(to bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);}
-        .save_app{
-            width:32px;
-            height:32px;
-            background-image:url(images/icons/add_event.png);
-            background-repeat: no-repeat;
-            cursor: pointer;
+        -webkit-box-shadow: 0px 0px 17px rgba(255, 255, 255, 0.67);
+        -moz-box-shadow:    0px 0px 17px rgba(255, 255, 255, 0.67);
+        box-shadow:         0px 0px 17px rgba(255, 255, 255, 0.67);
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+    }
+    .login1{
+        direction: rtl;
+        margin: 20px auto;
+        padding: 10px 5px;
+        /*        width:30%;*/
+        background: #3f65b7;
+        background-clip: padding-box;
+        border: 1px solid #ffffff;
+        border-bottom-color: #ffffff;
+        border-radius: 5px;
+        color: #ffffff;
+        background: #7abcff; /* Old browsers */
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(1, #CCCCCC),
+            color-stop(1, #EEF0ED),
+            color-stop(1, #FFFFFF)
+            );
+        background-image: -o-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
+        background-image: -moz-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
+        background-image: -webkit-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
+        background-image: -ms-linear-gradient(bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);
+        background-image: linear-gradient(to bottom, #CCCCCC 100%, #EEF0ED 100%, #FFFFFF 100%);}
+    .save_app{
+        width:32px;
+        height:32px;
+        background-image:url(images/icons/add_event.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
 
-            float:right;
-            margin-right:10px;
+        float:right;
+        margin-right:10px;
 
-        }
-        .save_app2{
-            width:32px;
-            height:32px;
-            background-image:url(images/icons/add_event.png);
-            background-repeat: no-repeat;
-            cursor: pointer;
-
-
-
-        }
-        .show_app{
-            width:32px;
-            height:32px;
-            background-image:url(images/icons/show_event.png);
-            background-repeat: no-repeat;
-            cursor: pointer;
-            margin-left:10px;
-
-
-
-
-        }
-        .backColor{background: rgb(238,238,238); /* Old browsers */
-                   background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 75%); /* FF3.6+ */
-                   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(75%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
-                   background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* Chrome10+,Safari5.1+ */
-                   background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* Opera 11.10+ */
-                   background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* IE10+ */
-                   background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* W3C */
-                   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
-
-        }
-        #appointmentTable tbody tr.even:hover, #appointmentTable tbody tr.even td.highlighted {
-            background-color: #ECFFB3;
-        }
-
-        #appointmentTable tbody tr.odd:hover, #appointmentTable tbody tr.odd td.highlighted {
-            background-color: #E6FF99;
-        }
-
-        #appointmentTable tr.even:hover {
-            background-color: #ECFFB3;
-        }
-
-        #appointmentTable tr.even:hover td.sorting_1 {
-            background-color: #DDFF75;
-        }
-
-        #appointmentTable tr.even:hover td.sorting_2 {
-            background-color: #E7FF9E;
-        }
-
-        #appointmentTable tr.even:hover td.sorting_3 {
-            background-color: #E2FF89;
-        }
-
-        #appointmentTable tr.odd:hover {
-            background-color: #E6FF99;
-        }
-
-        #appointmentTable tr.odd:hover td.sorting_1 {
-            background-color: #D6FF5C;
-        }
-
-        #appointmentTable tr.odd:hover td.sorting_2 {
-            background-color: #E0FF84;
-        }
-
-        #appointmentTable tr.odd:hover td.sorting_3 {
-            background-color: #DBFF70;
-        }
-        .num{background: #ffc578; /* Old browsers */
-             background: -moz-linear-gradient(top,  #ffc578 0%, #fb9d23 100%); /* FF3.6+ */
-             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc578), color-stop(100%,#fb9d23)); /* Chrome,Safari4+ */
-             background: -webkit-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); /* Chrome10+,Safari5.1+ */
-             background: -o-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); /* Opera 11.10+ */
-             background: -ms-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); /* IE10+ */
-             background: linear-gradient(to bottom,  #ffc578 0%,#fb9d23 100%); /* W3C */
-             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=0 ); /* IE6-9 */
-             font-weight: bold
-        }
-        #ta tr td{
-            border: none
-        }
-        .button_finis{
-            width:135px;
-            height:29px;
-            margin: 4px;
-            background-repeat: no-repeat;
-            cursor: pointer;
-            border: none;
-            background-position: right top ;
-            display: inline-block;
-            background-color: transparent;
-            background-image:url(images/buttons/finish.png);
-        }
-    </style>
-    <body >
-      
-        <div id="finish_Note"  style="width: 40%;display: none;position: fixed">
-
-            <div style="clear: both;margin-left: 93%;margin-top: 0px;margin-bottom: -38px;z-index: -10000000;">
-                <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;   -webkit-box-shadow: 0px 0px 17px rgba(255, 255, 255, 1.0);background-color: transparent;
-                     -moz-box-shadow:    0px 0px 17px rgba(255, 255, 255, 1.0);
-                     box-shadow:         0px 0px 17px rgba(255, 255, 255, 1.0);
-                     -webkit-border-radius: 100px;
-                     -moz-border-radius: 100px;
-                     border-radius: 100px;" onclick="closePopup(this)"/>
-            </div>
-
-            <!--<h1>رسالة قصيرة</h1>-->
-            <div class="login" style="width:90%;margin-left: auto;margin-right: auto;">
-                <table  border="0px" id="ta" style="width:100%;text-align: right;margin-bottom: 10px !important;margin-left: auto;margin-right: auto;" >                
+    }
+    .save_app2{
+        width:32px;
+        height:32px;
+        background-image:url(images/icons/add_event.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
 
 
 
-                    <tr>
-                        <td style="width: 40%;"> <label style="width: 100px;">ملاحظات الإنهاء</label></TD>
-                        <td style="width: 60%;"><TEXTAREA cols="40" rows="5" name="notes" id="notes"></TEXTAREA></TD>
-                    </TR>
-                    <tr>
-                        <td style="width: 40%;"> <label style="width: 100px;">التاريخ</label></TD>
-                        <td style="width: 60%;">  <input name="finishEndDate" id="finishEndDate" type="text" size="40" maxlength="50" style="width:50%;float: right;font-size: 12px;" value="<%=nowTime%>"/></TEXTAREA></TD>
-                    </TR>
-                    <tr>
-                        <td colspan="2" > <input type="button"  onclick="JavaScript:finishCom(this);" class="button_finis"></TD>
-                    </tr>
-                    <tr>
-                        <td colspan="2" >
-                            <div style="margin: 0 auto;display: none; width: 90%;text-align: center;color: white" id="finishMsg">تم الإنهاء بنجاح</>
-                        </td>
-                    </tr>
+    }
+    .show_app{
+        width:32px;
+        height:32px;
+        background-image:url(images/icons/show_event.png);
+        background-repeat: no-repeat;
+        cursor: pointer;
+        margin-left:10px;
 
 
-                </TABLE>
-            </div>
 
+
+    }
+    .backColor{background: rgb(238,238,238); /* Old browsers */
+               background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 75%); /* FF3.6+ */
+               background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(75%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+               background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* Chrome10+,Safari5.1+ */
+               background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* Opera 11.10+ */
+               background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* IE10+ */
+               background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 75%); /* W3C */
+               filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+
+    }
+    #appointmentTable tbody tr.even:hover, #appointmentTable tbody tr.even td.highlighted {
+        background-color: #ECFFB3;
+    }
+
+    #appointmentTable tbody tr.odd:hover, #appointmentTable tbody tr.odd td.highlighted {
+        background-color: #E6FF99;
+    }
+
+    #appointmentTable tr.even:hover {
+        background-color: #ECFFB3;
+    }
+
+    #appointmentTable tr.even:hover td.sorting_1 {
+        background-color: #DDFF75;
+    }
+
+    #appointmentTable tr.even:hover td.sorting_2 {
+        background-color: #E7FF9E;
+    }
+
+    #appointmentTable tr.even:hover td.sorting_3 {
+        background-color: #E2FF89;
+    }
+
+    #appointmentTable tr.odd:hover {
+        background-color: #E6FF99;
+    }
+
+    #appointmentTable tr.odd:hover td.sorting_1 {
+        background-color: #D6FF5C;
+    }
+
+    #appointmentTable tr.odd:hover td.sorting_2 {
+        background-color: #E0FF84;
+    }
+
+    #appointmentTable tr.odd:hover td.sorting_3 {
+        background-color: #DBFF70;
+    }
+    .num{background: #ffc578; /* Old browsers */
+         background: -moz-linear-gradient(top,  #ffc578 0%, #fb9d23 100%); /* FF3.6+ */
+         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc578), color-stop(100%,#fb9d23)); /* Chrome,Safari4+ */
+         background: -webkit-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); /* Chrome10+,Safari5.1+ */
+         background: -o-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); /* Opera 11.10+ */
+         background: -ms-linear-gradient(top,  #ffc578 0%,#fb9d23 100%); /* IE10+ */
+         background: linear-gradient(to bottom,  #ffc578 0%,#fb9d23 100%); /* W3C */
+         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=0 ); /* IE6-9 */
+         font-weight: bold
+    }
+    #ta tr td{
+        border: none
+    }
+    .button_finis{
+        width:135px;
+        height:29px;
+        margin: 4px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border: none;
+        background-position: right top ;
+        display: inline-block;
+        background-color: transparent;
+        background-image:url(images/buttons/finish.png);
+    }
+    /* Bootstrap-oriented overrides without changing JSP logic */
+    .login,
+    .login1{
+        border-radius: .75rem;
+        border: 1px solid #dbe3ee;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1);
+    }
+    #ta{
+        background: transparent;
+    }
+    #ta textarea,
+    #ta input[type="text"]{
+        font-size: .95rem !important;
+    }
+    .backColor{
+        background: #f8fafc !important;
+    }
+    .show_app,
+    .save_app,
+    .save_app2{
+        border-radius: .375rem;
+        transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .show_app:hover,
+    .save_app:hover,
+    .save_app2:hover{
+        transform: translateY(-1px);
+        box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.2);
+    }
+</style>
+ <body class="container-fluid py-3">
+  
+    <div id="finish_Note"  style="width: 40%;display: none;position: fixed">
+
+        <div style="clear: both;margin-left: 93%;margin-top: 0px;margin-bottom: -38px;z-index: -10000000;">
+            <img src="images/close_popup.png" width="32" height="32" style="background-repeat: no-repeat;   -webkit-box-shadow: 0px 0px 17px rgba(255, 255, 255, 1.0);background-color: transparent;
+                 -moz-box-shadow:    0px 0px 17px rgba(255, 255, 255, 1.0);
+                 box-shadow:         0px 0px 17px rgba(255, 255, 255, 1.0);
+                 -webkit-border-radius: 100px;
+                 -moz-border-radius: 100px;
+                 border-radius: 100px;" onclick="closePopup(this)"/>
         </div>
 
-        <script type="text/javascript" src="js/wz_tooltip.js"></script>
-    <CENTER>
-        <FIELDSET class="set" style="width:100%;" >
-
-            <FORM NAME="EQUIPMENT_CALENDAR_FORM" METHOD="POST">
-                <input type="hidden" value="<%=currentMonth%>" id="currentMonth"/>
-                <input type="hidden" value="<%=currentYear%>" id="currentYear"/>
-                <div style="width: 100%;clear: both">
-
-
-                    <div id="show_appointment"  style="width: 80% !important;display: none;margin-left: auto;margin-right: auto;text-align: center;position: fixed ;">
-
-                    </div>
-                    <div id="show_client_information"  style="width: 60% !important;display: none;margin-left: auto;margin-right: auto;text-align: center;position: fixed ;">
-
-                    </div>
-
-                    <div style="clear: both"></div>
-
-                    <TABLE ALIGN="<%=align%>" DIR="LTR" CELLPADDING="5" CELLSPACING="2" STYLE="background: rgba(255,255,255,1);
-                           background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
-                           background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
-                           background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
-                           background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
-                           background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
-                           background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
-                           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );">
-                        <TR>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Saturday</b></font></TD>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Sunday</b></font></TD>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Monday</b></font></TD>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Tuesday</b></font></TD>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Wednesday</b></font></TD>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Thursday</b></font></TD>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Friday</b></font></TD>
-                            <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="50" COLSPAN="2">&nbsp;</TD>
-                        </TR>
-
-                        <TR>
-                            <%
-                                for (int i = 0; i < 8; i++) {
-                                    if (i < 7) {
-                                        if (gotCell == true) {
-                                            cellValue = new Integer(minDate).toString();
-                                            minDate = minDate + 1;
-                                        } else if (startPeriodDayName.equalsIgnoreCase(dayName[i]) && minDate <= maxDate) {
-                                            gotCell = true;
-                                            cellValue = new Integer(minDate).toString();
-                                            minDate = minDate + 1;
-                                        } else {
-                                            cellValue = "0";
-                                        }
-                            %>
-                            <%
-                                int x;
-
-                                x = Integer.parseInt(cellValue);
-
-                                if (x >= currentDay) {%>
-                            <TD  STYLE="font-size:14;;height:75px;background: rgb(178,225,255); /* Old browsers */
-                                 background: -moz-linear-gradient(top,  rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
-                                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
-                                 background: -webkit-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
-                                 background: -o-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 11.10+ */
-                                 background: -ms-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
-                                 background: linear-gradient(to bottom,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
-                                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 ); /* IE6-9 */
-
-
-                                 " WIDTH="100"
-                                 <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
-                                 >
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)" >
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
-
-                                    </div> 
-                                </div>
-                                <div style="width: 100%;height: 55%;
-                                     " onmouseover="get_Count2(this,<%=cellValue%>)">
-
-
-                                    <input type="hidden" id="pageType" value="1"/> 
-                                    <div class="show_app" onclick="popupShowAppointment(this)"> </div>
-
-                                </div>
-                                <%} else {%>
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <!--<input  type="button" value="show" onclick="popupShowAppointment(this)"/>-->
-                                    <!--                                                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
-                                                                    
-                                                                                                    </div>-->
-
-                                </div>
-                                <div style="width: 100%;height: 55%;" id="div1">
-
-
-                                </div>
-                                <div style="width: 100%;height: 55%;display: none" onmouseover="get_Count2(this,<%=cellValue%>)" id="div2">
+        <!--<h1>رسالة قصيرة</h1>-->
+        <div class="login" style="width:90%;margin-left: auto;margin-right: auto;">
+            <table  border="0px" id="ta" style="width:100%;text-align: right;margin-bottom: 10px !important;margin-left: auto;margin-right: auto;" >                
 
 
 
+                <tr>
+                    <td style="width: 40%;"> <label style="width: 100px;">ملاحظات الإنهاء</label></TD>
+                    <td style="width: 60%;"><TEXTAREA cols="40" rows="5" name="notes" id="notes"></TEXTAREA></TD>
+                </TR>
+                <tr>
+                    <td style="width: 40%;"> <label style="width: 100px;">التاريخ</label></TD>
+                    <td style="width: 60%;">  <input name="finishEndDate" id="finishEndDate" type="text" size="40" maxlength="50" style="width:50%;float: right;font-size: 12px;" value="<%=nowTime%>"/></TEXTAREA></TD>
+                </TR>
+                <tr>
+                    <td colspan="2" > <input type="button"  onclick="JavaScript:finishCom(this);" class="button_finis"></TD>
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        <div style="margin: 0 auto;display: none; width: 90%;text-align: center;color: white" id="finishMsg">تم الإنهاء بنجاح</>
+                    </td>
+                </tr>
 
 
-                                    <input type="hidden" id="pageType" value="1"/> 
-                                    <div class="show_app" onclick="popupShowAppointment(this)"> </div>
+            </TABLE>
+        </div>
 
-                                </div>
-                                <%}%>
+    </div>
 
-                            </TD>
+    <script type="text/javascript" src="js/wz_tooltip.js"></script>
+<CENTER>
+    <FIELDSET class="set" style="width:100%;" >
 
-                            <%} else {%>
-                            <TD class="backColor" STYLE="font-size:14;;height:75px;" WIDTH="100"
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
-                                >
-
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
-
-                                    </div>
-                                </div>
-                                <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <input type="hidden" id="pageType" value="0"/> 
-                                    <div  class="show_app" onclick="popupShowAppointment(this)"></div>
-
-                                </div>
-                                <%} else {%>
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-
-                                </div>
-                                <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <!--<input type="button" value="adds" onclick="popupApp(this)"/>-->
-
-                                </div>
-                                <%}%>
+        <FORM NAME="EQUIPMENT_CALENDAR_FORM" METHOD="POST">
+            <input type="hidden" value="<%=currentMonth%>" id="currentMonth"/>
+            <input type="hidden" value="<%=currentYear%>" id="currentYear"/>
+            <div style="width: 100%;clear: both">
 
 
-                            </TD>
-                            <%}%>
-                            <%
-                            } else {
-                            %>
+                <div id="show_appointment"  style="width: 80% !important;display: none;margin-left: auto;margin-right: auto;text-align: center;position: fixed ;">
 
-                            <TD STYLE="font-size:16;;writing-mode:tb-rl" WIDTH="25" ROWSPAN="<%=calRowsNumber%>" BGCOLOR="#ddeeff"><b><%=year%></b></TD>
-                            <%
-                                    }
-                                }
-                            %>
-                        </TR>
+                </div>
+                <div id="show_client_information"  style="width: 60% !important;display: none;margin-left: auto;margin-right: auto;text-align: center;position: fixed ;">
 
-                        <TR>
-                            <%
-                                for (int i = 0; i < 7; i++) {
-                                    if (minDate <= maxDate) {
+                </div>
+
+                <div style="clear: both"></div>
+
+                <TABLE class="calendar-shell table table-bordered align-middle" ALIGN="<%=align%>" DIR="LTR" CELLPADDING="5" CELLSPACING="2" STYLE="background: rgba(255,255,255,1);
+                       background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+                       background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+                       background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+                       background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+                       background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+                       background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 100%);
+                       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );">
+                    <TR>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Saturday</b></font></TD>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Sunday</b></font></TD>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Monday</b></font></TD>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Tuesday</b></font></TD>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Wednesday</b></font></TD>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Thursday</b></font></TD>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="100"><font color="black"><b>Friday</b></font></TD>
+                        <TD BGCOLOR="#ccddff" STYLE="font-size:14;" WIDTH="50" COLSPAN="2">&nbsp;</TD>
+                    </TR>
+
+                    <TR>
+                        <%
+                            for (int i = 0; i < 8; i++) {
+                                if (i < 7) {
+                                    if (gotCell == true) {
                                         cellValue = new Integer(minDate).toString();
                                         minDate = minDate + 1;
-                                    } else {
-                                        cellValue = "&nbsp;";
-                                    }
-                            %>
-                            <%
-                                int x;
-
-                                x = Integer.parseInt(cellValue);
-
-                                if (x >= currentDay) {%>
-                            <TD  STYLE="font-size:14;;height:75px;background: rgb(178,225,255); /* Old browsers */
-                                 background: -moz-linear-gradient(top,  rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
-                                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
-                                 background: -webkit-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
-                                 background: -o-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 11.10+ */
-                                 background: -ms-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
-                                 background: linear-gradient(to bottom,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
-                                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 ); /* IE6-9 */
-
-
-                                 " WIDTH="100"
-                                 <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
-                                 >
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
-
-                                    </div>
-                                </div>
-                                <div style="width: 100%;height: 55%;
-                                     " onmouseover="get_Count2(this,<%=cellValue%>)">
-
-
-                                    <input type="hidden" id="pageType" value="1"/> 
-                                    <div class="show_app" onclick="popupShowAppointment(this)"> </div>
-
-                                </div>
-                                <%} else {%>
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <!--<input  type="button" value="show" onclick="popupShowAppointment(this)"/>-->
-
-                                </div>
-                                <div style="width: 100%;height: 55%;" id="div1">
-
-
-                                </div>
-                                <div style="width: 100%;height: 55%;display: none" onmouseover="get_Count2(this,<%=cellValue%>)" id="div2">
-
-
-
-
-
-                                    <input type="hidden" id="pageType" value="1"/> 
-                                    <div class="show_app" onclick="popupShowAppointment(this)"> </div>
-
-                                </div>
-                                <%}%>
-
-                            </TD>
-
-                            <%} else {%>
-                            <TD class="backColor" STYLE="font-size:14;;height:75px;" WIDTH="100"
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
-                                >
-
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
-
-                                    </div>
-                                </div>
-                                <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <input type="hidden" id="pageType" value="0"/> 
-                                    <div  class="show_app" onclick="popupShowAppointment(this)"></div>
-
-                                </div>
-                                <%} else {%>
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-
-                                </div>
-                                <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <!--<input type="button" value="adds" onclick="popupApp(this)"/>-->
-
-                                </div>
-                                <%}%>
-
-
-                            </TD>
-                            <%}%>
-                            <%}%>
-                            <TD STYLE="font-size:14;;writing-mode:tb-rl" WIDTH="25" ROWSPAN="<%=calRowsNumber%>" BGCOLOR="#ccddee"><font color="black"><b><%=monthName[month]%></b></font></TD>
-                        </TR>
-
-                        <%
-                            for (int i = 0; i < calRowsNumber - 2; i++) {
-                        %>
-                        <TR>
-                            <%
-                                for (int j = 0; j < 7; j++) {
-                                    if (minDate <= maxDate) {
+                                    } else if (startPeriodDayName.equalsIgnoreCase(dayName[i]) && minDate <= maxDate) {
+                                        gotCell = true;
                                         cellValue = new Integer(minDate).toString();
                                         minDate = minDate + 1;
                                     } else {
                                         cellValue = "0";
                                     }
-                            %>
-                            <%
-                                int x;
+                        %>
+                        <%
+                            int x;
 
-                                x = Integer.parseInt(cellValue);
+                            x = Integer.parseInt(cellValue);
 
-                                if (x >= currentDay) {%>
-                            <TD   STYLE="font-size:14;;height:75px;background: rgb(178,225,255); /* Old browsers */
-                                  background: -moz-linear-gradient(top,  rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
-                                  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
-                                  background: -webkit-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
-                                  background: -o-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 11.10+ */
-                                  background: -ms-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
-                                  background: linear-gradient(to bottom,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
-                                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 ); /* IE6-9 */
-
-
-                                  " WIDTH="100"
-                                  <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
-                                  >
+                            if (x >= currentDay) {%>
+                        <TD  STYLE="font-size:14;;height:75px;background: rgb(178,225,255); /* Old browsers */
+                             background: -moz-linear-gradient(top,  rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
+                             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
+                             background: -webkit-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
+                             background: -o-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 11.10+ */
+                             background: -ms-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
+                             background: linear-gradient(to bottom,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
+                             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 ); /* IE6-9 */
 
 
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
-
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        String number = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
-
-                                    </div>
-                                </div>
-                                <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-
-
-
-
-
-                                    <input type="hidden" id="pageType" value="1"/> 
-                                    <div class="show_app" onclick="popupShowAppointment(this)"> </div>
-
-                                </div>
-
+                             " WIDTH="100"
+                             <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
+                             >
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)" >
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
                                 <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
+
+                                </div> 
+                            </div>
+                            <div style="width: 100%;height: 55%;
+                                 " onmouseover="get_Count2(this,<%=cellValue%>)">
+
+
+                                <input type="hidden" id="pageType" value="1"/> 
+                                <div class="show_app" onclick="popupShowAppointment(this)"> </div>
+
+                            </div>
+                            <%} else {%>
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <!--<input  type="button" value="show" onclick="popupShowAppointment(this)"/>-->
+                                <!--                                                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
+                                                                
+                                                                                                </div>-->
+
+                            </div>
+                            <div style="width: 100%;height: 55%;" id="div1">
+
+
+                            </div>
+                            <div style="width: 100%;height: 55%;display: none" onmouseover="get_Count2(this,<%=cellValue%>)" id="div2">
 
 
 
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" >
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
 
-                                    </div>
-                                    <!--<input  type="button" value="show" onclick="popupShowAppointment(this)"/>-->
+
+                                <input type="hidden" id="pageType" value="1"/> 
+                                <div class="show_app" onclick="popupShowAppointment(this)"> </div>
+
+                            </div>
+                            <%}%>
+
+                        </TD>
+
+                        <%} else {%>
+                        <TD class="backColor" STYLE="font-size:14;;height:75px;" WIDTH="100"
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
+                            >
+
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
+
                                 </div>
-                                <div style="width: 100%;height: 55%;" id="div1">
+                            </div>
+                            <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <input type="hidden" id="pageType" value="0"/> 
+                                <div  class="show_app" onclick="popupShowAppointment(this)"></div>
 
-
-                                </div>
-                                <div style="width: 100%;height: 55%;display: none" onmouseover="get_Count2(this,<%=cellValue%>)" id="div2">
-
-
-
-
-
-                                    <input type="hidden" id="pageType" value="1"/> 
-                                    <div class="show_app" onclick="popupShowAppointment(this)"> </div>
-
-                                </div>
-
+                            </div>
+                            <%} else {%>
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
                                 <%}%>
 
-                            </TD>
+                            </div>
+                            <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <!--<input type="button" value="adds" onclick="popupApp(this)"/>-->
+
+                            </div>
+                            <%}%>
+
+
+                        </TD>
+                        <%}%>
+                        <%
+                        } else {
+                        %>
+
+                        <TD STYLE="font-size:16;;writing-mode:tb-rl" WIDTH="25" ROWSPAN="<%=calRowsNumber%>" BGCOLOR="#ddeeff"><b><%=year%></b></TD>
+                        <%
+                                }
+                            }
+                        %>
+                    </TR>
+
+                    <TR>
+                        <%
+                            for (int i = 0; i < 7; i++) {
+                                if (minDate <= maxDate) {
+                                    cellValue = new Integer(minDate).toString();
+                                    minDate = minDate + 1;
+                                } else {
+                                    cellValue = "&nbsp;";
+                                }
+                        %>
+                        <%
+                            int x;
+
+                            x = Integer.parseInt(cellValue);
+
+                            if (x >= currentDay) {%>
+                        <TD  STYLE="font-size:14;;height:75px;background: rgb(178,225,255); /* Old browsers */
+                             background: -moz-linear-gradient(top,  rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
+                             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
+                             background: -webkit-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
+                             background: -o-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 11.10+ */
+                             background: -ms-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
+                             background: linear-gradient(to bottom,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
+                             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 ); /* IE6-9 */
+
+
+                             " WIDTH="100"
+                             <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
+                             >
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
+
+                                </div>
+                            </div>
+                            <div style="width: 100%;height: 55%;
+                                 " onmouseover="get_Count2(this,<%=cellValue%>)">
+
+
+                                <input type="hidden" id="pageType" value="1"/> 
+                                <div class="show_app" onclick="popupShowAppointment(this)"> </div>
+
+                            </div>
+                            <%} else {%>
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <!--<input  type="button" value="show" onclick="popupShowAppointment(this)"/>-->
+
+                            </div>
+                            <div style="width: 100%;height: 55%;" id="div1">
+
+
+                            </div>
+                            <div style="width: 100%;height: 55%;display: none" onmouseover="get_Count2(this,<%=cellValue%>)" id="div2">
+
+
+
+
+
+                                <input type="hidden" id="pageType" value="1"/> 
+                                <div class="show_app" onclick="popupShowAppointment(this)"> </div>
+
+                            </div>
+                            <%}%>
+
+                        </TD>
+
+                        <%} else {%>
+                        <TD class="backColor" STYLE="font-size:14;;height:75px;" WIDTH="100"
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
+                            >
+
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
+
+                                </div>
+                            </div>
+                            <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <input type="hidden" id="pageType" value="0"/> 
+                                <div  class="show_app" onclick="popupShowAppointment(this)"></div>
+
+                            </div>
+                            <%} else {%>
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+
+                            </div>
+                            <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <!--<input type="button" value="adds" onclick="popupApp(this)"/>-->
+
+                            </div>
+                            <%}%>
+
+
+                        </TD>
+                        <%}%>
+                        <%}%>
+                        <TD STYLE="font-size:14;;writing-mode:tb-rl" WIDTH="25" ROWSPAN="<%=calRowsNumber%>" BGCOLOR="#ccddee"><font color="black"><b><%=monthName[month]%></b></font></TD>
+                    </TR>
+
+                    <%
+                        for (int i = 0; i < calRowsNumber - 2; i++) {
+                    %>
+                    <TR>
+                        <%
+                            for (int j = 0; j < 7; j++) {
+                                if (minDate <= maxDate) {
+                                    cellValue = new Integer(minDate).toString();
+                                    minDate = minDate + 1;
+                                } else {
+                                    cellValue = "0";
+                                }
+                        %>
+                        <%
+                            int x;
+
+                            x = Integer.parseInt(cellValue);
+
+                            if (x >= currentDay) {%>
+                        <TD   STYLE="font-size:14;;height:75px;background: rgb(178,225,255); /* Old browsers */
+                              background: -moz-linear-gradient(top,  rgba(178,225,255,1) 0%, rgba(102,182,252,1) 100%); /* FF3.6+ */
+                              background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,225,255,1)), color-stop(100%,rgba(102,182,252,1))); /* Chrome,Safari4+ */
+                              background: -webkit-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Chrome10+,Safari5.1+ */
+                              background: -o-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* Opera 11.10+ */
+                              background: -ms-linear-gradient(top,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* IE10+ */
+                              background: linear-gradient(to bottom,  rgba(178,225,255,1) 0%,rgba(102,182,252,1) 100%); /* W3C */
+                              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2e1ff', endColorstr='#66b6fc',GradientType=0 ); /* IE6-9 */
+
+
+                              " WIDTH="100"
+                              <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
+                              >
+
+
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
+
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    String number = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
+
+                                </div>
+                            </div>
+                            <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+
+
+
+
+
+                                <input type="hidden" id="pageType" value="1"/> 
+                                <div class="show_app" onclick="popupShowAppointment(this)"> </div>
+
+                            </div>
 
                             <%} else {%>
-                            <TD class="backColor" STYLE="font-size:14;;height:75px;" WIDTH="100"
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
-                                >
-
-                                <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
-
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
-                                    <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
-
-                                    </div>
-                                </div>
-                                <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <input type="hidden" id="pageType" value="0"/> 
-                                    <div  class="show_app" onclick="popupShowAppointment(this)" onmouseover="get_Count2(this,<%=cellValue%>)"></div>
-
-                                </div>
 
 
+
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" >
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
                                 <%} else {%>
-                                <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
-                                    <% String num = "";
-                                        if (cellValue.equals("0")) {%>
-                                    <b id="day"><%=num%></b>
-                                    <%} else {%>
-                                    <b id="day"><%=cellValue%></b>
-                                    <%}%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
 
                                 </div>
-                                <div style="width: 100%;height: 55%;">
-                                    <!--<input type="button" value="adds" onclick="popupApp(this)"/>-->
+                                <!--<input  type="button" value="show" onclick="popupShowAppointment(this)"/>-->
+                            </div>
+                            <div style="width: 100%;height: 55%;" id="div1">
+
+
+                            </div>
+                            <div style="width: 100%;height: 55%;display: none" onmouseover="get_Count2(this,<%=cellValue%>)" id="div2">
+
+
+
+
+
+                                <input type="hidden" id="pageType" value="1"/> 
+                                <div class="show_app" onclick="popupShowAppointment(this)"> </div>
+
+                            </div>
+
+                            <%}%>
+
+                        </TD>
+
+                        <%} else {%>
+                        <TD class="backColor" STYLE="font-size:14;;height:75px;" WIDTH="100"
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> background="images/schedule.jpg"<%} else {%> background="" <%}%>
+                            >
+
+                            <%if (eqpSchedulesDays.contains(new Integer(minDate - 1))) {%> 
+
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
+                                <%}%>
+                                <div style="float: right;width: 18px;height: 18px;border-radius: 3px 3px 3px 3px;text-align: center;display: none"class="num"id="number">
 
                                 </div>
+                            </div>
+                            <div style="width: 100%;height: 55%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <input type="hidden" id="pageType" value="0"/> 
+                                <div  class="show_app" onclick="popupShowAppointment(this)" onmouseover="get_Count2(this,<%=cellValue%>)"></div>
+
+                            </div>
+
+
+                            <%} else {%>
+                            <div style="width: 100%;margin-top: 0px;height: 45%;" onmouseover="get_Count2(this,<%=cellValue%>)">
+                                <% String num = "";
+                                    if (cellValue.equals("0")) {%>
+                                <b id="day"><%=num%></b>
+                                <%} else {%>
+                                <b id="day"><%=cellValue%></b>
                                 <%}%>
 
+                            </div>
+                            <div style="width: 100%;height: 55%;">
+                                <!--<input type="button" value="adds" onclick="popupApp(this)"/>-->
 
-                            </TD>
+                            </div>
                             <%}%>
 
-                            <%}%>
-                        </TR>
+
+                        </TD>
+                        <%}%>
 
                         <%}%>
-                    </TABLE>
+                    </TR>
 
-                    <input type="hidden" name="peroid" id="peroid" value="other">
-                    </center>
-                </div>
+                    <%}%>
+                </TABLE>
 
-                </div>
-            </FORM>
-        </FIELDSET>
-    </center>
+                <input type="hidden" name="peroid" id="peroid" value="other">
+                </center>
+            </div>
+
+            </div>
+        </FORM>
+    </FIELDSET>
+</center>
 </body>
 </html>
 

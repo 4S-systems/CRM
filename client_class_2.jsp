@@ -912,7 +912,7 @@
             vertical-align: middle;
         }
         .confirmed {
-            background-color: #EBB462;
+          
             color: black;
             font-size: 14px;
             font-weight: bold;
@@ -1024,7 +1024,7 @@ table.dataTable tfoot td {
                         </div>
                         <div id="appointments" style="display: none;"></div>
 
-                        <fieldset align=center class="set" style="width: 90%">
+                        <fieldset align=center class="set" style="width: 100%">
 
                             <form name="CLASSIFICATION_FORM" action="<%=context%>/main.jsp" method="POST" style="margin: 0px 0px -85px">
                                 <br/>
@@ -1164,36 +1164,84 @@ table.dataTable tfoot td {
                                                 }
                                         %>
                                         <tr>
-                                            <td style="text-align:right;width: 15%">
-                                                <%
-                                                    if (privilegesList.contains("BATCH_EVALUATION")) {
-                                                %>
-                                                <select class="clientRate" name="clientRate" id="clientRate<%=clientWbo.getAttribute("id")%>" style="width: 200px; direction: rtl;"
-                                                        onchange="JavaScript: changeClientRate('<%=clientWbo.getAttribute("id")%>', this);">
-                                                    <option value="">Select Client Rate</option>
-                                                    <%
-                                                        for (WebBusinessObject rateWbo : ratesList) {
-                                                    %>
-                                                    <option value="<%=rateWbo.getAttribute("projectID")%>" <%=rateWbo.getAttribute("projectID").equals(clientWbo.getAttribute("rateID")) ? "selected" : ""%>  data-image="images/msdropdown/<%="UL".equals(rateWbo.getAttribute("optionThree")) ? "black" : rateWbo.getAttribute("optionThree")%>.png"><%=rateWbo.getAttribute("projectName")%></option>
-                                                    <%
-                                                        }
-                                                    %>
-                                                </select>
-                                                <%
-                                                } else {
-                                                    if (clientWbo != null && clientWbo.getAttribute("rateID") != null) {
-                                                %>
-                                                <%=clientWbo.getAttribute("classTitle")%> <img src="images/msdropdown/<%="UL".equals(clientWbo.getAttribute("imageName")) ? "black" : clientWbo.getAttribute("imageName")%>.png" style="float: left;"/>
-                                                <%
-                                                        }
-                                                    }
-                                                %>
-                                            </td>
-                                            <td  width="13%">
-                                                <%=attValue%>
-                                                <img src="images/icons/info.png" title="<%=description%>"  onmouseover="showClientComm(this, '<%=description%>');" style="float: left; height: 23px; cursor: hand;"/>
-                                                <img src="images/dialogs/Fa.png" title="<%=clientWbo.getAttribute("id")%>"  onmouseover="showFirstAppointment(this, '<%=clientWbo.getAttribute("id")%>');" style="display:none;float: left; height: 25px; cursor: hand;"/>
-                                            </td>
+                                          <td class="align-middle px-2 py-1 text-left" style="width: 15%; font-size: 12px;">
+    <%
+        if (privilegesList.contains("BATCH_EVALUATION")) {
+    %>
+
+    <select 
+        class="clientRate form-control form-control-sm"
+        name="clientRate" 
+        id="clientRate<%=clientWbo.getAttribute("id")%>" 
+        style="width: 160px;  font-size: 12px;"
+        onchange="JavaScript: changeClientRate('<%=clientWbo.getAttribute("id")%>', this);"
+    >
+        <option value="">Select Client Rate</option>
+
+        <%
+            for (WebBusinessObject rateWbo : ratesList) {
+        %>
+
+        <option 
+            value="<%=rateWbo.getAttribute("projectID")%>" 
+            <%=rateWbo.getAttribute("projectID").equals(clientWbo.getAttribute("rateID")) ? "selected" : ""%>  
+            data-image="images/msdropdown/<%="UL".equals(rateWbo.getAttribute("optionThree")) ? "black" : rateWbo.getAttribute("optionThree")%>.png"
+        >
+            <%=rateWbo.getAttribute("projectName")%>
+        </option>
+
+        <%
+            }
+        %>
+    </select>
+
+    <%
+        } else {
+            if (clientWbo != null && clientWbo.getAttribute("rateID") != null) {
+    %>
+
+    <div class="d-flex align-items-center justify-content-start" style="font-size: 12px; line-height: 1.2;">
+        <span class="d-inline-block">
+            <%=clientWbo.getAttribute("classTitle")%>
+        </span>
+
+        <img 
+            src="images/msdropdown/<%="UL".equals(clientWbo.getAttribute("imageName")) ? "black" : clientWbo.getAttribute("imageName")%>.png" 
+            class="ml-1 flex-shrink-0"
+            style="width: 15px; height: 15px; object-fit: contain;"
+        />
+    </div>
+
+    <%
+            }
+        }
+    %>
+</td>
+                                           <td width="13%" class="align-middle  py-1">
+    <div class="d-flex align-items-center justify-content-start" style="font-size: 12px; line-height: 1.2;">
+        
+        <span class="d-inline-block text-truncate" style="max-width: 110px;">
+            <%=attValue%>
+        </span>
+
+        <img 
+            src="images/icons/info.png" 
+            title="<%=description%>"  
+            onmouseover="showClientComm(this, '<%=description%>');" 
+            class="ml-1 flex-shrink-0"
+            style="width: 16px; height: 16px; cursor: pointer;"
+        />
+
+        <img 
+            src="images/dialogs/Fa.png" 
+            title="<%=clientWbo.getAttribute("id")%>"  
+            onmouseover="showFirstAppointment(this, '<%=clientWbo.getAttribute("id")%>');" 
+            class="ml-1 flex-shrink-0"
+            style="display:none; width: 16px; height: 16px; cursor: pointer;"
+        />
+
+    </div>
+</td>
                                             <%
                                                 for (int i = 1; i < s; i++) {
                                                     if (i != 3) {
@@ -1201,27 +1249,55 @@ table.dataTable tfoot td {
                                                         attValue = clientWbo.getAttribute(attName) != null ? (String) clientWbo.getAttribute(attName) : "";
 
                                             %>
-                                            <td class="<%=i == 1 ? "confirmed" : ""%>" nowrap width="25%">
-                                                <div style="float: <%=sAlign%>;width:60%">
-                                                    <b id="<%=attName%><%=clientWbo.getAttribute("id")%>"><%=attValue%></b>
-                                                </div>
-                                                <%
-                                                    if (i == 1) {
-                                                %>
-                                                <a target="_SELF" href="<%=context%>/ClientServlet?op=clientDetails&amp;clientId=<%=clientWbo.getAttribute("id")%>">
-                                                    <img class="icon" src="images/client_details.jpg" width="23" height="23" style="float: left;" />
-                                                         <!--onmouseover="JavaScript: getFollowupCounts('<%=clientWbo.getAttribute("id")%>', this);"--> 
-                                                </a>
-                                                <!--a href="JavaScript: openInNewWindow('<%=context%>/IssueServlet?op=newComplaint&type=call&clientId=<%=clientWbo.getAttribute("id")%>&clientType=30-40');">
-                                                    <img class="icon" src="images/icons/control.png" height="23" style="float: left;"/>
-                                                </a-->
-                                                <a href="JavaScript: popupClientAppointments('<%=clientWbo.getAttribute("id")%>');">
-                                                    <img class="icon" src="images/icons/calendar-256.png" height="23" style="float: left;" />
-                                                </a>
-                                                <%
-                                                    }
-                                                %>
-                                            </td>
+                                           <td class="<%=i == 1 ? "confirmed" : ""%> text-center align-middle py-1 px-2" nowrap width="25%">
+    <div class="d-flex flex-column align-items-center justify-content-center gap-1">
+
+        <!-- الرقم لوحده في سطر -->
+        <b 
+            id="<%=attName%><%=clientWbo.getAttribute("id")%>" 
+            class="d-block fw-bold text-dark lh-1"
+            style="font-size: 12px;"
+        >
+            <%=attValue%>
+        </b>
+
+        <%
+            if (i == 1) {
+        %>
+
+        <!-- الأيقونات تحت الرقم -->
+        <div class="d-flex align-items-center justify-content-center gap-1">
+            <a 
+                target="_SELF" 
+                href="<%=context%>/ClientServlet?op=clientDetails&amp;clientId=<%=clientWbo.getAttribute("id")%>"
+                class="d-inline-flex"
+            >
+                <img 
+                    src="images/client_details.jpg" 
+                    title="Client Details"
+                    class="rounded"
+                    style="width: 20px; height: 20px; object-fit: cover;"
+                />
+            </a>
+
+            <a 
+                href="JavaScript: popupClientAppointments('<%=clientWbo.getAttribute("id")%>');"
+                class="d-inline-flex"
+            >
+                <img 
+                    src="images/icons/calendar-256.png" 
+                    title="Appointments"
+                    class="rounded"
+                    style="width: 20px; height: 20px; object-fit: cover;"
+                />
+            </a>
+        </div>
+
+        <%
+            }
+        %>
+    </div>
+</td>
                                             <%
                                                     }
                                                 }
@@ -1244,11 +1320,11 @@ table.dataTable tfoot td {
                                             SimpleDateFormat sdfK = new SimpleDateFormat("yyyy-MM-dd");
                                             Date appointmentDate = sdfK.parse(appointmentDateStr);
                                             Date today = new Date();
-                                            color = appointmentDate.compareTo(today) <= 0 ? "lightpink" : "white";
+                                            color = appointmentDate.compareTo(today) <= 0 ? " #FECACA" : "white";
                                             appoDate = clientWbo.getAttribute("appointment_date").toString().split(" ")[0];                                            
 }%>
                                                 
-                                                <td style="background: <%= color %>;">
+                                                <td style=" background: <%= color %>;">
                                                 <b><%=appoDate%></b>
                                             </td>
                                              <td>

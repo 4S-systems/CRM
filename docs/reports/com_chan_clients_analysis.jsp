@@ -957,13 +957,13 @@ fieldset {
     </HEAD>
     <body>
 	<input type="hidden" id="valRUrC">
-        <fieldset align=center class="set" style="width: 95%">
+        <fieldset align=center class="set" style="width: 80%; margin-left: auto; margin-right: 3px;">
             <form name="CLASSIFICATION_FORM" action="<%=context%>/ReportsServletThree?op=communicationChannelsClientsAnalysis" method="POST">
                 <br/>
                 <table class="blueBorder" align="center" dir="<%=dir%>" id="code" cellpadding="0" cellspacing="0" width="650" style="border-width: 1px; border-color: white; display: block;" >
                     
                     <tr>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" width="12%">
+                        <td class=" blueHeaderTD" style="font-size:18px;" width="12%">
 			    <input type="radio" name="clsUncls" id="all" value="all" onchange="showClass('all')" checked>
 			</td>
 			
@@ -973,7 +973,7 @@ fieldset {
 			    </font>
 			</td>
 			
-			<td class="blueBorder blueHeaderTD" style="font-size:18px;" width="12%">
+			<td class=" blueHeaderTD" style="font-size:18px;" width="12%">
 			</td>
                         
                         <td bgcolor="#dedede" valign="middle" width="38%">
@@ -982,7 +982,7 @@ fieldset {
 			</td>
                     </tr>
                     <tr id="dateRow">
-			<td class="blueBorder blueHeaderTD" style="font-size:18px;" width="12%">
+			<td class=" blueHeaderTD" style="font-size:18px;" width="12%">
                             <input type="radio" name="dateType" value="rating" <%="rating".equals(dateType) ? "checked" : ""%>/>
 			</td>
 			<td bgcolor="#dedede" valign="middle" width="38%">
@@ -990,7 +990,7 @@ fieldset {
 				<%=ratingDate%>
 			    </font>
 			</td>
-			<td class="blueBorder blueHeaderTD" style="font-size:18px;" width="12%">
+			<td class="blueHeaderTD" style="font-size:18px;" width="12%">
 			    <input type="radio" name="dateType" value="registration" <%="registration".equals(dateType) ? "checked" : ""%>/>
 			</td>
 			<td bgcolor="#dedede" valign="middle" width="38%">
@@ -1001,15 +1001,15 @@ fieldset {
 		    </tr>
                     
                     <tr id="smryTR">
-			<td class="blueBorder blueHeaderTD" style="font-size:18px;" width="12%">
+			<td class=" blueHeaderTD" style="font-size:18px;" width="12%">
                             <input type="radio" name="smry" value="1" <%="1".equals(smry) ? "checked" : ""%>/>
 			</td>
-			<td bgcolor="#dedede" valign="middle" width="38%">
-			    <font style="font-size: 15px;">
+			<td bgcolor="#dedede"  valign="middle" width="38%">
+			    <font style="font-size: 15px; color: black;">
 				<%=smryStr%>
 			    </font>
 			</td>
-			<td class="blueBorder blueHeaderTD" style="font-size:18px;" width="12%">
+			<td class=" blueHeaderTD" style="font-size:18px;" width="12%">
 			    <input type="radio" name="smry" value="0" <%="0".equals(smry) ? "checked" : ""%>/>
 			</td>
 			<td bgcolor="#dedede" valign="middle" width="38%">
@@ -1020,11 +1020,11 @@ fieldset {
 		    </tr>
 		    
 		    <tr>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
-                            <b><font size=3 color="white"> <%=fromDate%></b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
+                            <b><font size=3 color="black"> <%=fromDate%></b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
-                            <b><font size=3 color="white"> <%=toDate%></b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" width="325px" colspan="2">
+                            <b><font size=3 color="black"> <%=toDate%></b>
                         </td>
                     </tr>
                     <tr>
@@ -1038,11 +1038,11 @@ fieldset {
                         </td>
                     </tr>
                     <tr>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2">
-                            <b><font size="3" color="white"><%=proj%></b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" colspan="2">
+                            <b><font size="3" color="black"><%=proj%></b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2">
-                            <b><font size="3" color="white">Know Us</b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" colspan="2">
+                            <b><font size="3" color="black">Know Us</b>
                         </td>
                         
                         </tr>
@@ -1072,11 +1072,11 @@ fieldset {
                         
                     </tr>
                     <tr id="">
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
-                            <b><font size=3 color="white">Tools</b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
+                            <b><font size=3 color="black">Tools</b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
-                            <b><font size=3 color="white">Source</b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
+                            <b><font size=3 color="black">Source</b>
                         </td>
                     </tr>
                     <tr>
@@ -1104,11 +1104,11 @@ fieldset {
                         </td>
                         </tr>
                     <tr>
-                       <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
-                            <b><font size=3 color="white">Team Leader</b>
+                       <td class=" blueHeaderTD" style="font-size:18px;" colspan="2" id="nclssTrStr" >
+                            <b><font size=3 color="black">Team Leader</b>
                         </td>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="2">
-                            <b><font size=3 color="white"><%=employeeName%></b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" colspan="2">
+                            <b><font size=3 color="black"><%=employeeName%></b>
                         </td>
                     </tr>
                     <tr>
@@ -1131,8 +1131,8 @@ fieldset {
                         </td>
                     </tr>
                     <tr>
-                        <td class="blueBorder blueHeaderTD" style="font-size:18px;" colspan="4">
-                            <b><font size=3 color="white"><%=typeOfRequest%></b>
+                        <td class=" blueHeaderTD" style="font-size:18px;" colspan="4">
+                            <b><font size=3 color="black"><%=typeOfRequest%></b>
                         </td>
                        
                     </tr>

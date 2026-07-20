@@ -518,6 +518,25 @@
                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#fb9d23',GradientType=0 ); /* IE6-9 */
                  font-weight: bold
             }
+   .crm-distribute-btn {
+    min-width: 155px;
+    color: #ffffff;
+    background: #27272A;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 6px 14px;
+    margin-bottom: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.16);
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 1.2px;
+}
+
+.crm-distribute-btn:hover {
+    background: #18181b;
+    border-color: #18181b;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
         </style>
     </head>
     <body>
@@ -585,9 +604,17 @@
             <br/><br/>
             <center> <b> <font size="3" color="red"> <%=PN%> : <%=data.size()%> </font></b></center> 
             <br>
-            <button type="button" style="color: #27272A;font-size:15;margin-bottom: 5px;font-weight:bold; width: 150px; height: 30px; vertical-align: top;"
-                    onclick="JavaScript: openRedirectPopup();" title="توزيع">Distribute &nbsp;&nbsp;<img src="images/icons/forward.png" width="15" height="15" />
-            </button>
+    <div class="d-flex justify-content-center align-items-center mb-2">
+    <button
+        type="button"
+        class="btn crm-distribute-btn d-inline-flex align-items-center justify-content-center gap-2"
+        onclick="openRedirectPopup();"
+        title="توزيع"
+    >
+        <span>Distribute</span>
+        <img src="images/icons/forward.png" width="16" height="16" alt="forward" />
+    </button>
+</div>
             <table class="display" id="indextable" align="center" dir="<%=dir%>" width="100%" cellpadding="0" cellspacing="0">
                 <thead>
                     <tr>
